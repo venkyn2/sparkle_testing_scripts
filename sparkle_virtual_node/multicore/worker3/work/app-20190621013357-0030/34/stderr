@@ -1,0 +1,286 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker3/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker3/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=42847" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:42847" "--executor-id" "34" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621013357-0030" "--worker-url" "spark://Worker@mdc-ch1-cust4:37279"
+========================================
+
+19/06/21 01:33:57 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 98281@mdc-ch1-cust4
+19/06/21 01:33:57 INFO util.SignalUtils: Registered signal handler for TERM
+19/06/21 01:33:57 INFO util.SignalUtils: Registered signal handler for HUP
+19/06/21 01:33:57 INFO util.SignalUtils: Registered signal handler for INT
+19/06/21 01:33:58 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/06/21 01:33:58 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:33:58 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:33:58 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:33:58 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:33:58 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:33:58 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:42847 after 42 ms (0 ms spent in bootstraps)
+19/06/21 01:33:58 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/06/21 01:33:58 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:33:58 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:33:58 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:33:58 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:33:58 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:33:58 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:42847 after 1 ms (0 ms spent in bootstraps)
+19/06/21 01:33:58 INFO storage.DiskBlockManager: Created local directory at /data/spark-116e9f26-d387-405c-86a0-7964901ec4ee/executor-314c46e1-3d8a-406d-8e4a-f0b32090cba0/blockmgr-a1a250b5-656a-4e17-9604-5a0b7aa617d2
+19/06/21 01:33:58 INFO memory.MemoryStore: MemoryStore started with capacity 12.6 GB
+19/06/21 01:33:58 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:42847
+19/06/21 01:33:58 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@mdc-ch1-cust4:37279
+19/06/21 01:33:58 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:37279 after 0 ms (0 ms spent in bootstraps)
+19/06/21 01:33:58 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@mdc-ch1-cust4:37279
+19/06/21 01:33:59 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/06/21 01:33:59 INFO executor.Executor: Starting executor ID 34 on host mdc-ch1-cust4
+19/06/21 01:33:59 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37361.
+19/06/21 01:33:59 INFO netty.NettyBlockTransferService: Server created on mdc-ch1-cust4:37361
+19/06/21 01:33:59 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/06/21 01:33:59 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(34, mdc-ch1-cust4, 37361, None)
+19/06/21 01:33:59 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(34, mdc-ch1-cust4, 37361, None)
+19/06/21 01:33:59 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(34, mdc-ch1-cust4, 37361, None)
+19/06/21 01:34:00 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 199
+19/06/21 01:34:00 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 241
+19/06/21 01:34:00 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 283
+19/06/21 01:34:00 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 325
+19/06/21 01:34:00 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 367
+19/06/21 01:34:00 INFO executor.Executor: Running task 0.0 in stage 1.0 (TID 199)
+19/06/21 01:34:00 INFO executor.Executor: Running task 168.0 in stage 1.0 (TID 367)
+19/06/21 01:34:00 INFO executor.Executor: Running task 42.0 in stage 1.0 (TID 241)
+19/06/21 01:34:00 INFO executor.Executor: Running task 126.0 in stage 1.0 (TID 325)
+19/06/21 01:34:00 INFO executor.Executor: Running task 84.0 in stage 1.0 (TID 283)
+19/06/21 01:34:00 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:42847/jars/simple-partitionby-computation-project_2.11-1.0.jar with timestamp 1561106037423
+19/06/21 01:34:00 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:42847 after 1 ms (0 ms spent in bootstraps)
+19/06/21 01:34:00 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:42847/jars/simple-partitionby-computation-project_2.11-1.0.jar to /data/spark-116e9f26-d387-405c-86a0-7964901ec4ee/executor-314c46e1-3d8a-406d-8e4a-f0b32090cba0/spark-10ade24e-17ba-4ec1-80fc-9c430e04473f/fetchFileTemp4413434790976851196.tmp
+19/06/21 01:34:00 INFO util.Utils: Copying /data/spark-116e9f26-d387-405c-86a0-7964901ec4ee/executor-314c46e1-3d8a-406d-8e4a-f0b32090cba0/spark-10ade24e-17ba-4ec1-80fc-9c430e04473f/-5508981101561106037423_cache to /var/tmp/spark2.0hpcplatform/multicore/worker3/work/app-20190621013357-0030/34/./simple-partitionby-computation-project_2.11-1.0.jar
+19/06/21 01:34:00 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker3/work/app-20190621013357-0030/34/./simple-partitionby-computation-project_2.11-1.0.jar to class loader
+19/06/21 01:34:00 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 1
+19/06/21 01:34:00 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:44833 after 0 ms (0 ms spent in bootstraps)
+19/06/21 01:34:01 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 1586.0 B, free 12.6 GB)
+19/06/21 01:34:01 INFO broadcast.TorrentBroadcast: Reading broadcast variable 1 took 414 ms
+19/06/21 01:34:01 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 2.5 KB, free 12.6 GB)
+19/06/21 01:34:01 INFO memory.MemoryStore: Block rdd_3_126 stored as values in memory (estimated size 160.2 MB, free 12.2 GB)
+19/06/21 01:34:01 INFO memory.MemoryStore: Block rdd_3_168 stored as values in memory (estimated size 160.2 MB, free 12.2 GB)
+19/06/21 01:34:01 INFO memory.MemoryStore: Block rdd_3_0 stored as values in memory (estimated size 160.2 MB, free 12.2 GB)
+19/06/21 01:34:01 INFO executor.Executor: 1 block locks were not released by TID = 367:
+[rdd_3_168]
+19/06/21 01:34:01 INFO executor.Executor: 1 block locks were not released by TID = 325:
+[rdd_3_126]
+19/06/21 01:34:01 INFO executor.Executor: 1 block locks were not released by TID = 199:
+[rdd_3_0]
+19/06/21 01:34:01 INFO executor.Executor: Finished task 168.0 in stage 1.0 (TID 367). 708 bytes result sent to driver
+19/06/21 01:34:01 INFO executor.Executor: Finished task 126.0 in stage 1.0 (TID 325). 708 bytes result sent to driver
+19/06/21 01:34:01 INFO executor.Executor: Finished task 0.0 in stage 1.0 (TID 199). 708 bytes result sent to driver
+19/06/21 01:34:03 INFO memory.MemoryStore: Block rdd_3_42 stored as values in memory (estimated size 160.2 MB, free 12.0 GB)
+19/06/21 01:34:03 INFO executor.Executor: 1 block locks were not released by TID = 241:
+[rdd_3_42]
+19/06/21 01:34:03 INFO executor.Executor: Finished task 42.0 in stage 1.0 (TID 241). 708 bytes result sent to driver
+19/06/21 01:34:03 INFO memory.MemoryStore: Block rdd_3_84 stored as values in memory (estimated size 160.2 MB, free 11.8 GB)
+19/06/21 01:34:03 INFO executor.Executor: 1 block locks were not released by TID = 283:
+[rdd_3_84]
+19/06/21 01:34:03 INFO executor.Executor: Finished task 84.0 in stage 1.0 (TID 283). 708 bytes result sent to driver
+19/06/21 01:34:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 415
+19/06/21 01:34:06 INFO executor.Executor: Running task 0.0 in stage 2.0 (TID 415)
+19/06/21 01:34:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 457
+19/06/21 01:34:06 INFO executor.Executor: Running task 42.0 in stage 2.0 (TID 457)
+19/06/21 01:34:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 499
+19/06/21 01:34:06 INFO executor.Executor: Running task 84.0 in stage 2.0 (TID 499)
+19/06/21 01:34:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 541
+19/06/21 01:34:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 581
+19/06/21 01:34:06 INFO executor.Executor: Running task 126.0 in stage 2.0 (TID 541)
+19/06/21 01:34:06 INFO executor.Executor: Running task 168.0 in stage 2.0 (TID 581)
+19/06/21 01:34:06 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 2
+19/06/21 01:34:06 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:46709 after 1 ms (0 ms spent in bootstraps)
+19/06/21 01:34:06 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.1 KB, free 11.8 GB)
+19/06/21 01:34:06 INFO broadcast.TorrentBroadcast: Reading broadcast variable 2 took 10 ms
+19/06/21 01:34:06 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 3.5 KB, free 11.8 GB)
+19/06/21 01:34:06 INFO storage.BlockManager: Found block rdd_3_0 locally
+19/06/21 01:34:06 INFO storage.BlockManager: Found block rdd_3_126 locally
+19/06/21 01:34:06 INFO storage.BlockManager: Found block rdd_3_84 locally
+19/06/21 01:34:06 INFO storage.BlockManager: Found block rdd_3_168 locally
+19/06/21 01:34:06 INFO storage.BlockManager: Found block rdd_3_42 locally
+19/06/21 01:34:07 INFO executor.Executor: Finished task 42.0 in stage 2.0 (TID 457). 1146 bytes result sent to driver
+19/06/21 01:34:07 INFO executor.Executor: Finished task 84.0 in stage 2.0 (TID 499). 1103 bytes result sent to driver
+19/06/21 01:34:07 INFO executor.Executor: Finished task 0.0 in stage 2.0 (TID 415). 1103 bytes result sent to driver
+19/06/21 01:34:07 INFO executor.Executor: Finished task 168.0 in stage 2.0 (TID 581). 1103 bytes result sent to driver
+19/06/21 01:34:07 INFO executor.Executor: Finished task 126.0 in stage 2.0 (TID 541). 1103 bytes result sent to driver
+19/06/21 01:34:09 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 621
+19/06/21 01:34:09 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 663
+19/06/21 01:34:09 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 705
+19/06/21 01:34:09 INFO executor.Executor: Running task 22.0 in stage 3.0 (TID 621)
+19/06/21 01:34:09 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 747
+19/06/21 01:34:09 INFO executor.Executor: Running task 64.0 in stage 3.0 (TID 663)
+19/06/21 01:34:09 INFO executor.Executor: Running task 106.0 in stage 3.0 (TID 705)
+19/06/21 01:34:09 INFO executor.Executor: Running task 148.0 in stage 3.0 (TID 747)
+19/06/21 01:34:09 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 789
+19/06/21 01:34:09 INFO executor.Executor: Running task 190.0 in stage 3.0 (TID 789)
+19/06/21 01:34:09 INFO spark.MapOutputTrackerWorker: Updating epoch to 1 and clearing cache
+19/06/21 01:34:09 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 3
+19/06/21 01:34:09 INFO memory.MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 1829.0 B, free 11.8 GB)
+19/06/21 01:34:09 INFO broadcast.TorrentBroadcast: Reading broadcast variable 3 took 4 ms
+19/06/21 01:34:09 INFO memory.MemoryStore: Block broadcast_3 stored as values in memory (estimated size 2.8 KB, free 11.8 GB)
+19/06/21 01:34:09 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/06/21 01:34:09 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/06/21 01:34:09 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/06/21 01:34:09 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/06/21 01:34:09 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/06/21 01:34:09 INFO spark.MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@mdc-ch1-cust4.mdc.ext.hpe.com:42847)
+19/06/21 01:34:09 INFO spark.MapOutputTrackerWorker: Got the output locations
+19/06/21 01:34:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:34967 after 2 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:38763 after 2 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:34927 after 2 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:43313 after 3 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:36601 after 3 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:45653 after 9 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:33055 after 10 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:35263 after 10 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:37267 after 2 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:43489 after 1 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:33727 after 1 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:35941 after 7 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:45467 after 1 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:34295 after 1 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:34523 after 2 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:35917 after 3 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:41359 after 2 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:34527 after 4 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:37095 after 2 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:44347 after 2 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:32915 after 3 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:39747 after 3 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:41783 after 1 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:43483 after 4 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:39107 after 5 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:34173 after 0 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:46869 after 4 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:43419 after 4 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:44275 after 2 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:39383 after 1 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:33397 after 1 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:42681 after 4 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:40809 after 1 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:37355 after 5 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:40337 after 5 ms (0 ms spent in bootstraps)
+19/06/21 01:34:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:38589 after 2 ms (0 ms spent in bootstraps)
+19/06/21 01:34:10 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:40541 after 5 ms (0 ms spent in bootstraps)
+19/06/21 01:34:10 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:42475 after 17 ms (0 ms spent in bootstraps)
+19/06/21 01:34:10 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:32929 after 20 ms (0 ms spent in bootstraps)
+19/06/21 01:34:10 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:33977 after 21 ms (0 ms spent in bootstraps)
+19/06/21 01:34:10 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 121 ms
+19/06/21 01:34:10 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 121 ms
+19/06/21 01:34:10 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 127 ms
+19/06/21 01:34:10 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 129 ms
+19/06/21 01:34:10 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 130 ms
+19/06/21 01:34:19 INFO executor.Executor: Finished task 106.0 in stage 3.0 (TID 705). 1013 bytes result sent to driver
+19/06/21 01:34:19 INFO executor.Executor: Finished task 148.0 in stage 3.0 (TID 747). 1013 bytes result sent to driver
+19/06/21 01:34:21 INFO executor.Executor: Finished task 190.0 in stage 3.0 (TID 789). 1013 bytes result sent to driver
+19/06/21 01:34:21 INFO executor.Executor: Finished task 22.0 in stage 3.0 (TID 621). 1013 bytes result sent to driver
+19/06/21 01:34:21 INFO executor.Executor: Finished task 64.0 in stage 3.0 (TID 663). 1013 bytes result sent to driver
+19/06/21 01:34:21 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 834
+19/06/21 01:34:21 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 876
+19/06/21 01:34:21 INFO executor.Executor: Running task 35.0 in stage 5.0 (TID 834)
+19/06/21 01:34:21 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 918
+19/06/21 01:34:21 INFO executor.Executor: Running task 77.0 in stage 5.0 (TID 876)
+19/06/21 01:34:21 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 960
+19/06/21 01:34:21 INFO executor.Executor: Running task 119.0 in stage 5.0 (TID 918)
+19/06/21 01:34:21 INFO executor.Executor: Running task 161.0 in stage 5.0 (TID 960)
+19/06/21 01:34:21 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 4
+19/06/21 01:34:21 INFO memory.MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 2.4 KB, free 11.8 GB)
+19/06/21 01:34:21 INFO broadcast.TorrentBroadcast: Reading broadcast variable 4 took 4 ms
+19/06/21 01:34:21 INFO memory.MemoryStore: Block broadcast_4 stored as values in memory (estimated size 4.0 KB, free 11.8 GB)
+19/06/21 01:34:21 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:21 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:21 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:21 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:21 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 9 ms
+19/06/21 01:34:21 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 9 ms
+19/06/21 01:34:21 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 10 ms
+19/06/21 01:34:21 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 10 ms
+19/06/21 01:34:31 INFO executor.Executor: Finished task 35.0 in stage 5.0 (TID 834). 1017 bytes result sent to driver
+19/06/21 01:34:31 INFO executor.Executor: Finished task 77.0 in stage 5.0 (TID 876). 1017 bytes result sent to driver
+19/06/21 01:34:32 INFO executor.Executor: Finished task 119.0 in stage 5.0 (TID 918). 1017 bytes result sent to driver
+19/06/21 01:34:32 INFO executor.Executor: Finished task 161.0 in stage 5.0 (TID 960). 1017 bytes result sent to driver
+19/06/21 01:34:33 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1010
+19/06/21 01:34:33 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1052
+19/06/21 01:34:33 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1094
+19/06/21 01:34:33 INFO executor.Executor: Running task 11.0 in stage 7.0 (TID 1010)
+19/06/21 01:34:33 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1136
+19/06/21 01:34:33 INFO executor.Executor: Running task 53.0 in stage 7.0 (TID 1052)
+19/06/21 01:34:33 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1178
+19/06/21 01:34:33 INFO executor.Executor: Running task 95.0 in stage 7.0 (TID 1094)
+19/06/21 01:34:33 INFO executor.Executor: Running task 137.0 in stage 7.0 (TID 1136)
+19/06/21 01:34:33 INFO executor.Executor: Running task 179.0 in stage 7.0 (TID 1178)
+19/06/21 01:34:33 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 5
+19/06/21 01:34:33 INFO memory.MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 2.5 KB, free 11.8 GB)
+19/06/21 01:34:33 INFO broadcast.TorrentBroadcast: Reading broadcast variable 5 took 2 ms
+19/06/21 01:34:33 INFO memory.MemoryStore: Block broadcast_5 stored as values in memory (estimated size 4.3 KB, free 11.8 GB)
+19/06/21 01:34:33 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:33 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:33 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:33 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:33 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:33 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 7 ms
+19/06/21 01:34:33 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 8 ms
+19/06/21 01:34:33 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 8 ms
+19/06/21 01:34:33 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 8 ms
+19/06/21 01:34:33 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 8 ms
+19/06/21 01:34:43 INFO executor.Executor: Finished task 53.0 in stage 7.0 (TID 1052). 1017 bytes result sent to driver
+19/06/21 01:34:43 INFO executor.Executor: Finished task 137.0 in stage 7.0 (TID 1136). 1017 bytes result sent to driver
+19/06/21 01:34:43 INFO executor.Executor: Finished task 11.0 in stage 7.0 (TID 1010). 1017 bytes result sent to driver
+19/06/21 01:34:43 INFO executor.Executor: Finished task 179.0 in stage 7.0 (TID 1178). 1017 bytes result sent to driver
+19/06/21 01:34:44 INFO executor.Executor: Finished task 95.0 in stage 7.0 (TID 1094). 1017 bytes result sent to driver
+19/06/21 01:34:44 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1224
+19/06/21 01:34:44 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1266
+19/06/21 01:34:44 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1308
+19/06/21 01:34:44 INFO executor.Executor: Running task 25.0 in stage 9.0 (TID 1224)
+19/06/21 01:34:44 INFO executor.Executor: Running task 67.0 in stage 9.0 (TID 1266)
+19/06/21 01:34:44 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1350
+19/06/21 01:34:44 INFO executor.Executor: Running task 109.0 in stage 9.0 (TID 1308)
+19/06/21 01:34:44 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1392
+19/06/21 01:34:44 INFO executor.Executor: Running task 151.0 in stage 9.0 (TID 1350)
+19/06/21 01:34:44 INFO executor.Executor: Running task 193.0 in stage 9.0 (TID 1392)
+19/06/21 01:34:44 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 6
+19/06/21 01:34:44 INFO memory.MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 1829.0 B, free 11.8 GB)
+19/06/21 01:34:44 INFO broadcast.TorrentBroadcast: Reading broadcast variable 6 took 4 ms
+19/06/21 01:34:44 INFO memory.MemoryStore: Block broadcast_6 stored as values in memory (estimated size 2.8 KB, free 11.8 GB)
+19/06/21 01:34:44 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:44 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:44 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:44 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:44 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 5 local blocks and 195 remote blocks
+19/06/21 01:34:44 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 5 ms
+19/06/21 01:34:44 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 6 ms
+19/06/21 01:34:44 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 6 ms
+19/06/21 01:34:44 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 6 ms
+19/06/21 01:34:44 INFO storage.ShuffleBlockFetcherIterator: Started 41 remote fetches in 7 ms
+19/06/21 01:34:53 INFO executor.Executor: Finished task 193.0 in stage 9.0 (TID 1392). 1013 bytes result sent to driver
+19/06/21 01:34:54 INFO executor.Executor: Finished task 25.0 in stage 9.0 (TID 1224). 1013 bytes result sent to driver
+19/06/21 01:34:55 INFO executor.Executor: Finished task 67.0 in stage 9.0 (TID 1266). 1013 bytes result sent to driver
+19/06/21 01:34:55 INFO executor.Executor: Finished task 151.0 in stage 9.0 (TID 1350). 1013 bytes result sent to driver
+19/06/21 01:34:55 INFO executor.Executor: Finished task 109.0 in stage 9.0 (TID 1308). 1013 bytes result sent to driver
+19/06/21 01:34:56 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1413
+19/06/21 01:34:56 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1455
+19/06/21 01:34:56 INFO executor.Executor: Running task 42.0 in stage 10.0 (TID 1455)
+19/06/21 01:34:56 INFO executor.Executor: Running task 0.0 in stage 10.0 (TID 1413)
+19/06/21 01:34:56 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1497
+19/06/21 01:34:56 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1539
+19/06/21 01:34:56 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1578
+19/06/21 01:34:56 INFO executor.Executor: Running task 84.0 in stage 10.0 (TID 1497)
+19/06/21 01:34:56 INFO executor.Executor: Running task 126.0 in stage 10.0 (TID 1539)
+19/06/21 01:34:56 INFO executor.Executor: Running task 168.0 in stage 10.0 (TID 1578)
+19/06/21 01:34:56 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 7
+19/06/21 01:34:56 INFO memory.MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 1547.0 B, free 11.8 GB)
+19/06/21 01:34:56 INFO broadcast.TorrentBroadcast: Reading broadcast variable 7 took 3 ms
+19/06/21 01:34:56 INFO memory.MemoryStore: Block broadcast_7 stored as values in memory (estimated size 2.4 KB, free 11.8 GB)
+19/06/21 01:34:56 INFO storage.BlockManager: Found block rdd_3_168 locally
+19/06/21 01:34:56 INFO storage.BlockManager: Found block rdd_3_126 locally
+19/06/21 01:34:56 INFO storage.BlockManager: Found block rdd_3_84 locally
+19/06/21 01:34:56 INFO storage.BlockManager: Found block rdd_3_0 locally
+19/06/21 01:34:56 INFO storage.BlockManager: Found block rdd_3_42 locally
+19/06/21 01:34:56 INFO executor.Executor: Finished task 168.0 in stage 10.0 (TID 1578). 755 bytes result sent to driver
+19/06/21 01:34:56 INFO executor.Executor: Finished task 84.0 in stage 10.0 (TID 1497). 755 bytes result sent to driver
+19/06/21 01:34:56 INFO executor.Executor: Finished task 126.0 in stage 10.0 (TID 1539). 798 bytes result sent to driver
+19/06/21 01:34:56 INFO executor.Executor: Finished task 42.0 in stage 10.0 (TID 1455). 755 bytes result sent to driver
+19/06/21 01:34:56 INFO executor.Executor: Finished task 0.0 in stage 10.0 (TID 1413). 755 bytes result sent to driver
+19/06/21 01:34:56 INFO executor.CoarseGrainedExecutorBackend: Driver commanded a shutdown
+19/06/21 01:34:56 ERROR executor.CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

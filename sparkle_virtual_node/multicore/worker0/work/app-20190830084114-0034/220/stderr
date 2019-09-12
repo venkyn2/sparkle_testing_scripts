@@ -1,0 +1,657 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker0/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker0/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.network.timeout=20000" "-Dspark.driver.port=37829" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:37829" "--executor-id" "220" "--hostname" "10.1.1.4" "--cores" "1" "--app-id" "app-20190830084114-0034" "--worker-url" "spark://Worker@10.1.1.4:46217"
+========================================
+
+19/08/30 08:41:15 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 21163@mdc-ch1-cust4
+19/08/30 08:41:15 INFO util.SignalUtils: Registered signal handler for TERM
+19/08/30 08:41:15 INFO util.SignalUtils: Registered signal handler for HUP
+19/08/30 08:41:15 INFO util.SignalUtils: Registered signal handler for INT
+19/08/30 08:41:15 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/08/30 08:41:16 INFO spark.SecurityManager: Changing view acls to: root,nnnnnven
+19/08/30 08:41:16 INFO spark.SecurityManager: Changing modify acls to: root,nnnnnven
+19/08/30 08:41:16 INFO spark.SecurityManager: Changing view acls groups to: 
+19/08/30 08:41:16 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/08/30 08:41:16 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, nnnnnven); groups with view permissions: Set(); users  with modify permissions: Set(root, nnnnnven); groups with modify permissions: Set()
+19/08/30 08:41:16 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:37829 after 138 ms (0 ms spent in bootstraps)
+19/08/30 08:41:16 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/08/30 08:41:16 WARN spark.SparkConf: The configuration key 'spark.yarn.executor.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.executor.memoryOverhead' instead.
+19/08/30 08:41:16 INFO spark.SecurityManager: Changing view acls to: root,nnnnnven
+19/08/30 08:41:16 INFO spark.SecurityManager: Changing modify acls to: root,nnnnnven
+19/08/30 08:41:16 INFO spark.SecurityManager: Changing view acls groups to: 
+19/08/30 08:41:16 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/08/30 08:41:16 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, nnnnnven); groups with view permissions: Set(); users  with modify permissions: Set(root, nnnnnven); groups with modify permissions: Set()
+19/08/30 08:41:17 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:37829 after 23 ms (0 ms spent in bootstraps)
+19/08/30 08:41:17 INFO storage.DiskBlockManager: Created local directory at /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-42ee2252-c217-4c6b-aec8-ec5541bf4145/blockmgr-7fb7657e-6c69-496b-a2d6-bf0a6bec1e03
+19/08/30 08:41:17 INFO memory.MemoryStore: MemoryStore started with capacity 4.1 GB
+19/08/30 08:41:18 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:37829
+19/08/30 08:41:18 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@10.1.1.4:46217
+19/08/30 08:41:18 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:46217 after 25 ms (0 ms spent in bootstraps)
+19/08/30 08:41:18 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@10.1.1.4:46217
+19/08/30 08:41:18 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/08/30 08:41:18 INFO executor.Executor: Starting executor ID 220 on host 10.1.1.4
+19/08/30 08:41:18 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37369.
+19/08/30 08:41:18 INFO netty.NettyBlockTransferService: Server created on 10.1.1.4:37369
+19/08/30 08:41:18 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/08/30 08:41:18 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(220, 10.1.1.4, 37369, None)
+19/08/30 08:41:18 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(220, 10.1.1.4, 37369, None)
+19/08/30 08:41:18 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(220, 10.1.1.4, 37369, None)
+19/08/30 08:41:18 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 185
+19/08/30 08:41:18 INFO executor.Executor: Running task 185.0 in stage 0.0 (TID 185)
+19/08/30 08:41:18 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:37829/jars/spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar with timestamp 1567179674115
+19/08/30 08:41:19 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:37829 after 7 ms (0 ms spent in bootstraps)
+19/08/30 08:41:19 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:37829/jars/spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar to /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-42ee2252-c217-4c6b-aec8-ec5541bf4145/spark-a486129a-70ef-416a-91fa-72bb0ea8c3a7/fetchFileTemp4148073512478623277.tmp
+19/08/30 08:41:19 INFO util.Utils: Copying /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-42ee2252-c217-4c6b-aec8-ec5541bf4145/spark-a486129a-70ef-416a-91fa-72bb0ea8c3a7/-11956425001567179674115_cache to /var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190830084114-0034/220/./spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar
+19/08/30 08:41:19 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190830084114-0034/220/./spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar to class loader
+19/08/30 08:41:19 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 1
+19/08/30 08:41:19 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:46835 after 5 ms (0 ms spent in bootstraps)
+19/08/30 08:41:19 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.2 KB, free 4.1 GB)
+19/08/30 08:41:19 INFO broadcast.TorrentBroadcast: Reading broadcast variable 1 took 351 ms
+19/08/30 08:41:20 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.5 KB, free 4.1 GB)
+19/08/30 08:41:20 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-input/part-r-00000:198642237440+1073741824
+19/08/30 08:41:20 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 0
+19/08/30 08:41:20 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:46109 after 4 ms (0 ms spent in bootstraps)
+19/08/30 08:41:20 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 22.3 KB, free 4.1 GB)
+19/08/30 08:41:20 INFO broadcast.TorrentBroadcast: Reading broadcast variable 0 took 174 ms
+19/08/30 08:41:21 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 317.5 KB, free 4.1 GB)
+19/08/30 08:47:32 INFO executor.Executor: Finished task 185.0 in stage 0.0 (TID 185). 1041 bytes result sent to driver
+19/08/30 08:47:32 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1124
+19/08/30 08:47:32 INFO executor.Executor: Running task 1124.0 in stage 0.0 (TID 1124)
+19/08/30 08:47:33 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-input/part-r-00006:2147483648+1073741824
+19/08/30 08:48:01 WARN executor.Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:835)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:864)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:864)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:864)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1945)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:864)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:223)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:227)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:220)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+19/08/30 08:48:11 WARN executor.Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:835)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:864)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:864)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:864)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1945)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:864)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:223)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:227)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:220)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+19/08/30 08:48:16 WARN client.TransportResponseHandler: Ignoring response for RPC 7047493755845867735 from mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:37829 (81 bytes) since it is not outstanding
+19/08/30 08:48:16 WARN client.TransportResponseHandler: Ignoring response for RPC 6630927193315425932 from mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:37829 (81 bytes) since it is not outstanding
+19/08/30 08:54:10 INFO executor.Executor: Finished task 1124.0 in stage 0.0 (TID 1124). 998 bytes result sent to driver
+19/08/30 08:54:10 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1942
+19/08/30 08:54:10 INFO executor.Executor: Running task 1942.0 in stage 0.0 (TID 1942)
+19/08/30 08:54:10 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-input/part-r-00010:77309411328+1073741824
+19/08/30 08:59:53 INFO executor.Executor: Finished task 1942.0 in stage 0.0 (TID 1942). 1041 bytes result sent to driver
+19/08/30 08:59:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2720
+19/08/30 08:59:53 INFO executor.Executor: Running task 2720.0 in stage 0.0 (TID 2720)
+19/08/30 08:59:53 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-input/part-r-00014:109521666048+1073741824
+19/08/30 09:05:12 INFO executor.Executor: Finished task 2720.0 in stage 0.0 (TID 2720). 998 bytes result sent to driver
+19/08/30 09:05:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 3669
+19/08/30 09:05:12 INFO executor.Executor: Running task 3669.0 in stage 0.0 (TID 3669)
+19/08/30 09:05:12 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-input/part-r-00019:124554051584+1073741824
+19/08/30 09:11:02 INFO executor.Executor: Finished task 3669.0 in stage 0.0 (TID 3669). 998 bytes result sent to driver
+19/08/30 09:11:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 4589
+19/08/30 09:11:02 INFO executor.Executor: Running task 4589.0 in stage 0.0 (TID 4589)
+19/08/30 09:11:02 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-input/part-r-00024:108447924224+1073741824
+19/08/30 09:11:17 INFO executor.Executor: Finished task 4589.0 in stage 0.0 (TID 4589). 998 bytes result sent to driver
+19/08/30 09:11:17 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 4618
+19/08/30 09:11:17 INFO executor.Executor: Running task 4618.0 in stage 0.0 (TID 4618)
+19/08/30 09:11:17 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-input/part-r-00024:139586437120+1073741824
+19/08/30 09:11:31 INFO executor.Executor: Finished task 4618.0 in stage 0.0 (TID 4618). 998 bytes result sent to driver
+19/08/30 09:11:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 4659
+19/08/30 09:11:31 INFO executor.Executor: Running task 4659.0 in stage 0.0 (TID 4659)
+19/08/30 09:11:31 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-input/part-r-00024:183609851904+1073741824
+19/08/30 09:11:46 INFO executor.Executor: Finished task 4659.0 in stage 0.0 (TID 4659). 998 bytes result sent to driver
+19/08/30 09:14:27 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 5008
+19/08/30 09:14:27 INFO executor.Executor: Running task 333.0 in stage 1.0 (TID 5008)
+19/08/30 09:14:27 INFO spark.MapOutputTrackerWorker: Updating epoch to 1 and clearing cache
+19/08/30 09:14:27 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 2
+19/08/30 09:14:27 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43275 after 1 ms (0 ms spent in bootstraps)
+19/08/30 09:14:28 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 25.1 KB, free 4.1 GB)
+19/08/30 09:14:28 INFO broadcast.TorrentBroadcast: Reading broadcast variable 2 took 109 ms
+19/08/30 09:14:28 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 69.4 KB, free 4.1 GB)
+19/08/30 09:14:28 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/30 09:14:28 INFO spark.MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@mdc-ch1-cust4.mdc.ext.hpe.com:37829)
+19/08/30 09:14:28 INFO spark.MapOutputTrackerWorker: Got the output locations
+19/08/30 09:14:28 INFO storage.ShuffleBlockFetcherIterator: Getting 4675 non-empty blocks including 8 local blocks and 4667 remote blocks
+19/08/30 09:14:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:41069 after 6 ms (0 ms spent in bootstraps)
+19/08/30 09:14:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:45885 after 7 ms (0 ms spent in bootstraps)
+19/08/30 09:14:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:39155 after 7 ms (0 ms spent in bootstraps)
+19/08/30 09:14:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43473 after 2 ms (0 ms spent in bootstraps)
+19/08/30 09:14:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:39487 after 14 ms (0 ms spent in bootstraps)
+19/08/30 09:14:29 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:37365 after 1028 ms (0 ms spent in bootstraps)
+19/08/30 09:14:29 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:34409 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:29 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:36491 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:30 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:46797 after 1008 ms (0 ms spent in bootstraps)
+19/08/30 09:14:31 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:45099 after 1013 ms (0 ms spent in bootstraps)
+19/08/30 09:14:31 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:38029 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:31 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:36295 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:32 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:46323 after 1009 ms (0 ms spent in bootstraps)
+19/08/30 09:14:32 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:35321 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:32 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:34303 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:33 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:40813 after 1021 ms (0 ms spent in bootstraps)
+19/08/30 09:14:33 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:37737 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:33 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:39601 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:14:33 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:35169 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:34 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:37689 after 1006 ms (0 ms spent in bootstraps)
+19/08/30 09:14:34 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:44091 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:34 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:34803 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:34 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:42161 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:14:34 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:40337 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:14:35 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:35523 after 1020 ms (0 ms spent in bootstraps)
+19/08/30 09:14:35 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:46007 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:35 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:35599 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:14:35 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:42793 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:14:35 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:38083 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:14:35 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:43953 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:14:36 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:41571 after 1015 ms (0 ms spent in bootstraps)
+19/08/30 09:14:36 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:42233 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:14:37 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:33207 after 1021 ms (0 ms spent in bootstraps)
+19/08/30 09:14:37 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:45803 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:37 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:34197 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:14:37 INFO storage.ShuffleBlockFetcherIterator: Started 35 remote fetches in 9502 ms
+19/08/30 09:14:37 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:33371 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:37 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:41071 after 1 ms (0 ms spent in bootstraps)
+19/08/30 09:14:39 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:34575 after 1013 ms (0 ms spent in bootstraps)
+19/08/30 09:14:39 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:40867 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:39 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:35331 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:39 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:40795 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:39 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:34359 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:14:39 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:36399 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:14:40 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:41603 after 1007 ms (0 ms spent in bootstraps)
+19/08/30 09:14:40 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:42285 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:40 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:44821 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:40 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:46687 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:41 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:34747 after 1018 ms (0 ms spent in bootstraps)
+19/08/30 09:14:41 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:45881 after 6 ms (0 ms spent in bootstraps)
+19/08/30 09:14:42 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:34871 after 1016 ms (0 ms spent in bootstraps)
+19/08/30 09:14:42 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:44129 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:42 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:37433 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:42 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:39747 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:44 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:35483 after 2051 ms (0 ms spent in bootstraps)
+19/08/30 09:14:44 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:37251 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:44 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:37605 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:44 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:45807 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:44 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:41035 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:44 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:46037 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:44 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:43159 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:44 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:43127 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:44 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:44709 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:45 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:33443 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:45 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:33655 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:46 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:36271 after 2 ms (0 ms spent in bootstraps)
+19/08/30 09:14:46 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:43585 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:46 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43797 after 1 ms (0 ms spent in bootstraps)
+19/08/30 09:14:47 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:37239 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:47 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:44469 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:48 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:39753 after 6 ms (0 ms spent in bootstraps)
+19/08/30 09:14:49 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:45877 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:34135 after 3048 ms (0 ms spent in bootstraps)
+19/08/30 09:14:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:46091 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:33023 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:36965 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:53 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:35661 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:54 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:45917 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:54 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:44773 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:55 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:38155 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:57 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:43635 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:57 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:42903 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:58 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:46401 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:58 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:46779 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:14:59 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:45897 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:14:59 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:43907 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:00 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:38195 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:15:00 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:35309 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:01 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:36263 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:02 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:33683 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:03 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:39835 after 1022 ms (0 ms spent in bootstraps)
+19/08/30 09:15:06 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:41439 after 3035 ms (0 ms spent in bootstraps)
+19/08/30 09:15:06 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:35471 after 17 ms (0 ms spent in bootstraps)
+19/08/30 09:15:06 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:39089 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:06 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:44683 after 7 ms (0 ms spent in bootstraps)
+19/08/30 09:15:07 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:37403 after 1026 ms (0 ms spent in bootstraps)
+19/08/30 09:15:07 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:43979 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:07 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:33253 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:15:07 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43481 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:15:07 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:41381 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:07 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:41691 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:15:08 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:45911 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:46271 after 1008 ms (0 ms spent in bootstraps)
+19/08/30 09:15:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:46045 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43055 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:15:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:36181 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:46785 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:37589 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:15:18 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:42409 after 7197 ms (0 ms spent in bootstraps)
+19/08/30 09:15:19 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:42727 after 1017 ms (0 ms spent in bootstraps)
+19/08/30 09:15:19 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:33503 after 1 ms (0 ms spent in bootstraps)
+19/08/30 09:15:20 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:39155 after 1012 ms (0 ms spent in bootstraps)
+19/08/30 09:15:20 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:46847 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:20 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:44505 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:15:21 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:36129 after 1031 ms (0 ms spent in bootstraps)
+19/08/30 09:15:22 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:39929 after 1015 ms (0 ms spent in bootstraps)
+19/08/30 09:15:22 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:36211 after 6 ms (0 ms spent in bootstraps)
+19/08/30 09:15:25 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:35577 after 3044 ms (0 ms spent in bootstraps)
+19/08/30 09:15:25 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:44089 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:26 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:39871 after 1022 ms (0 ms spent in bootstraps)
+19/08/30 09:15:27 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:34341 after 1008 ms (0 ms spent in bootstraps)
+19/08/30 09:15:27 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:38471 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:27 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:43165 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:46781 after 1013 ms (0 ms spent in bootstraps)
+19/08/30 09:15:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:38001 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:41267 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:15:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:41129 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:34695 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:37089 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:15:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:41595 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:36977 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:29 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:42281 after 1015 ms (0 ms spent in bootstraps)
+19/08/30 09:15:30 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:41811 after 1014 ms (0 ms spent in bootstraps)
+19/08/30 09:15:30 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:37659 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:31 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:35407 after 1027 ms (0 ms spent in bootstraps)
+19/08/30 09:15:31 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:38147 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:31 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:40107 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:15:31 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:41133 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:15:31 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:33737 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:15:33 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:39513 after 1008 ms (0 ms spent in bootstraps)
+19/08/30 09:15:33 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:37385 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:33 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:32943 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:33 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:45691 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:34 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:35459 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:35 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:41933 after 1009 ms (0 ms spent in bootstraps)
+19/08/30 09:15:36 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:41463 after 1012 ms (0 ms spent in bootstraps)
+19/08/30 09:15:36 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:40651 after 16 ms (0 ms spent in bootstraps)
+19/08/30 09:15:38 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:35497 after 1032 ms (0 ms spent in bootstraps)
+19/08/30 09:15:38 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43551 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:15:38 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:35023 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:15:38 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:43237 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:15:38 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:41623 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:40 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:42871 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:40 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:45633 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:41 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:44673 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:42 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:44885 after 1034 ms (0 ms spent in bootstraps)
+19/08/30 09:15:42 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:43839 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:42 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:38555 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:43 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:37149 after 6 ms (0 ms spent in bootstraps)
+19/08/30 09:15:43 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:43931 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:44 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:41543 after 1012 ms (0 ms spent in bootstraps)
+19/08/30 09:15:44 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:37433 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:45 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:40023 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:45 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:37645 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:46 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:41219 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:49 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:40491 after 1033 ms (0 ms spent in bootstraps)
+19/08/30 09:15:49 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:35191 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:49 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:41795 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:49 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:39223 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:50 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:32833 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:50 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:45313 after 10 ms (0 ms spent in bootstraps)
+19/08/30 09:15:51 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:42441 after 6 ms (0 ms spent in bootstraps)
+19/08/30 09:15:51 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:46339 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:15:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:44805 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:08 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:46249 after 15322 ms (0 ms spent in bootstraps)
+19/08/30 09:16:08 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:42169 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:33099 after 1031 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:44769 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:38165 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:35505 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:38085 after 1 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:34785 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:46447 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:35899 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:41707 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:37615 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:43417 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:36121 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:36701 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:39699 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:35569 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:34713 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:36089 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:34203 after 1 ms (0 ms spent in bootstraps)
+19/08/30 09:16:10 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:41511 after 1022 ms (0 ms spent in bootstraps)
+19/08/30 09:16:11 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:40321 after 1037 ms (0 ms spent in bootstraps)
+19/08/30 09:16:11 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:40993 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:16:11 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:40633 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:11 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:37265 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:12 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:34457 after 1009 ms (0 ms spent in bootstraps)
+19/08/30 09:16:12 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:43575 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:12 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:38553 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:16:13 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:44853 after 1008 ms (0 ms spent in bootstraps)
+19/08/30 09:16:13 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:42213 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:13 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:40075 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:16 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:41257 after 3033 ms (0 ms spent in bootstraps)
+19/08/30 09:16:16 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:44701 after 6 ms (0 ms spent in bootstraps)
+19/08/30 09:16:16 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:43399 after 23 ms (0 ms spent in bootstraps)
+19/08/30 09:16:18 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:44231 after 2028 ms (0 ms spent in bootstraps)
+19/08/30 09:16:18 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:46511 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:19 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:34261 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:19 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:40067 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:19 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:32851 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:19 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:35609 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:16:19 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:39135 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:20 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:34553 after 1009 ms (0 ms spent in bootstraps)
+19/08/30 09:16:20 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:33289 after 16 ms (0 ms spent in bootstraps)
+19/08/30 09:16:20 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:43661 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:20 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:34375 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:20 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:46117 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:21 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:38635 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:21 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:42991 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:22 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:44975 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:22 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:46363 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:16:22 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:36135 after 10 ms (0 ms spent in bootstraps)
+19/08/30 09:16:23 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:41799 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:24 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:44351 after 1030 ms (0 ms spent in bootstraps)
+19/08/30 09:16:25 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:41607 after 6 ms (0 ms spent in bootstraps)
+19/08/30 09:16:25 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:45701 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:16:25 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:39715 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:25 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:33953 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:25 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:37977 after 3 ms (0 ms spent in bootstraps)
+19/08/30 09:16:25 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:43941 after 15 ms (0 ms spent in bootstraps)
+19/08/30 09:16:27 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:42867 after 1014 ms (0 ms spent in bootstraps)
+19/08/30 09:16:27 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:39149 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:16:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:45143 after 1026 ms (0 ms spent in bootstraps)
+19/08/30 09:16:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:44333 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:44843 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:39785 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:36475 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:16:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:35475 after 1 ms (0 ms spent in bootstraps)
+19/08/30 09:16:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:45733 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:42979 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:35221 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:36931 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:29 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:39773 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:29 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:36913 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:31 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:46457 after 1011 ms (0 ms spent in bootstraps)
+19/08/30 09:16:31 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:44123 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:32 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:44497 after 1038 ms (0 ms spent in bootstraps)
+19/08/30 09:16:32 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:43757 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:33 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:38145 after 1024 ms (0 ms spent in bootstraps)
+19/08/30 09:16:33 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:45531 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:33 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:36293 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:34 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:41529 after 1026 ms (0 ms spent in bootstraps)
+19/08/30 09:16:34 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:44981 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:34 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:35455 after 15 ms (0 ms spent in bootstraps)
+19/08/30 09:16:35 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:41003 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:35 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:38515 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:16:35 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:43757 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:36 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:43207 after 1016 ms (0 ms spent in bootstraps)
+19/08/30 09:16:36 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:41583 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:37 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:36801 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:16:37 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:42817 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:16:37 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:46413 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:16:37 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:33309 after 7 ms (0 ms spent in bootstraps)
+19/08/30 09:16:37 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:43045 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:38 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:38899 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:38 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:33829 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:39 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:32799 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:39 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:40143 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:40 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:45981 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:40 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:44087 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:42 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:43597 after 1030 ms (0 ms spent in bootstraps)
+19/08/30 09:16:42 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:42971 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:42 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:45805 after 11 ms (0 ms spent in bootstraps)
+19/08/30 09:16:42 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:43301 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:42 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:34499 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:43 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:46415 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:43 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:34257 after 29 ms (0 ms spent in bootstraps)
+19/08/30 09:16:44 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:41895 after 1025 ms (0 ms spent in bootstraps)
+19/08/30 09:16:44 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:35259 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:16:44 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:44151 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:51 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:42485 after 6075 ms (0 ms spent in bootstraps)
+19/08/30 09:16:51 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:42667 after 6 ms (0 ms spent in bootstraps)
+19/08/30 09:16:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:38907 after 1011 ms (0 ms spent in bootstraps)
+19/08/30 09:16:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:42597 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:42777 after 1 ms (0 ms spent in bootstraps)
+19/08/30 09:16:53 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:42217 after 1011 ms (0 ms spent in bootstraps)
+19/08/30 09:16:53 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:46653 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:16:54 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:32877 after 1012 ms (0 ms spent in bootstraps)
+19/08/30 09:16:54 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:38747 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:54 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:40515 after 125 ms (0 ms spent in bootstraps)
+19/08/30 09:16:54 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:34549 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:54 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:37751 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:54 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:36493 after 1 ms (0 ms spent in bootstraps)
+19/08/30 09:16:54 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:39161 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:54 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43145 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:16:54 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:37945 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:54 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:33543 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:16:54 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:32965 after 7 ms (0 ms spent in bootstraps)
+19/08/30 09:16:55 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:42427 after 8 ms (0 ms spent in bootstraps)
+19/08/30 09:16:55 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:34015 after 8 ms (0 ms spent in bootstraps)
+19/08/30 09:16:55 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:46115 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:55 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:40307 after 30 ms (0 ms spent in bootstraps)
+19/08/30 09:16:55 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:44611 after 9 ms (0 ms spent in bootstraps)
+19/08/30 09:16:56 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:35071 after 1017 ms (0 ms spent in bootstraps)
+19/08/30 09:16:57 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:42521 after 1024 ms (0 ms spent in bootstraps)
+19/08/30 09:16:57 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:36745 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:57 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:46717 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:16:58 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:43119 after 1020 ms (0 ms spent in bootstraps)
+19/08/30 09:16:58 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:38287 after 15 ms (0 ms spent in bootstraps)
+19/08/30 09:16:59 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:33437 after 1023 ms (0 ms spent in bootstraps)
+19/08/30 09:16:59 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:37217 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:59 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:44577 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:59 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43325 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:16:59 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:41649 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:59 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:39475 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:59 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:45581 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:59 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:34373 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:16:59 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:33571 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:16:59 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:41011 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:17:01 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:38779 after 1011 ms (0 ms spent in bootstraps)
+19/08/30 09:17:01 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43053 after 1 ms (0 ms spent in bootstraps)
+19/08/30 09:17:01 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:39949 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:17:01 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:44649 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:17:01 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:42805 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:17:02 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:33695 after 1010 ms (0 ms spent in bootstraps)
+19/08/30 09:17:02 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:46681 after 9 ms (0 ms spent in bootstraps)
+19/08/30 09:17:02 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:32985 after 6 ms (0 ms spent in bootstraps)
+19/08/30 09:17:02 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:42887 after 3 ms (0 ms spent in bootstraps)
+19/08/30 09:17:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:45215 after 1012 ms (0 ms spent in bootstraps)
+19/08/30 09:17:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:39667 after 7 ms (0 ms spent in bootstraps)
+19/08/30 09:17:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43957 after 9 ms (0 ms spent in bootstraps)
+19/08/30 09:17:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:45187 after 23 ms (0 ms spent in bootstraps)
+19/08/30 09:17:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:44677 after 24 ms (0 ms spent in bootstraps)
+19/08/30 09:17:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:32841 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:17:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:35089 after 1 ms (0 ms spent in bootstraps)
+19/08/30 09:17:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:43773 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:17:05 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:35215 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:06 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:45003 after 1023 ms (0 ms spent in bootstraps)
+19/08/30 09:17:06 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43625 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:06 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:37479 after 14 ms (0 ms spent in bootstraps)
+19/08/30 09:17:07 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:40707 after 1078 ms (0 ms spent in bootstraps)
+19/08/30 09:17:07 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:45763 after 14 ms (0 ms spent in bootstraps)
+19/08/30 09:17:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:33645 after 2040 ms (0 ms spent in bootstraps)
+19/08/30 09:17:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:38811 after 70 ms (0 ms spent in bootstraps)
+19/08/30 09:17:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:45155 after 47 ms (0 ms spent in bootstraps)
+19/08/30 09:17:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:44175 after 52 ms (0 ms spent in bootstraps)
+19/08/30 09:17:10 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:37101 after 108 ms (0 ms spent in bootstraps)
+19/08/30 09:17:11 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:35947 after 68 ms (0 ms spent in bootstraps)
+19/08/30 09:17:12 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:38959 after 1033 ms (0 ms spent in bootstraps)
+19/08/30 09:17:12 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:42689 after 1 ms (0 ms spent in bootstraps)
+19/08/30 09:17:12 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:33511 after 25 ms (0 ms spent in bootstraps)
+19/08/30 09:17:12 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:46529 after 25 ms (0 ms spent in bootstraps)
+19/08/30 09:17:12 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:45195 after 32 ms (0 ms spent in bootstraps)
+19/08/30 09:17:13 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:42373 after 1010 ms (0 ms spent in bootstraps)
+19/08/30 09:17:13 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:34963 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:17:13 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:43455 after 29 ms (0 ms spent in bootstraps)
+19/08/30 09:17:13 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:38047 after 98 ms (0 ms spent in bootstraps)
+19/08/30 09:17:13 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:35575 after 24 ms (0 ms spent in bootstraps)
+19/08/30 09:17:13 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:40083 after 129 ms (0 ms spent in bootstraps)
+19/08/30 09:17:13 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:41345 after 81 ms (0 ms spent in bootstraps)
+19/08/30 09:17:14 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:43247 after 28 ms (0 ms spent in bootstraps)
+19/08/30 09:17:14 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:35175 after 39 ms (0 ms spent in bootstraps)
+19/08/30 09:17:14 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:39603 after 44 ms (0 ms spent in bootstraps)
+19/08/30 09:17:14 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:36213 after 5 ms (0 ms spent in bootstraps)
+19/08/30 09:17:19 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:36143 after 4064 ms (0 ms spent in bootstraps)
+19/08/30 09:17:19 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43175 after 1 ms (0 ms spent in bootstraps)
+19/08/30 09:17:19 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:37339 after 11 ms (0 ms spent in bootstraps)
+19/08/30 09:17:19 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:36239 after 68 ms (0 ms spent in bootstraps)
+19/08/30 09:17:19 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:41807 after 153 ms (0 ms spent in bootstraps)
+19/08/30 09:17:19 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:39327 after 93 ms (0 ms spent in bootstraps)
+19/08/30 09:17:19 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:42961 after 102 ms (0 ms spent in bootstraps)
+19/08/30 09:17:20 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:32783 after 103 ms (0 ms spent in bootstraps)
+19/08/30 09:17:20 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:45323 after 132 ms (0 ms spent in bootstraps)
+19/08/30 09:17:20 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:36647 after 56 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:36295 after 9 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:36589 after 4 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:39587 after 1 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:36839 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:33313 after 1 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:44039 after 1 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:41995 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:43775 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:33099 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:37415 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:35309 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:43701 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:40751 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:38171 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:41779 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:39039 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:34139 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:42505 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:35167 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:44183 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:17:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:39253 after 0 ms (0 ms spent in bootstraps)
+19/08/30 09:18:32 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 09:18:32 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 09:23:54 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190830084117_0001_r_000333_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-output/_temporary/0/task_20190830084117_0001_r_000333
+19/08/30 09:23:54 INFO mapred.SparkHadoopMapRedUtil: attempt_20190830084117_0001_r_000333_0: Committed
+19/08/30 09:23:54 INFO executor.Executor: Finished task 333.0 in stage 1.0 (TID 5008). 1299 bytes result sent to driver
+19/08/30 09:23:54 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 5166
+19/08/30 09:23:54 INFO executor.Executor: Running task 491.0 in stage 1.0 (TID 5166)
+19/08/30 09:23:54 INFO storage.ShuffleBlockFetcherIterator: Getting 4675 non-empty blocks including 8 local blocks and 4667 remote blocks
+19/08/30 09:23:54 INFO storage.ShuffleBlockFetcherIterator: Started 33 remote fetches in 20 ms
+19/08/30 09:26:33 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 09:26:33 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 09:32:53 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190830084117_0001_r_000491_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-output/_temporary/0/task_20190830084117_0001_r_000491
+19/08/30 09:32:53 INFO mapred.SparkHadoopMapRedUtil: attempt_20190830084117_0001_r_000491_0: Committed
+19/08/30 09:32:53 INFO executor.Executor: Finished task 491.0 in stage 1.0 (TID 5166). 1299 bytes result sent to driver
+19/08/30 09:32:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 5589
+19/08/30 09:32:53 INFO executor.Executor: Running task 914.0 in stage 1.0 (TID 5589)
+19/08/30 09:32:53 INFO storage.ShuffleBlockFetcherIterator: Getting 4675 non-empty blocks including 8 local blocks and 4667 remote blocks
+19/08/30 09:32:53 INFO storage.ShuffleBlockFetcherIterator: Started 35 remote fetches in 20 ms
+19/08/30 09:34:44 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 09:34:44 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 09:40:33 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190830084117_0001_r_000914_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-output/_temporary/0/task_20190830084117_0001_r_000914
+19/08/30 09:40:33 INFO mapred.SparkHadoopMapRedUtil: attempt_20190830084117_0001_r_000914_0: Committed
+19/08/30 09:40:33 INFO executor.Executor: Finished task 914.0 in stage 1.0 (TID 5589). 1342 bytes result sent to driver
+19/08/30 09:40:33 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 5968
+19/08/30 09:40:33 INFO executor.Executor: Running task 1293.0 in stage 1.0 (TID 5968)
+19/08/30 09:40:33 INFO storage.ShuffleBlockFetcherIterator: Getting 4675 non-empty blocks including 8 local blocks and 4667 remote blocks
+19/08/30 09:40:33 INFO storage.ShuffleBlockFetcherIterator: Started 31 remote fetches in 4 ms
+19/08/30 09:42:55 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 09:42:55 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 09:50:04 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190830084117_0001_r_001293_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-output/_temporary/0/task_20190830084117_0001_r_001293
+19/08/30 09:50:04 INFO mapred.SparkHadoopMapRedUtil: attempt_20190830084117_0001_r_001293_0: Committed
+19/08/30 09:50:04 INFO executor.Executor: Finished task 1293.0 in stage 1.0 (TID 5968). 1299 bytes result sent to driver
+19/08/30 09:50:04 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 6362
+19/08/30 09:50:04 INFO executor.Executor: Running task 1686.0 in stage 1.0 (TID 6362)
+19/08/30 09:50:04 INFO storage.ShuffleBlockFetcherIterator: Getting 4675 non-empty blocks including 8 local blocks and 4667 remote blocks
+19/08/30 09:50:04 INFO storage.ShuffleBlockFetcherIterator: Started 32 remote fetches in 6 ms
+19/08/30 09:53:22 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 09:53:22 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 09:58:26 WARN hdfs.DFSClient: Slow ReadProcessor read fields took 39751ms (threshold=30000ms); ack: seqno: 12030 reply: SUCCESS reply: SUCCESS downstreamAckTimeNanos: 64929778 flag: 0 flag: 0, targets: [DatanodeInfoWithStorage[10.1.1.4:50010,DS-44001805-6082-4944-9ca0-c98e6ad424ce,DISK], DatanodeInfoWithStorage[10.1.7.4:50010,DS-f6fc30ad-0069-49bc-9b9e-041dfaafc6e0,DISK]]
+19/08/30 09:59:54 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190830084117_0001_r_001686_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-output/_temporary/0/task_20190830084117_0001_r_001686
+19/08/30 09:59:54 INFO mapred.SparkHadoopMapRedUtil: attempt_20190830084117_0001_r_001686_0: Committed
+19/08/30 09:59:54 INFO executor.Executor: Finished task 1686.0 in stage 1.0 (TID 6362). 1299 bytes result sent to driver
+19/08/30 09:59:54 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 6770
+19/08/30 09:59:54 INFO executor.Executor: Running task 2094.0 in stage 1.0 (TID 6770)
+19/08/30 09:59:54 INFO storage.ShuffleBlockFetcherIterator: Getting 4675 non-empty blocks including 8 local blocks and 4667 remote blocks
+19/08/30 09:59:54 INFO storage.ShuffleBlockFetcherIterator: Started 33 remote fetches in 8 ms
+19/08/30 10:02:34 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 10:02:34 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 10:09:01 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190830084117_0001_r_002094_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-output/_temporary/0/task_20190830084117_0001_r_002094
+19/08/30 10:09:01 INFO mapred.SparkHadoopMapRedUtil: attempt_20190830084117_0001_r_002094_0: Committed
+19/08/30 10:09:01 INFO executor.Executor: Finished task 2094.0 in stage 1.0 (TID 6770). 1299 bytes result sent to driver
+19/08/30 10:09:01 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 7125
+19/08/30 10:09:01 INFO executor.Executor: Running task 2449.0 in stage 1.0 (TID 7125)
+19/08/30 10:09:01 INFO storage.ShuffleBlockFetcherIterator: Getting 4675 non-empty blocks including 8 local blocks and 4667 remote blocks
+19/08/30 10:09:01 INFO storage.ShuffleBlockFetcherIterator: Started 38 remote fetches in 3 ms
+19/08/30 10:11:02 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 10:11:02 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 10:17:48 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190830084117_0001_r_002449_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-output/_temporary/0/task_20190830084117_0001_r_002449
+19/08/30 10:17:48 INFO mapred.SparkHadoopMapRedUtil: attempt_20190830084117_0001_r_002449_0: Committed
+19/08/30 10:17:48 INFO executor.Executor: Finished task 2449.0 in stage 1.0 (TID 7125). 1299 bytes result sent to driver
+19/08/30 10:17:48 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 7493
+19/08/30 10:17:48 INFO executor.Executor: Running task 2817.0 in stage 1.0 (TID 7493)
+19/08/30 10:17:48 INFO storage.ShuffleBlockFetcherIterator: Getting 4675 non-empty blocks including 8 local blocks and 4667 remote blocks
+19/08/30 10:17:48 INFO storage.ShuffleBlockFetcherIterator: Started 34 remote fetches in 19 ms
+19/08/30 10:19:21 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 10:19:21 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 10:26:22 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190830084117_0001_r_002817_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-output/_temporary/0/task_20190830084117_0001_r_002817
+19/08/30 10:26:22 INFO mapred.SparkHadoopMapRedUtil: attempt_20190830084117_0001_r_002817_0: Committed
+19/08/30 10:26:22 INFO executor.Executor: Finished task 2817.0 in stage 1.0 (TID 7493). 1299 bytes result sent to driver
+19/08/30 10:26:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 7846
+19/08/30 10:26:22 INFO executor.Executor: Running task 3170.0 in stage 1.0 (TID 7846)
+19/08/30 10:26:22 INFO storage.ShuffleBlockFetcherIterator: Getting 4675 non-empty blocks including 8 local blocks and 4667 remote blocks
+19/08/30 10:26:22 INFO storage.ShuffleBlockFetcherIterator: Started 32 remote fetches in 44 ms
+19/08/30 10:28:56 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 10:28:56 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 10:35:49 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190830084117_0001_r_003170_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-output/_temporary/0/task_20190830084117_0001_r_003170
+19/08/30 10:35:49 INFO mapred.SparkHadoopMapRedUtil: attempt_20190830084117_0001_r_003170_0: Committed
+19/08/30 10:35:49 INFO executor.Executor: Finished task 3170.0 in stage 1.0 (TID 7846). 1342 bytes result sent to driver
+19/08/30 10:35:49 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 8260
+19/08/30 10:35:49 INFO executor.Executor: Running task 3584.0 in stage 1.0 (TID 8260)
+19/08/30 10:35:49 INFO storage.ShuffleBlockFetcherIterator: Getting 4675 non-empty blocks including 8 local blocks and 4667 remote blocks
+19/08/30 10:35:49 INFO storage.ShuffleBlockFetcherIterator: Started 31 remote fetches in 7 ms
+19/08/30 10:38:38 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 10:38:38 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 10:45:51 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190830084117_0001_r_003584_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-output/_temporary/0/task_20190830084117_0001_r_003584
+19/08/30 10:45:51 INFO mapred.SparkHadoopMapRedUtil: attempt_20190830084117_0001_r_003584_0: Committed
+19/08/30 10:45:51 INFO executor.Executor: Finished task 3584.0 in stage 1.0 (TID 8260). 1299 bytes result sent to driver
+19/08/30 10:45:51 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 8656
+19/08/30 10:45:51 INFO executor.Executor: Running task 3980.0 in stage 1.0 (TID 8656)
+19/08/30 10:45:51 INFO storage.ShuffleBlockFetcherIterator: Getting 4675 non-empty blocks including 8 local blocks and 4667 remote blocks
+19/08/30 10:45:51 INFO storage.ShuffleBlockFetcherIterator: Started 33 remote fetches in 12 ms
+19/08/30 10:47:38 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 10:47:38 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 10:54:56 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190830084117_0001_r_003980_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-output/_temporary/0/task_20190830084117_0001_r_003980
+19/08/30 10:54:56 INFO mapred.SparkHadoopMapRedUtil: attempt_20190830084117_0001_r_003980_0: Committed
+19/08/30 10:54:56 INFO executor.Executor: Finished task 3980.0 in stage 1.0 (TID 8656). 1342 bytes result sent to driver
+19/08/30 10:54:56 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 9046
+19/08/30 10:54:56 INFO executor.Executor: Running task 4370.0 in stage 1.0 (TID 9046)
+19/08/30 10:54:56 INFO storage.ShuffleBlockFetcherIterator: Getting 4675 non-empty blocks including 8 local blocks and 4667 remote blocks
+19/08/30 10:54:56 INFO storage.ShuffleBlockFetcherIterator: Started 35 remote fetches in 15 ms
+19/08/30 10:56:51 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 10:56:51 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/30 11:02:50 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190830084117_0001_r_004370_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven5000G/HSsort-output/_temporary/0/task_20190830084117_0001_r_004370
+19/08/30 11:02:50 INFO mapred.SparkHadoopMapRedUtil: attempt_20190830084117_0001_r_004370_0: Committed
+19/08/30 11:02:50 INFO executor.Executor: Finished task 4370.0 in stage 1.0 (TID 9046). 1299 bytes result sent to driver
+19/08/30 11:06:31 INFO executor.CoarseGrainedExecutorBackend: Driver commanded a shutdown
+19/08/30 11:06:31 ERROR executor.CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

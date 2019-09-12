@@ -1,0 +1,160 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker0/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker0/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=39871" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39871" "--executor-id" "51" "--hostname" "10.1.1.4" "--cores" "4" "--app-id" "app-20190829211953-0026" "--worker-url" "spark://Worker@10.1.1.4:46217"
+========================================
+
+19/08/29 21:19:53 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 73285@mdc-ch1-cust4
+19/08/29 21:19:53 INFO util.SignalUtils: Registered signal handler for TERM
+19/08/29 21:19:53 INFO util.SignalUtils: Registered signal handler for HUP
+19/08/29 21:19:53 INFO util.SignalUtils: Registered signal handler for INT
+19/08/29 21:19:54 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/08/29 21:19:54 INFO spark.SecurityManager: Changing view acls to: root,nnnnnven
+19/08/29 21:19:54 INFO spark.SecurityManager: Changing modify acls to: root,nnnnnven
+19/08/29 21:19:54 INFO spark.SecurityManager: Changing view acls groups to: 
+19/08/29 21:19:54 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/08/29 21:19:54 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, nnnnnven); groups with view permissions: Set(); users  with modify permissions: Set(root, nnnnnven); groups with modify permissions: Set()
+19/08/29 21:19:54 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:39871 after 54 ms (0 ms spent in bootstraps)
+19/08/29 21:19:54 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/08/29 21:19:54 INFO spark.SecurityManager: Changing view acls to: root,nnnnnven
+19/08/29 21:19:54 INFO spark.SecurityManager: Changing modify acls to: root,nnnnnven
+19/08/29 21:19:54 INFO spark.SecurityManager: Changing view acls groups to: 
+19/08/29 21:19:54 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/08/29 21:19:54 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, nnnnnven); groups with view permissions: Set(); users  with modify permissions: Set(root, nnnnnven); groups with modify permissions: Set()
+19/08/29 21:19:54 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:39871 after 1 ms (0 ms spent in bootstraps)
+19/08/29 21:19:54 INFO storage.DiskBlockManager: Created local directory at /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-be945a2e-b37e-4874-87fc-163fdc91b32c/blockmgr-98b5f15e-27bc-4aed-b727-637dc107bda2
+19/08/29 21:19:54 INFO memory.MemoryStore: MemoryStore started with capacity 2.5 GB
+19/08/29 21:19:54 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39871
+19/08/29 21:19:54 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@10.1.1.4:46217
+19/08/29 21:19:54 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:46217 after 6 ms (0 ms spent in bootstraps)
+19/08/29 21:19:54 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@10.1.1.4:46217
+19/08/29 21:19:54 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/08/29 21:19:54 INFO executor.Executor: Starting executor ID 51 on host 10.1.1.4
+19/08/29 21:19:55 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33997.
+19/08/29 21:19:55 INFO netty.NettyBlockTransferService: Server created on 10.1.1.4:33997
+19/08/29 21:19:55 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/08/29 21:19:55 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(51, 10.1.1.4, 33997, None)
+19/08/29 21:19:55 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(51, 10.1.1.4, 33997, None)
+19/08/29 21:19:55 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(51, 10.1.1.4, 33997, None)
+19/08/29 21:19:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 20
+19/08/29 21:19:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 21
+19/08/29 21:19:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 22
+19/08/29 21:19:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 23
+19/08/29 21:19:55 INFO executor.Executor: Running task 22.0 in stage 0.0 (TID 22)
+19/08/29 21:19:55 INFO executor.Executor: Running task 20.0 in stage 0.0 (TID 20)
+19/08/29 21:19:55 INFO executor.Executor: Running task 21.0 in stage 0.0 (TID 21)
+19/08/29 21:19:55 INFO executor.Executor: Running task 23.0 in stage 0.0 (TID 23)
+19/08/29 21:19:55 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:39871/jars/spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar with timestamp 1567138793216
+19/08/29 21:19:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:39871 after 1 ms (0 ms spent in bootstraps)
+19/08/29 21:19:55 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:39871/jars/spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar to /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-be945a2e-b37e-4874-87fc-163fdc91b32c/spark-26960720-a112-4068-8d90-8e192f073f0e/fetchFileTemp2924022212056635692.tmp
+19/08/29 21:19:55 INFO util.Utils: Copying /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-be945a2e-b37e-4874-87fc-163fdc91b32c/spark-26960720-a112-4068-8d90-8e192f073f0e/3361181551567138793216_cache to /var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190829211953-0026/51/./spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar
+19/08/29 21:19:55 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190829211953-0026/51/./spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar to class loader
+19/08/29 21:19:55 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 0
+19/08/29 21:19:55 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:40561 after 2 ms (0 ms spent in bootstraps)
+19/08/29 21:19:55 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 24.4 KB, free 2.5 GB)
+19/08/29 21:19:55 INFO broadcast.TorrentBroadcast: Reading broadcast variable 0 took 135 ms
+19/08/29 21:19:55 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 68.5 KB, free 2.5 GB)
+19/08/29 21:19:55 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/29 21:19:55 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/29 21:19:55 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/29 21:19:55 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/29 21:19:56 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/29 21:19:56 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/29 21:19:56 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/29 21:19:56 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/29 21:36:01 WARN hdfs.DFSClient: DFSOutputStream ResponseProcessor exception  for block BP-1030775781-10.1.1.4-1567136922127:blk_1073741967_1143
+java.io.IOException: Bad response ERROR for block BP-1030775781-10.1.1.4-1567136922127:blk_1073741967_1143 from datanode DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer$ResponseProcessor.run(DFSOutputStream.java:766)
+19/08/29 21:36:01 WARN hdfs.DFSClient: DFSOutputStream ResponseProcessor exception  for block BP-1030775781-10.1.1.4-1567136922127:blk_1073741969_1145
+java.io.IOException: Bad response ERROR for block BP-1030775781-10.1.1.4-1567136922127:blk_1073741969_1145 from datanode DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer$ResponseProcessor.run(DFSOutputStream.java:766)
+19/08/29 21:36:01 WARN hdfs.DFSClient: DFSOutputStream ResponseProcessor exception  for block BP-1030775781-10.1.1.4-1567136922127:blk_1073741959_1135
+java.io.IOException: Bad response ERROR for block BP-1030775781-10.1.1.4-1567136922127:blk_1073741959_1135 from datanode DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer$ResponseProcessor.run(DFSOutputStream.java:766)
+19/08/29 21:36:01 WARN hdfs.DFSClient: DFSOutputStream ResponseProcessor exception  for block BP-1030775781-10.1.1.4-1567136922127:blk_1073741951_1127
+java.io.IOException: Bad response ERROR for block BP-1030775781-10.1.1.4-1567136922127:blk_1073741951_1127 from datanode DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer$ResponseProcessor.run(DFSOutputStream.java:766)
+19/08/29 21:36:01 WARN hdfs.DFSClient: Error Recovery for block BP-1030775781-10.1.1.4-1567136922127:blk_1073741959_1135 in pipeline DatanodeInfoWithStorage[10.1.1.4:50010,DS-44001805-6082-4944-9ca0-c98e6ad424ce,DISK], DatanodeInfoWithStorage[10.1.2.4:50010,DS-2ab08441-a0df-4b98-a095-6d6cf97380d8,DISK], DatanodeInfoWithStorage[10.1.3.4:50010,DS-8587b757-3af4-43b0-b930-091f92898ab5,DISK], DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK], DatanodeInfoWithStorage[10.1.7.4:50010,DS-f6fc30ad-0069-49bc-9b9e-041dfaafc6e0,DISK], DatanodeInfoWithStorage[10.1.8.4:50010,DS-ba58489f-a009-4560-8eee-0784f5e89e12,DISK], DatanodeInfoWithStorage[10.1.6.4:50010,DS-5ff65642-cd52-41bf-b27d-345842ad2283,DISK], DatanodeInfoWithStorage[10.1.5.4:50010,DS-6fdedfea-25ef-4c3b-ac95-8dbf917a4430,DISK]: bad datanode DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]
+19/08/29 21:36:01 WARN hdfs.DFSClient: Error Recovery for block BP-1030775781-10.1.1.4-1567136922127:blk_1073741951_1127 in pipeline DatanodeInfoWithStorage[10.1.1.4:50010,DS-44001805-6082-4944-9ca0-c98e6ad424ce,DISK], DatanodeInfoWithStorage[10.1.6.4:50010,DS-5ff65642-cd52-41bf-b27d-345842ad2283,DISK], DatanodeInfoWithStorage[10.1.8.4:50010,DS-ba58489f-a009-4560-8eee-0784f5e89e12,DISK], DatanodeInfoWithStorage[10.1.7.4:50010,DS-f6fc30ad-0069-49bc-9b9e-041dfaafc6e0,DISK], DatanodeInfoWithStorage[10.1.2.4:50010,DS-2ab08441-a0df-4b98-a095-6d6cf97380d8,DISK], DatanodeInfoWithStorage[10.1.5.4:50010,DS-6fdedfea-25ef-4c3b-ac95-8dbf917a4430,DISK], DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK], DatanodeInfoWithStorage[10.1.3.4:50010,DS-8587b757-3af4-43b0-b930-091f92898ab5,DISK]: bad datanode DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]
+19/08/29 21:36:01 WARN hdfs.DFSClient: Error Recovery for block BP-1030775781-10.1.1.4-1567136922127:blk_1073741967_1143 in pipeline DatanodeInfoWithStorage[10.1.1.4:50010,DS-44001805-6082-4944-9ca0-c98e6ad424ce,DISK], DatanodeInfoWithStorage[10.1.6.4:50010,DS-5ff65642-cd52-41bf-b27d-345842ad2283,DISK], DatanodeInfoWithStorage[10.1.7.4:50010,DS-f6fc30ad-0069-49bc-9b9e-041dfaafc6e0,DISK], DatanodeInfoWithStorage[10.1.3.4:50010,DS-8587b757-3af4-43b0-b930-091f92898ab5,DISK], DatanodeInfoWithStorage[10.1.8.4:50010,DS-ba58489f-a009-4560-8eee-0784f5e89e12,DISK], DatanodeInfoWithStorage[10.1.5.4:50010,DS-6fdedfea-25ef-4c3b-ac95-8dbf917a4430,DISK], DatanodeInfoWithStorage[10.1.2.4:50010,DS-2ab08441-a0df-4b98-a095-6d6cf97380d8,DISK], DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]: bad datanode DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]
+19/08/29 21:36:01 WARN hdfs.DFSClient: Error Recovery for block BP-1030775781-10.1.1.4-1567136922127:blk_1073741969_1145 in pipeline DatanodeInfoWithStorage[10.1.1.4:50010,DS-44001805-6082-4944-9ca0-c98e6ad424ce,DISK], DatanodeInfoWithStorage[10.1.6.4:50010,DS-5ff65642-cd52-41bf-b27d-345842ad2283,DISK], DatanodeInfoWithStorage[10.1.5.4:50010,DS-6fdedfea-25ef-4c3b-ac95-8dbf917a4430,DISK], DatanodeInfoWithStorage[10.1.2.4:50010,DS-2ab08441-a0df-4b98-a095-6d6cf97380d8,DISK], DatanodeInfoWithStorage[10.1.3.4:50010,DS-8587b757-3af4-43b0-b930-091f92898ab5,DISK], DatanodeInfoWithStorage[10.1.7.4:50010,DS-f6fc30ad-0069-49bc-9b9e-041dfaafc6e0,DISK], DatanodeInfoWithStorage[10.1.8.4:50010,DS-ba58489f-a009-4560-8eee-0784f5e89e12,DISK], DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]: bad datanode DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]
+19/08/29 21:36:04 INFO hdfs.DFSClient: Exception in createBlockOutputStream
+java.io.IOException: Got error, status message , ack with firstBadLink as 10.1.4.4:50010
+	at org.apache.hadoop.hdfs.protocol.datatransfer.DataTransferProtoUtil.checkBlockOpStatus(DataTransferProtoUtil.java:142)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.createBlockOutputStream(DFSOutputStream.java:1334)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1237)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:449)
+19/08/29 21:36:04 INFO hdfs.DFSClient: Abandoning BP-1030775781-10.1.1.4-1567136922127:blk_1073741979_1180
+19/08/29 21:36:04 INFO hdfs.DFSClient: Excluding datanode DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]
+19/08/29 21:36:37 INFO hdfs.DFSClient: Exception in createBlockOutputStream
+java.io.IOException: Got error, status message , ack with firstBadLink as 10.1.4.4:50010
+	at org.apache.hadoop.hdfs.protocol.datatransfer.DataTransferProtoUtil.checkBlockOpStatus(DataTransferProtoUtil.java:142)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.createBlockOutputStream(DFSOutputStream.java:1334)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1237)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:449)
+19/08/29 21:36:37 INFO hdfs.DFSClient: Abandoning BP-1030775781-10.1.1.4-1567136922127:blk_1073741987_1188
+19/08/29 21:36:37 INFO hdfs.DFSClient: Excluding datanode DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]
+19/08/29 21:36:51 INFO hdfs.DFSClient: Exception in createBlockOutputStream
+java.io.IOException: Got error, status message , ack with firstBadLink as 10.1.4.4:50010
+	at org.apache.hadoop.hdfs.protocol.datatransfer.DataTransferProtoUtil.checkBlockOpStatus(DataTransferProtoUtil.java:142)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.createBlockOutputStream(DFSOutputStream.java:1334)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1237)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:449)
+19/08/29 21:36:51 INFO hdfs.DFSClient: Abandoning BP-1030775781-10.1.1.4-1567136922127:blk_1073742011_1212
+19/08/29 21:36:51 INFO hdfs.DFSClient: Excluding datanode DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]
+19/08/29 21:36:57 INFO hdfs.DFSClient: Exception in createBlockOutputStream
+java.io.IOException: Got error, status message , ack with firstBadLink as 10.1.4.4:50010
+	at org.apache.hadoop.hdfs.protocol.datatransfer.DataTransferProtoUtil.checkBlockOpStatus(DataTransferProtoUtil.java:142)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.createBlockOutputStream(DFSOutputStream.java:1334)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1237)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:449)
+19/08/29 21:36:57 INFO hdfs.DFSClient: Abandoning BP-1030775781-10.1.1.4-1567136922127:blk_1073742013_1214
+19/08/29 21:36:57 INFO hdfs.DFSClient: Excluding datanode DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]
+19/08/29 21:47:48 INFO hdfs.DFSClient: Exception in createBlockOutputStream
+java.io.IOException: Got error, status message , ack with firstBadLink as 10.1.4.4:50010
+	at org.apache.hadoop.hdfs.protocol.datatransfer.DataTransferProtoUtil.checkBlockOpStatus(DataTransferProtoUtil.java:142)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.createBlockOutputStream(DFSOutputStream.java:1334)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1237)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:449)
+19/08/29 21:47:48 INFO hdfs.DFSClient: Abandoning BP-1030775781-10.1.1.4-1567136922127:blk_1073742125_1326
+19/08/29 21:47:48 INFO hdfs.DFSClient: Excluding datanode DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]
+19/08/29 21:47:48 INFO hdfs.DFSClient: Removing node DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK] from the excluded nodes list
+19/08/29 21:48:34 INFO hdfs.DFSClient: Exception in createBlockOutputStream
+java.io.IOException: Got error, status message , ack with firstBadLink as 10.1.4.4:50010
+	at org.apache.hadoop.hdfs.protocol.datatransfer.DataTransferProtoUtil.checkBlockOpStatus(DataTransferProtoUtil.java:142)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.createBlockOutputStream(DFSOutputStream.java:1334)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1237)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:449)
+19/08/29 21:48:34 INFO hdfs.DFSClient: Abandoning BP-1030775781-10.1.1.4-1567136922127:blk_1073742151_1352
+19/08/29 21:48:34 INFO hdfs.DFSClient: Excluding datanode DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]
+19/08/29 21:48:34 INFO hdfs.DFSClient: Removing node DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK] from the excluded nodes list
+19/08/29 21:48:36 INFO hdfs.DFSClient: Exception in createBlockOutputStream
+java.io.IOException: Got error, status message , ack with firstBadLink as 10.1.4.4:50010
+	at org.apache.hadoop.hdfs.protocol.datatransfer.DataTransferProtoUtil.checkBlockOpStatus(DataTransferProtoUtil.java:142)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.createBlockOutputStream(DFSOutputStream.java:1334)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1237)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:449)
+19/08/29 21:48:36 INFO hdfs.DFSClient: Abandoning BP-1030775781-10.1.1.4-1567136922127:blk_1073742155_1356
+19/08/29 21:48:36 INFO hdfs.DFSClient: Excluding datanode DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]
+19/08/29 21:48:36 INFO hdfs.DFSClient: Removing node DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK] from the excluded nodes list
+19/08/29 21:48:39 INFO hdfs.DFSClient: Exception in createBlockOutputStream
+java.io.IOException: Got error, status message , ack with firstBadLink as 10.1.4.4:50010
+	at org.apache.hadoop.hdfs.protocol.datatransfer.DataTransferProtoUtil.checkBlockOpStatus(DataTransferProtoUtil.java:142)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.createBlockOutputStream(DFSOutputStream.java:1334)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1237)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:449)
+19/08/29 21:48:39 INFO hdfs.DFSClient: Abandoning BP-1030775781-10.1.1.4-1567136922127:blk_1073742159_1360
+19/08/29 21:48:39 INFO hdfs.DFSClient: Excluding datanode DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK]
+19/08/29 21:48:39 INFO hdfs.DFSClient: Removing node DatanodeInfoWithStorage[10.1.4.4:50010,DS-ddf1b3ca-d989-4061-aed9-a1442a63a49d,DISK] from the excluded nodes list
+19/08/29 22:49:31 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190829211953_0001_r_000021_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/_temporary/0/task_20190829211953_0001_r_000021
+19/08/29 22:49:31 INFO mapred.SparkHadoopMapRedUtil: attempt_20190829211953_0001_r_000021_0: Committed
+19/08/29 22:49:31 INFO executor.Executor: Finished task 21.0 in stage 0.0 (TID 21). 912 bytes result sent to driver
+19/08/29 22:50:23 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190829211953_0001_r_000022_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/_temporary/0/task_20190829211953_0001_r_000022
+19/08/29 22:50:23 INFO mapred.SparkHadoopMapRedUtil: attempt_20190829211953_0001_r_000022_0: Committed
+19/08/29 22:50:23 INFO executor.Executor: Finished task 22.0 in stage 0.0 (TID 22). 912 bytes result sent to driver
+19/08/29 22:50:27 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190829211953_0001_r_000023_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/_temporary/0/task_20190829211953_0001_r_000023
+19/08/29 22:50:27 INFO mapred.SparkHadoopMapRedUtil: attempt_20190829211953_0001_r_000023_0: Committed
+19/08/29 22:50:27 INFO executor.Executor: Finished task 23.0 in stage 0.0 (TID 23). 869 bytes result sent to driver
+19/08/29 22:50:28 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190829211953_0001_r_000020_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/_temporary/0/task_20190829211953_0001_r_000020
+19/08/29 22:50:28 INFO mapred.SparkHadoopMapRedUtil: attempt_20190829211953_0001_r_000020_0: Committed
+19/08/29 22:50:28 INFO executor.Executor: Finished task 20.0 in stage 0.0 (TID 20). 869 bytes result sent to driver
+19/08/29 22:54:25 INFO executor.CoarseGrainedExecutorBackend: Driver commanded a shutdown
+19/08/29 22:54:25 ERROR executor.CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

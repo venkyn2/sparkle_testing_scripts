@@ -1,0 +1,1002 @@
+Spark Command: /opt/jdk1.8.0_131/jre/bin/java -cp /var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/ -Xmx1g org.apache.spark.deploy.worker.Worker --webui-port 8085 spark://mdc-ch1-cust4:7077 -h mdc-ch1-cust4
+========================================
+19/06/20 02:21:52 INFO worker.Worker: Started daemon with process name: 12328@mdc-ch1-cust4
+19/06/20 02:21:52 INFO util.SignalUtils: Registered signal handler for TERM
+19/06/20 02:21:52 INFO util.SignalUtils: Registered signal handler for HUP
+19/06/20 02:21:52 INFO util.SignalUtils: Registered signal handler for INT
+19/06/20 02:21:52 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/06/20 02:21:52 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 02:21:52 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 02:21:52 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 02:21:52 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 02:21:52 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 02:21:52 INFO util.Utils: Successfully started service 'sparkWorker' on port 37759.
+19/06/20 02:21:53 INFO worker.Worker: Starting Spark worker mdc-ch1-cust4:37759 with 144 cores, 1921.3 GB RAM
+19/06/20 02:21:53 INFO worker.Worker: Running Spark version 2.4.0
+19/06/20 02:21:53 INFO worker.Worker: Spark home: /var/tmp/spark2.0hpcplatform/multicore/worker2
+19/06/20 02:21:53 INFO util.log: Logging initialized @1020ms
+19/06/20 02:21:53 INFO server.Server: jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+19/06/20 02:21:53 INFO server.Server: Started @1057ms
+19/06/20 02:21:53 INFO server.AbstractConnector: Started ServerConnector@43505e2e{HTTP/1.1,[http/1.1]}{0.0.0.0:8085}
+19/06/20 02:21:53 INFO util.Utils: Successfully started service 'WorkerUI' on port 8085.
+19/06/20 02:21:53 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2fb17133{/logPage,null,AVAILABLE,@Spark}
+19/06/20 02:21:53 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@54a31fa1{/logPage/json,null,AVAILABLE,@Spark}
+19/06/20 02:21:53 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@12a81a4e{/,null,AVAILABLE,@Spark}
+19/06/20 02:21:53 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@39a195a0{/json,null,AVAILABLE,@Spark}
+19/06/20 02:21:53 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7533cb22{/static,null,AVAILABLE,@Spark}
+19/06/20 02:21:53 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@359169c0{/log,null,AVAILABLE,@Spark}
+19/06/20 02:21:53 INFO ui.WorkerWebUI: Bound WorkerWebUI to 0.0.0.0, and started at http://mdc-ch1-cust4.mdc.ext.hpe.com:8085
+19/06/20 02:21:53 INFO worker.Worker: Connecting to master mdc-ch1-cust4:7077...
+19/06/20 02:21:53 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1a708398{/metrics/json,null,AVAILABLE,@Spark}
+19/06/20 02:21:53 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:7077 after 19 ms (0 ms spent in bootstraps)
+19/06/20 02:21:53 INFO worker.Worker: Successfully registered with master spark://mdc-ch1-cust4.mdc.ext.hpe.com:7077
+19/06/20 03:20:05 INFO worker.Worker: Asked to launch executor app-20190620032005-0000/64 for TeraGen (1000GB)
+19/06/20 03:20:05 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 03:20:05 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 03:20:05 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 03:20:05 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 03:20:05 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 03:20:05 INFO worker.Worker: Asked to launch executor app-20190620032005-0000/65 for TeraGen (1000GB)
+19/06/20 03:20:05 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 03:20:05 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 03:20:05 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 03:20:05 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 03:20:05 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 03:20:05 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=38873" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:38873" "--executor-id" "64" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620032005-0000" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 03:20:05 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=38873" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:38873" "--executor-id" "65" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620032005-0000" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 03:20:06 INFO worker.Worker: Asked to kill executor app-20190620032005-0000/65
+19/06/20 03:20:06 INFO worker.Worker: Asked to kill executor app-20190620032005-0000/64
+19/06/20 03:20:06 INFO worker.ExecutorRunner: Runner thread for executor app-20190620032005-0000/65 interrupted
+19/06/20 03:20:06 INFO worker.ExecutorRunner: Runner thread for executor app-20190620032005-0000/64 interrupted
+19/06/20 03:20:06 INFO worker.ExecutorRunner: Killing process!
+19/06/20 03:20:06 INFO worker.ExecutorRunner: Killing process!
+19/06/20 03:20:06 INFO worker.Worker: Executor app-20190620032005-0000/65 finished with state KILLED exitStatus 143
+19/06/20 03:20:06 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 65
+19/06/20 03:20:06 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620032005-0000, execId=65)
+19/06/20 03:20:06 INFO worker.Worker: Executor app-20190620032005-0000/64 finished with state KILLED exitStatus 143
+19/06/20 03:20:06 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 64
+19/06/20 03:20:06 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620032005-0000, execId=64)
+19/06/20 03:20:06 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620032005-0000 removed, cleanupLocalDirs = true
+19/06/20 03:20:06 INFO worker.Worker: Cleaning up local directories for application app-20190620032005-0000
+19/06/20 03:23:50 INFO worker.Worker: Asked to launch executor app-20190620032350-0001/64 for TeraGen (1000GB)
+19/06/20 03:23:50 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 03:23:50 INFO worker.Worker: Asked to launch executor app-20190620032350-0001/65 for TeraGen (1000GB)
+19/06/20 03:23:50 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 03:23:50 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 03:23:50 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 03:23:50 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 03:23:50 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 03:23:50 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 03:23:50 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 03:23:50 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 03:23:50 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 03:23:50 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=37855" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:37855" "--executor-id" "65" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620032350-0001" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 03:23:50 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=37855" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:37855" "--executor-id" "64" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620032350-0001" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 03:32:31 INFO worker.Worker: Asked to kill executor app-20190620032350-0001/65
+19/06/20 03:32:31 INFO worker.Worker: Asked to kill executor app-20190620032350-0001/64
+19/06/20 03:32:31 INFO worker.ExecutorRunner: Runner thread for executor app-20190620032350-0001/65 interrupted
+19/06/20 03:32:31 INFO worker.ExecutorRunner: Runner thread for executor app-20190620032350-0001/64 interrupted
+19/06/20 03:32:31 INFO worker.ExecutorRunner: Killing process!
+19/06/20 03:32:31 INFO worker.ExecutorRunner: Killing process!
+19/06/20 03:32:32 INFO worker.Worker: Executor app-20190620032350-0001/64 finished with state KILLED exitStatus 143
+19/06/20 03:32:32 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 64
+19/06/20 03:32:32 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620032350-0001, execId=64)
+19/06/20 03:32:32 INFO worker.Worker: Executor app-20190620032350-0001/65 finished with state KILLED exitStatus 143
+19/06/20 03:32:32 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 65
+19/06/20 03:32:32 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620032350-0001, execId=65)
+19/06/20 03:32:32 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620032350-0001 removed, cleanupLocalDirs = true
+19/06/20 03:32:32 INFO worker.Worker: Cleaning up local directories for application app-20190620032350-0001
+19/06/20 03:33:24 INFO worker.Worker: Asked to launch executor app-20190620033324-0002/64 for TeraSort
+19/06/20 03:33:24 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 03:33:24 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 03:33:24 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 03:33:24 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 03:33:24 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 03:33:24 INFO worker.Worker: Asked to launch executor app-20190620033324-0002/65 for TeraSort
+19/06/20 03:33:24 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 03:33:24 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 03:33:24 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 03:33:24 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 03:33:24 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 03:33:24 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.driver.port=39611" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39611" "--executor-id" "65" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620033324-0002" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 03:33:24 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.driver.port=39611" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39611" "--executor-id" "64" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620033324-0002" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 03:43:21 INFO worker.Worker: Asked to kill executor app-20190620033324-0002/65
+19/06/20 03:43:21 INFO worker.ExecutorRunner: Runner thread for executor app-20190620033324-0002/65 interrupted
+19/06/20 03:43:21 INFO worker.ExecutorRunner: Killing process!
+19/06/20 03:43:21 INFO worker.Worker: Asked to kill executor app-20190620033324-0002/64
+19/06/20 03:43:21 INFO worker.ExecutorRunner: Runner thread for executor app-20190620033324-0002/64 interrupted
+19/06/20 03:43:21 INFO worker.ExecutorRunner: Killing process!
+19/06/20 03:43:21 INFO worker.Worker: Executor app-20190620033324-0002/65 finished with state KILLED exitStatus 143
+19/06/20 03:43:21 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 65
+19/06/20 03:43:21 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620033324-0002, execId=65)
+19/06/20 03:43:21 INFO worker.Worker: Executor app-20190620033324-0002/64 finished with state KILLED exitStatus 143
+19/06/20 03:43:21 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 64
+19/06/20 03:43:21 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620033324-0002, execId=64)
+19/06/20 03:43:21 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620033324-0002 removed, cleanupLocalDirs = true
+19/06/20 03:43:21 INFO worker.Worker: Cleaning up local directories for application app-20190620033324-0002
+19/06/20 03:48:29 INFO worker.Worker: Asked to launch executor app-20190620034829-0003/64 for TeraSort
+19/06/20 03:48:29 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 03:48:29 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 03:48:29 INFO worker.Worker: Asked to launch executor app-20190620034829-0003/65 for TeraSort
+19/06/20 03:48:29 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 03:48:29 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 03:48:29 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 03:48:29 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 03:48:29 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 03:48:29 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 03:48:29 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 03:48:29 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 03:48:29 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.driver.port=37033" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:37033" "--executor-id" "64" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620034829-0003" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 03:48:29 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.driver.port=37033" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:37033" "--executor-id" "65" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620034829-0003" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 04:00:32 INFO worker.Worker: Asked to kill executor app-20190620034829-0003/65
+19/06/20 04:00:32 INFO worker.Worker: Asked to kill executor app-20190620034829-0003/64
+19/06/20 04:00:32 INFO worker.ExecutorRunner: Runner thread for executor app-20190620034829-0003/65 interrupted
+19/06/20 04:00:32 INFO worker.ExecutorRunner: Runner thread for executor app-20190620034829-0003/64 interrupted
+19/06/20 04:00:32 INFO worker.ExecutorRunner: Killing process!
+19/06/20 04:00:32 INFO worker.ExecutorRunner: Killing process!
+19/06/20 04:00:32 INFO worker.Worker: Executor app-20190620034829-0003/64 finished with state KILLED exitStatus 143
+19/06/20 04:00:32 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 64
+19/06/20 04:00:32 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620034829-0003, execId=64)
+19/06/20 04:00:33 INFO worker.Worker: Executor app-20190620034829-0003/65 finished with state KILLED exitStatus 143
+19/06/20 04:00:33 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 65
+19/06/20 04:00:33 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620034829-0003, execId=65)
+19/06/20 04:00:33 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620034829-0003 removed, cleanupLocalDirs = true
+19/06/20 04:00:33 INFO worker.Worker: Cleaning up local directories for application app-20190620034829-0003
+19/06/20 04:17:45 INFO worker.Worker: Asked to launch executor app-20190620041745-0004/64 for TeraSort
+19/06/20 04:17:45 INFO worker.Worker: Asked to launch executor app-20190620041745-0004/65 for TeraSort
+19/06/20 04:17:45 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 04:17:45 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 04:17:45 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 04:17:45 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 04:17:45 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 04:17:45 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 04:17:45 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 04:17:45 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 04:17:45 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 04:17:45 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 04:17:45 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-Dspark.driver.port=44895" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:44895" "--executor-id" "65" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620041745-0004" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 04:17:45 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-Dspark.driver.port=44895" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:44895" "--executor-id" "64" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620041745-0004" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 04:39:56 INFO worker.Worker: Asked to kill executor app-20190620041745-0004/65
+19/06/20 04:39:56 INFO worker.ExecutorRunner: Runner thread for executor app-20190620041745-0004/65 interrupted
+19/06/20 04:39:56 INFO worker.Worker: Asked to kill executor app-20190620041745-0004/64
+19/06/20 04:39:56 INFO worker.ExecutorRunner: Killing process!
+19/06/20 04:39:56 INFO worker.ExecutorRunner: Runner thread for executor app-20190620041745-0004/64 interrupted
+19/06/20 04:39:56 INFO worker.ExecutorRunner: Killing process!
+19/06/20 04:39:57 INFO worker.Worker: Executor app-20190620041745-0004/64 finished with state KILLED exitStatus 143
+19/06/20 04:39:57 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 64
+19/06/20 04:39:57 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620041745-0004, execId=64)
+19/06/20 04:39:57 INFO worker.Worker: Executor app-20190620041745-0004/65 finished with state KILLED exitStatus 143
+19/06/20 04:39:57 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 65
+19/06/20 04:39:57 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620041745-0004, execId=65)
+19/06/20 04:39:57 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620041745-0004 removed, cleanupLocalDirs = true
+19/06/20 04:39:57 INFO worker.Worker: Cleaning up local directories for application app-20190620041745-0004
+19/06/20 04:45:36 INFO worker.Worker: Asked to launch executor app-20190620044536-0005/64 for TeraSort
+19/06/20 04:45:36 INFO worker.Worker: Asked to launch executor app-20190620044536-0005/65 for TeraSort
+19/06/20 04:45:36 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 04:45:36 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 04:45:36 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 04:45:36 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 04:45:36 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 04:45:36 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 04:45:36 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 04:45:36 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 04:45:36 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 04:45:36 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 04:45:36 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx16384M" "-Dspark.driver.port=33771" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:33771" "--executor-id" "64" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620044536-0005" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 04:45:36 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx16384M" "-Dspark.driver.port=33771" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:33771" "--executor-id" "65" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620044536-0005" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 05:00:32 INFO worker.Worker: Asked to kill executor app-20190620044536-0005/65
+19/06/20 05:00:32 INFO worker.Worker: Asked to kill executor app-20190620044536-0005/64
+19/06/20 05:00:32 INFO worker.ExecutorRunner: Runner thread for executor app-20190620044536-0005/65 interrupted
+19/06/20 05:00:32 INFO worker.ExecutorRunner: Runner thread for executor app-20190620044536-0005/64 interrupted
+19/06/20 05:00:32 INFO worker.ExecutorRunner: Killing process!
+19/06/20 05:00:32 INFO worker.ExecutorRunner: Killing process!
+19/06/20 05:00:33 INFO worker.Worker: Executor app-20190620044536-0005/65 finished with state KILLED exitStatus 0
+19/06/20 05:00:33 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 65
+19/06/20 05:00:33 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620044536-0005, execId=65)
+19/06/20 05:00:33 INFO worker.Worker: Executor app-20190620044536-0005/64 finished with state KILLED exitStatus 143
+19/06/20 05:00:33 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 64
+19/06/20 05:00:33 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620044536-0005, execId=64)
+19/06/20 05:00:33 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620044536-0005 removed, cleanupLocalDirs = true
+19/06/20 05:00:33 INFO worker.Worker: Cleaning up local directories for application app-20190620044536-0005
+19/06/20 05:32:32 INFO worker.Worker: Asked to launch executor app-20190620053232-0006/64 for TeraSort
+19/06/20 05:32:32 INFO worker.Worker: Asked to launch executor app-20190620053232-0006/65 for TeraSort
+19/06/20 05:32:32 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 05:32:32 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 05:32:32 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 05:32:32 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 05:32:32 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 05:32:32 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 05:32:32 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 05:32:32 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 05:32:32 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 05:32:32 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 05:32:32 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx16384M" "-Dspark.driver.port=34283" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:34283" "--executor-id" "65" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620053232-0006" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 05:32:33 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx16384M" "-Dspark.driver.port=34283" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:34283" "--executor-id" "64" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620053232-0006" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 05:38:40 INFO worker.Worker: Asked to kill executor app-20190620053232-0006/65
+19/06/20 05:38:40 INFO worker.ExecutorRunner: Runner thread for executor app-20190620053232-0006/65 interrupted
+19/06/20 05:38:40 INFO worker.ExecutorRunner: Killing process!
+19/06/20 05:38:40 INFO worker.Worker: Asked to kill executor app-20190620053232-0006/64
+19/06/20 05:38:40 INFO worker.ExecutorRunner: Runner thread for executor app-20190620053232-0006/64 interrupted
+19/06/20 05:38:40 INFO worker.ExecutorRunner: Killing process!
+19/06/20 05:38:40 INFO worker.Worker: Executor app-20190620053232-0006/64 finished with state KILLED exitStatus 143
+19/06/20 05:38:40 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 64
+19/06/20 05:38:40 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620053232-0006, execId=64)
+19/06/20 05:38:40 INFO worker.Worker: Executor app-20190620053232-0006/65 finished with state KILLED exitStatus 143
+19/06/20 05:38:40 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 65
+19/06/20 05:38:40 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620053232-0006, execId=65)
+19/06/20 05:38:40 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620053232-0006 removed, cleanupLocalDirs = true
+19/06/20 05:38:40 INFO worker.Worker: Cleaning up local directories for application app-20190620053232-0006
+19/06/20 05:40:58 INFO worker.Worker: Asked to launch executor app-20190620054058-0007/64 for TeraSort
+19/06/20 05:40:58 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 05:40:58 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 05:40:58 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 05:40:58 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 05:40:58 INFO worker.Worker: Asked to launch executor app-20190620054058-0007/65 for TeraSort
+19/06/20 05:40:58 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 05:40:58 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 05:40:58 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 05:40:58 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 05:40:58 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 05:40:58 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 05:40:58 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx16384M" "-Dspark.driver.port=40715" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:40715" "--executor-id" "64" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620054058-0007" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 05:40:58 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx16384M" "-Dspark.driver.port=40715" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:40715" "--executor-id" "65" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620054058-0007" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 05:41:15 INFO worker.Worker: Asked to kill executor app-20190620054058-0007/65
+19/06/20 05:41:15 INFO worker.ExecutorRunner: Runner thread for executor app-20190620054058-0007/65 interrupted
+19/06/20 05:41:15 INFO worker.ExecutorRunner: Killing process!
+19/06/20 05:41:15 INFO worker.Worker: Asked to kill executor app-20190620054058-0007/64
+19/06/20 05:41:15 INFO worker.ExecutorRunner: Runner thread for executor app-20190620054058-0007/64 interrupted
+19/06/20 05:41:15 INFO worker.ExecutorRunner: Killing process!
+19/06/20 05:41:15 INFO worker.Worker: Executor app-20190620054058-0007/65 finished with state KILLED exitStatus 143
+19/06/20 05:41:15 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 65
+19/06/20 05:41:15 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620054058-0007, execId=65)
+19/06/20 05:41:15 INFO worker.Worker: Executor app-20190620054058-0007/64 finished with state KILLED exitStatus 143
+19/06/20 05:41:15 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 64
+19/06/20 05:41:15 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620054058-0007, execId=64)
+19/06/20 05:41:15 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620054058-0007 removed, cleanupLocalDirs = true
+19/06/20 05:41:15 INFO worker.Worker: Cleaning up local directories for application app-20190620054058-0007
+19/06/20 05:42:43 INFO worker.Worker: Asked to launch executor app-20190620054243-0008/64 for TeraSort
+19/06/20 05:42:43 INFO worker.Worker: Asked to launch executor app-20190620054243-0008/65 for TeraSort
+19/06/20 05:42:43 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 05:42:43 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 05:42:43 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 05:42:43 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 05:42:43 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 05:42:43 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 05:42:43 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 05:42:43 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 05:42:43 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 05:42:43 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 05:42:43 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.driver.port=34747" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:34747" "--executor-id" "64" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620054243-0008" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 05:42:43 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.driver.port=34747" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:34747" "--executor-id" "65" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620054243-0008" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 06:47:43 INFO worker.Worker: Asked to kill executor app-20190620054243-0008/65
+19/06/20 06:47:43 INFO worker.ExecutorRunner: Runner thread for executor app-20190620054243-0008/65 interrupted
+19/06/20 06:47:43 INFO worker.ExecutorRunner: Killing process!
+19/06/20 06:47:43 INFO worker.Worker: Asked to launch executor app-20190620054243-0008/103 for TeraSort
+19/06/20 06:47:43 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 06:47:43 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 06:47:43 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 06:47:43 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 06:47:43 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 06:47:43 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.driver.port=34747" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:34747" "--executor-id" "103" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620054243-0008" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 06:47:52 INFO worker.Worker: Executor app-20190620054243-0008/65 finished with state KILLED exitStatus 143
+19/06/20 06:47:52 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 65
+19/06/20 06:47:52 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620054243-0008, execId=65)
+19/06/20 07:17:56 INFO worker.Worker: Asked to kill executor app-20190620054243-0008/64
+19/06/20 07:17:56 INFO worker.ExecutorRunner: Runner thread for executor app-20190620054243-0008/64 interrupted
+19/06/20 07:17:56 INFO worker.ExecutorRunner: Killing process!
+19/06/20 07:17:56 INFO worker.Worker: Asked to kill executor app-20190620054243-0008/103
+19/06/20 07:17:56 INFO worker.ExecutorRunner: Runner thread for executor app-20190620054243-0008/103 interrupted
+19/06/20 07:17:56 INFO worker.ExecutorRunner: Killing process!
+19/06/20 07:17:59 INFO worker.Worker: Executor app-20190620054243-0008/64 finished with state KILLED exitStatus 143
+19/06/20 07:17:59 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 64
+19/06/20 07:17:59 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620054243-0008, execId=64)
+19/06/20 07:17:59 INFO worker.Worker: Executor app-20190620054243-0008/103 finished with state KILLED exitStatus 143
+19/06/20 07:17:59 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 103
+19/06/20 07:17:59 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620054243-0008, execId=103)
+19/06/20 07:17:59 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620054243-0008 removed, cleanupLocalDirs = true
+19/06/20 07:17:59 INFO worker.Worker: Cleaning up local directories for application app-20190620054243-0008
+19/06/20 07:33:35 INFO worker.Worker: Asked to launch executor app-20190620073335-0009/64 for TeraSort
+19/06/20 07:33:35 INFO worker.Worker: Asked to launch executor app-20190620073335-0009/65 for TeraSort
+19/06/20 07:33:35 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 07:33:35 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 07:33:35 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 07:33:35 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 07:33:35 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 07:33:35 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 07:33:35 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 07:33:35 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 07:33:35 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 07:33:35 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 07:33:35 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.network.timeout=40000" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-Dspark.driver.port=37083" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:37083" "--executor-id" "65" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620073335-0009" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 07:33:35 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.network.timeout=40000" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-Dspark.driver.port=37083" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:37083" "--executor-id" "64" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620073335-0009" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 08:47:39 INFO worker.Worker: Asked to kill executor app-20190620073335-0009/65
+19/06/20 08:47:39 INFO worker.Worker: Asked to kill executor app-20190620073335-0009/64
+19/06/20 08:47:39 INFO worker.ExecutorRunner: Runner thread for executor app-20190620073335-0009/65 interrupted
+19/06/20 08:47:39 INFO worker.ExecutorRunner: Runner thread for executor app-20190620073335-0009/64 interrupted
+19/06/20 08:47:39 INFO worker.ExecutorRunner: Killing process!
+19/06/20 08:47:39 INFO worker.ExecutorRunner: Killing process!
+19/06/20 08:47:42 INFO worker.Worker: Executor app-20190620073335-0009/65 finished with state KILLED exitStatus 143
+19/06/20 08:47:42 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 65
+19/06/20 08:47:42 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620073335-0009, execId=65)
+19/06/20 08:47:45 INFO worker.Worker: Executor app-20190620073335-0009/64 finished with state KILLED exitStatus 143
+19/06/20 08:47:45 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 64
+19/06/20 08:47:45 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620073335-0009, execId=64)
+19/06/20 08:47:45 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620073335-0009 removed, cleanupLocalDirs = true
+19/06/20 08:47:45 INFO worker.Worker: Cleaning up local directories for application app-20190620073335-0009
+19/06/20 08:58:25 INFO worker.Worker: Asked to launch executor app-20190620085825-0010/64 for TeraGen (2TB)
+19/06/20 08:58:25 INFO worker.Worker: Asked to launch executor app-20190620085825-0010/65 for TeraGen (2TB)
+19/06/20 08:58:25 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 08:58:25 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 08:58:25 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 08:58:25 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 08:58:25 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 08:58:25 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 08:58:25 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 08:58:25 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 08:58:25 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 08:58:25 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 08:58:25 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.driver.port=41135" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:41135" "--executor-id" "64" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620085825-0010" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 08:58:25 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.driver.port=41135" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:41135" "--executor-id" "65" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620085825-0010" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 09:19:30 INFO worker.Worker: Asked to kill executor app-20190620085825-0010/65
+19/06/20 09:19:30 INFO worker.Worker: Asked to kill executor app-20190620085825-0010/64
+19/06/20 09:19:30 INFO worker.ExecutorRunner: Runner thread for executor app-20190620085825-0010/65 interrupted
+19/06/20 09:19:30 INFO worker.ExecutorRunner: Runner thread for executor app-20190620085825-0010/64 interrupted
+19/06/20 09:19:30 INFO worker.ExecutorRunner: Killing process!
+19/06/20 09:19:30 INFO worker.ExecutorRunner: Killing process!
+19/06/20 09:19:30 INFO worker.Worker: Executor app-20190620085825-0010/64 finished with state KILLED exitStatus 143
+19/06/20 09:19:30 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 64
+19/06/20 09:19:30 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620085825-0010, execId=64)
+19/06/20 09:19:30 INFO worker.Worker: Executor app-20190620085825-0010/65 finished with state KILLED exitStatus 143
+19/06/20 09:19:30 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 65
+19/06/20 09:19:30 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620085825-0010, execId=65)
+19/06/20 09:19:30 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620085825-0010 removed, cleanupLocalDirs = true
+19/06/20 09:19:30 INFO worker.Worker: Cleaning up local directories for application app-20190620085825-0010
+19/06/20 09:26:31 INFO worker.Worker: Asked to launch executor app-20190620092631-0011/64 for TeraSort
+19/06/20 09:26:31 INFO worker.Worker: Asked to launch executor app-20190620092631-0011/65 for TeraSort
+19/06/20 09:26:31 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 09:26:31 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 09:26:31 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 09:26:31 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 09:26:31 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 09:26:31 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 09:26:31 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 09:26:31 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 09:26:31 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 09:26:31 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 09:26:31 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.driver.port=35591" "-Dspark.network.timeout=40000" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:35591" "--executor-id" "65" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620092631-0011" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 09:26:31 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.driver.port=35591" "-Dspark.network.timeout=40000" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:35591" "--executor-id" "64" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620092631-0011" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 11:08:45 INFO worker.Worker: Asked to kill executor app-20190620092631-0011/65
+19/06/20 11:08:45 INFO worker.Worker: Asked to kill executor app-20190620092631-0011/64
+19/06/20 11:08:45 INFO worker.ExecutorRunner: Runner thread for executor app-20190620092631-0011/65 interrupted
+19/06/20 11:08:45 INFO worker.ExecutorRunner: Killing process!
+19/06/20 11:08:45 INFO worker.ExecutorRunner: Runner thread for executor app-20190620092631-0011/64 interrupted
+19/06/20 11:08:45 INFO worker.ExecutorRunner: Killing process!
+19/06/20 11:08:48 INFO worker.Worker: Executor app-20190620092631-0011/64 finished with state KILLED exitStatus 143
+19/06/20 11:08:48 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 64
+19/06/20 11:08:48 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620092631-0011, execId=64)
+19/06/20 11:08:55 INFO worker.Worker: Executor app-20190620092631-0011/65 finished with state KILLED exitStatus 137
+19/06/20 11:08:55 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 65
+19/06/20 11:08:55 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620092631-0011, execId=65)
+19/06/20 11:08:55 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620092631-0011 removed, cleanupLocalDirs = true
+19/06/20 11:08:55 INFO worker.Worker: Cleaning up local directories for application app-20190620092631-0011
+19/06/20 11:14:20 INFO worker.Worker: Asked to launch executor app-20190620111420-0012/64 for TeraGen (3TB)
+19/06/20 11:14:20 INFO worker.Worker: Asked to launch executor app-20190620111420-0012/65 for TeraGen (3TB)
+19/06/20 11:14:20 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 11:14:20 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 11:14:20 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 11:14:20 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 11:14:20 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 11:14:20 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 11:14:20 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 11:14:20 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 11:14:20 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 11:14:20 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 11:14:20 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=43117" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:43117" "--executor-id" "64" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620111420-0012" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 11:14:20 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=43117" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:43117" "--executor-id" "65" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620111420-0012" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 11:41:25 INFO worker.Worker: Asked to kill executor app-20190620111420-0012/65
+19/06/20 11:41:25 INFO worker.Worker: Asked to kill executor app-20190620111420-0012/64
+19/06/20 11:41:25 INFO worker.ExecutorRunner: Runner thread for executor app-20190620111420-0012/64 interrupted
+19/06/20 11:41:25 INFO worker.ExecutorRunner: Killing process!
+19/06/20 11:41:25 INFO worker.ExecutorRunner: Runner thread for executor app-20190620111420-0012/65 interrupted
+19/06/20 11:41:25 INFO worker.ExecutorRunner: Killing process!
+19/06/20 11:41:25 INFO worker.Worker: Executor app-20190620111420-0012/65 finished with state KILLED exitStatus 143
+19/06/20 11:41:25 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 65
+19/06/20 11:41:25 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620111420-0012, execId=65)
+19/06/20 11:41:25 INFO worker.Worker: Executor app-20190620111420-0012/64 finished with state KILLED exitStatus 143
+19/06/20 11:41:25 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 64
+19/06/20 11:41:25 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620111420-0012, execId=64)
+19/06/20 11:41:25 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620111420-0012 removed, cleanupLocalDirs = true
+19/06/20 11:41:25 INFO worker.Worker: Cleaning up local directories for application app-20190620111420-0012
+19/06/20 11:45:12 INFO worker.Worker: Asked to launch executor app-20190620114512-0013/238 for TeraSort
+19/06/20 11:45:12 INFO worker.Worker: Asked to launch executor app-20190620114512-0013/239 for TeraSort
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 11:45:12 INFO worker.Worker: Asked to launch executor app-20190620114512-0013/240 for TeraSort
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 11:45:12 INFO worker.Worker: Asked to launch executor app-20190620114512-0013/241 for TeraSort
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 11:45:12 INFO worker.Worker: Asked to launch executor app-20190620114512-0013/242 for TeraSort
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 11:45:12 INFO worker.Worker: Asked to launch executor app-20190620114512-0013/243 for TeraSort
+19/06/20 11:45:12 INFO worker.Worker: Asked to launch executor app-20190620114512-0013/244 for TeraSort
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 11:45:12 INFO worker.Worker: Asked to launch executor app-20190620114512-0013/245 for TeraSort
+19/06/20 11:45:12 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 11:45:12 INFO worker.Worker: Asked to launch executor app-20190620114512-0013/246 for TeraSort
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 11:45:12 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 11:45:12 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 11:45:12 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.network.timeout=2000000" "-Dspark.driver.port=40545" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:40545" "--executor-id" "244" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620114512-0013" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 11:45:12 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.network.timeout=2000000" "-Dspark.driver.port=40545" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:40545" "--executor-id" "241" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620114512-0013" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 11:45:12 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.network.timeout=2000000" "-Dspark.driver.port=40545" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:40545" "--executor-id" "240" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620114512-0013" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 11:45:12 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.network.timeout=2000000" "-Dspark.driver.port=40545" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:40545" "--executor-id" "246" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620114512-0013" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 11:45:12 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.network.timeout=2000000" "-Dspark.driver.port=40545" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:40545" "--executor-id" "245" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620114512-0013" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 11:45:12 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.network.timeout=2000000" "-Dspark.driver.port=40545" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:40545" "--executor-id" "242" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620114512-0013" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 11:45:12 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.network.timeout=2000000" "-Dspark.driver.port=40545" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:40545" "--executor-id" "239" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620114512-0013" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 11:45:12 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.network.timeout=2000000" "-Dspark.driver.port=40545" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:40545" "--executor-id" "238" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620114512-0013" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 11:45:12 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.network.timeout=2000000" "-Dspark.driver.port=40545" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:40545" "--executor-id" "243" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620114512-0013" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 14:03:44 INFO worker.Worker: Asked to kill executor app-20190620114512-0013/245
+19/06/20 14:03:44 INFO worker.Worker: Asked to kill executor app-20190620114512-0013/244
+19/06/20 14:03:44 INFO worker.Worker: Asked to kill executor app-20190620114512-0013/238
+19/06/20 14:03:44 INFO worker.Worker: Asked to kill executor app-20190620114512-0013/241
+19/06/20 14:03:44 INFO worker.Worker: Asked to kill executor app-20190620114512-0013/240
+19/06/20 14:03:44 INFO worker.Worker: Asked to kill executor app-20190620114512-0013/243
+19/06/20 14:03:44 INFO worker.Worker: Asked to kill executor app-20190620114512-0013/246
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Runner thread for executor app-20190620114512-0013/238 interrupted
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Runner thread for executor app-20190620114512-0013/243 interrupted
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Runner thread for executor app-20190620114512-0013/241 interrupted
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Killing process!
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Runner thread for executor app-20190620114512-0013/244 interrupted
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Killing process!
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Runner thread for executor app-20190620114512-0013/245 interrupted
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Killing process!
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Runner thread for executor app-20190620114512-0013/246 interrupted
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Killing process!
+19/06/20 14:03:44 INFO worker.Worker: Asked to kill executor app-20190620114512-0013/239
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Killing process!
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Killing process!
+19/06/20 14:03:44 INFO worker.Worker: Asked to kill executor app-20190620114512-0013/242
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Runner thread for executor app-20190620114512-0013/242 interrupted
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Killing process!
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Runner thread for executor app-20190620114512-0013/240 interrupted
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Killing process!
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Runner thread for executor app-20190620114512-0013/239 interrupted
+19/06/20 14:03:44 INFO worker.ExecutorRunner: Killing process!
+19/06/20 14:03:54 INFO worker.Worker: Executor app-20190620114512-0013/242 finished with state KILLED exitStatus 143
+19/06/20 14:03:54 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 242
+19/06/20 14:03:54 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620114512-0013, execId=242)
+19/06/20 14:03:55 INFO worker.Worker: Executor app-20190620114512-0013/240 finished with state KILLED exitStatus 143
+19/06/20 14:03:55 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 240
+19/06/20 14:03:55 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620114512-0013, execId=240)
+19/06/20 14:03:56 INFO worker.Worker: Executor app-20190620114512-0013/241 finished with state KILLED exitStatus 143
+19/06/20 14:03:56 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 241
+19/06/20 14:03:56 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620114512-0013, execId=241)
+19/06/20 14:03:58 INFO worker.Worker: Executor app-20190620114512-0013/243 finished with state KILLED exitStatus 143
+19/06/20 14:03:58 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 243
+19/06/20 14:03:58 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620114512-0013, execId=243)
+19/06/20 14:03:59 INFO worker.Worker: Executor app-20190620114512-0013/239 finished with state KILLED exitStatus 143
+19/06/20 14:03:59 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 239
+19/06/20 14:03:59 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620114512-0013, execId=239)
+19/06/20 14:04:00 INFO worker.Worker: Executor app-20190620114512-0013/245 finished with state KILLED exitStatus 143
+19/06/20 14:04:00 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 245
+19/06/20 14:04:00 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620114512-0013, execId=245)
+19/06/20 14:04:00 INFO worker.Worker: Executor app-20190620114512-0013/238 finished with state KILLED exitStatus 143
+19/06/20 14:04:00 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 238
+19/06/20 14:04:00 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620114512-0013, execId=238)
+19/06/20 14:04:00 INFO worker.Worker: Executor app-20190620114512-0013/246 finished with state KILLED exitStatus 137
+19/06/20 14:04:00 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 246
+19/06/20 14:04:00 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620114512-0013, execId=246)
+19/06/20 14:04:01 INFO worker.Worker: Executor app-20190620114512-0013/244 finished with state KILLED exitStatus 137
+19/06/20 14:04:01 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 244
+19/06/20 14:04:01 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620114512-0013, execId=244)
+19/06/20 14:04:01 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620114512-0013 removed, cleanupLocalDirs = true
+19/06/20 14:04:01 INFO worker.Worker: Cleaning up local directories for application app-20190620114512-0013
+19/06/20 20:08:06 INFO worker.Worker: Asked to launch executor app-20190620200806-0014/64 for TeraGen (3TB)
+19/06/20 20:08:06 INFO worker.Worker: Asked to launch executor app-20190620200806-0014/65 for TeraGen (3TB)
+19/06/20 20:08:06 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 20:08:06 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 20:08:06 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 20:08:06 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 20:08:06 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 20:08:06 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 20:08:06 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 20:08:06 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 20:08:06 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 20:08:06 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 20:08:06 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=35999" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:35999" "--executor-id" "65" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620200806-0014" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 20:08:06 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=35999" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:35999" "--executor-id" "64" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620200806-0014" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 20:08:14 INFO worker.Worker: Asked to kill executor app-20190620200806-0014/65
+19/06/20 20:08:14 INFO worker.ExecutorRunner: Runner thread for executor app-20190620200806-0014/65 interrupted
+19/06/20 20:08:14 INFO worker.ExecutorRunner: Killing process!
+19/06/20 20:08:14 INFO worker.Worker: Asked to kill executor app-20190620200806-0014/64
+19/06/20 20:08:14 INFO worker.ExecutorRunner: Runner thread for executor app-20190620200806-0014/64 interrupted
+19/06/20 20:08:14 INFO worker.ExecutorRunner: Killing process!
+19/06/20 20:08:15 INFO worker.Worker: Executor app-20190620200806-0014/64 finished with state KILLED exitStatus 143
+19/06/20 20:08:15 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 64
+19/06/20 20:08:15 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620200806-0014, execId=64)
+19/06/20 20:08:15 INFO worker.Worker: Executor app-20190620200806-0014/65 finished with state KILLED exitStatus 143
+19/06/20 20:08:15 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 65
+19/06/20 20:08:15 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620200806-0014, execId=65)
+19/06/20 20:08:15 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620200806-0014 removed, cleanupLocalDirs = true
+19/06/20 20:08:15 INFO worker.Worker: Cleaning up local directories for application app-20190620200806-0014
+19/06/20 20:08:46 INFO worker.Worker: Asked to launch executor app-20190620200846-0015/64 for TeraGen (5TB)
+19/06/20 20:08:46 INFO worker.Worker: Asked to launch executor app-20190620200846-0015/65 for TeraGen (5TB)
+19/06/20 20:08:46 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 20:08:46 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 20:08:46 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 20:08:46 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 20:08:46 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 20:08:46 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 20:08:46 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 20:08:46 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 20:08:46 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 20:08:46 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 20:08:46 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=34181" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:34181" "--executor-id" "65" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620200846-0015" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 20:08:46 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=34181" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:34181" "--executor-id" "64" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620200846-0015" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 20:08:52 INFO worker.Worker: Asked to launch executor app-20190620200852-0016/24 for TeraGen (5TB)
+19/06/20 20:08:52 INFO worker.Worker: Asked to launch executor app-20190620200852-0016/25 for TeraGen (5TB)
+19/06/20 20:08:52 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 20:08:52 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 20:08:52 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 20:08:52 INFO worker.Worker: Asked to launch executor app-20190620200852-0016/26 for TeraGen (5TB)
+19/06/20 20:08:52 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 20:08:52 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 20:08:52 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 20:08:52 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 20:08:52 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 20:08:52 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 20:08:52 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 20:08:52 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 20:08:52 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 20:08:52 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 20:08:52 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 20:08:52 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 20:08:52 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=46677" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:46677" "--executor-id" "25" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620200852-0016" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 20:08:52 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=46677" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:46677" "--executor-id" "26" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620200852-0016" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 20:08:52 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=46677" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:46677" "--executor-id" "24" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620200852-0016" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 20:08:53 INFO worker.Worker: Asked to kill executor app-20190620200852-0016/26
+19/06/20 20:08:53 INFO worker.ExecutorRunner: Runner thread for executor app-20190620200852-0016/26 interrupted
+19/06/20 20:08:53 INFO worker.ExecutorRunner: Killing process!
+19/06/20 20:08:53 INFO worker.Worker: Asked to kill executor app-20190620200852-0016/25
+19/06/20 20:08:53 INFO worker.Worker: Asked to kill executor app-20190620200852-0016/24
+19/06/20 20:08:53 INFO worker.ExecutorRunner: Runner thread for executor app-20190620200852-0016/24 interrupted
+19/06/20 20:08:53 INFO worker.ExecutorRunner: Killing process!
+19/06/20 20:08:53 INFO worker.ExecutorRunner: Runner thread for executor app-20190620200852-0016/25 interrupted
+19/06/20 20:08:53 INFO worker.ExecutorRunner: Killing process!
+19/06/20 20:08:54 INFO worker.Worker: Executor app-20190620200852-0016/26 finished with state KILLED exitStatus 143
+19/06/20 20:08:54 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 26
+19/06/20 20:08:54 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620200852-0016, execId=26)
+19/06/20 20:08:54 INFO worker.Worker: Executor app-20190620200852-0016/24 finished with state KILLED exitStatus 143
+19/06/20 20:08:54 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 24
+19/06/20 20:08:54 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620200852-0016, execId=24)
+19/06/20 20:08:54 INFO worker.Worker: Executor app-20190620200852-0016/25 finished with state KILLED exitStatus 1
+19/06/20 20:08:54 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 25
+19/06/20 20:08:54 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620200852-0016, execId=25)
+19/06/20 20:08:54 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620200852-0016 removed, cleanupLocalDirs = true
+19/06/20 20:08:54 INFO worker.Worker: Cleaning up local directories for application app-20190620200852-0016
+19/06/20 20:09:07 INFO worker.Worker: Asked to kill executor app-20190620200846-0015/65
+19/06/20 20:09:07 INFO worker.Worker: Asked to kill executor app-20190620200846-0015/64
+19/06/20 20:09:07 INFO worker.ExecutorRunner: Runner thread for executor app-20190620200846-0015/65 interrupted
+19/06/20 20:09:07 INFO worker.ExecutorRunner: Killing process!
+19/06/20 20:09:07 INFO worker.ExecutorRunner: Runner thread for executor app-20190620200846-0015/64 interrupted
+19/06/20 20:09:07 INFO worker.ExecutorRunner: Killing process!
+19/06/20 20:09:07 INFO worker.Worker: Executor app-20190620200846-0015/65 finished with state KILLED exitStatus 143
+19/06/20 20:09:07 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 65
+19/06/20 20:09:07 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620200846-0015, execId=65)
+19/06/20 20:09:07 INFO worker.Worker: Executor app-20190620200846-0015/64 finished with state KILLED exitStatus 143
+19/06/20 20:09:07 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 64
+19/06/20 20:09:07 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620200846-0015, execId=64)
+19/06/20 20:09:07 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620200846-0015 removed, cleanupLocalDirs = true
+19/06/20 20:09:07 INFO worker.Worker: Cleaning up local directories for application app-20190620200846-0015
+19/06/20 20:09:57 INFO worker.Worker: Asked to launch executor app-20190620200957-0017/64 for TeraGen (5TB)
+19/06/20 20:09:57 INFO worker.Worker: Asked to launch executor app-20190620200957-0017/65 for TeraGen (5TB)
+19/06/20 20:09:57 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 20:09:57 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 20:09:57 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 20:09:57 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 20:09:57 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 20:09:57 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 20:09:57 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 20:09:57 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 20:09:57 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 20:09:57 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 20:09:57 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=40873" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:40873" "--executor-id" "65" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620200957-0017" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 20:09:57 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=40873" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:40873" "--executor-id" "64" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620200957-0017" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 21:00:24 INFO worker.Worker: Asked to kill executor app-20190620200957-0017/65
+19/06/20 21:00:24 INFO worker.Worker: Asked to kill executor app-20190620200957-0017/64
+19/06/20 21:00:24 INFO worker.ExecutorRunner: Runner thread for executor app-20190620200957-0017/64 interrupted
+19/06/20 21:00:24 INFO worker.ExecutorRunner: Runner thread for executor app-20190620200957-0017/65 interrupted
+19/06/20 21:00:24 INFO worker.ExecutorRunner: Killing process!
+19/06/20 21:00:24 INFO worker.ExecutorRunner: Killing process!
+19/06/20 21:00:25 INFO worker.Worker: Executor app-20190620200957-0017/64 finished with state KILLED exitStatus 143
+19/06/20 21:00:25 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 64
+19/06/20 21:00:25 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620200957-0017, execId=64)
+19/06/20 21:00:25 INFO worker.Worker: Executor app-20190620200957-0017/65 finished with state KILLED exitStatus 143
+19/06/20 21:00:25 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 65
+19/06/20 21:00:25 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620200957-0017, execId=65)
+19/06/20 21:00:25 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620200957-0017 removed, cleanupLocalDirs = true
+19/06/20 21:00:25 INFO worker.Worker: Cleaning up local directories for application app-20190620200957-0017
+19/06/20 21:16:55 INFO worker.Worker: Asked to launch executor app-20190620211655-0018/238 for TeraSort
+19/06/20 21:16:55 INFO worker.Worker: Asked to launch executor app-20190620211655-0018/239 for TeraSort
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 21:16:55 INFO worker.Worker: Asked to launch executor app-20190620211655-0018/240 for TeraSort
+19/06/20 21:16:55 INFO worker.Worker: Asked to launch executor app-20190620211655-0018/241 for TeraSort
+19/06/20 21:16:55 INFO worker.Worker: Asked to launch executor app-20190620211655-0018/242 for TeraSort
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 21:16:55 INFO worker.Worker: Asked to launch executor app-20190620211655-0018/243 for TeraSort
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 21:16:55 INFO worker.Worker: Asked to launch executor app-20190620211655-0018/244 for TeraSort
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 21:16:55 INFO worker.Worker: Asked to launch executor app-20190620211655-0018/245 for TeraSort
+19/06/20 21:16:55 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 21:16:55 INFO worker.Worker: Asked to launch executor app-20190620211655-0018/246 for TeraSort
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 21:16:55 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls to: root
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 21:16:55 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/20 21:16:55 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.driver.port=39777" "-Dspark.network.timeout=20000" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39777" "--executor-id" "245" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620211655-0018" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 21:16:55 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.driver.port=39777" "-Dspark.network.timeout=20000" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39777" "--executor-id" "238" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620211655-0018" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 21:16:55 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.driver.port=39777" "-Dspark.network.timeout=20000" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39777" "--executor-id" "242" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620211655-0018" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 21:16:55 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.driver.port=39777" "-Dspark.network.timeout=20000" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39777" "--executor-id" "244" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620211655-0018" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 21:16:55 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.driver.port=39777" "-Dspark.network.timeout=20000" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39777" "--executor-id" "241" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620211655-0018" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 21:16:55 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.driver.port=39777" "-Dspark.network.timeout=20000" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39777" "--executor-id" "239" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620211655-0018" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 21:16:55 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.driver.port=39777" "-Dspark.network.timeout=20000" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39777" "--executor-id" "240" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620211655-0018" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 21:16:55 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.driver.port=39777" "-Dspark.network.timeout=20000" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39777" "--executor-id" "243" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620211655-0018" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/20 21:16:55 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.driver.port=39777" "-Dspark.network.timeout=20000" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39777" "--executor-id" "246" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620211655-0018" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/21 00:16:32 INFO worker.Worker: Asked to kill executor app-20190620211655-0018/245
+19/06/21 00:16:32 INFO worker.Worker: Asked to kill executor app-20190620211655-0018/244
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Runner thread for executor app-20190620211655-0018/245 interrupted
+19/06/21 00:16:32 INFO worker.Worker: Asked to kill executor app-20190620211655-0018/238
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Killing process!
+19/06/21 00:16:32 INFO worker.Worker: Asked to kill executor app-20190620211655-0018/241
+19/06/21 00:16:32 INFO worker.Worker: Asked to kill executor app-20190620211655-0018/240
+19/06/21 00:16:32 INFO worker.Worker: Asked to kill executor app-20190620211655-0018/243
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Runner thread for executor app-20190620211655-0018/238 interrupted
+19/06/21 00:16:32 INFO worker.Worker: Asked to kill executor app-20190620211655-0018/246
+19/06/21 00:16:32 INFO worker.Worker: Asked to kill executor app-20190620211655-0018/239
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Killing process!
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Runner thread for executor app-20190620211655-0018/241 interrupted
+19/06/21 00:16:32 INFO worker.Worker: Asked to kill executor app-20190620211655-0018/242
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Killing process!
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Runner thread for executor app-20190620211655-0018/246 interrupted
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Killing process!
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Runner thread for executor app-20190620211655-0018/242 interrupted
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Killing process!
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Runner thread for executor app-20190620211655-0018/239 interrupted
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Killing process!
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Runner thread for executor app-20190620211655-0018/244 interrupted
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Killing process!
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Runner thread for executor app-20190620211655-0018/243 interrupted
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Killing process!
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Runner thread for executor app-20190620211655-0018/240 interrupted
+19/06/21 00:16:32 INFO worker.ExecutorRunner: Killing process!
+19/06/21 00:16:50 INFO worker.Worker: Executor app-20190620211655-0018/240 finished with state KILLED exitStatus 143
+19/06/21 00:16:50 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 240
+19/06/21 00:16:50 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620211655-0018, execId=240)
+19/06/21 00:16:50 INFO worker.Worker: Executor app-20190620211655-0018/241 finished with state KILLED exitStatus 143
+19/06/21 00:16:50 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 241
+19/06/21 00:16:50 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620211655-0018, execId=241)
+19/06/21 00:16:51 INFO worker.Worker: Executor app-20190620211655-0018/243 finished with state KILLED exitStatus 143
+19/06/21 00:16:51 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 243
+19/06/21 00:16:51 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620211655-0018, execId=243)
+19/06/21 00:16:51 INFO worker.Worker: Executor app-20190620211655-0018/239 finished with state KILLED exitStatus 143
+19/06/21 00:16:51 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 239
+19/06/21 00:16:51 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620211655-0018, execId=239)
+19/06/21 00:16:51 INFO worker.Worker: Executor app-20190620211655-0018/246 finished with state KILLED exitStatus 143
+19/06/21 00:16:51 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 246
+19/06/21 00:16:51 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620211655-0018, execId=246)
+19/06/21 00:16:52 INFO worker.Worker: Executor app-20190620211655-0018/238 finished with state KILLED exitStatus 137
+19/06/21 00:16:52 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 238
+19/06/21 00:16:52 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620211655-0018, execId=238)
+19/06/21 00:16:52 INFO worker.Worker: Executor app-20190620211655-0018/242 finished with state KILLED exitStatus 143
+19/06/21 00:16:52 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 242
+19/06/21 00:16:52 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620211655-0018, execId=242)
+19/06/21 00:16:52 INFO worker.Worker: Executor app-20190620211655-0018/245 finished with state KILLED exitStatus 143
+19/06/21 00:16:52 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 245
+19/06/21 00:16:52 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620211655-0018, execId=245)
+19/06/21 00:16:52 WARN util.Utils: Timed out waiting to forcibly kill process
+19/06/21 00:16:52 WARN worker.ExecutorRunner: Failed to terminate process: java.lang.UNIXProcess@cd8c0e7. This process will likely be orphaned.
+19/06/21 00:16:52 INFO worker.Worker: Executor app-20190620211655-0018/244 finished with state KILLED
+19/06/21 00:16:52 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 244
+19/06/21 00:16:52 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190620211655-0018, execId=244)
+19/06/21 00:16:52 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190620211655-0018 removed, cleanupLocalDirs = true
+19/06/21 00:16:52 INFO worker.Worker: Cleaning up local directories for application app-20190620211655-0018
+19/06/21 01:15:55 INFO worker.Worker: Asked to launch executor app-20190621011555-0019/30 for simple multi-processed join
+19/06/21 01:15:55 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:15:55 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:15:55 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:15:55 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:15:55 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:15:55 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=33163" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:33163" "--executor-id" "30" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621011555-0019" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/21 01:16:01 INFO worker.Worker: Asked to kill executor app-20190621011555-0019/30
+19/06/21 01:16:01 INFO worker.ExecutorRunner: Runner thread for executor app-20190621011555-0019/30 interrupted
+19/06/21 01:16:01 INFO worker.ExecutorRunner: Killing process!
+19/06/21 01:16:02 INFO worker.Worker: Executor app-20190621011555-0019/30 finished with state KILLED exitStatus 143
+19/06/21 01:16:02 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 30
+19/06/21 01:16:02 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190621011555-0019, execId=30)
+19/06/21 01:16:02 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190621011555-0019 removed, cleanupLocalDirs = true
+19/06/21 01:16:02 INFO worker.Worker: Cleaning up local directories for application app-20190621011555-0019
+19/06/21 01:18:09 INFO worker.Worker: Asked to launch executor app-20190621011809-0020/30 for simple multi-processed groupby
+19/06/21 01:18:09 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:18:09 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:18:09 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:18:09 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:18:09 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:18:09 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=41343" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:41343" "--executor-id" "30" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621011809-0020" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/21 01:20:45 INFO worker.Worker: Asked to kill executor app-20190621011809-0020/30
+19/06/21 01:20:45 INFO worker.ExecutorRunner: Runner thread for executor app-20190621011809-0020/30 interrupted
+19/06/21 01:20:45 INFO worker.ExecutorRunner: Killing process!
+19/06/21 01:20:46 INFO worker.Worker: Executor app-20190621011809-0020/30 finished with state KILLED exitStatus 143
+19/06/21 01:20:46 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 30
+19/06/21 01:20:46 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190621011809-0020, execId=30)
+19/06/21 01:20:46 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190621011809-0020 removed, cleanupLocalDirs = true
+19/06/21 01:20:46 INFO worker.Worker: Cleaning up local directories for application app-20190621011809-0020
+19/06/21 01:21:03 INFO worker.Worker: Asked to launch executor app-20190621012103-0021/24 for simple multi-processed groupby
+19/06/21 01:21:03 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:21:03 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:21:03 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:21:03 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:21:03 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:21:03 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=36591" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:36591" "--executor-id" "24" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621012103-0021" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/21 01:22:07 INFO worker.Worker: Asked to kill executor app-20190621012103-0021/24
+19/06/21 01:22:07 INFO worker.ExecutorRunner: Runner thread for executor app-20190621012103-0021/24 interrupted
+19/06/21 01:22:07 INFO worker.ExecutorRunner: Killing process!
+19/06/21 01:22:08 INFO worker.Worker: Executor app-20190621012103-0021/24 finished with state KILLED exitStatus 143
+19/06/21 01:22:08 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 24
+19/06/21 01:22:08 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190621012103-0021, execId=24)
+19/06/21 01:22:08 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190621012103-0021 removed, cleanupLocalDirs = true
+19/06/21 01:22:08 INFO worker.Worker: Cleaning up local directories for application app-20190621012103-0021
+19/06/21 01:23:17 INFO worker.Worker: Asked to launch executor app-20190621012317-0022/24 for simple multi-processed groupby
+19/06/21 01:23:17 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:23:17 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:23:17 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:23:17 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:23:17 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:23:17 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=39069" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39069" "--executor-id" "24" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621012317-0022" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/21 01:24:20 INFO worker.Worker: Asked to kill executor app-20190621012317-0022/24
+19/06/21 01:24:20 INFO worker.ExecutorRunner: Runner thread for executor app-20190621012317-0022/24 interrupted
+19/06/21 01:24:20 INFO worker.ExecutorRunner: Killing process!
+19/06/21 01:24:21 INFO worker.Worker: Executor app-20190621012317-0022/24 finished with state KILLED exitStatus 143
+19/06/21 01:24:21 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 24
+19/06/21 01:24:21 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190621012317-0022, execId=24)
+19/06/21 01:24:21 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190621012317-0022 removed, cleanupLocalDirs = true
+19/06/21 01:24:21 INFO worker.Worker: Cleaning up local directories for application app-20190621012317-0022
+19/06/21 01:24:39 INFO worker.Worker: Asked to launch executor app-20190621012439-0023/24 for simple multi-processed groupby
+19/06/21 01:24:39 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:24:39 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:24:39 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:24:39 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:24:39 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:24:39 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=41839" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:41839" "--executor-id" "24" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621012439-0023" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/21 01:25:43 INFO worker.Worker: Asked to kill executor app-20190621012439-0023/24
+19/06/21 01:25:43 INFO worker.ExecutorRunner: Runner thread for executor app-20190621012439-0023/24 interrupted
+19/06/21 01:25:43 INFO worker.ExecutorRunner: Killing process!
+19/06/21 01:25:44 INFO worker.Worker: Executor app-20190621012439-0023/24 finished with state KILLED exitStatus 143
+19/06/21 01:25:44 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 24
+19/06/21 01:25:44 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190621012439-0023, execId=24)
+19/06/21 01:25:44 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190621012439-0023 removed, cleanupLocalDirs = true
+19/06/21 01:25:44 INFO worker.Worker: Cleaning up local directories for application app-20190621012439-0023
+19/06/21 01:25:52 INFO worker.Worker: Asked to launch executor app-20190621012552-0024/24 for simple multi-processed groupby
+19/06/21 01:25:52 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:25:52 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:25:52 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:25:52 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:25:52 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:25:52 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=41283" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:41283" "--executor-id" "24" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621012552-0024" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/21 01:26:59 INFO worker.Worker: Asked to kill executor app-20190621012552-0024/24
+19/06/21 01:26:59 INFO worker.ExecutorRunner: Runner thread for executor app-20190621012552-0024/24 interrupted
+19/06/21 01:26:59 INFO worker.ExecutorRunner: Killing process!
+19/06/21 01:27:00 INFO worker.Worker: Executor app-20190621012552-0024/24 finished with state KILLED exitStatus 143
+19/06/21 01:27:00 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 24
+19/06/21 01:27:00 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190621012552-0024, execId=24)
+19/06/21 01:27:00 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190621012552-0024 removed, cleanupLocalDirs = true
+19/06/21 01:27:00 INFO worker.Worker: Cleaning up local directories for application app-20190621012552-0024
+19/06/21 01:27:59 INFO worker.Worker: Asked to launch executor app-20190621012759-0025/24 for simple multi-processed join
+19/06/21 01:27:59 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:27:59 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:27:59 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:27:59 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:27:59 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:27:59 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=37175" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:37175" "--executor-id" "24" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621012759-0025" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/21 01:28:04 INFO worker.Worker: Asked to kill executor app-20190621012759-0025/24
+19/06/21 01:28:04 INFO worker.ExecutorRunner: Runner thread for executor app-20190621012759-0025/24 interrupted
+19/06/21 01:28:04 INFO worker.ExecutorRunner: Killing process!
+19/06/21 01:28:05 INFO worker.Worker: Executor app-20190621012759-0025/24 finished with state KILLED exitStatus 143
+19/06/21 01:28:05 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 24
+19/06/21 01:28:05 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190621012759-0025, execId=24)
+19/06/21 01:28:05 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190621012759-0025 removed, cleanupLocalDirs = true
+19/06/21 01:28:05 INFO worker.Worker: Cleaning up local directories for application app-20190621012759-0025
+19/06/21 01:29:39 INFO worker.Worker: Asked to launch executor app-20190621012939-0026/24 for simple multi-processed join
+19/06/21 01:29:39 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:29:39 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:29:39 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:29:39 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:29:39 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:29:39 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=34797" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:34797" "--executor-id" "24" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621012939-0026" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/21 01:29:45 INFO worker.Worker: Asked to kill executor app-20190621012939-0026/24
+19/06/21 01:29:45 INFO worker.ExecutorRunner: Runner thread for executor app-20190621012939-0026/24 interrupted
+19/06/21 01:29:45 INFO worker.ExecutorRunner: Killing process!
+19/06/21 01:29:45 INFO worker.Worker: Executor app-20190621012939-0026/24 finished with state KILLED exitStatus 143
+19/06/21 01:29:45 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 24
+19/06/21 01:29:45 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190621012939-0026, execId=24)
+19/06/21 01:29:45 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190621012939-0026 removed, cleanupLocalDirs = true
+19/06/21 01:29:45 INFO worker.Worker: Cleaning up local directories for application app-20190621012939-0026
+19/06/21 01:29:58 INFO worker.Worker: Asked to launch executor app-20190621012958-0027/24 for simple multi-processed join
+19/06/21 01:29:58 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:29:58 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:29:58 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:29:58 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:29:58 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:29:58 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=36293" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:36293" "--executor-id" "24" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621012958-0027" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/21 01:30:04 INFO worker.Worker: Asked to kill executor app-20190621012958-0027/24
+19/06/21 01:30:04 INFO worker.ExecutorRunner: Runner thread for executor app-20190621012958-0027/24 interrupted
+19/06/21 01:30:04 INFO worker.ExecutorRunner: Killing process!
+19/06/21 01:30:04 INFO worker.Worker: Executor app-20190621012958-0027/24 finished with state KILLED exitStatus 143
+19/06/21 01:30:04 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 24
+19/06/21 01:30:04 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190621012958-0027, execId=24)
+19/06/21 01:30:04 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190621012958-0027 removed, cleanupLocalDirs = true
+19/06/21 01:30:04 INFO worker.Worker: Cleaning up local directories for application app-20190621012958-0027
+19/06/21 01:31:04 INFO worker.Worker: Asked to launch executor app-20190621013104-0028/24 for simple multi-processed groupby
+19/06/21 01:31:04 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:31:04 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:31:04 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:31:04 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:31:04 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:31:04 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=36495" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:36495" "--executor-id" "24" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621013104-0028" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/21 01:32:06 INFO worker.Worker: Asked to kill executor app-20190621013104-0028/24
+19/06/21 01:32:06 INFO worker.ExecutorRunner: Runner thread for executor app-20190621013104-0028/24 interrupted
+19/06/21 01:32:06 INFO worker.ExecutorRunner: Killing process!
+19/06/21 01:32:06 INFO worker.Worker: Executor app-20190621013104-0028/24 finished with state KILLED exitStatus 143
+19/06/21 01:32:06 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 24
+19/06/21 01:32:06 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190621013104-0028, execId=24)
+19/06/21 01:32:06 INFO worker.Worker: Cleaning up local directories for application app-20190621013104-0028
+19/06/21 01:32:06 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190621013104-0028 removed, cleanupLocalDirs = true
+19/06/21 01:32:42 INFO worker.Worker: Asked to launch executor app-20190621013242-0029/24 for simple multi-processed groupby
+19/06/21 01:32:42 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:32:42 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:32:42 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:32:42 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:32:42 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:32:42 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=35747" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:35747" "--executor-id" "24" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621013242-0029" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/21 01:33:45 INFO worker.Worker: Asked to kill executor app-20190621013242-0029/24
+19/06/21 01:33:45 INFO worker.ExecutorRunner: Runner thread for executor app-20190621013242-0029/24 interrupted
+19/06/21 01:33:45 INFO worker.ExecutorRunner: Killing process!
+19/06/21 01:33:46 INFO worker.Worker: Executor app-20190621013242-0029/24 finished with state KILLED exitStatus 143
+19/06/21 01:33:46 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 24
+19/06/21 01:33:46 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190621013242-0029, execId=24)
+19/06/21 01:33:46 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190621013242-0029 removed, cleanupLocalDirs = true
+19/06/21 01:33:46 INFO worker.Worker: Cleaning up local directories for application app-20190621013242-0029
+19/06/21 01:33:57 INFO worker.Worker: Asked to launch executor app-20190621013357-0030/24 for simple multi-processed groupby
+19/06/21 01:33:57 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:33:57 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:33:57 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:33:57 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:33:57 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:33:57 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=42847" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:42847" "--executor-id" "24" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621013357-0030" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/21 01:34:56 INFO worker.Worker: Asked to kill executor app-20190621013357-0030/24
+19/06/21 01:34:56 INFO worker.ExecutorRunner: Runner thread for executor app-20190621013357-0030/24 interrupted
+19/06/21 01:34:56 INFO worker.ExecutorRunner: Killing process!
+19/06/21 01:34:57 INFO worker.Worker: Executor app-20190621013357-0030/24 finished with state KILLED exitStatus 143
+19/06/21 01:34:57 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 24
+19/06/21 01:34:57 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190621013357-0030, execId=24)
+19/06/21 01:34:57 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190621013357-0030 removed, cleanupLocalDirs = true
+19/06/21 01:34:57 INFO worker.Worker: Cleaning up local directories for application app-20190621013357-0030
+19/06/21 01:37:58 INFO worker.Worker: Asked to launch executor app-20190621013758-0031/24 for simple multi-processed groupby
+19/06/21 01:37:58 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:37:58 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:37:58 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:37:58 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:37:58 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:37:58 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=44121" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:44121" "--executor-id" "24" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621013758-0031" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/21 01:38:46 INFO worker.Worker: Asked to kill executor app-20190621013758-0031/24
+19/06/21 01:38:46 INFO worker.ExecutorRunner: Runner thread for executor app-20190621013758-0031/24 interrupted
+19/06/21 01:38:46 INFO worker.ExecutorRunner: Killing process!
+19/06/21 01:38:47 INFO worker.Worker: Executor app-20190621013758-0031/24 finished with state KILLED exitStatus 143
+19/06/21 01:38:47 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 24
+19/06/21 01:38:47 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190621013758-0031, execId=24)
+19/06/21 01:38:47 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190621013758-0031 removed, cleanupLocalDirs = true
+19/06/21 01:38:47 INFO worker.Worker: Cleaning up local directories for application app-20190621013758-0031
+19/06/21 01:38:57 INFO worker.Worker: Asked to launch executor app-20190621013857-0032/24 for simple multi-processed groupby
+19/06/21 01:38:57 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:38:57 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:38:57 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:38:57 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:38:57 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:38:57 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=41917" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:41917" "--executor-id" "24" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621013857-0032" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/21 01:39:46 INFO worker.Worker: Asked to kill executor app-20190621013857-0032/24
+19/06/21 01:39:46 INFO worker.ExecutorRunner: Runner thread for executor app-20190621013857-0032/24 interrupted
+19/06/21 01:39:46 INFO worker.ExecutorRunner: Killing process!
+19/06/21 01:39:46 INFO worker.Worker: Executor app-20190621013857-0032/24 finished with state KILLED exitStatus 143
+19/06/21 01:39:46 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 24
+19/06/21 01:39:46 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190621013857-0032, execId=24)
+19/06/21 01:39:46 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190621013857-0032 removed, cleanupLocalDirs = true
+19/06/21 01:39:46 INFO worker.Worker: Cleaning up local directories for application app-20190621013857-0032
+19/06/21 01:40:03 INFO worker.Worker: Asked to launch executor app-20190621014003-0033/24 for simple multi-processed groupby
+19/06/21 01:40:03 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:40:03 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:40:03 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:40:03 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:40:03 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:40:03 INFO worker.ExecutorRunner: Launch command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=43931" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:43931" "--executor-id" "24" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621014003-0033" "--worker-url" "spark://Worker@mdc-ch1-cust4:37759"
+19/06/21 01:40:52 INFO worker.Worker: Asked to kill executor app-20190621014003-0033/24
+19/06/21 01:40:52 INFO worker.ExecutorRunner: Runner thread for executor app-20190621014003-0033/24 interrupted
+19/06/21 01:40:52 INFO worker.ExecutorRunner: Killing process!
+19/06/21 01:40:52 INFO worker.Worker: Executor app-20190621014003-0033/24 finished with state KILLED exitStatus 143
+19/06/21 01:40:52 INFO shuffle.ExternalShuffleBlockResolver: Clean up non-shuffle files associated with the finished executor 24
+19/06/21 01:40:52 INFO shuffle.ExternalShuffleBlockResolver: Executor is not registered (appId=app-20190621014003-0033, execId=24)
+19/06/21 01:40:52 INFO shuffle.ExternalShuffleBlockResolver: Application app-20190621014003-0033 removed, cleanupLocalDirs = true
+19/06/21 01:40:52 INFO worker.Worker: Cleaning up local directories for application app-20190621014003-0033
+19/06/21 01:45:14 ERROR worker.Worker: RECEIVED SIGNAL TERM
+19/06/21 01:45:14 INFO util.ShutdownHookManager: Shutdown hook called
+19/06/21 01:45:14 INFO util.ShutdownHookManager: Deleting directory /data/spark-91ebcdae-a911-4492-ae55-8a21c51c0a7f

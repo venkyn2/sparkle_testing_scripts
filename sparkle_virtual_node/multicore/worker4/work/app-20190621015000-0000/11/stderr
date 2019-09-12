@@ -1,0 +1,124 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker4/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker4/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=36665" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:36665" "--executor-id" "11" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621015000-0000" "--worker-url" "spark://Worker@mdc-ch1-cust4:41237"
+========================================
+
+19/06/21 01:50:00 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 108105@mdc-ch1-cust4
+19/06/21 01:50:00 INFO util.SignalUtils: Registered signal handler for TERM
+19/06/21 01:50:00 INFO util.SignalUtils: Registered signal handler for HUP
+19/06/21 01:50:00 INFO util.SignalUtils: Registered signal handler for INT
+19/06/21 01:50:01 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/06/21 01:50:01 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:50:01 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:50:01 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:50:01 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:50:01 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:50:01 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:36665 after 58 ms (0 ms spent in bootstraps)
+19/06/21 01:50:01 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/06/21 01:50:01 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 01:50:01 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 01:50:01 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 01:50:01 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 01:50:01 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 01:50:01 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:36665 after 1 ms (0 ms spent in bootstraps)
+19/06/21 01:50:01 INFO storage.DiskBlockManager: Created local directory at /data/spark-4d26af87-8887-4d45-a4f7-ad4aebb2b6b1/executor-bf516bb6-2f94-4154-99b1-0f5f7f2f51d9/blockmgr-c3d28c08-b585-4f2f-b2ac-ca70e434a090
+19/06/21 01:50:01 INFO memory.MemoryStore: MemoryStore started with capacity 12.6 GB
+19/06/21 01:50:01 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:36665
+19/06/21 01:50:01 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@mdc-ch1-cust4:41237
+19/06/21 01:50:01 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:41237 after 1 ms (0 ms spent in bootstraps)
+19/06/21 01:50:01 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@mdc-ch1-cust4:41237
+19/06/21 01:50:01 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/06/21 01:50:01 INFO executor.Executor: Starting executor ID 11 on host mdc-ch1-cust4
+19/06/21 01:50:02 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45249.
+19/06/21 01:50:02 INFO netty.NettyBlockTransferService: Server created on mdc-ch1-cust4:45249
+19/06/21 01:50:02 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/06/21 01:50:02 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(11, mdc-ch1-cust4, 45249, None)
+19/06/21 01:50:02 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(11, mdc-ch1-cust4, 45249, None)
+19/06/21 01:50:02 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(11, mdc-ch1-cust4, 45249, None)
+19/06/21 01:50:03 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 213
+19/06/21 01:50:03 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 255
+19/06/21 01:50:03 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 297
+19/06/21 01:50:03 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 339
+19/06/21 01:50:03 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 381
+19/06/21 01:50:03 INFO executor.Executor: Running task 98.0 in stage 1.0 (TID 297)
+19/06/21 01:50:03 INFO executor.Executor: Running task 182.0 in stage 1.0 (TID 381)
+19/06/21 01:50:03 INFO executor.Executor: Running task 140.0 in stage 1.0 (TID 339)
+19/06/21 01:50:03 INFO executor.Executor: Running task 14.0 in stage 1.0 (TID 213)
+19/06/21 01:50:03 INFO executor.Executor: Running task 56.0 in stage 1.0 (TID 255)
+19/06/21 01:50:03 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:36665/jars/simple-reduceby-computation-project_2.11-1.0.jar with timestamp 1561107000299
+19/06/21 01:50:03 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:36665 after 1 ms (0 ms spent in bootstraps)
+19/06/21 01:50:03 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:36665/jars/simple-reduceby-computation-project_2.11-1.0.jar to /data/spark-4d26af87-8887-4d45-a4f7-ad4aebb2b6b1/executor-bf516bb6-2f94-4154-99b1-0f5f7f2f51d9/spark-03ff12ac-1bb5-4235-9341-fc531dea8140/fetchFileTemp2115530566273752471.tmp
+19/06/21 01:50:03 INFO util.Utils: Copying /data/spark-4d26af87-8887-4d45-a4f7-ad4aebb2b6b1/executor-bf516bb6-2f94-4154-99b1-0f5f7f2f51d9/spark-03ff12ac-1bb5-4235-9341-fc531dea8140/-5301875471561107000299_cache to /var/tmp/spark2.0hpcplatform/multicore/worker4/work/app-20190621015000-0000/11/./simple-reduceby-computation-project_2.11-1.0.jar
+19/06/21 01:50:03 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker4/work/app-20190621015000-0000/11/./simple-reduceby-computation-project_2.11-1.0.jar to class loader
+19/06/21 01:50:03 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 1
+19/06/21 01:50:03 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:39949 after 2 ms (0 ms spent in bootstraps)
+19/06/21 01:50:03 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 1589.0 B, free 12.6 GB)
+19/06/21 01:50:03 INFO broadcast.TorrentBroadcast: Reading broadcast variable 1 took 102 ms
+19/06/21 01:50:03 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 2.5 KB, free 12.6 GB)
+19/06/21 01:50:04 INFO memory.MemoryStore: Block rdd_3_140 stored as values in memory (estimated size 83.9 MB, free 12.5 GB)
+19/06/21 01:50:04 INFO memory.MemoryStore: Block rdd_3_98 stored as values in memory (estimated size 83.9 MB, free 12.5 GB)
+19/06/21 01:50:04 INFO memory.MemoryStore: Block rdd_3_56 stored as values in memory (estimated size 83.9 MB, free 12.4 GB)
+19/06/21 01:50:04 INFO memory.MemoryStore: Block rdd_3_14 stored as values in memory (estimated size 83.9 MB, free 12.3 GB)
+19/06/21 01:50:04 INFO memory.MemoryStore: Block rdd_3_182 stored as values in memory (estimated size 83.9 MB, free 12.2 GB)
+19/06/21 01:50:04 INFO executor.Executor: 1 block locks were not released by TID = 381:
+[rdd_3_182]
+19/06/21 01:50:04 INFO executor.Executor: 1 block locks were not released by TID = 297:
+[rdd_3_98]
+19/06/21 01:50:04 INFO executor.Executor: 1 block locks were not released by TID = 339:
+[rdd_3_140]
+19/06/21 01:50:04 INFO executor.Executor: 1 block locks were not released by TID = 255:
+[rdd_3_56]
+19/06/21 01:50:04 INFO executor.Executor: 1 block locks were not released by TID = 213:
+[rdd_3_14]
+19/06/21 01:50:04 INFO executor.Executor: Finished task 140.0 in stage 1.0 (TID 339). 751 bytes result sent to driver
+19/06/21 01:50:04 INFO executor.Executor: Finished task 182.0 in stage 1.0 (TID 381). 708 bytes result sent to driver
+19/06/21 01:50:04 INFO executor.Executor: Finished task 14.0 in stage 1.0 (TID 213). 708 bytes result sent to driver
+19/06/21 01:50:04 INFO executor.Executor: Finished task 56.0 in stage 1.0 (TID 255). 751 bytes result sent to driver
+19/06/21 01:50:04 INFO executor.Executor: Finished task 98.0 in stage 1.0 (TID 297). 708 bytes result sent to driver
+19/06/21 01:50:04 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 433
+19/06/21 01:50:04 INFO executor.Executor: Running task 14.0 in stage 2.0 (TID 433)
+19/06/21 01:50:04 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 475
+19/06/21 01:50:04 INFO executor.Executor: Running task 56.0 in stage 2.0 (TID 475)
+19/06/21 01:50:04 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 517
+19/06/21 01:50:04 INFO executor.Executor: Running task 98.0 in stage 2.0 (TID 517)
+19/06/21 01:50:04 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 559
+19/06/21 01:50:04 INFO executor.Executor: Running task 140.0 in stage 2.0 (TID 559)
+19/06/21 01:50:04 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 593
+19/06/21 01:50:04 INFO executor.Executor: Running task 182.0 in stage 2.0 (TID 593)
+19/06/21 01:50:05 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 2
+19/06/21 01:50:05 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:44957 after 3 ms (0 ms spent in bootstraps)
+19/06/21 01:51:06 INFO executor.CoarseGrainedExecutorBackend: Driver commanded a shutdown
+19/06/21 01:51:06 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from mdc-ch6-cust4/10.1.6.4:44957 is closed
+19/06/21 01:51:06 ERROR shuffle.OneForOneBlockFetcher: Failed while starting block fetches
+java.io.IOException: Connection from mdc-ch6-cust4/10.1.6.4:44957 closed
+	at org.apache.spark.network.client.TransportResponseHandler.channelInactive(TransportResponseHandler.java:146)
+	at org.apache.spark.network.server.TransportChannelHandler.channelInactive(TransportChannelHandler.java:108)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at io.netty.handler.timeout.IdleStateHandler.channelInactive(IdleStateHandler.java:277)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at org.apache.spark.network.util.TransportFrameDecoder.channelInactive(TransportFrameDecoder.java:182)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1354)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:917)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$8.run(AbstractChannel.java:822)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 01:51:06 INFO shuffle.RetryingBlockFetcher: Retrying fetch (1/3) for 1 outstanding blocks after 5000 ms
+19/06/21 01:51:06 INFO executor.CoarseGrainedExecutorBackend: Driver from mdc-ch1-cust4.mdc.ext.hpe.com:36665 disconnected during shutdown
+19/06/21 01:51:06 INFO executor.CoarseGrainedExecutorBackend: Driver from mdc-ch1-cust4.mdc.ext.hpe.com:36665 disconnected during shutdown

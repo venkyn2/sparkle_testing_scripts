@@ -1,0 +1,363 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker0/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker0/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.network.timeout=2000000" "-Dspark.driver.port=37781" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:37781" "--executor-id" "51" "--hostname" "10.1.1.4" "--cores" "4" "--app-id" "app-20190827234658-0024" "--worker-url" "spark://Worker@10.1.1.4:46217"
+========================================
+
+19/08/27 23:46:59 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 128616@mdc-ch1-cust4
+19/08/27 23:46:59 INFO util.SignalUtils: Registered signal handler for TERM
+19/08/27 23:46:59 INFO util.SignalUtils: Registered signal handler for HUP
+19/08/27 23:46:59 INFO util.SignalUtils: Registered signal handler for INT
+19/08/27 23:46:59 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/08/27 23:46:59 INFO spark.SecurityManager: Changing view acls to: root,nnnnnven
+19/08/27 23:46:59 INFO spark.SecurityManager: Changing modify acls to: root,nnnnnven
+19/08/27 23:46:59 INFO spark.SecurityManager: Changing view acls groups to: 
+19/08/27 23:46:59 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/08/27 23:46:59 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, nnnnnven); groups with view permissions: Set(); users  with modify permissions: Set(root, nnnnnven); groups with modify permissions: Set()
+19/08/27 23:46:59 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:37781 after 47 ms (0 ms spent in bootstraps)
+19/08/27 23:46:59 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/08/27 23:46:59 WARN spark.SparkConf: The configuration key 'spark.yarn.executor.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.executor.memoryOverhead' instead.
+19/08/27 23:46:59 INFO spark.SecurityManager: Changing view acls to: root,nnnnnven
+19/08/27 23:46:59 INFO spark.SecurityManager: Changing modify acls to: root,nnnnnven
+19/08/27 23:46:59 INFO spark.SecurityManager: Changing view acls groups to: 
+19/08/27 23:46:59 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/08/27 23:46:59 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, nnnnnven); groups with view permissions: Set(); users  with modify permissions: Set(root, nnnnnven); groups with modify permissions: Set()
+19/08/27 23:47:00 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:37781 after 1 ms (0 ms spent in bootstraps)
+19/08/27 23:47:00 INFO storage.DiskBlockManager: Created local directory at /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-8e1023c8-bb8a-45fc-9e80-5f6d4aa4fb4c/blockmgr-36ac3ab4-7851-4391-b34c-22c3d6a2e26a
+19/08/27 23:47:00 INFO memory.MemoryStore: MemoryStore started with capacity 4.1 GB
+19/08/27 23:47:00 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:37781
+19/08/27 23:47:00 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@10.1.1.4:46217
+19/08/27 23:47:00 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:46217 after 3 ms (0 ms spent in bootstraps)
+19/08/27 23:47:00 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@10.1.1.4:46217
+19/08/27 23:47:00 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/08/27 23:47:00 INFO executor.Executor: Starting executor ID 51 on host 10.1.1.4
+19/08/27 23:47:00 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45767.
+19/08/27 23:47:00 INFO netty.NettyBlockTransferService: Server created on 10.1.1.4:45767
+19/08/27 23:47:00 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/08/27 23:47:00 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(51, 10.1.1.4, 45767, None)
+19/08/27 23:47:00 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(51, 10.1.1.4, 45767, None)
+19/08/27 23:47:00 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(51, 10.1.1.4, 45767, None)
+19/08/27 23:47:00 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 72
+19/08/27 23:47:00 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 73
+19/08/27 23:47:00 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 74
+19/08/27 23:47:00 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 75
+19/08/27 23:47:00 INFO executor.Executor: Running task 72.0 in stage 0.0 (TID 72)
+19/08/27 23:47:00 INFO executor.Executor: Running task 75.0 in stage 0.0 (TID 75)
+19/08/27 23:47:00 INFO executor.Executor: Running task 74.0 in stage 0.0 (TID 74)
+19/08/27 23:47:00 INFO executor.Executor: Running task 73.0 in stage 0.0 (TID 73)
+19/08/27 23:47:00 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:37781/jars/spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar with timestamp 1566974818710
+19/08/27 23:47:00 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:37781 after 1 ms (0 ms spent in bootstraps)
+19/08/27 23:47:00 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:37781/jars/spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar to /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-8e1023c8-bb8a-45fc-9e80-5f6d4aa4fb4c/spark-e8388b19-011e-4241-a685-44127bbb8595/fetchFileTemp8111451187717836459.tmp
+19/08/27 23:47:00 INFO util.Utils: Copying /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-8e1023c8-bb8a-45fc-9e80-5f6d4aa4fb4c/spark-e8388b19-011e-4241-a685-44127bbb8595/13946659631566974818710_cache to /var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190827234658-0024/51/./spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar
+19/08/27 23:47:00 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190827234658-0024/51/./spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar to class loader
+19/08/27 23:47:00 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 1
+19/08/27 23:47:00 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:33833 after 1 ms (0 ms spent in bootstraps)
+19/08/27 23:47:00 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.2 KB, free 4.1 GB)
+19/08/27 23:47:00 INFO broadcast.TorrentBroadcast: Reading broadcast variable 1 took 98 ms
+19/08/27 23:47:01 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.5 KB, free 4.1 GB)
+19/08/27 23:47:01 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00000:80530636800+1073741824
+19/08/27 23:47:01 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00000:78383153152+1073741824
+19/08/27 23:47:01 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00000:79456894976+1073741824
+19/08/27 23:47:01 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00000:77309411328+1073741824
+19/08/27 23:47:01 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 0
+19/08/27 23:47:01 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 22.3 KB, free 4.1 GB)
+19/08/27 23:47:01 INFO broadcast.TorrentBroadcast: Reading broadcast variable 0 took 19 ms
+19/08/27 23:47:01 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 317.5 KB, free 4.1 GB)
+19/08/27 23:51:19 INFO sort.ShuffleExternalSorter: Thread 71 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/08/27 23:51:20 INFO sort.ShuffleExternalSorter: Thread 72 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/08/27 23:51:20 INFO sort.ShuffleExternalSorter: Thread 69 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/08/27 23:51:21 INFO sort.ShuffleExternalSorter: Thread 70 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/08/27 23:52:46 INFO executor.Executor: Finished task 75.0 in stage 0.0 (TID 75). 1126 bytes result sent to driver
+19/08/27 23:52:46 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 709
+19/08/27 23:52:46 INFO executor.Executor: Running task 709.0 in stage 0.0 (TID 709)
+19/08/27 23:52:46 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00006:39728447488+1073741824
+19/08/27 23:52:46 INFO executor.Executor: Finished task 72.0 in stage 0.0 (TID 72). 1083 bytes result sent to driver
+19/08/27 23:52:46 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 712
+19/08/27 23:52:46 INFO executor.Executor: Running task 712.0 in stage 0.0 (TID 712)
+19/08/27 23:52:46 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00006:42949672960+1073741824
+19/08/27 23:52:51 INFO executor.Executor: Finished task 73.0 in stage 0.0 (TID 73). 1083 bytes result sent to driver
+19/08/27 23:52:51 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 808
+19/08/27 23:52:51 INFO executor.Executor: Running task 808.0 in stage 0.0 (TID 808)
+19/08/27 23:52:51 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00007:25769803776+1073741824
+19/08/27 23:52:52 INFO executor.Executor: Finished task 74.0 in stage 0.0 (TID 74). 1083 bytes result sent to driver
+19/08/27 23:52:52 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 855
+19/08/27 23:52:52 INFO executor.Executor: Running task 855.0 in stage 0.0 (TID 855)
+19/08/27 23:52:52 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00007:76235669504+1073741824
+19/08/27 23:57:21 INFO sort.ShuffleExternalSorter: Thread 72 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/08/27 23:57:32 INFO sort.ShuffleExternalSorter: Thread 71 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/08/27 23:57:40 INFO sort.ShuffleExternalSorter: Thread 69 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/08/27 23:57:54 INFO sort.ShuffleExternalSorter: Thread 70 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/08/27 23:58:29 INFO executor.Executor: Finished task 709.0 in stage 0.0 (TID 709). 1083 bytes result sent to driver
+19/08/27 23:58:29 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1174
+19/08/27 23:58:29 INFO executor.Executor: Running task 1174.0 in stage 0.0 (TID 1174)
+19/08/27 23:58:29 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00010:57982058496+1073741824
+19/08/27 23:58:54 INFO executor.Executor: Finished task 855.0 in stage 0.0 (TID 855). 1083 bytes result sent to driver
+19/08/27 23:58:54 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1384
+19/08/27 23:58:54 INFO executor.Executor: Running task 1384.0 in stage 0.0 (TID 1384)
+19/08/27 23:58:54 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00012:42949672960+1073741824
+19/08/27 23:58:56 INFO executor.Executor: Finished task 712.0 in stage 0.0 (TID 712). 1083 bytes result sent to driver
+19/08/27 23:58:56 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1419
+19/08/27 23:58:56 INFO executor.Executor: Running task 1419.0 in stage 0.0 (TID 1419)
+19/08/27 23:58:56 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00012:80530636800+1073741824
+19/08/27 23:58:56 INFO executor.Executor: Finished task 808.0 in stage 0.0 (TID 808). 1083 bytes result sent to driver
+19/08/27 23:58:56 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1435
+19/08/27 23:58:56 INFO executor.Executor: Running task 1435.0 in stage 0.0 (TID 1435)
+19/08/27 23:58:56 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00012:97710505984+1073741824
+19/08/28 00:02:51 INFO sort.ShuffleExternalSorter: Thread 72 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/08/28 00:03:43 INFO sort.ShuffleExternalSorter: Thread 71 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/08/28 00:03:57 INFO sort.ShuffleExternalSorter: Thread 69 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/08/28 00:04:12 INFO executor.Executor: Finished task 1174.0 in stage 0.0 (TID 1174). 1083 bytes result sent to driver
+19/08/28 00:04:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1795
+19/08/28 00:04:12 INFO executor.Executor: Running task 1795.0 in stage 0.0 (TID 1795)
+19/08/28 00:04:12 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00016:3221225472+1073741824
+19/08/28 00:04:12 INFO sort.ShuffleExternalSorter: Thread 70 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/08/28 00:05:14 INFO executor.Executor: Finished task 1419.0 in stage 0.0 (TID 1419). 1126 bytes result sent to driver
+19/08/28 00:05:14 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2059
+19/08/28 00:05:14 INFO executor.Executor: Running task 2059.0 in stage 0.0 (TID 2059)
+19/08/28 00:05:14 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00018:46170898432+1073741824
+19/08/28 00:05:15 INFO executor.Executor: Finished task 1384.0 in stage 0.0 (TID 1384). 1083 bytes result sent to driver
+19/08/28 00:05:15 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2063
+19/08/28 00:05:15 INFO executor.Executor: Running task 2063.0 in stage 0.0 (TID 2063)
+19/08/28 00:05:15 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00018:50465865728+1073741824
+19/08/28 00:05:30 INFO executor.Executor: Finished task 1435.0 in stage 0.0 (TID 1435). 1083 bytes result sent to driver
+19/08/28 00:05:30 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2136
+19/08/28 00:05:30 INFO executor.Executor: Running task 2136.0 in stage 0.0 (TID 2136)
+19/08/28 00:05:30 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00019:8589934592+1073741824
+19/08/28 00:08:19 INFO sort.ShuffleExternalSorter: Thread 72 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/08/28 00:09:05 INFO sort.ShuffleExternalSorter: Thread 69 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/08/28 00:09:10 INFO sort.ShuffleExternalSorter: Thread 71 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/08/28 00:09:27 INFO sort.ShuffleExternalSorter: Thread 70 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/08/28 00:09:33 INFO executor.Executor: Finished task 1795.0 in stage 0.0 (TID 1795). 1126 bytes result sent to driver
+19/08/28 00:09:33 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2692
+19/08/28 00:09:33 INFO executor.Executor: Running task 2692.0 in stage 0.0 (TID 2692)
+19/08/28 00:09:33 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00024:4294967296+1073741824
+19/08/28 00:10:19 INFO executor.Executor: Finished task 2059.0 in stage 0.0 (TID 2059). 1083 bytes result sent to driver
+19/08/28 00:10:20 INFO executor.Executor: Finished task 2063.0 in stage 0.0 (TID 2063). 1083 bytes result sent to driver
+19/08/28 00:10:31 INFO executor.Executor: Finished task 2136.0 in stage 0.0 (TID 2136). 1083 bytes result sent to driver
+19/08/28 00:12:56 INFO executor.Executor: Finished task 2692.0 in stage 0.0 (TID 2692). 997 bytes result sent to driver
+19/08/28 00:13:01 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2862
+19/08/28 00:13:01 INFO executor.Executor: Running task 62.0 in stage 1.0 (TID 2862)
+19/08/28 00:13:01 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2962
+19/08/28 00:13:01 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 3062
+19/08/28 00:13:01 INFO executor.Executor: Running task 162.0 in stage 1.0 (TID 2962)
+19/08/28 00:13:01 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 3162
+19/08/28 00:13:01 INFO executor.Executor: Running task 262.0 in stage 1.0 (TID 3062)
+19/08/28 00:13:01 INFO executor.Executor: Running task 362.0 in stage 1.0 (TID 3162)
+19/08/28 00:13:01 INFO spark.MapOutputTrackerWorker: Updating epoch to 1 and clearing cache
+19/08/28 00:13:01 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 2
+19/08/28 00:13:01 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:37091 after 1 ms (0 ms spent in bootstraps)
+19/08/28 00:13:01 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 25.0 KB, free 4.1 GB)
+19/08/28 00:13:01 INFO broadcast.TorrentBroadcast: Reading broadcast variable 2 took 21 ms
+19/08/28 00:13:01 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 69.4 KB, free 4.1 GB)
+19/08/28 00:13:01 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/28 00:13:01 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/28 00:13:01 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/28 00:13:01 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/28 00:13:01 INFO spark.MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@mdc-ch1-cust4.mdc.ext.hpe.com:37781)
+19/08/28 00:13:01 INFO spark.MapOutputTrackerWorker: Got the output locations
+19/08/28 00:13:01 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 17 local blocks and 2783 remote blocks
+19/08/28 00:13:01 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 17 local blocks and 2783 remote blocks
+19/08/28 00:13:01 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 17 local blocks and 2783 remote blocks
+19/08/28 00:13:01 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 17 local blocks and 2783 remote blocks
+19/08/28 00:13:01 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:46727 after 1 ms (0 ms spent in bootstraps)
+19/08/28 00:13:01 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:35675 after 6 ms (0 ms spent in bootstraps)
+19/08/28 00:13:01 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:42231 after 15 ms (0 ms spent in bootstraps)
+19/08/28 00:13:01 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:41491 after 16 ms (0 ms spent in bootstraps)
+19/08/28 00:13:01 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:37393 after 8 ms (0 ms spent in bootstraps)
+19/08/28 00:13:01 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:35327 after 11 ms (0 ms spent in bootstraps)
+19/08/28 00:13:01 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:36755 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:01 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:38047 after 6 ms (0 ms spent in bootstraps)
+19/08/28 00:13:01 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:34481 after 3 ms (0 ms spent in bootstraps)
+19/08/28 00:13:02 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:40053 after 12 ms (0 ms spent in bootstraps)
+19/08/28 00:13:02 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:33281 after 1019 ms (0 ms spent in bootstraps)
+19/08/28 00:13:02 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:34703 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:02 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43833 after 1 ms (0 ms spent in bootstraps)
+19/08/28 00:13:02 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:44925 after 1 ms (0 ms spent in bootstraps)
+19/08/28 00:13:02 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:43173 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:02 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:34825 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:02 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:34787 after 1016 ms (0 ms spent in bootstraps)
+19/08/28 00:13:03 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:40123 after 7 ms (0 ms spent in bootstraps)
+19/08/28 00:13:03 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:36217 after 1010 ms (0 ms spent in bootstraps)
+19/08/28 00:13:03 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:46571 after 1039 ms (0 ms spent in bootstraps)
+19/08/28 00:13:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:40271 after 1034 ms (0 ms spent in bootstraps)
+19/08/28 00:13:04 INFO storage.ShuffleBlockFetcherIterator: Started 9 remote fetches in 2213 ms
+19/08/28 00:13:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:41065 after 0 ms (0 ms spent in bootstraps)
+19/08/28 00:13:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:33927 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:46015 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:36695 after 6 ms (0 ms spent in bootstraps)
+19/08/28 00:13:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:36771 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:04 INFO storage.ShuffleBlockFetcherIterator: Started 11 remote fetches in 2227 ms
+19/08/28 00:13:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:41213 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:43641 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:04 INFO storage.ShuffleBlockFetcherIterator: Started 12 remote fetches in 2263 ms
+19/08/28 00:13:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:36061 after 1011 ms (0 ms spent in bootstraps)
+19/08/28 00:13:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:34345 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:40917 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:39271 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:36423 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:43077 after 14 ms (0 ms spent in bootstraps)
+19/08/28 00:13:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:37485 after 13 ms (0 ms spent in bootstraps)
+19/08/28 00:13:04 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:35441 after 12 ms (0 ms spent in bootstraps)
+19/08/28 00:13:05 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:36475 after 1010 ms (0 ms spent in bootstraps)
+19/08/28 00:13:05 INFO storage.ShuffleBlockFetcherIterator: Started 8 remote fetches in 3284 ms
+19/08/28 00:13:06 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:35235 after 1016 ms (0 ms spent in bootstraps)
+19/08/28 00:13:07 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:45531 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:07 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:38839 after 6 ms (0 ms spent in bootstraps)
+19/08/28 00:13:08 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43803 after 1 ms (0 ms spent in bootstraps)
+19/08/28 00:13:08 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:41651 after 6 ms (0 ms spent in bootstraps)
+19/08/28 00:13:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:45339 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:39775 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:14 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:34689 after 1013 ms (0 ms spent in bootstraps)
+19/08/28 00:13:16 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:42615 after 13 ms (0 ms spent in bootstraps)
+19/08/28 00:13:16 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:40861 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:16 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:37089 after 6 ms (0 ms spent in bootstraps)
+19/08/28 00:13:17 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:37911 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:19 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:40289 after 1033 ms (0 ms spent in bootstraps)
+19/08/28 00:13:20 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:44837 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:20 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:39195 after 6 ms (0 ms spent in bootstraps)
+19/08/28 00:13:20 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:37637 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:21 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:34579 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:22 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:45171 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:24 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:44325 after 6 ms (0 ms spent in bootstraps)
+19/08/28 00:13:25 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:36081 after 1032 ms (0 ms spent in bootstraps)
+19/08/28 00:13:26 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:38025 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:26 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:38485 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:27 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:34873 after 6 ms (0 ms spent in bootstraps)
+19/08/28 00:13:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:38971 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:38473 after 6 ms (0 ms spent in bootstraps)
+19/08/28 00:13:28 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:38329 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:30 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:34695 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:31 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:44769 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:33 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:42657 after 3052 ms (0 ms spent in bootstraps)
+19/08/28 00:13:33 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:39877 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:35 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:38077 after 6 ms (0 ms spent in bootstraps)
+19/08/28 00:13:36 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:46701 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:44 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:33905 after 1011 ms (0 ms spent in bootstraps)
+19/08/28 00:13:45 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:36575 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:47 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:42695 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:47 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:40081 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:50 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:39905 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:50 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:42765 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:50 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:34711 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:34727 after 6 ms (0 ms spent in bootstraps)
+19/08/28 00:13:54 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:36329 after 14 ms (0 ms spent in bootstraps)
+19/08/28 00:13:57 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:46469 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:57 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:35091 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:57 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:37981 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:58 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:45321 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:13:58 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:44003 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:14:08 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:39771 after 0 ms (0 ms spent in bootstraps)
+19/08/28 00:14:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:45581 after 6 ms (0 ms spent in bootstraps)
+19/08/28 00:14:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:43637 after 8 ms (0 ms spent in bootstraps)
+19/08/28 00:14:10 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:33229 after 0 ms (0 ms spent in bootstraps)
+19/08/28 00:14:10 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:44435 after 0 ms (0 ms spent in bootstraps)
+19/08/28 00:14:29 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:46705 after 38 ms (0 ms spent in bootstraps)
+19/08/28 00:14:30 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:46025 after 7 ms (0 ms spent in bootstraps)
+19/08/28 00:14:32 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:35745 after 6 ms (0 ms spent in bootstraps)
+19/08/28 00:14:33 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:41237 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:14:45 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:39983 after 1 ms (0 ms spent in bootstraps)
+19/08/28 00:14:46 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:34859 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:14:49 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:42917 after 1 ms (0 ms spent in bootstraps)
+19/08/28 00:14:52 INFO collection.ExternalSorter: Thread 98 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/08/28 00:14:53 INFO collection.ExternalSorter: Thread 72 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/08/28 00:14:53 INFO collection.ExternalSorter: Thread 96 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/08/28 00:14:55 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:37007 after 5 ms (0 ms spent in bootstraps)
+19/08/28 00:14:55 INFO collection.ExternalSorter: Thread 97 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/08/28 00:15:52 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:37767 after 1 ms (0 ms spent in bootstraps)
+19/08/28 00:16:09 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:33155 after 10 ms (0 ms spent in bootstraps)
+19/08/28 00:18:22 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:18:22 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:19:02 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190827234700_0001_r_000162_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-output/_temporary/0/task_20190827234700_0001_r_000162
+19/08/28 00:19:02 INFO mapred.SparkHadoopMapRedUtil: attempt_20190827234700_0001_r_000162_0: Committed
+19/08/28 00:19:02 INFO executor.Executor: Finished task 162.0 in stage 1.0 (TID 2962). 1342 bytes result sent to driver
+19/08/28 00:19:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 3219
+19/08/28 00:19:02 INFO executor.Executor: Running task 419.0 in stage 1.0 (TID 3219)
+19/08/28 00:19:02 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 17 local blocks and 2783 remote blocks
+19/08/28 00:19:02 INFO storage.ShuffleBlockFetcherIterator: Started 9 remote fetches in 14 ms
+19/08/28 00:19:06 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:19:06 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:19:10 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:19:10 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:19:19 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:19:19 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:19:20 INFO collection.ExternalSorter: Thread 96 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/08/28 00:20:03 WARN hdfs.DFSClient: Slow ReadProcessor read fields took 42689ms (threshold=30000ms); ack: seqno: 2631 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[10.1.2.4:50010,DS-7f14fd1f-255c-4648-9fca-0bec713d2c39,DISK]]
+19/08/28 00:20:03 WARN hdfs.DFSClient: Slow ReadProcessor read fields took 42689ms (threshold=30000ms); ack: seqno: 3503 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[10.1.5.4:50010,DS-3083c5f1-fc49-4dfe-9709-02e70d29e332,DISK]]
+19/08/28 00:20:03 WARN hdfs.DFSClient: Slow ReadProcessor read fields took 42691ms (threshold=30000ms); ack: seqno: 206 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[10.1.3.4:50010,DS-d0b84fb0-effe-4b86-af41-8ffc53646bac,DISK]]
+19/08/28 00:21:52 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:21:52 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:23:06 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190827234700_0001_r_000062_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-output/_temporary/0/task_20190827234700_0001_r_000062
+19/08/28 00:23:06 INFO mapred.SparkHadoopMapRedUtil: attempt_20190827234700_0001_r_000062_0: Committed
+19/08/28 00:23:06 INFO executor.Executor: Finished task 62.0 in stage 1.0 (TID 2862). 1299 bytes result sent to driver
+19/08/28 00:23:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 3449
+19/08/28 00:23:06 INFO executor.Executor: Running task 623.0 in stage 1.0 (TID 3449)
+19/08/28 00:23:06 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 17 local blocks and 2783 remote blocks
+19/08/28 00:23:06 INFO storage.ShuffleBlockFetcherIterator: Started 9 remote fetches in 2 ms
+19/08/28 00:23:15 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190827234700_0001_r_000362_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-output/_temporary/0/task_20190827234700_0001_r_000362
+19/08/28 00:23:15 INFO mapred.SparkHadoopMapRedUtil: attempt_20190827234700_0001_r_000362_0: Committed
+19/08/28 00:23:15 INFO executor.Executor: Finished task 362.0 in stage 1.0 (TID 3162). 1299 bytes result sent to driver
+19/08/28 00:23:15 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 3477
+19/08/28 00:23:15 INFO executor.Executor: Running task 647.0 in stage 1.0 (TID 3477)
+19/08/28 00:23:15 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 17 local blocks and 2783 remote blocks
+19/08/28 00:23:15 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 3 ms
+19/08/28 00:23:38 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190827234700_0001_r_000262_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-output/_temporary/0/task_20190827234700_0001_r_000262
+19/08/28 00:23:38 INFO mapred.SparkHadoopMapRedUtil: attempt_20190827234700_0001_r_000262_0: Committed
+19/08/28 00:23:38 INFO executor.Executor: Finished task 262.0 in stage 1.0 (TID 3062). 1299 bytes result sent to driver
+19/08/28 00:23:38 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 3552
+19/08/28 00:23:38 INFO executor.Executor: Running task 719.0 in stage 1.0 (TID 3552)
+19/08/28 00:23:38 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 17 local blocks and 2783 remote blocks
+19/08/28 00:23:38 INFO storage.ShuffleBlockFetcherIterator: Started 10 remote fetches in 47 ms
+19/08/28 00:24:42 WARN hdfs.DFSClient: Slow ReadProcessor read fields took 52861ms (threshold=30000ms); ack: seqno: 11014 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[10.1.3.4:50010,DS-d0b84fb0-effe-4b86-af41-8ffc53646bac,DISK]]
+19/08/28 00:26:04 INFO collection.ExternalSorter: Thread 72 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/08/28 00:26:04 INFO collection.ExternalSorter: Thread 97 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/08/28 00:26:04 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190827234700_0001_r_000419_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-output/_temporary/0/task_20190827234700_0001_r_000419
+19/08/28 00:26:04 INFO mapred.SparkHadoopMapRedUtil: attempt_20190827234700_0001_r_000419_0: Committed
+19/08/28 00:26:04 INFO executor.Executor: Finished task 419.0 in stage 1.0 (TID 3219). 1299 bytes result sent to driver
+19/08/28 00:26:04 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 3603
+19/08/28 00:26:04 INFO executor.Executor: Running task 164.1 in stage 1.0 (TID 3603)
+19/08/28 00:26:04 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 17 local blocks and 2783 remote blocks
+19/08/28 00:26:04 INFO storage.ShuffleBlockFetcherIterator: Started 10 remote fetches in 4 ms
+19/08/28 00:26:30 INFO collection.ExternalSorter: Thread 98 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/08/28 00:29:32 INFO collection.ExternalSorter: Thread 96 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/08/28 00:32:04 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:32:04 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:32:09 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:32:09 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:32:51 WARN hdfs.DFSClient: Slow ReadProcessor read fields took 36323ms (threshold=30000ms); ack: seqno: 628 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[10.1.3.4:50010,DS-d0b84fb0-effe-4b86-af41-8ffc53646bac,DISK]]
+19/08/28 00:32:51 WARN hdfs.DFSClient: Slow ReadProcessor read fields took 36324ms (threshold=30000ms); ack: seqno: 1080 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[10.1.2.4:50010,DS-7f14fd1f-255c-4648-9fca-0bec713d2c39,DISK]]
+19/08/28 00:33:03 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:33:03 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:33:51 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:33:51 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/28 00:35:07 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190827234700_0001_r_000623_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-output/_temporary/0/task_20190827234700_0001_r_000623
+19/08/28 00:35:07 INFO mapred.SparkHadoopMapRedUtil: attempt_20190827234700_0001_r_000623_0: Committed
+19/08/28 00:35:07 INFO executor.Executor: Finished task 623.0 in stage 1.0 (TID 3449). 1299 bytes result sent to driver
+19/08/28 00:35:07 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 3932
+19/08/28 00:35:07 INFO executor.Executor: Running task 1071.0 in stage 1.0 (TID 3932)
+19/08/28 00:35:07 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 17 local blocks and 2783 remote blocks
+19/08/28 00:35:07 INFO storage.ShuffleBlockFetcherIterator: Started 10 remote fetches in 3 ms
+19/08/28 00:35:15 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190827234700_0001_r_000719_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-output/_temporary/0/task_20190827234700_0001_r_000719
+19/08/28 00:35:15 INFO mapred.SparkHadoopMapRedUtil: attempt_20190827234700_0001_r_000719_0: Committed
+19/08/28 00:35:15 INFO executor.Executor: Finished task 719.0 in stage 1.0 (TID 3552). 1299 bytes result sent to driver
+19/08/28 00:35:15 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 3946
+19/08/28 00:35:15 INFO executor.Executor: Running task 1084.0 in stage 1.0 (TID 3946)
+19/08/28 00:35:15 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 17 local blocks and 2783 remote blocks
+19/08/28 00:35:15 INFO storage.ShuffleBlockFetcherIterator: Started 11 remote fetches in 14 ms
+19/08/28 00:35:22 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190827234700_0001_r_000647_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-output/_temporary/0/task_20190827234700_0001_r_000647
+19/08/28 00:35:22 INFO mapred.SparkHadoopMapRedUtil: attempt_20190827234700_0001_r_000647_0: Committed
+19/08/28 00:35:22 INFO executor.Executor: Finished task 647.0 in stage 1.0 (TID 3477). 1299 bytes result sent to driver
+19/08/28 00:35:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 3961
+19/08/28 00:35:22 INFO executor.Executor: Running task 1099.0 in stage 1.0 (TID 3961)
+19/08/28 00:35:22 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 17 local blocks and 2783 remote blocks
+19/08/28 00:35:22 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 20 ms
+19/08/28 00:35:31 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190827234700_0001_r_000164_1' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-output/_temporary/0/task_20190827234700_0001_r_000164
+19/08/28 00:35:31 INFO mapred.SparkHadoopMapRedUtil: attempt_20190827234700_0001_r_000164_1: Committed
+19/08/28 00:35:31 INFO executor.Executor: Finished task 164.1 in stage 1.0 (TID 3603). 1299 bytes result sent to driver
+19/08/28 00:35:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 3977
+19/08/28 00:35:31 INFO executor.Executor: Running task 1115.0 in stage 1.0 (TID 3977)
+19/08/28 00:35:31 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 17 local blocks and 2783 remote blocks
+19/08/28 00:35:31 INFO storage.ShuffleBlockFetcherIterator: Started 10 remote fetches in 17 ms
+19/08/28 00:36:26 INFO collection.ExternalSorter: Thread 72 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/08/28 00:36:43 INFO collection.ExternalSorter: Thread 98 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/08/28 00:37:07 INFO collection.ExternalSorter: Thread 97 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/08/28 00:37:12 INFO collection.ExternalSorter: Thread 96 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/08/28 00:38:31 INFO executor.CoarseGrainedExecutorBackend: Driver commanded a shutdown
+19/08/28 00:38:31 ERROR executor.CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

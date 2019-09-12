@@ -1,0 +1,381 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker3/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker3/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=43941" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:43941" "--executor-id" "10" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621021946-0008" "--worker-url" "spark://Worker@mdc-ch1-cust4:39957"
+========================================
+
+19/06/21 02:19:46 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 120774@mdc-ch1-cust4
+19/06/21 02:19:46 INFO util.SignalUtils: Registered signal handler for TERM
+19/06/21 02:19:46 INFO util.SignalUtils: Registered signal handler for HUP
+19/06/21 02:19:46 INFO util.SignalUtils: Registered signal handler for INT
+19/06/21 02:19:46 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/06/21 02:19:46 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 02:19:46 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 02:19:46 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 02:19:46 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 02:19:46 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 02:19:46 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:43941 after 49 ms (0 ms spent in bootstraps)
+19/06/21 02:19:47 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/06/21 02:19:47 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 02:19:47 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 02:19:47 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 02:19:47 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 02:19:47 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 02:19:47 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:43941 after 1 ms (0 ms spent in bootstraps)
+19/06/21 02:19:47 INFO storage.DiskBlockManager: Created local directory at /data/spark-e463ffc0-1f3e-497e-8062-3d2a50ca29e2/executor-736451f9-419a-4edf-8fa2-058a5ab76ce9/blockmgr-c5c364e6-49dc-42b8-8049-1d08af320dd1
+19/06/21 02:19:47 INFO memory.MemoryStore: MemoryStore started with capacity 12.6 GB
+19/06/21 02:19:47 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:43941
+19/06/21 02:19:47 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@mdc-ch1-cust4:39957
+19/06/21 02:19:47 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:39957 after 1 ms (0 ms spent in bootstraps)
+19/06/21 02:19:47 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@mdc-ch1-cust4:39957
+19/06/21 02:19:47 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/06/21 02:19:47 INFO executor.Executor: Starting executor ID 10 on host mdc-ch1-cust4
+19/06/21 02:19:47 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39363.
+19/06/21 02:19:47 INFO netty.NettyBlockTransferService: Server created on mdc-ch1-cust4:39363
+19/06/21 02:19:47 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/06/21 02:19:47 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(10, mdc-ch1-cust4, 39363, None)
+19/06/21 02:19:47 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(10, mdc-ch1-cust4, 39363, None)
+19/06/21 02:19:47 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(10, mdc-ch1-cust4, 39363, None)
+19/06/21 02:19:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 29
+19/06/21 02:19:47 INFO executor.Executor: Running task 10.0 in stage 1.0 (TID 29)
+19/06/21 02:19:47 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:43941/jars/simple-join-computation-project_2.11-1.0.jar with timestamp 1561108785900
+19/06/21 02:19:47 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:43941 after 1 ms (0 ms spent in bootstraps)
+19/06/21 02:19:47 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:43941/jars/simple-join-computation-project_2.11-1.0.jar to /data/spark-e463ffc0-1f3e-497e-8062-3d2a50ca29e2/executor-736451f9-419a-4edf-8fa2-058a5ab76ce9/spark-e31ce665-8a8d-4744-a211-67970d4cb772/fetchFileTemp3729692751901977734.tmp
+19/06/21 02:19:47 INFO util.Utils: Copying /data/spark-e463ffc0-1f3e-497e-8062-3d2a50ca29e2/executor-736451f9-419a-4edf-8fa2-058a5ab76ce9/spark-e31ce665-8a8d-4744-a211-67970d4cb772/-9276869791561108785900_cache to /var/tmp/spark2.0hpcplatform/multicore/worker3/work/app-20190621021946-0008/10/./simple-join-computation-project_2.11-1.0.jar
+19/06/21 02:19:47 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker3/work/app-20190621021946-0008/10/./simple-join-computation-project_2.11-1.0.jar to class loader
+19/06/21 02:19:48 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 1
+19/06/21 02:19:48 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:42809 after 1 ms (0 ms spent in bootstraps)
+19/06/21 02:19:48 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 924.0 B, free 12.6 GB)
+19/06/21 02:19:48 INFO broadcast.TorrentBroadcast: Reading broadcast variable 1 took 61 ms
+19/06/21 02:19:48 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 1296.0 B, free 12.6 GB)
+19/06/21 02:19:48 INFO executor.Executor: Finished task 10.0 in stage 1.0 (TID 29). 666 bytes result sent to driver
+19/06/21 02:19:48 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 55
+19/06/21 02:19:48 INFO executor.Executor: Running task 17.0 in stage 2.0 (TID 55)
+19/06/21 02:19:48 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 2
+19/06/21 02:19:48 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 1596.0 B, free 12.6 GB)
+19/06/21 02:19:48 INFO broadcast.TorrentBroadcast: Reading broadcast variable 2 took 8 ms
+19/06/21 02:19:48 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 2.5 KB, free 12.6 GB)
+19/06/21 02:19:48 INFO memory.MemoryStore: Block rdd_3_17 stored as values in memory (estimated size 856.0 B, free 12.6 GB)
+19/06/21 02:19:48 INFO executor.Executor: 1 block locks were not released by TID = 55:
+[rdd_3_17]
+19/06/21 02:19:48 INFO executor.Executor: Finished task 17.0 in stage 2.0 (TID 55). 665 bytes result sent to driver
+19/06/21 02:19:48 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 75
+19/06/21 02:19:48 INFO executor.Executor: Running task 17.0 in stage 3.0 (TID 75)
+19/06/21 02:19:48 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 3
+19/06/21 02:19:48 INFO memory.MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 1600.0 B, free 12.6 GB)
+19/06/21 02:19:48 INFO broadcast.TorrentBroadcast: Reading broadcast variable 3 took 7 ms
+19/06/21 02:19:48 INFO memory.MemoryStore: Block broadcast_3 stored as values in memory (estimated size 2.5 KB, free 12.6 GB)
+19/06/21 02:19:48 INFO memory.MemoryStore: Block rdd_7_17 stored as values in memory (estimated size 856.0 B, free 12.6 GB)
+19/06/21 02:19:48 INFO executor.Executor: 1 block locks were not released by TID = 75:
+[rdd_7_17]
+19/06/21 02:19:48 INFO executor.Executor: Finished task 17.0 in stage 3.0 (TID 75). 665 bytes result sent to driver
+19/06/21 02:19:48 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 85
+19/06/21 02:19:48 INFO executor.Executor: Running task 17.0 in stage 4.0 (TID 85)
+19/06/21 02:19:48 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 4
+19/06/21 02:19:48 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:38379 after 1 ms (0 ms spent in bootstraps)
+19/06/21 02:19:48 INFO memory.MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 2.2 KB, free 12.6 GB)
+19/06/21 02:19:48 INFO broadcast.TorrentBroadcast: Reading broadcast variable 4 took 12 ms
+19/06/21 02:19:48 INFO memory.MemoryStore: Block broadcast_4 stored as values in memory (estimated size 3.5 KB, free 12.6 GB)
+19/06/21 02:19:48 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 102
+19/06/21 02:19:48 INFO executor.Executor: Running task 17.0 in stage 5.0 (TID 102)
+19/06/21 02:19:48 INFO shm.ShmShuffleManager: ShmShuffleManager obtains SPARK_WORKER_CORES: 64
+19/06/21 02:19:48 INFO shm.ShmShuffleManager: to initialize shm shuffle manager in an executor, with executor id string value:10
+19/06/21 02:19:48 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 5
+19/06/21 02:19:48 INFO memory.MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 2.2 KB, free 12.6 GB)
+19/06/21 02:19:48 INFO broadcast.TorrentBroadcast: Reading broadcast variable 5 took 6 ms
+19/06/21 02:19:48 INFO memory.MemoryStore: Block broadcast_5 stored as values in memory (estimated size 3.5 KB, free 12.6 GB)
+19/06/21 02:19:48 INFO shuffle.ShuffleStoreManager: jnishmshuffle shared library loaded via loadLibraryFromJar
+19/06/21 02:19:48 INFO shuffle.ShuffleStoreManager: perform actual initialization for ShuffleStoreManager
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0621 02:19:48.896910 121291 MapShuffleStoreManager.cc:101] map shuffle store manage initialize
+I0621 02:19:48.896963 121291 ByteBufferPool.cc:44] initialize queue-based bytebuffer pool
+I0621 02:19:48.896970 121291 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:19:48.896972 121291 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:19:48.896975 121291 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:19:48.896981 121291 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:19:48.896986 121291 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:19:48.896989 121291 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:19:48.896994 121291 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:19:48.896998 121291 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:19:48.897017 121291 SharedMemoryAllocator.h:64] rmb default log level chosen is: info
+I0621 02:19:48.897261 121291 SharedMemoryAllocator.h:201] rmb shared memory manager detected a single-partitioned shm path: /lfs/spark_global0
+0000001 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:48.897350 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 153) Open heap path: /lfs/spark_global0 
+0000002 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:48.898018 [info] - (/home/ghosdebd/sparkle/alps/src/pegasus/lfs_region_file.cc, 64) Open LFS region file path: "/lfs/spark_global0" flags: O_RDWR
+0000004 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:48.912998 [info] - (/home/ghosdebd/sparkle/alps/src/pegasus/segmap.cc, 39) map region  base_addr: 0x7ef3ac000000 size: 549755813888 addr_range: 0x7ef3ac000000--7f73ac000000
+0000005 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:48.913029 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 158) Opened heap path: /lfs/spark_global0  size: 549755813888
+I0621 02:19:48.914151 121291 SharedMemoryAllocator.h:93] rmb shared memory manager initialized global heap:0xf44140
+I0621 02:19:48.914273 121291 SharedMemoryManager.cc:64] shared-memory manager registered heap: /lfs/spark_global0
+I0621 02:19:48.914279 121291 ShuffleDataSharedMemoryManager.h:162] shuffle engine has opened heap: /lfs/spark_global0
+I0621 02:19:48.914286 121291 ShuffleStoreManager.cc:140] shuffle store manager initialized with executor id 10 and generation id: 9
+19/06/21 02:19:49 INFO shm.ShmShuffleWriter:  Map Thread: 69 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:19:49 INFO storage.BlockManager: Found block rdd_3_17 locally
+19/06/21 02:19:49 INFO shm.ShmShuffleWriter:  Map Thread: 77 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:19:49 INFO storage.BlockManager: Found block rdd_7_17 locally
+19/06/21 02:19:49 INFO shuffle.MapSHMShuffleStore: store id0 map-side shared-memory based shuffle store started with ordering: false
+19/06/21 02:19:49 INFO shuffle.MapSHMShuffleStore: store id1 map-side shared-memory based shuffle store started with ordering: false
+I0621 02:19:49.217460 121291 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0xf44030
+I0621 02:19:49.217476 121343 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0xf44030
+I0621 02:19:49.218019 121291 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 17 and ordering: 0
+I0621 02:19:49.218036 121291 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:19:49.218021 121343 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:1 map id: 17 and ordering: 0
+I0621 02:19:49.218050 121343 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+0000006 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.219178 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 412
+0000007 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.219193 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 412
+0000008 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.219247 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 412 ig: 0
+0000009 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.219250 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 412 ig: 0
+0000011 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.219388 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 412
+0000010 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.219387 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 412
+0000012 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.219413 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/process_slab_heap.cc, 30) acquire_slab
+0000013 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.219423 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/process_slab_heap.cc, 33) acquire_slab: locked
+0000014 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.219435 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentheap.hh, 116) malloc
+0000015 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.219526 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/zone.hh, 40) NVZONE: 0x7ef7ac000400
+0000016 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.219539 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/zone.hh, 41) NVZONE: ID: 2
+0000017 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.221239 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentmap.cc, 88) INSERT: (0, 32766)
+0000018 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.221271 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/zone_heap.hh, 153) Acquired zone: 2
+0000019 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.221283 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/zone.hh, 72) Enumerate zone: 2
+0000020 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.222767 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentheap.hh, 116) malloc
+0000021 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.222787 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentmap.cc, 88) INSERT: (1, 32765)
+0000022 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.222795 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/zone.cc, 48) Allocated zone_id: 2 extent: (0, 1) 0x7ef7ac0404c8
+0000023 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.222824 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/process_slab_heap.cc, 50) acquire_slab: unlock 2
+0000024 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.222842 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000404c8) block: 0
+0000025 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.222851 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000026 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.222864 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x400040548) size: 412
+0000027 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.222872 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000404c8) block: 1
+0000028 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.222886 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 30
+0000029 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.222897 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000030 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.222901 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 30 ig: 0
+0000031 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.222912 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x4000406e8) size: 412
+0000032 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.222924 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 30
+0000033 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.222937 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 30
+0000034 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.222942 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/process_slab_heap.cc, 30) acquire_slab
+0000035 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.222952 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 30 ig: 0
+0000036 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.222962 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/process_slab_heap.cc, 33) acquire_slab: locked
+0000037 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.222971 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 30
+0000038 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.222981 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentheap.hh, 116) malloc
+0000039 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223000 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentmap.cc, 88) INSERT: (2, 32764)
+0000040 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223009 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/zone.cc, 48) Allocated zone_id: 2 extent: (1, 1) 0x7ef7ac0804c8
+0000041 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223220 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/process_slab_heap.cc, 50) acquire_slab: unlock 2
+0000042 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223228 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000804c8) block: 0
+0000043 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223238 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000044 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223246 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x400080908) size: 30
+0000045 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223250 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000804c8) block: 1
+0000046 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223252 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 60
+0000047 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223257 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000048 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223268 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 60 ig: 0
+0000049 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223277 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x400080928) size: 30
+0000050 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223288 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 60
+0000051 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223297 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 30
+0000052 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223401 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/process_slab_heap.cc, 30) acquire_slab
+0000053 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223409 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 30 ig: 0
+0000054 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223415 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/process_slab_heap.cc, 33) acquire_slab: locked
+0000055 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223423 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 30
+0000056 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223433 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentheap.hh, 116) malloc
+0000057 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223453 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentmap.cc, 88) INSERT: (3, 32763)
+0000058 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223462 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/zone.cc, 48) Allocated zone_id: 2 extent: (2, 1) 0x7ef7ac0c04c8
+0000059 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223667 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/process_slab_heap.cc, 50) acquire_slab: unlock 2
+0000060 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223676 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000c04c8) block: 0
+0000061 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223684 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000062 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223694 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x4000c0708) size: 60
+0000063 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223697 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000804c8) block: 2
+0000064 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223704 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 30
+0000065 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223712 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000066 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223723 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 30 ig: 0
+0000067 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223731 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x400080948) size: 30
+0000068 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223739 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 30
+0000069 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223750 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 30
+0000070 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223759 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000804c8) block: 3
+0000071 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223764 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 30 ig: 0
+0000072 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223774 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000073 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223779 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 30
+0000074 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223789 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x400080968) size: 30
+0000075 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223798 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000804c8) block: 4
+0000076 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223807 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 60
+0000077 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223816 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000078 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223825 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 60 ig: 0
+0000079 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223835 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x400080988) size: 30
+0000080 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223844 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 60
+0000081 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223854 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 60
+0000082 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223864 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000c04c8) block: 1
+0000083 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223873 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 60 ig: 0
+0000084 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223882 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000085 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223891 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 60
+0000086 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223899 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x4000c0748) size: 60
+0000087 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223911 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000c04c8) block: 2
+0000088 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223917 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 60
+0000089 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223927 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000090 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223935 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 60 ig: 0
+0000091 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223946 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x4000c0788) size: 60
+0000092 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223952 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 60
+0000093 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223958 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 30
+0000094 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223967 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000c04c8) block: 3
+0000095 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223977 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 30 ig: 0
+0000096 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.223986 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000097 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.223995 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 30
+0000098 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.224004 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x4000c07c8) size: 60
+0000099 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224014 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000804c8) block: 5
+0000100 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.224036 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 30
+0000101 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224045 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000102 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.224053 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 30 ig: 0
+0000103 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224059 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x4000809a8) size: 30
+0000104 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.224067 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 30
+0000105 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224076 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 30
+0000106 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.224085 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000804c8) block: 6
+0000107 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224092 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 30 ig: 0
+0000108 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.224104 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000109 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224114 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 30
+0000110 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.224124 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x4000809c8) size: 30
+0000111 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224133 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000804c8) block: 7
+0000112 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.224143 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 30
+0000113 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224152 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000114 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.224161 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 30 ig: 0
+0000115 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224170 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x4000809e8) size: 30
+0000116 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.224176 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 30
+0000117 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224186 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 30
+0000118 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.224196 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000804c8) block: 8
+0000119 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224204 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 30 ig: 0
+0000120 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.224213 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000121 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224222 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 30
+0000122 | T.0x00007f74f8ffc700 | 2019-06-21, 02:19:49.224232 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x400080a08) size: 30
+0000123 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224241 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000804c8) block: 9
+0000124 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224260 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000125 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224266 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x400080a28) size: 30
+0000126 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224279 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 30
+0000127 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224287 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 30 ig: 0
+0000128 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224294 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 30
+0000129 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224299 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000804c8) block: 10
+0000130 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224305 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000131 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224310 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x400080a48) size: 30
+0000132 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224317 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 30
+0000133 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224321 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 30 ig: 0
+0000134 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224327 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 30
+0000135 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224333 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab.cc, 56) Allocate block: nvslab: (0xbeef, 0x4000804c8) block: 11
+0000136 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224342 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/slab_heap.cc, 40) Allocate block: new_fullness: 0 old_fullness: 0
+0000137 | T.0x00007f7502ffe700 | 2019-06-21, 02:19:49.224347 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 391) Allocated block ptr: (0xbeef, 0x400080a68) size: 30
+19/06/21 02:19:49 INFO shm.ShmShuffleWriter: store id0 shm-shuffle map status region id: 48879
+19/06/21 02:19:49 INFO shm.ShmShuffleWriter: store id1 shm-shuffle map status region id: 48879
+19/06/21 02:19:49 INFO shm.ShmShuffleWriter: store id1 shm-shuffle map status offset to index chunk: 0x 4000406e8
+19/06/21 02:19:49 INFO shm.ShmShuffleWriter: store id0 shm-shuffle map status offset to index chunk: 0x 400040548
+19/06/21 02:19:49 INFO shuffle.MapSHMShuffleStore: store id 0 map-side shared-memory based shuffle store stopped with id:1-17
+19/06/21 02:19:49 INFO shuffle.MapSHMShuffleStore: store id 1 map-side shared-memory based shuffle store stopped with id:0-17
+I0621 02:19:49.226897 121343 MapShuffleStoreWithLongKeys.cc:411] map shuffle store with long keys with map id: 17 stopped buffer pool size: 2
+I0621 02:19:49.226904 121291 MapShuffleStoreWithLongKeys.cc:411] map shuffle store with long keys with map id: 17 stopped buffer pool size: 2
+I0621 02:19:49.226912 121343 MapShuffleStoreWithLongKeys.cc:415] map shuffle store with long keys with map id: 17 stopped key pool size: 2
+I0621 02:19:49.226922 121291 MapShuffleStoreWithLongKeys.cc:415] map shuffle store with long keys with map id: 17 stopped key pool size: 2
+19/06/21 02:19:49 INFO executor.Executor: Finished task 17.0 in stage 5.0 (TID 102). 851 bytes result sent to driver
+19/06/21 02:19:49 INFO executor.Executor: Finished task 17.0 in stage 4.0 (TID 85). 851 bytes result sent to driver
+19/06/21 02:19:49 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 121
+19/06/21 02:19:49 INFO executor.Executor: Running task 3.0 in stage 6.0 (TID 121)
+19/06/21 02:19:49 INFO spark.MapOutputTrackerWorker: Updating epoch to 2 and clearing cache
+19/06/21 02:19:49 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 6
+19/06/21 02:19:49 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:41355 after 1 ms (0 ms spent in bootstraps)
+19/06/21 02:19:50 INFO memory.MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 2.1 KB, free 12.6 GB)
+19/06/21 02:19:50 INFO broadcast.TorrentBroadcast: Reading broadcast variable 6 took 121 ms
+19/06/21 02:19:50 INFO memory.MemoryStore: Block broadcast_6 stored as values in memory (estimated size 3.6 KB, free 12.6 GB)
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 0 reduce-side shared-memory based shuffle store started with id:0-3
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 0 reduce-side shared-memory based shuffle store started with id:0-3
+19/06/21 02:19:50 INFO shm.ShmShuffleStoreShuffleFetcher: Fetching shm-shuffle outputs for shuffle 0, reduce 3
+19/06/21 02:19:50 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/06/21 02:19:50 INFO spark.MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@mdc-ch1-cust4.mdc.ext.hpe.com:43941)
+19/06/21 02:19:50 INFO spark.MapOutputTrackerWorker: Got the output locations
+19/06/21 02:19:50 INFO shm.ShmShuffleStoreShuffleFetcher: Fetching shm-shuffle map output location for shuffle 0, reduce 3 took 10 ms
+I0621 02:19:50.243119 121291 ReduceShuffleStoreManager.cc:128] create long-key reduce shuffle store with shuffle id:0 passthrough buffer: 0x7ef36bfff010 with buffer capacity: 1073741824 reducer id: 3 with ordering: 0 and with aggregation: 0
+19/06/21 02:19:50 INFO shm.ShmShuffleReader: ShmShuffleReader, straight pass-through for downstream processing
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 1 reduce-side shared-memory based shuffle store started with id:1-3
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 1 reduce-side shared-memory based shuffle store started with id:1-3
+19/06/21 02:19:50 INFO shm.ShmShuffleStoreShuffleFetcher: Fetching shm-shuffle outputs for shuffle 1, reduce 3
+19/06/21 02:19:50 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 1, fetching them
+19/06/21 02:19:50 INFO spark.MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@mdc-ch1-cust4.mdc.ext.hpe.com:43941)
+19/06/21 02:19:50 INFO spark.MapOutputTrackerWorker: Got the output locations
+19/06/21 02:19:50 INFO shm.ShmShuffleStoreShuffleFetcher: Fetching shm-shuffle map output location for shuffle 1, reduce 3 took 3 ms
+I0621 02:19:50.250501 121291 ReduceShuffleStoreManager.cc:128] create long-key reduce shuffle store with shuffle id:1 passthrough buffer: 0x7ef36bfff010 with buffer capacity: 1073741824 reducer id: 3 with ordering: 0 and with aggregation: 0
+19/06/21 02:19:50 INFO shm.ShmShuffleReader: ShmShuffleReader, straight pass-through for downstream processing
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 0 reduce-side shared-memory based shuffle store stopped with id:0-3
+I0621 02:19:50.272506 121291 ReduceShuffleStoreWithLongKeys.cc:427] **reduce shuffle store with long keys  with id: 3 stopped buffer pool size: 2
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 1 reduce-side shared-memory based shuffle store stopped with id:1-3
+I0621 02:19:50.273572 121291 ReduceShuffleStoreWithLongKeys.cc:427] **reduce shuffle store with long keys  with id: 3 stopped buffer pool size: 2
+19/06/21 02:19:50 INFO executor.Executor: Finished task 3.0 in stage 6.0 (TID 121). 838 bytes result sent to driver
+19/06/21 02:19:50 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 150
+19/06/21 02:19:50 INFO executor.Executor: Running task 12.0 in stage 9.0 (TID 150)
+19/06/21 02:19:50 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 7
+19/06/21 02:19:50 INFO memory.MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 2.6 KB, free 12.6 GB)
+19/06/21 02:19:50 INFO broadcast.TorrentBroadcast: Reading broadcast variable 7 took 8 ms
+19/06/21 02:19:50 INFO memory.MemoryStore: Block broadcast_7 stored as values in memory (estimated size 4.5 KB, free 12.6 GB)
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 2 reduce-side shared-memory based shuffle store started with id:0-12
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 2 reduce-side shared-memory based shuffle store started with id:0-12
+19/06/21 02:19:50 INFO shm.ShmShuffleStoreShuffleFetcher: Fetching shm-shuffle outputs for shuffle 0, reduce 12
+19/06/21 02:19:50 INFO shm.ShmShuffleStoreShuffleFetcher: Fetching shm-shuffle map output location for shuffle 0, reduce 12 took 1 ms
+I0621 02:19:50.370160 121291 ReduceShuffleStoreManager.cc:128] create long-key reduce shuffle store with shuffle id:0 passthrough buffer: 0x7ef36bfff010 with buffer capacity: 1073741824 reducer id: 12 with ordering: 0 and with aggregation: 0
+19/06/21 02:19:50 INFO shm.ShmShuffleReader: ShmShuffleReader, straight pass-through for downstream processing
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 3 reduce-side shared-memory based shuffle store started with id:1-12
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 3 reduce-side shared-memory based shuffle store started with id:1-12
+19/06/21 02:19:50 INFO shm.ShmShuffleStoreShuffleFetcher: Fetching shm-shuffle outputs for shuffle 1, reduce 12
+19/06/21 02:19:50 INFO shm.ShmShuffleStoreShuffleFetcher: Fetching shm-shuffle map output location for shuffle 1, reduce 12 took 0 ms
+I0621 02:19:50.373533 121291 ReduceShuffleStoreManager.cc:128] create long-key reduce shuffle store with shuffle id:1 passthrough buffer: 0x7ef36bfff010 with buffer capacity: 1073741824 reducer id: 12 with ordering: 0 and with aggregation: 0
+19/06/21 02:19:50 INFO shm.ShmShuffleReader: ShmShuffleReader, straight pass-through for downstream processing
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 2 reduce-side shared-memory based shuffle store stopped with id:0-12
+I0621 02:19:50.377900 121291 ReduceShuffleStoreWithLongKeys.cc:427] **reduce shuffle store with long keys  with id: 12 stopped buffer pool size: 2
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 3 reduce-side shared-memory based shuffle store stopped with id:1-12
+I0621 02:19:50.378741 121291 ReduceShuffleStoreWithLongKeys.cc:427] **reduce shuffle store with long keys  with id: 12 stopped buffer pool size: 2
+19/06/21 02:19:50 INFO executor.Executor: Finished task 12.0 in stage 9.0 (TID 150). 802 bytes result sent to driver
+19/06/21 02:19:50 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 160
+19/06/21 02:19:50 INFO executor.Executor: Running task 2.0 in stage 12.0 (TID 160)
+19/06/21 02:19:50 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 8
+19/06/21 02:19:50 INFO memory.MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 2.6 KB, free 12.6 GB)
+19/06/21 02:19:50 INFO broadcast.TorrentBroadcast: Reading broadcast variable 8 took 6 ms
+19/06/21 02:19:50 INFO memory.MemoryStore: Block broadcast_8 stored as values in memory (estimated size 4.7 KB, free 12.6 GB)
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 4 reduce-side shared-memory based shuffle store started with id:0-2
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 4 reduce-side shared-memory based shuffle store started with id:0-2
+19/06/21 02:19:50 INFO shm.ShmShuffleStoreShuffleFetcher: Fetching shm-shuffle outputs for shuffle 0, reduce 2
+19/06/21 02:19:50 INFO shm.ShmShuffleStoreShuffleFetcher: Fetching shm-shuffle map output location for shuffle 0, reduce 2 took 0 ms
+I0621 02:19:50.440050 121291 ReduceShuffleStoreManager.cc:128] create long-key reduce shuffle store with shuffle id:0 passthrough buffer: 0x7ef36bfff010 with buffer capacity: 1073741824 reducer id: 2 with ordering: 0 and with aggregation: 0
+19/06/21 02:19:50 INFO shm.ShmShuffleReader: ShmShuffleReader, straight pass-through for downstream processing
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 5 reduce-side shared-memory based shuffle store started with id:1-2
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 5 reduce-side shared-memory based shuffle store started with id:1-2
+19/06/21 02:19:50 INFO shm.ShmShuffleStoreShuffleFetcher: Fetching shm-shuffle outputs for shuffle 1, reduce 2
+19/06/21 02:19:50 INFO shm.ShmShuffleStoreShuffleFetcher: Fetching shm-shuffle map output location for shuffle 1, reduce 2 took 0 ms
+I0621 02:19:50.442631 121291 ReduceShuffleStoreManager.cc:128] create long-key reduce shuffle store with shuffle id:1 passthrough buffer: 0x7ef36bfff010 with buffer capacity: 1073741824 reducer id: 2 with ordering: 0 and with aggregation: 0
+19/06/21 02:19:50 INFO shm.ShmShuffleReader: ShmShuffleReader, straight pass-through for downstream processing
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 4 reduce-side shared-memory based shuffle store stopped with id:0-2
+I0621 02:19:50.446069 121291 ReduceShuffleStoreWithLongKeys.cc:427] **reduce shuffle store with long keys  with id: 2 stopped buffer pool size: 2
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 5 reduce-side shared-memory based shuffle store stopped with id:1-2
+I0621 02:19:50.447033 121291 ReduceShuffleStoreWithLongKeys.cc:427] **reduce shuffle store with long keys  with id: 2 stopped buffer pool size: 2
+19/06/21 02:19:50 INFO executor.Executor: Finished task 2.0 in stage 12.0 (TID 160). 802 bytes result sent to driver
+19/06/21 02:19:50 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 187
+19/06/21 02:19:50 INFO executor.Executor: Running task 17.0 in stage 13.0 (TID 187)
+19/06/21 02:19:50 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 9
+19/06/21 02:19:50 INFO memory.MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 1556.0 B, free 12.6 GB)
+19/06/21 02:19:50 INFO broadcast.TorrentBroadcast: Reading broadcast variable 9 took 31 ms
+19/06/21 02:19:50 INFO memory.MemoryStore: Block broadcast_9 stored as values in memory (estimated size 2.4 KB, free 12.6 GB)
+19/06/21 02:19:50 INFO storage.BlockManager: Found block rdd_3_17 locally
+19/06/21 02:19:50 INFO executor.Executor: Finished task 17.0 in stage 13.0 (TID 187). 752 bytes result sent to driver
+19/06/21 02:19:50 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 204
+19/06/21 02:19:50 INFO executor.Executor: Running task 17.0 in stage 14.0 (TID 204)
+19/06/21 02:19:50 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 10
+19/06/21 02:19:50 INFO memory.MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 1559.0 B, free 12.6 GB)
+19/06/21 02:19:50 INFO broadcast.TorrentBroadcast: Reading broadcast variable 10 took 8 ms
+19/06/21 02:19:50 INFO memory.MemoryStore: Block broadcast_10 stored as values in memory (estimated size 2.4 KB, free 12.6 GB)
+19/06/21 02:19:50 INFO storage.BlockManager: Found block rdd_7_17 locally
+19/06/21 02:19:50 INFO executor.Executor: Finished task 17.0 in stage 14.0 (TID 204). 752 bytes result sent to driver
+19/06/21 02:19:50 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 226
+19/06/21 02:19:50 INFO executor.Executor: Running task 8.0 in stage 17.0 (TID 226)
+19/06/21 02:19:50 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 11
+19/06/21 02:19:50 INFO memory.MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 2.1 KB, free 12.6 GB)
+19/06/21 02:19:50 INFO broadcast.TorrentBroadcast: Reading broadcast variable 11 took 6 ms
+19/06/21 02:19:50 INFO memory.MemoryStore: Block broadcast_11 stored as values in memory (estimated size 3.6 KB, free 12.6 GB)
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 6 reduce-side shared-memory based shuffle store started with id:0-8
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 6 reduce-side shared-memory based shuffle store started with id:0-8
+19/06/21 02:19:50 INFO shm.ShmShuffleStoreShuffleFetcher: Fetching shm-shuffle outputs for shuffle 0, reduce 8
+19/06/21 02:19:50 INFO shm.ShmShuffleStoreShuffleFetcher: Fetching shm-shuffle map output location for shuffle 0, reduce 8 took 0 ms
+I0621 02:19:50.644629 121291 ReduceShuffleStoreManager.cc:128] create long-key reduce shuffle store with shuffle id:0 passthrough buffer: 0x7ef36bfff010 with buffer capacity: 1073741824 reducer id: 8 with ordering: 0 and with aggregation: 0
+19/06/21 02:19:50 INFO shm.ShmShuffleReader: ShmShuffleReader, straight pass-through for downstream processing
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 7 reduce-side shared-memory based shuffle store started with id:1-8
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 7 reduce-side shared-memory based shuffle store started with id:1-8
+19/06/21 02:19:50 INFO shm.ShmShuffleStoreShuffleFetcher: Fetching shm-shuffle outputs for shuffle 1, reduce 8
+19/06/21 02:19:50 INFO shm.ShmShuffleStoreShuffleFetcher: Fetching shm-shuffle map output location for shuffle 1, reduce 8 took 0 ms
+I0621 02:19:50.647110 121291 ReduceShuffleStoreManager.cc:128] create long-key reduce shuffle store with shuffle id:1 passthrough buffer: 0x7ef36bfff010 with buffer capacity: 1073741824 reducer id: 8 with ordering: 0 and with aggregation: 0
+19/06/21 02:19:50 INFO shm.ShmShuffleReader: ShmShuffleReader, straight pass-through for downstream processing
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 6 reduce-side shared-memory based shuffle store stopped with id:0-8
+I0621 02:19:50.650146 121291 ReduceShuffleStoreWithLongKeys.cc:427] **reduce shuffle store with long keys  with id: 8 stopped buffer pool size: 2
+19/06/21 02:19:50 INFO shuffle.ReduceSHMShuffleStore: store id 7 reduce-side shared-memory based shuffle store stopped with id:1-8
+I0621 02:19:50.650907 121291 ReduceShuffleStoreWithLongKeys.cc:427] **reduce shuffle store with long keys  with id: 8 stopped buffer pool size: 2
+19/06/21 02:19:50 INFO executor.Executor: Finished task 8.0 in stage 17.0 (TID 226). 795 bytes result sent to driver
+19/06/21 02:19:50 INFO executor.CoarseGrainedExecutorBackend: Driver commanded a shutdown
+19/06/21 02:19:50 ERROR executor.CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

@@ -1,0 +1,268 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=39133" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39133" "--executor-id" "13" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621021028-0003" "--worker-url" "spark://Worker@mdc-ch1-cust4:35763"
+========================================
+
+19/06/21 02:10:28 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 113097@mdc-ch1-cust4
+19/06/21 02:10:28 INFO util.SignalUtils: Registered signal handler for TERM
+19/06/21 02:10:28 INFO util.SignalUtils: Registered signal handler for HUP
+19/06/21 02:10:28 INFO util.SignalUtils: Registered signal handler for INT
+19/06/21 02:10:28 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/06/21 02:10:28 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 02:10:28 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 02:10:28 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 02:10:28 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 02:10:28 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 02:10:29 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:39133 after 48 ms (0 ms spent in bootstraps)
+19/06/21 02:10:29 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/06/21 02:10:29 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 02:10:29 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 02:10:29 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 02:10:29 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 02:10:29 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 02:10:29 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:39133 after 1 ms (0 ms spent in bootstraps)
+19/06/21 02:10:29 INFO storage.DiskBlockManager: Created local directory at /data/spark-87822a48-daf4-494f-b14f-ae33f326dc42/executor-b78ff26b-16c2-46c2-982e-8aa4ed0e93d4/blockmgr-cbe16580-69e9-49d5-9546-dab947917950
+19/06/21 02:10:29 INFO memory.MemoryStore: MemoryStore started with capacity 12.6 GB
+19/06/21 02:10:29 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39133
+19/06/21 02:10:29 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@mdc-ch1-cust4:35763
+19/06/21 02:10:29 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:35763 after 1 ms (0 ms spent in bootstraps)
+19/06/21 02:10:29 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@mdc-ch1-cust4:35763
+19/06/21 02:10:29 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/06/21 02:10:29 INFO executor.Executor: Starting executor ID 13 on host mdc-ch1-cust4
+19/06/21 02:10:29 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38143.
+19/06/21 02:10:29 INFO netty.NettyBlockTransferService: Server created on mdc-ch1-cust4:38143
+19/06/21 02:10:29 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/06/21 02:10:29 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(13, mdc-ch1-cust4, 38143, None)
+19/06/21 02:10:29 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(13, mdc-ch1-cust4, 38143, None)
+19/06/21 02:10:29 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(13, mdc-ch1-cust4, 38143, None)
+19/06/21 02:10:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 203
+19/06/21 02:10:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 221
+19/06/21 02:10:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 239
+19/06/21 02:10:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 257
+19/06/21 02:10:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 275
+19/06/21 02:10:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 293
+19/06/21 02:10:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 311
+19/06/21 02:10:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 329
+19/06/21 02:10:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 347
+19/06/21 02:10:31 INFO executor.Executor: Running task 22.0 in stage 1.0 (TID 221)
+19/06/21 02:10:31 INFO executor.Executor: Running task 112.0 in stage 1.0 (TID 311)
+19/06/21 02:10:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 365
+19/06/21 02:10:31 INFO executor.Executor: Running task 130.0 in stage 1.0 (TID 329)
+19/06/21 02:10:31 INFO executor.Executor: Running task 76.0 in stage 1.0 (TID 275)
+19/06/21 02:10:31 INFO executor.Executor: Running task 94.0 in stage 1.0 (TID 293)
+19/06/21 02:10:31 INFO executor.Executor: Running task 58.0 in stage 1.0 (TID 257)
+19/06/21 02:10:31 INFO executor.Executor: Running task 4.0 in stage 1.0 (TID 203)
+19/06/21 02:10:31 INFO executor.Executor: Running task 40.0 in stage 1.0 (TID 239)
+19/06/21 02:10:31 INFO executor.Executor: Running task 166.0 in stage 1.0 (TID 365)
+19/06/21 02:10:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 383
+19/06/21 02:10:31 INFO executor.Executor: Running task 148.0 in stage 1.0 (TID 347)
+19/06/21 02:10:31 INFO executor.Executor: Running task 184.0 in stage 1.0 (TID 383)
+19/06/21 02:10:31 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:39133/jars/simple-reduceby-computation-project_2.11-1.0.jar with timestamp 1561108228070
+19/06/21 02:10:31 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:39133 after 1 ms (0 ms spent in bootstraps)
+19/06/21 02:10:31 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:39133/jars/simple-reduceby-computation-project_2.11-1.0.jar to /data/spark-87822a48-daf4-494f-b14f-ae33f326dc42/executor-b78ff26b-16c2-46c2-982e-8aa4ed0e93d4/spark-791dae49-f5e9-4119-9e27-c9e761a4a369/fetchFileTemp1770172373188505323.tmp
+19/06/21 02:10:31 INFO util.Utils: Copying /data/spark-87822a48-daf4-494f-b14f-ae33f326dc42/executor-b78ff26b-16c2-46c2-982e-8aa4ed0e93d4/spark-791dae49-f5e9-4119-9e27-c9e761a4a369/19627663661561108228070_cache to /var/tmp/spark2.0hpcplatform/multicore/worker2/work/app-20190621021028-0003/13/./simple-reduceby-computation-project_2.11-1.0.jar
+19/06/21 02:10:31 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker2/work/app-20190621021028-0003/13/./simple-reduceby-computation-project_2.11-1.0.jar to class loader
+19/06/21 02:10:31 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 1
+19/06/21 02:10:31 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:42315 after 1 ms (0 ms spent in bootstraps)
+19/06/21 02:10:31 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 1589.0 B, free 12.6 GB)
+19/06/21 02:10:31 INFO broadcast.TorrentBroadcast: Reading broadcast variable 1 took 263 ms
+19/06/21 02:10:31 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 2.5 KB, free 12.6 GB)
+19/06/21 02:10:34 INFO memory.MemoryStore: Block rdd_3_130 stored as values in memory (estimated size 83.9 MB, free 12.5 GB)
+19/06/21 02:10:34 INFO memory.MemoryStore: Block rdd_3_94 stored as values in memory (estimated size 83.9 MB, free 12.5 GB)
+19/06/21 02:10:34 INFO executor.Executor: 1 block locks were not released by TID = 329:
+[rdd_3_130]
+19/06/21 02:10:34 INFO memory.MemoryStore: Block rdd_3_58 stored as values in memory (estimated size 83.9 MB, free 12.4 GB)
+19/06/21 02:10:34 INFO executor.Executor: 1 block locks were not released by TID = 293:
+[rdd_3_94]
+19/06/21 02:10:34 INFO memory.MemoryStore: Block rdd_3_148 stored as values in memory (estimated size 83.9 MB, free 12.3 GB)
+19/06/21 02:10:34 INFO executor.Executor: 1 block locks were not released by TID = 257:
+[rdd_3_58]
+19/06/21 02:10:34 INFO memory.MemoryStore: Block rdd_3_112 stored as values in memory (estimated size 83.9 MB, free 12.2 GB)
+19/06/21 02:10:34 INFO memory.MemoryStore: Block rdd_3_166 stored as values in memory (estimated size 83.9 MB, free 12.1 GB)
+19/06/21 02:10:34 INFO executor.Executor: 1 block locks were not released by TID = 347:
+[rdd_3_148]
+19/06/21 02:10:34 INFO memory.MemoryStore: Block rdd_3_40 stored as values in memory (estimated size 83.9 MB, free 12.1 GB)
+19/06/21 02:10:34 INFO executor.Executor: 1 block locks were not released by TID = 365:
+[rdd_3_166]
+19/06/21 02:10:34 INFO executor.Executor: 1 block locks were not released by TID = 311:
+[rdd_3_112]
+19/06/21 02:10:34 INFO memory.MemoryStore: Block rdd_3_4 stored as values in memory (estimated size 83.9 MB, free 12.0 GB)
+19/06/21 02:10:34 INFO memory.MemoryStore: Block rdd_3_76 stored as values in memory (estimated size 83.9 MB, free 11.9 GB)
+19/06/21 02:10:34 INFO memory.MemoryStore: Block rdd_3_184 stored as values in memory (estimated size 83.9 MB, free 11.7 GB)
+19/06/21 02:10:34 INFO executor.Executor: 1 block locks were not released by TID = 239:
+[rdd_3_40]
+19/06/21 02:10:34 INFO executor.Executor: Finished task 148.0 in stage 1.0 (TID 347). 708 bytes result sent to driver
+19/06/21 02:10:34 INFO executor.Executor: Finished task 130.0 in stage 1.0 (TID 329). 751 bytes result sent to driver
+19/06/21 02:10:34 INFO executor.Executor: Finished task 94.0 in stage 1.0 (TID 293). 708 bytes result sent to driver
+19/06/21 02:10:34 INFO memory.MemoryStore: Block rdd_3_22 stored as values in memory (estimated size 83.9 MB, free 11.7 GB)
+19/06/21 02:10:34 INFO executor.Executor: Finished task 58.0 in stage 1.0 (TID 257). 708 bytes result sent to driver
+19/06/21 02:10:34 INFO executor.Executor: 1 block locks were not released by TID = 203:
+[rdd_3_4]
+19/06/21 02:10:34 INFO executor.Executor: Finished task 40.0 in stage 1.0 (TID 239). 708 bytes result sent to driver
+19/06/21 02:10:34 INFO executor.Executor: Finished task 112.0 in stage 1.0 (TID 311). 708 bytes result sent to driver
+19/06/21 02:10:34 INFO executor.Executor: 1 block locks were not released by TID = 275:
+[rdd_3_76]
+19/06/21 02:10:34 INFO executor.Executor: 1 block locks were not released by TID = 383:
+[rdd_3_184]
+19/06/21 02:10:34 INFO executor.Executor: 1 block locks were not released by TID = 221:
+[rdd_3_22]
+19/06/21 02:10:34 INFO executor.Executor: Finished task 4.0 in stage 1.0 (TID 203). 708 bytes result sent to driver
+19/06/21 02:10:34 INFO executor.Executor: Finished task 166.0 in stage 1.0 (TID 365). 708 bytes result sent to driver
+19/06/21 02:10:34 INFO executor.Executor: Finished task 184.0 in stage 1.0 (TID 383). 708 bytes result sent to driver
+19/06/21 02:10:34 INFO executor.Executor: Finished task 22.0 in stage 1.0 (TID 221). 708 bytes result sent to driver
+19/06/21 02:10:34 INFO executor.Executor: Finished task 76.0 in stage 1.0 (TID 275). 708 bytes result sent to driver
+19/06/21 02:10:36 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 405
+19/06/21 02:10:36 INFO executor.Executor: Running task 4.0 in stage 2.0 (TID 405)
+19/06/21 02:10:36 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 423
+19/06/21 02:10:36 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 441
+19/06/21 02:10:36 INFO executor.Executor: Running task 22.0 in stage 2.0 (TID 423)
+19/06/21 02:10:36 INFO executor.Executor: Running task 40.0 in stage 2.0 (TID 441)
+19/06/21 02:10:36 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 459
+19/06/21 02:10:36 INFO executor.Executor: Running task 58.0 in stage 2.0 (TID 459)
+19/06/21 02:10:36 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 477
+19/06/21 02:10:36 INFO executor.Executor: Running task 76.0 in stage 2.0 (TID 477)
+19/06/21 02:10:36 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 495
+19/06/21 02:10:36 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 513
+19/06/21 02:10:36 INFO executor.Executor: Running task 94.0 in stage 2.0 (TID 495)
+19/06/21 02:10:36 INFO executor.Executor: Running task 112.0 in stage 2.0 (TID 513)
+19/06/21 02:10:36 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 531
+19/06/21 02:10:36 INFO executor.Executor: Running task 130.0 in stage 2.0 (TID 531)
+19/06/21 02:10:36 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 549
+19/06/21 02:10:36 INFO executor.Executor: Running task 148.0 in stage 2.0 (TID 549)
+19/06/21 02:10:36 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 567
+19/06/21 02:10:36 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 585
+19/06/21 02:10:36 INFO executor.Executor: Running task 166.0 in stage 2.0 (TID 567)
+19/06/21 02:10:36 INFO executor.Executor: Running task 184.0 in stage 2.0 (TID 585)
+19/06/21 02:10:36 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 2
+19/06/21 02:10:36 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:45823 after 2 ms (0 ms spent in bootstraps)
+19/06/21 02:10:36 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.2 KB, free 11.7 GB)
+19/06/21 02:10:36 INFO broadcast.TorrentBroadcast: Reading broadcast variable 2 took 30 ms
+19/06/21 02:10:36 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 3.7 KB, free 11.7 GB)
+19/06/21 02:10:36 INFO shm.ShmShuffleManager: ShmShuffleManager obtains SPARK_WORKER_CORES: 64
+19/06/21 02:10:36 INFO shm.ShmShuffleManager: to initialize shm shuffle manager in an executor, with executor id string value:13
+19/06/21 02:10:36 INFO shuffle.ShuffleStoreManager: jnishmshuffle shared library loaded via loadLibraryFromJar
+19/06/21 02:10:36 INFO shuffle.ShuffleStoreManager: perform actual initialization for ShuffleStoreManager
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0621 02:10:36.362536 113631 MapShuffleStoreManager.cc:101] map shuffle store manage initialize
+I0621 02:10:36.362591 113631 ByteBufferPool.cc:44] initialize queue-based bytebuffer pool
+I0621 02:10:36.362597 113631 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:10:36.362601 113631 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:10:36.362602 113631 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:10:36.362605 113631 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:10:36.362607 113631 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:10:36.362609 113631 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:10:36.362612 113631 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:10:36.362613 113631 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:10:36.362638 113631 SharedMemoryAllocator.h:64] rmb default log level chosen is: info
+I0621 02:10:36.362865 113631 SharedMemoryAllocator.h:201] rmb shared memory manager detected a single-partitioned shm path: /lfs/spark_global0
+0000001 | T.0x00007f4bbc1f4700 | 2019-06-21, 02:10:36.362951 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 153) Open heap path: /lfs/spark_global0 
+0000002 | T.0x00007f4bbc1f4700 | 2019-06-21, 02:10:36.363619 [info] - (/home/ghosdebd/sparkle/alps/src/pegasus/lfs_region_file.cc, 64) Open LFS region file path: "/lfs/spark_global0" flags: O_RDWR
+0000004 | T.0x00007f4bbc1f4700 | 2019-06-21, 02:10:36.369786 [info] - (/home/ghosdebd/sparkle/alps/src/pegasus/segmap.cc, 39) map region  base_addr: 0x7eca50000000 size: 549755813888 addr_range: 0x7eca50000000--7f4a50000000
+0000005 | T.0x00007f4bbc1f4700 | 2019-06-21, 02:10:36.369823 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 158) Opened heap path: /lfs/spark_global0  size: 549755813888
+I0621 02:10:36.370129 113631 SharedMemoryAllocator.h:93] rmb shared memory manager initialized global heap:0x15b2140
+I0621 02:10:36.370245 113631 SharedMemoryManager.cc:64] shared-memory manager registered heap: /lfs/spark_global0
+I0621 02:10:36.370252 113631 ShuffleDataSharedMemoryManager.h:162] shuffle engine has opened heap: /lfs/spark_global0
+I0621 02:10:36.370259 113631 ShuffleStoreManager.cc:140] shuffle store manager initialized with executor id 13 and generation id: 59
+19/06/21 02:10:38 INFO shm.ShmShuffleWriter:  Map Thread: 69 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:10:38 INFO shm.ShmShuffleWriter:  Map Thread: 73 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:10:38 INFO shm.ShmShuffleWriter:  Map Thread: 77 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:10:38 INFO shm.ShmShuffleWriter:  Map Thread: 74 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:10:38 INFO shm.ShmShuffleWriter:  Map Thread: 75 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:10:38 INFO shm.ShmShuffleWriter:  Map Thread: 72 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:10:38 INFO shm.ShmShuffleWriter:  Map Thread: 76 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:10:38 INFO shm.ShmShuffleWriter:  Map Thread: 78 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:10:38 INFO shm.ShmShuffleWriter:  Map Thread: 79 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:10:38 INFO shm.ShmShuffleWriter:  Map Thread: 70 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:10:38 INFO shm.ShmShuffleWriter:  Map Thread: 71 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:10:38 INFO storage.BlockManager: Found block rdd_3_166 locally
+19/06/21 02:10:38 INFO storage.BlockManager: Found block rdd_3_148 locally
+19/06/21 02:10:38 INFO storage.BlockManager: Found block rdd_3_40 locally
+19/06/21 02:10:38 INFO storage.BlockManager: Found block rdd_3_130 locally
+19/06/21 02:10:38 INFO storage.BlockManager: Found block rdd_3_94 locally
+19/06/21 02:10:38 INFO storage.BlockManager: Found block rdd_3_184 locally
+19/06/21 02:10:38 INFO storage.BlockManager: Found block rdd_3_112 locally
+19/06/21 02:10:38 INFO storage.BlockManager: Found block rdd_3_76 locally
+19/06/21 02:10:38 INFO storage.BlockManager: Found block rdd_3_58 locally
+19/06/21 02:10:38 INFO storage.BlockManager: Found block rdd_3_22 locally
+19/06/21 02:10:38 INFO storage.BlockManager: Found block rdd_3_4 locally
+19/06/21 02:10:38 INFO shuffle.MapSHMShuffleStore: store id4 map-side shared-memory based shuffle store started with ordering: false
+19/06/21 02:10:38 INFO shuffle.MapSHMShuffleStore: store id10 map-side shared-memory based shuffle store started with ordering: false
+19/06/21 02:10:38 INFO shuffle.MapSHMShuffleStore: store id8 map-side shared-memory based shuffle store started with ordering: false
+I0621 02:10:38.057765 113630 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x15b2030
+I0621 02:10:38.057746 113631 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x15b2030
+19/06/21 02:10:38 INFO shuffle.MapSHMShuffleStore: store id5 map-side shared-memory based shuffle store started with ordering: false
+I0621 02:10:38.057894 113631 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 148 and ordering: 0
+I0621 02:10:38.057909 113631 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:10:38.057900 113630 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 94 and ordering: 0
+I0621 02:10:38.057920 113630 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+19/06/21 02:10:38 INFO shuffle.MapSHMShuffleStore: store id1 map-side shared-memory based shuffle store started with ordering: false
+I0621 02:10:38.057898 113633 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x15b2030
+I0621 02:10:38.058034 113626 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x15b2030
+I0621 02:10:38.058034 113637 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x15b2030
+I0621 02:10:38.058519 113633 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 40 and ordering: 0
+I0621 02:10:38.058534 113633 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:10:38.058571 113626 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 76 and ordering: 0
+19/06/21 02:10:38 INFO shuffle.MapSHMShuffleStore: store id0 map-side shared-memory based shuffle store started with ordering: false
+I0621 02:10:38.058581 113637 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 184 and ordering: 0
+I0621 02:10:38.058586 113626 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:10:38.058593 113637 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+19/06/21 02:10:38 INFO shuffle.MapSHMShuffleStore: store id7 map-side shared-memory based shuffle store started with ordering: false
+I0621 02:10:38.058641 113628 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x15b2030
+19/06/21 02:10:38 INFO shuffle.MapSHMShuffleStore: store id6 map-side shared-memory based shuffle store started with ordering: false
+I0621 02:10:38.058676 113628 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 58 and ordering: 0
+I0621 02:10:38.058681 113628 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:10:38.058707 113635 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x15b2030
+I0621 02:10:38.058713 113634 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x15b2030
+19/06/21 02:10:38 INFO shuffle.MapSHMShuffleStore: store id2 map-side shared-memory based shuffle store started with ordering: false
+I0621 02:10:38.058750 113635 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 112 and ordering: 0
+I0621 02:10:38.058759 113635 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:10:38.058759 113634 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 130 and ordering: 0
+I0621 02:10:38.058773 113634 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+19/06/21 02:10:38 INFO shuffle.MapSHMShuffleStore: store id9 map-side shared-memory based shuffle store started with ordering: false
+19/06/21 02:10:38 INFO shuffle.MapSHMShuffleStore: store id3 map-side shared-memory based shuffle store started with ordering: false
+I0621 02:10:38.058828 113641 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x15b2030
+I0621 02:10:38.058854 113638 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x15b2030
+I0621 02:10:38.058885 113641 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 22 and ordering: 0
+I0621 02:10:38.058892 113638 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 4 and ordering: 0
+I0621 02:10:38.058895 113641 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:10:38.058887 113636 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x15b2030
+I0621 02:10:38.058895 113638 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:10:38.058925 113636 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 166 and ordering: 0
+I0621 02:10:38.058933 113636 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:10:38.439821 113636 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f4b659a9010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:10:38.453217 113628 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f4b6e91c010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:10:38.454553 113635 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f4b6d9a9010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:10:38.456472 113631 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f4ba748e010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:10:38.457916 113641 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f4b6748e010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:10:38.459352 113634 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f4b6ca36010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:10:38.470940 113638 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f4b6691c010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:10:38.476466 113637 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f4b6f48e010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:10:38.483449 113636 MapShuffleStoreWithLongKeys.cc:134] keys 0x7ec78e911010 with size tracker: 1000000 reaches buffer size: 500000
+I0621 02:10:38.489989 113626 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f4ba4635010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:10:38.490644 113633 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f4ba59a9010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:10:38.498759 113630 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f4ba691c010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:10:38.504340 113641 MapShuffleStoreWithLongKeys.cc:134] keys 0x7ec788d81010 with size tracker: 1000000 reaches buffer size: 500000
+I0621 02:10:38.513406 113638 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f4b6691c010 with size tracker: 1000000 reaches buffer size: 500000
+I0621 02:10:38.532244 113636 MapShuffleStoreWithLongKeys.cc:134] keys 0x7ec783d63010 with size tracker: 1500000 reaches buffer size: 500000
+I0621 02:10:38.534713 113628 MapShuffleStoreWithLongKeys.cc:134] keys 0x7ec78d22d010 with size tracker: 1000000 reaches buffer size: 500000
+I0621 02:10:38.536777 113635 MapShuffleStoreWithLongKeys.cc:134] keys 0x7ec78bb49010 with size tracker: 1000000 reaches buffer size: 500000
+I0621 02:10:38.538125 113631 MapShuffleStoreWithLongKeys.cc:134] keys 0x7ec78a465010 with size tracker: 1000000 reaches buffer size: 500000
+I0621 02:10:38.542448 113634 MapShuffleStoreWithLongKeys.cc:134] keys 0x7ec78769d010 with size tracker: 1000000 reaches buffer size: 500000
+I0621 02:10:38.548933 113633 MapShuffleStoreWithLongKeys.cc:134] keys 0x7ec78267f010 with size tracker: 1000000 reaches buffer size: 500000
+I0621 02:10:38.550803 113641 MapShuffleStoreWithLongKeys.cc:134] keys 0x7ec77ed45010 with size tracker: 1500000 reaches buffer size: 500000
+I0621 02:10:38.557477 113638 MapShuffleStoreWithLongKeys.cc:134] keys 0x7ec77caef010 with size tracker: 1500000 reaches buffer size: 500000
+I0621 02:10:38.564522 113637 MapShuffleStoreWithLongKeys.cc:134] keys 0x7ec785fb9010 with size tracker: 1000000 reaches buffer size: 500000
+0000006 | T.0x00007f4bb7cfc700 | 2019-06-21, 02:10:38.580214 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 4012
+0000007 | T.0x00007f4bb7cfc700 | 2019-06-21, 02:10:38.580504 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 4012 ig: 0
+0000008 | T.0x00007f4bb7cfc700 | 2019-06-21, 02:10:38.581127 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 4012
+0000009 | T.0x00007f4bb7cfc700 | 2019-06-21, 02:10:38.581165 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/process_slab_heap.cc, 30) acquire_slab
+0000010 | T.0x00007f4bb7cfc700 | 2019-06-21, 02:10:38.581188 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/process_slab_heap.cc, 33) acquire_slab: locked
+0000011 | T.0x00007f4bb7cfc700 | 2019-06-21, 02:10:38.581218 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentheap.hh, 116) malloc
+I0621 02:10:38.581238 113626 MapShuffleStoreWithLongKeys.cc:134] keys 0x7ec78e911010 with size tracker: 1000000 reaches buffer size: 500000
+0000012 | T.0x00007f4bb7cfc700 | 2019-06-21, 02:10:38.583490 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentheap.hh, 116) malloc
+0000013 | T.0x00007f4bb7cfc700 | 2019-06-21, 02:10:38.583546 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentheap.hh, 116) malloc
+0000014 | T.0x00007f4bb7cfc700 | 2019-06-21, 02:10:38.583559 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentheap.hh, 130) acquire_new_zone
+0000015 | T.0x00007f4bb7cfc700 | 2019-06-21, 02:10:38.583586 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentheap.hh, 137) acquire_new_zone: zone_id: null
+0000016 | T.0x00007f4bb7cfc700 | 2019-06-21, 02:10:38.583602 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/process_slab_heap.cc, 64) acquire_slab: unlock 3: slab=0
+0000017 | T.0x00007f4bb7cfc700 | 2019-06-21, 02:10:38.583642 [warning] - (/home/ghosdebd/sparkle/alps/src/globalheap/thread_slab_heap.cc, 47) Out of memory
+E0621 02:10:38.583700 113636 MapShuffleStoreWithLongKeys.cc:216] allocate index chunk returns global null pointer  for size: 4012 generation id: 59
+F0621 02:10:38.583755 113636 MapShuffleStoreWithLongKeys.cc:229] Check failed: indChunkOffset != nullptr allocate index chunk returns null with generation id: 59
+*** Check failure stack trace: ***

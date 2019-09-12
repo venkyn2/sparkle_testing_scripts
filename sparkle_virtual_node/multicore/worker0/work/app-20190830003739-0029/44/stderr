@@ -1,0 +1,153 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker0/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker0/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx5120M" "-Dspark.driver.port=45837" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:45837" "--executor-id" "44" "--hostname" "10.1.1.4" "--cores" "4" "--app-id" "app-20190830003739-0029" "--worker-url" "spark://Worker@10.1.1.4:46217"
+========================================
+
+19/08/30 00:37:40 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 106244@mdc-ch1-cust4
+19/08/30 00:37:40 INFO util.SignalUtils: Registered signal handler for TERM
+19/08/30 00:37:40 INFO util.SignalUtils: Registered signal handler for HUP
+19/08/30 00:37:40 INFO util.SignalUtils: Registered signal handler for INT
+19/08/30 00:37:40 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/08/30 00:37:40 INFO spark.SecurityManager: Changing view acls to: root,nnnnnven
+19/08/30 00:37:40 INFO spark.SecurityManager: Changing modify acls to: root,nnnnnven
+19/08/30 00:37:40 INFO spark.SecurityManager: Changing view acls groups to: 
+19/08/30 00:37:40 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/08/30 00:37:40 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, nnnnnven); groups with view permissions: Set(); users  with modify permissions: Set(root, nnnnnven); groups with modify permissions: Set()
+19/08/30 00:37:40 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:45837 after 48 ms (0 ms spent in bootstraps)
+19/08/30 00:37:40 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/08/30 00:37:40 INFO spark.SecurityManager: Changing view acls to: root,nnnnnven
+19/08/30 00:37:40 INFO spark.SecurityManager: Changing modify acls to: root,nnnnnven
+19/08/30 00:37:40 INFO spark.SecurityManager: Changing view acls groups to: 
+19/08/30 00:37:40 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/08/30 00:37:40 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, nnnnnven); groups with view permissions: Set(); users  with modify permissions: Set(root, nnnnnven); groups with modify permissions: Set()
+19/08/30 00:37:41 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:45837 after 1 ms (0 ms spent in bootstraps)
+19/08/30 00:37:41 INFO storage.DiskBlockManager: Created local directory at /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-58293b9c-f297-4eef-a46f-5cd8ccdf6750/blockmgr-fe9ec4bd-6224-42f4-9bb3-449cae1eb1f5
+19/08/30 00:37:41 INFO memory.MemoryStore: MemoryStore started with capacity 2.5 GB
+19/08/30 00:37:41 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@10.1.1.4:46217
+19/08/30 00:37:41 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:45837
+19/08/30 00:37:41 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:46217 after 3 ms (0 ms spent in bootstraps)
+19/08/30 00:37:41 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/08/30 00:37:41 INFO executor.Executor: Starting executor ID 44 on host 10.1.1.4
+19/08/30 00:37:41 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42761.
+19/08/30 00:37:41 INFO netty.NettyBlockTransferService: Server created on 10.1.1.4:42761
+19/08/30 00:37:41 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/08/30 00:37:41 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(44, 10.1.1.4, 42761, None)
+19/08/30 00:37:41 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(44, 10.1.1.4, 42761, None)
+19/08/30 00:37:41 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(44, 10.1.1.4, 42761, None)
+19/08/30 00:37:42 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 46
+19/08/30 00:37:42 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 132
+19/08/30 00:37:42 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 218
+19/08/30 00:37:42 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 304
+19/08/30 00:37:42 INFO executor.Executor: Running task 132.0 in stage 0.0 (TID 132)
+19/08/30 00:37:42 INFO executor.Executor: Running task 304.0 in stage 0.0 (TID 304)
+19/08/30 00:37:42 INFO executor.Executor: Running task 46.0 in stage 0.0 (TID 46)
+19/08/30 00:37:42 INFO executor.Executor: Running task 218.0 in stage 0.0 (TID 218)
+19/08/30 00:37:42 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:45837/jars/spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar with timestamp 1567150659692
+19/08/30 00:37:42 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:45837 after 1 ms (0 ms spent in bootstraps)
+19/08/30 00:37:42 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:45837/jars/spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar to /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-58293b9c-f297-4eef-a46f-5cd8ccdf6750/spark-6c99c149-17f2-426e-9424-a51b08684437/fetchFileTemp1518269999760283616.tmp
+19/08/30 00:37:42 INFO util.Utils: Copying /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-58293b9c-f297-4eef-a46f-5cd8ccdf6750/spark-6c99c149-17f2-426e-9424-a51b08684437/-264789481567150659692_cache to /var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190830003739-0029/44/./spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar
+19/08/30 00:37:42 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190830003739-0029/44/./spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar to class loader
+19/08/30 00:37:42 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 1
+19/08/30 00:37:42 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:45047 after 1 ms (0 ms spent in bootstraps)
+19/08/30 00:37:42 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 1764.0 B, free 2.5 GB)
+19/08/30 00:37:42 INFO broadcast.TorrentBroadcast: Reading broadcast variable 1 took 375 ms
+19/08/30 00:37:42 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 2.9 KB, free 2.5 GB)
+19/08/30 00:37:42 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00132:0+1052620000
+19/08/30 00:37:42 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00304:0+1053547600
+19/08/30 00:37:42 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00046:0+1052603400
+19/08/30 00:37:42 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00218:0+1052497800
+19/08/30 00:37:42 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 0
+19/08/30 00:37:42 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43241 after 2 ms (0 ms spent in bootstraps)
+19/08/30 00:37:43 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 22.3 KB, free 2.5 GB)
+19/08/30 00:37:43 INFO broadcast.TorrentBroadcast: Reading broadcast variable 0 took 56 ms
+19/08/30 00:37:43 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 317.5 KB, free 2.5 GB)
+19/08/30 00:37:47 INFO executor.Executor: Finished task 132.0 in stage 0.0 (TID 132). 918 bytes result sent to driver
+19/08/30 00:37:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 406
+19/08/30 00:37:47 INFO executor.Executor: Running task 406.0 in stage 0.0 (TID 406)
+19/08/30 00:37:47 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00406:0+1052881200
+19/08/30 00:37:47 INFO executor.Executor: Finished task 46.0 in stage 0.0 (TID 46). 875 bytes result sent to driver
+19/08/30 00:37:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 407
+19/08/30 00:37:47 INFO executor.Executor: Running task 407.0 in stage 0.0 (TID 407)
+19/08/30 00:37:47 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00407:0+1052924900
+19/08/30 00:37:51 INFO executor.Executor: Finished task 406.0 in stage 0.0 (TID 406). 875 bytes result sent to driver
+19/08/30 00:37:51 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 517
+19/08/30 00:37:51 INFO executor.Executor: Running task 517.0 in stage 0.0 (TID 517)
+19/08/30 00:37:51 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00517:0+1052160700
+19/08/30 00:37:51 INFO executor.Executor: Finished task 407.0 in stage 0.0 (TID 407). 875 bytes result sent to driver
+19/08/30 00:37:51 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 518
+19/08/30 00:37:51 INFO executor.Executor: Running task 518.0 in stage 0.0 (TID 518)
+19/08/30 00:37:51 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00518:0+1053233100
+19/08/30 00:37:54 INFO executor.Executor: Finished task 517.0 in stage 0.0 (TID 517). 875 bytes result sent to driver
+19/08/30 00:37:54 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 548
+19/08/30 00:37:54 INFO executor.Executor: Running task 548.0 in stage 0.0 (TID 548)
+19/08/30 00:37:54 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00548:0+1052648300
+19/08/30 00:37:57 INFO executor.Executor: Finished task 548.0 in stage 0.0 (TID 548). 875 bytes result sent to driver
+19/08/30 00:37:57 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 559
+19/08/30 00:37:57 INFO executor.Executor: Running task 559.0 in stage 0.0 (TID 559)
+19/08/30 00:37:57 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00559:0+1052536600
+19/08/30 00:43:39 INFO executor.Executor: Finished task 218.0 in stage 0.0 (TID 218). 875 bytes result sent to driver
+19/08/30 00:43:39 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 599
+19/08/30 00:43:39 INFO executor.Executor: Running task 599.0 in stage 0.0 (TID 599)
+19/08/30 00:43:39 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00599:0+1052985400
+19/08/30 00:43:47 INFO executor.Executor: Finished task 304.0 in stage 0.0 (TID 304). 875 bytes result sent to driver
+19/08/30 00:43:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 671
+19/08/30 00:43:47 INFO executor.Executor: Running task 671.0 in stage 0.0 (TID 671)
+19/08/30 00:43:47 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00671:0+1052537000
+19/08/30 00:44:01 INFO executor.Executor: Finished task 518.0 in stage 0.0 (TID 518). 875 bytes result sent to driver
+19/08/30 00:44:11 INFO executor.Executor: Finished task 559.0 in stage 0.0 (TID 559). 875 bytes result sent to driver
+19/08/30 00:47:51 INFO executor.Executor: Finished task 599.0 in stage 0.0 (TID 599). 918 bytes result sent to driver
+19/08/30 00:48:07 INFO executor.Executor: Finished task 671.0 in stage 0.0 (TID 671). 875 bytes result sent to driver
+19/08/30 00:48:13 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1046
+19/08/30 00:48:13 INFO executor.Executor: Running task 96.0 in stage 1.0 (TID 1046)
+19/08/30 00:48:13 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1146
+19/08/30 00:48:13 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1246
+19/08/30 00:48:13 INFO executor.Executor: Running task 196.0 in stage 1.0 (TID 1146)
+19/08/30 00:48:13 INFO executor.Executor: Running task 296.0 in stage 1.0 (TID 1246)
+19/08/30 00:48:13 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1346
+19/08/30 00:48:13 INFO executor.Executor: Running task 396.0 in stage 1.0 (TID 1346)
+19/08/30 00:48:13 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 2
+19/08/30 00:48:13 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:37409 after 1 ms (0 ms spent in bootstraps)
+19/08/30 00:48:13 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 1347.0 B, free 2.5 GB)
+19/08/30 00:48:13 INFO broadcast.TorrentBroadcast: Reading broadcast variable 2 took 20 ms
+19/08/30 00:48:13 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 2.1 KB, free 2.5 GB)
+19/08/30 00:48:13 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00196:0+1052105900
+19/08/30 00:48:13 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00296:0+1052837900
+19/08/30 00:48:13 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00096:0+1052837600
+19/08/30 00:48:13 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00396:0+1052158700
+19/08/30 00:48:17 INFO executor.Executor: Finished task 196.0 in stage 1.0 (TID 1146). 798 bytes result sent to driver
+19/08/30 00:48:17 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1390
+19/08/30 00:48:17 INFO executor.Executor: Running task 440.0 in stage 1.0 (TID 1390)
+19/08/30 00:48:17 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00440:0+1051801800
+19/08/30 00:48:17 INFO executor.Executor: Finished task 96.0 in stage 1.0 (TID 1046). 798 bytes result sent to driver
+19/08/30 00:48:17 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1432
+19/08/30 00:48:17 INFO executor.Executor: Running task 482.0 in stage 1.0 (TID 1432)
+19/08/30 00:48:17 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00482:0+1052756700
+19/08/30 00:48:20 INFO executor.Executor: Finished task 482.0 in stage 1.0 (TID 1432). 798 bytes result sent to driver
+19/08/30 00:48:20 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1488
+19/08/30 00:48:20 INFO executor.Executor: Running task 538.0 in stage 1.0 (TID 1488)
+19/08/30 00:48:20 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00538:0+1052769200
+19/08/30 00:54:15 INFO executor.Executor: Finished task 396.0 in stage 1.0 (TID 1346). 841 bytes result sent to driver
+19/08/30 00:54:15 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1551
+19/08/30 00:54:15 INFO executor.Executor: Running task 601.0 in stage 1.0 (TID 1551)
+19/08/30 00:54:15 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00601:0+1053080100
+19/08/30 00:54:17 INFO executor.Executor: Finished task 296.0 in stage 1.0 (TID 1246). 798 bytes result sent to driver
+19/08/30 00:54:17 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1590
+19/08/30 00:54:17 INFO executor.Executor: Running task 640.0 in stage 1.0 (TID 1590)
+19/08/30 00:54:17 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00640:0+1052064400
+19/08/30 00:54:22 INFO executor.Executor: Finished task 440.0 in stage 1.0 (TID 1390). 798 bytes result sent to driver
+19/08/30 00:54:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1731
+19/08/30 00:54:22 INFO executor.Executor: Running task 781.0 in stage 1.0 (TID 1731)
+19/08/30 00:54:22 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00781:0+1053176100
+19/08/30 00:54:25 INFO executor.Executor: Finished task 538.0 in stage 1.0 (TID 1488). 798 bytes result sent to driver
+19/08/30 00:54:25 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1801
+19/08/30 00:54:25 INFO executor.Executor: Running task 851.0 in stage 1.0 (TID 1801)
+19/08/30 00:54:25 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00851:0+1053247300
+19/08/30 00:54:25 INFO executor.Executor: Finished task 781.0 in stage 1.0 (TID 1731). 798 bytes result sent to driver
+19/08/30 00:54:25 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1814
+19/08/30 00:54:25 INFO executor.Executor: Running task 864.0 in stage 1.0 (TID 1814)
+19/08/30 00:54:25 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/part-r-00864:0+1053221400
+19/08/30 00:58:29 INFO executor.Executor: Finished task 864.0 in stage 1.0 (TID 1814). 798 bytes result sent to driver
+19/08/30 00:58:30 INFO executor.Executor: Finished task 640.0 in stage 1.0 (TID 1590). 798 bytes result sent to driver
+19/08/30 00:58:39 INFO executor.Executor: Finished task 601.0 in stage 1.0 (TID 1551). 798 bytes result sent to driver
+19/08/30 00:58:40 INFO executor.Executor: Finished task 851.0 in stage 1.0 (TID 1801). 798 bytes result sent to driver
+19/08/30 00:58:42 INFO executor.CoarseGrainedExecutorBackend: Driver commanded a shutdown
+19/08/30 00:58:42 ERROR executor.CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

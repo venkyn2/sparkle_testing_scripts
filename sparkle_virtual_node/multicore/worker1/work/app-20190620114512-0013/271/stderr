@@ -1,0 +1,577 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker1/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker1/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.network.timeout=2000000" "-Dspark.driver.port=40545" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:40545" "--executor-id" "271" "--hostname" "mdc-ch1-cust4" "--cores" "1" "--app-id" "app-20190620114512-0013" "--worker-url" "spark://Worker@mdc-ch1-cust4:41491"
+========================================
+
+19/06/20 11:45:13 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 111753@mdc-ch1-cust4
+19/06/20 11:45:13 INFO util.SignalUtils: Registered signal handler for TERM
+19/06/20 11:45:13 INFO util.SignalUtils: Registered signal handler for HUP
+19/06/20 11:45:13 INFO util.SignalUtils: Registered signal handler for INT
+19/06/20 11:45:14 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/06/20 11:45:14 INFO spark.SecurityManager: Changing view acls to: root,nnnnnven
+19/06/20 11:45:14 INFO spark.SecurityManager: Changing modify acls to: root,nnnnnven
+19/06/20 11:45:14 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 11:45:14 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 11:45:14 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, nnnnnven); groups with view permissions: Set(); users  with modify permissions: Set(root, nnnnnven); groups with modify permissions: Set()
+19/06/20 11:45:15 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:40545 after 167 ms (0 ms spent in bootstraps)
+19/06/20 11:45:15 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/06/20 11:45:15 WARN spark.SparkConf: The configuration key 'spark.yarn.executor.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.executor.memoryOverhead' instead.
+19/06/20 11:45:15 INFO spark.SecurityManager: Changing view acls to: root,nnnnnven
+19/06/20 11:45:15 INFO spark.SecurityManager: Changing modify acls to: root,nnnnnven
+19/06/20 11:45:15 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 11:45:15 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 11:45:15 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, nnnnnven); groups with view permissions: Set(); users  with modify permissions: Set(root, nnnnnven); groups with modify permissions: Set()
+19/06/20 11:45:16 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:40545 after 7 ms (0 ms spent in bootstraps)
+19/06/20 11:45:16 INFO storage.DiskBlockManager: Created local directory at /data/spark-aa19d770-0024-4e6b-9a17-68a6de868dd4/executor-1551a1c4-83b2-47e1-b8c3-a7db500cdae1/blockmgr-7a9e8943-cf7e-4240-983b-a4abf8fce3b8
+19/06/20 11:45:16 INFO memory.MemoryStore: MemoryStore started with capacity 4.1 GB
+19/06/20 11:45:16 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:40545
+19/06/20 11:45:16 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@mdc-ch1-cust4:41491
+19/06/20 11:45:16 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:41491 after 35 ms (0 ms spent in bootstraps)
+19/06/20 11:45:16 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@mdc-ch1-cust4:41491
+19/06/20 11:45:17 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/06/20 11:45:17 INFO executor.Executor: Starting executor ID 271 on host mdc-ch1-cust4
+19/06/20 11:45:17 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39247.
+19/06/20 11:45:17 INFO netty.NettyBlockTransferService: Server created on mdc-ch1-cust4:39247
+19/06/20 11:45:17 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/06/20 11:45:17 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(271, mdc-ch1-cust4, 39247, None)
+19/06/20 11:45:17 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(271, mdc-ch1-cust4, 39247, None)
+19/06/20 11:45:17 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(271, mdc-ch1-cust4, 39247, None)
+19/06/20 11:45:18 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 302
+19/06/20 11:45:18 INFO executor.Executor: Running task 302.0 in stage 0.0 (TID 302)
+19/06/20 11:45:18 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:40545/jars/spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar with timestamp 1561056312731
+19/06/20 11:45:18 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:40545 after 7 ms (0 ms spent in bootstraps)
+19/06/20 11:45:18 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:40545/jars/spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar to /data/spark-aa19d770-0024-4e6b-9a17-68a6de868dd4/executor-1551a1c4-83b2-47e1-b8c3-a7db500cdae1/spark-49c79a17-c11e-4a9c-b80b-a10575d3b82b/fetchFileTemp7571449568269749458.tmp
+19/06/20 11:45:18 INFO util.Utils: Copying /data/spark-aa19d770-0024-4e6b-9a17-68a6de868dd4/executor-1551a1c4-83b2-47e1-b8c3-a7db500cdae1/spark-49c79a17-c11e-4a9c-b80b-a10575d3b82b/7770675811561056312731_cache to /var/tmp/spark2.0hpcplatform/multicore/worker1/work/app-20190620114512-0013/271/./spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar
+19/06/20 11:45:18 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker1/work/app-20190620114512-0013/271/./spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar to class loader
+19/06/20 11:45:18 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 1
+19/06/20 11:45:18 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:35095 after 9 ms (0 ms spent in bootstraps)
+19/06/20 11:45:19 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.2 KB, free 4.1 GB)
+19/06/20 11:45:19 INFO broadcast.TorrentBroadcast: Reading broadcast variable 1 took 305 ms
+19/06/20 11:45:20 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.5 KB, free 4.1 GB)
+19/06/20 11:45:20 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00002:83751862272+1073741824
+19/06/20 11:45:20 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 0
+19/06/20 11:45:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:36831 after 3 ms (0 ms spent in bootstraps)
+19/06/20 11:45:20 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 22.3 KB, free 4.1 GB)
+19/06/20 11:45:20 INFO broadcast.TorrentBroadcast: Reading broadcast variable 0 took 65 ms
+19/06/20 11:45:21 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 317.5 KB, free 4.1 GB)
+19/06/20 12:27:32 INFO executor.Executor: Finished task 302.0 in stage 0.0 (TID 302). 1046 bytes result sent to driver
+19/06/20 12:27:32 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1735
+19/06/20 12:27:32 INFO executor.Executor: Running task 1735.0 in stage 0.0 (TID 1735)
+19/06/20 12:27:32 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00015:59055800320+1073741824
+19/06/20 12:27:52 INFO executor.Executor: Finished task 1735.0 in stage 0.0 (TID 1735). 1046 bytes result sent to driver
+19/06/20 12:27:52 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1767
+19/06/20 12:27:52 INFO executor.Executor: Running task 1767.0 in stage 0.0 (TID 1767)
+19/06/20 12:27:52 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00015:93415538688+1073741824
+19/06/20 12:28:11 INFO executor.Executor: Finished task 1767.0 in stage 0.0 (TID 1767). 1003 bytes result sent to driver
+19/06/20 12:28:11 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1799
+19/06/20 12:28:11 INFO executor.Executor: Running task 1799.0 in stage 0.0 (TID 1799)
+19/06/20 12:28:11 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00016:7516192768+1073741824
+19/06/20 12:39:41 INFO executor.Executor: Finished task 1799.0 in stage 0.0 (TID 1799). 1003 bytes result sent to driver
+19/06/20 12:39:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2745
+19/06/20 12:39:41 INFO executor.Executor: Running task 2745.0 in stage 0.0 (TID 2745)
+19/06/20 12:39:41 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00024:61203283968+1073741824
+19/06/20 12:39:53 INFO executor.Executor: Finished task 2745.0 in stage 0.0 (TID 2745). 1046 bytes result sent to driver
+19/06/20 12:39:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2750
+19/06/20 12:39:53 INFO executor.Executor: Running task 2750.0 in stage 0.0 (TID 2750)
+19/06/20 12:39:53 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00024:66571993088+1073741824
+19/06/20 12:40:04 INFO executor.Executor: Finished task 2750.0 in stage 0.0 (TID 2750). 1003 bytes result sent to driver
+19/06/20 12:40:04 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2756
+19/06/20 12:40:04 INFO executor.Executor: Running task 2756.0 in stage 0.0 (TID 2756)
+19/06/20 12:40:04 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00024:73014444032+1073741824
+19/06/20 12:40:16 INFO executor.Executor: Finished task 2756.0 in stage 0.0 (TID 2756). 1046 bytes result sent to driver
+19/06/20 12:40:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2761
+19/06/20 12:40:16 INFO executor.Executor: Running task 2761.0 in stage 0.0 (TID 2761)
+19/06/20 12:40:16 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00024:78383153152+1073741824
+19/06/20 12:40:27 INFO executor.Executor: Finished task 2761.0 in stage 0.0 (TID 2761). 1003 bytes result sent to driver
+19/06/20 12:40:27 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2765
+19/06/20 12:40:27 INFO executor.Executor: Running task 2765.0 in stage 0.0 (TID 2765)
+19/06/20 12:40:27 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00024:82678120448+1073741824
+19/06/20 12:40:39 INFO executor.Executor: Finished task 2765.0 in stage 0.0 (TID 2765). 1003 bytes result sent to driver
+19/06/20 12:40:39 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2773
+19/06/20 12:40:39 INFO executor.Executor: Running task 2773.0 in stage 0.0 (TID 2773)
+19/06/20 12:40:39 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00024:91268055040+1073741824
+19/06/20 12:40:51 INFO executor.Executor: Finished task 2773.0 in stage 0.0 (TID 2773). 960 bytes result sent to driver
+19/06/20 12:40:51 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2779
+19/06/20 12:40:51 INFO executor.Executor: Running task 2779.0 in stage 0.0 (TID 2779)
+19/06/20 12:40:51 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00024:97710505984+1073741824
+19/06/20 12:41:03 INFO executor.Executor: Finished task 2779.0 in stage 0.0 (TID 2779). 1003 bytes result sent to driver
+19/06/20 12:41:03 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2786
+19/06/20 12:41:03 INFO executor.Executor: Running task 2786.0 in stage 0.0 (TID 2786)
+19/06/20 12:41:03 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00024:105226698752+1073741824
+19/06/20 12:41:15 INFO executor.Executor: Finished task 2786.0 in stage 0.0 (TID 2786). 1003 bytes result sent to driver
+19/06/20 12:41:15 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2793
+19/06/20 12:41:15 INFO executor.Executor: Running task 2793.0 in stage 0.0 (TID 2793)
+19/06/20 12:41:15 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-input/part-r-00024:112742891520+1073741824
+19/06/20 12:41:26 INFO executor.Executor: Finished task 2793.0 in stage 0.0 (TID 2793). 1003 bytes result sent to driver
+19/06/20 13:02:07 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 3025
+19/06/20 13:02:07 INFO executor.Executor: Running task 225.0 in stage 1.0 (TID 3025)
+19/06/20 13:02:07 INFO spark.MapOutputTrackerWorker: Updating epoch to 1 and clearing cache
+19/06/20 13:02:07 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 2
+19/06/20 13:02:07 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:46277 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:02:07 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 25.0 KB, free 4.1 GB)
+19/06/20 13:02:07 INFO broadcast.TorrentBroadcast: Reading broadcast variable 2 took 55 ms
+19/06/20 13:02:07 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 69.4 KB, free 4.1 GB)
+19/06/20 13:02:07 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/06/20 13:02:07 INFO spark.MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@mdc-ch1-cust4.mdc.ext.hpe.com:40545)
+19/06/20 13:02:07 INFO spark.MapOutputTrackerWorker: Got the output locations
+19/06/20 13:02:07 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 13 local blocks and 2787 remote blocks
+19/06/20 13:02:12 WARN client.TransportClientFactory: DNS resolution for mdc-ch5-cust4/10.1.5.4:42381 took 5028 ms
+19/06/20 13:02:13 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:42381 after 92 ms (0 ms spent in bootstraps)
+19/06/20 13:02:13 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:45947 after 44 ms (0 ms spent in bootstraps)
+19/06/20 13:02:13 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:45921 after 27 ms (0 ms spent in bootstraps)
+19/06/20 13:02:13 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:43941 after 177 ms (0 ms spent in bootstraps)
+19/06/20 13:02:13 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:43739 after 169 ms (0 ms spent in bootstraps)
+19/06/20 13:02:14 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:37253 after 1032 ms (0 ms spent in bootstraps)
+19/06/20 13:02:14 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:32841 after 186 ms (0 ms spent in bootstraps)
+19/06/20 13:02:15 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:34239 after 85 ms (0 ms spent in bootstraps)
+19/06/20 13:02:15 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:42587 after 265 ms (0 ms spent in bootstraps)
+19/06/20 13:02:15 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:42917 after 263 ms (0 ms spent in bootstraps)
+19/06/20 13:02:15 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:37187 after 30 ms (0 ms spent in bootstraps)
+19/06/20 13:02:15 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:38563 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:02:15 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:41575 after 117 ms (0 ms spent in bootstraps)
+19/06/20 13:02:15 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:46851 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:02:15 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:46569 after 174 ms (0 ms spent in bootstraps)
+19/06/20 13:02:16 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:46777 after 95 ms (0 ms spent in bootstraps)
+19/06/20 13:02:16 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:35539 after 91 ms (0 ms spent in bootstraps)
+19/06/20 13:02:16 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:35985 after 288 ms (0 ms spent in bootstraps)
+19/06/20 13:02:16 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:44755 after 229 ms (0 ms spent in bootstraps)
+19/06/20 13:02:16 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:43831 after 174 ms (0 ms spent in bootstraps)
+19/06/20 13:02:18 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:46721 after 1281 ms (0 ms spent in bootstraps)
+19/06/20 13:02:18 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:36371 after 35 ms (0 ms spent in bootstraps)
+19/06/20 13:02:18 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:45305 after 234 ms (0 ms spent in bootstraps)
+19/06/20 13:02:18 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:34967 after 355 ms (0 ms spent in bootstraps)
+19/06/20 13:02:19 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:42043 after 400 ms (0 ms spent in bootstraps)
+19/06/20 13:02:19 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:35635 after 45 ms (0 ms spent in bootstraps)
+19/06/20 13:02:19 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:34887 after 57 ms (0 ms spent in bootstraps)
+19/06/20 13:02:19 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:37013 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:02:19 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:46419 after 60 ms (0 ms spent in bootstraps)
+19/06/20 13:02:19 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:45283 after 379 ms (0 ms spent in bootstraps)
+19/06/20 13:02:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:36937 after 283 ms (0 ms spent in bootstraps)
+19/06/20 13:02:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:38641 after 213 ms (0 ms spent in bootstraps)
+19/06/20 13:02:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:43189 after 37 ms (0 ms spent in bootstraps)
+19/06/20 13:02:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:34551 after 336 ms (0 ms spent in bootstraps)
+19/06/20 13:02:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:38719 after 191 ms (0 ms spent in bootstraps)
+19/06/20 13:02:21 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:35837 after 322 ms (0 ms spent in bootstraps)
+19/06/20 13:02:21 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:44917 after 219 ms (0 ms spent in bootstraps)
+19/06/20 13:02:21 INFO storage.ShuffleBlockFetcherIterator: Started 37 remote fetches in 13570 ms
+19/06/20 13:02:21 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:44153 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:02:21 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:45235 after 213 ms (0 ms spent in bootstraps)
+19/06/20 13:02:21 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:44151 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:02:21 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:45035 after 90 ms (0 ms spent in bootstraps)
+19/06/20 13:02:21 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:43205 after 27 ms (0 ms spent in bootstraps)
+19/06/20 13:02:22 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:34405 after 156 ms (0 ms spent in bootstraps)
+19/06/20 13:02:22 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:46745 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:02:22 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:34995 after 20 ms (0 ms spent in bootstraps)
+19/06/20 13:02:22 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:36077 after 340 ms (0 ms spent in bootstraps)
+19/06/20 13:02:22 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:42209 after 372 ms (0 ms spent in bootstraps)
+19/06/20 13:02:23 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:32777 after 65 ms (0 ms spent in bootstraps)
+19/06/20 13:02:23 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:32951 after 156 ms (0 ms spent in bootstraps)
+19/06/20 13:02:24 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:41623 after 131 ms (0 ms spent in bootstraps)
+19/06/20 13:02:25 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:37041 after 360 ms (0 ms spent in bootstraps)
+19/06/20 13:02:27 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:36717 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:02:27 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:37935 after 188 ms (0 ms spent in bootstraps)
+19/06/20 13:02:28 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:45569 after 59 ms (0 ms spent in bootstraps)
+19/06/20 13:02:28 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:36399 after 63 ms (0 ms spent in bootstraps)
+19/06/20 13:02:28 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:33307 after 56 ms (0 ms spent in bootstraps)
+19/06/20 13:02:28 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:41493 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:02:28 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:33303 after 32 ms (0 ms spent in bootstraps)
+19/06/20 13:02:28 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:45851 after 161 ms (0 ms spent in bootstraps)
+19/06/20 13:02:28 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:37187 after 65 ms (0 ms spent in bootstraps)
+19/06/20 13:02:28 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:43627 after 270 ms (0 ms spent in bootstraps)
+19/06/20 13:02:28 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:46297 after 65 ms (0 ms spent in bootstraps)
+19/06/20 13:02:28 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:36187 after 77 ms (0 ms spent in bootstraps)
+19/06/20 13:02:28 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:41879 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:02:29 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:42399 after 82 ms (0 ms spent in bootstraps)
+19/06/20 13:02:29 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:39849 after 167 ms (0 ms spent in bootstraps)
+19/06/20 13:02:29 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:36017 after 4 ms (0 ms spent in bootstraps)
+19/06/20 13:02:29 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:42889 after 53 ms (0 ms spent in bootstraps)
+19/06/20 13:02:29 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:38639 after 115 ms (0 ms spent in bootstraps)
+19/06/20 13:02:29 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:42119 after 45 ms (0 ms spent in bootstraps)
+19/06/20 13:02:30 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:45201 after 72 ms (0 ms spent in bootstraps)
+19/06/20 13:02:30 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:37851 after 369 ms (0 ms spent in bootstraps)
+19/06/20 13:02:31 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:40343 after 160 ms (0 ms spent in bootstraps)
+19/06/20 13:02:31 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:40979 after 67 ms (0 ms spent in bootstraps)
+19/06/20 13:02:31 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:37085 after 34 ms (0 ms spent in bootstraps)
+19/06/20 13:02:31 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:45621 after 84 ms (0 ms spent in bootstraps)
+19/06/20 13:02:32 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:33285 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:02:33 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:45007 after 459 ms (0 ms spent in bootstraps)
+19/06/20 13:02:33 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:45135 after 295 ms (0 ms spent in bootstraps)
+19/06/20 13:02:38 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:35491 after 151 ms (0 ms spent in bootstraps)
+19/06/20 13:02:38 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:42177 after 75 ms (0 ms spent in bootstraps)
+19/06/20 13:02:39 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:39235 after 229 ms (0 ms spent in bootstraps)
+19/06/20 13:02:39 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:33453 after 73 ms (0 ms spent in bootstraps)
+19/06/20 13:02:40 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:44767 after 251 ms (0 ms spent in bootstraps)
+19/06/20 13:02:44 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:39715 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:02:44 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:39775 after 279 ms (0 ms spent in bootstraps)
+19/06/20 13:02:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:40873 after 191 ms (0 ms spent in bootstraps)
+19/06/20 13:02:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:43905 after 128 ms (0 ms spent in bootstraps)
+19/06/20 13:02:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:44175 after 74 ms (0 ms spent in bootstraps)
+19/06/20 13:02:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:45289 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:02:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:41747 after 339 ms (0 ms spent in bootstraps)
+19/06/20 13:02:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:32897 after 118 ms (0 ms spent in bootstraps)
+19/06/20 13:02:46 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:33499 after 309 ms (0 ms spent in bootstraps)
+19/06/20 13:02:47 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:36499 after 95 ms (0 ms spent in bootstraps)
+19/06/20 13:02:50 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:37049 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:02:50 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:39107 after 409 ms (0 ms spent in bootstraps)
+19/06/20 13:02:50 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:42665 after 175 ms (0 ms spent in bootstraps)
+19/06/20 13:02:50 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:42451 after 72 ms (0 ms spent in bootstraps)
+19/06/20 13:02:50 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:42547 after 70 ms (0 ms spent in bootstraps)
+19/06/20 13:02:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:33721 after 43 ms (0 ms spent in bootstraps)
+19/06/20 13:02:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:41117 after 4 ms (0 ms spent in bootstraps)
+19/06/20 13:02:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:41941 after 62 ms (0 ms spent in bootstraps)
+19/06/20 13:02:56 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:44219 after 233 ms (0 ms spent in bootstraps)
+19/06/20 13:02:56 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:34923 after 122 ms (0 ms spent in bootstraps)
+19/06/20 13:02:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:40723 after 7 ms (0 ms spent in bootstraps)
+19/06/20 13:03:04 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:44285 after 378 ms (0 ms spent in bootstraps)
+19/06/20 13:03:04 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:46057 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:03:05 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:45123 after 134 ms (0 ms spent in bootstraps)
+19/06/20 13:03:06 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:39257 after 312 ms (0 ms spent in bootstraps)
+19/06/20 13:03:16 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:40051 after 106 ms (0 ms spent in bootstraps)
+19/06/20 13:03:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:42127 after 103 ms (0 ms spent in bootstraps)
+19/06/20 13:03:21 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:39619 after 61 ms (0 ms spent in bootstraps)
+19/06/20 13:03:22 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:37865 after 116 ms (0 ms spent in bootstraps)
+19/06/20 13:03:23 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:42225 after 490 ms (0 ms spent in bootstraps)
+19/06/20 13:03:31 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:37475 after 130 ms (0 ms spent in bootstraps)
+19/06/20 13:03:33 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:39719 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:03:34 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:40507 after 214 ms (0 ms spent in bootstraps)
+19/06/20 13:03:37 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:44173 after 96 ms (0 ms spent in bootstraps)
+19/06/20 13:03:40 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:46113 after 50 ms (0 ms spent in bootstraps)
+19/06/20 13:03:41 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:39069 after 96 ms (0 ms spent in bootstraps)
+19/06/20 13:03:41 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:40285 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:03:41 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:45309 after 22 ms (0 ms spent in bootstraps)
+19/06/20 13:03:41 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:44577 after 345 ms (0 ms spent in bootstraps)
+19/06/20 13:03:41 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:33235 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:03:52 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:35027 after 4 ms (0 ms spent in bootstraps)
+19/06/20 13:03:52 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:39195 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:03:52 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:33809 after 14 ms (0 ms spent in bootstraps)
+19/06/20 13:03:52 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:45121 after 8 ms (0 ms spent in bootstraps)
+19/06/20 13:03:52 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:40093 after 47 ms (0 ms spent in bootstraps)
+19/06/20 13:03:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:45929 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:03:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:46515 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:03:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:46371 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:03:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:34675 after 74 ms (0 ms spent in bootstraps)
+19/06/20 13:03:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:46679 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:03:56 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:45977 after 140 ms (0 ms spent in bootstraps)
+19/06/20 13:03:56 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:38229 after 404 ms (0 ms spent in bootstraps)
+19/06/20 13:03:56 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:42563 after 9 ms (0 ms spent in bootstraps)
+19/06/20 13:03:59 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:42099 after 134 ms (0 ms spent in bootstraps)
+19/06/20 13:04:06 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:33959 after 33 ms (0 ms spent in bootstraps)
+19/06/20 13:04:07 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:37445 after 4 ms (0 ms spent in bootstraps)
+19/06/20 13:04:08 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:43827 after 4 ms (0 ms spent in bootstraps)
+19/06/20 13:04:08 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:37441 after 59 ms (0 ms spent in bootstraps)
+19/06/20 13:04:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:42741 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:04:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:39207 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:04:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:46409 after 8 ms (0 ms spent in bootstraps)
+19/06/20 13:04:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:42961 after 186 ms (0 ms spent in bootstraps)
+19/06/20 13:04:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:44013 after 4 ms (0 ms spent in bootstraps)
+19/06/20 13:04:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:39249 after 8 ms (0 ms spent in bootstraps)
+19/06/20 13:04:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:44763 after 7 ms (0 ms spent in bootstraps)
+19/06/20 13:04:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:42073 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:04:13 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:34641 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:04:13 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:37131 after 287 ms (0 ms spent in bootstraps)
+19/06/20 13:04:14 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:34767 after 5 ms (0 ms spent in bootstraps)
+19/06/20 13:04:15 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:38681 after 4 ms (0 ms spent in bootstraps)
+19/06/20 13:04:17 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:34637 after 89 ms (0 ms spent in bootstraps)
+19/06/20 13:04:18 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:39535 after 26 ms (0 ms spent in bootstraps)
+19/06/20 13:04:18 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:39301 after 24 ms (0 ms spent in bootstraps)
+19/06/20 13:04:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:36477 after 345 ms (0 ms spent in bootstraps)
+19/06/20 13:04:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:38749 after 317 ms (0 ms spent in bootstraps)
+19/06/20 13:04:21 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:42993 after 475 ms (0 ms spent in bootstraps)
+19/06/20 13:04:21 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:36267 after 13 ms (0 ms spent in bootstraps)
+19/06/20 13:04:22 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:41063 after 193 ms (0 ms spent in bootstraps)
+19/06/20 13:04:22 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:36161 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:04:23 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:45713 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:04:23 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:35493 after 5 ms (0 ms spent in bootstraps)
+19/06/20 13:04:23 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:41465 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:04:23 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:42523 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:04:23 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:44685 after 50 ms (0 ms spent in bootstraps)
+19/06/20 13:04:24 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:43179 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:04:24 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:35635 after 7 ms (0 ms spent in bootstraps)
+19/06/20 13:04:24 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:36833 after 323 ms (0 ms spent in bootstraps)
+19/06/20 13:04:27 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:46575 after 5 ms (0 ms spent in bootstraps)
+19/06/20 13:04:28 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:44111 after 7 ms (0 ms spent in bootstraps)
+19/06/20 13:04:29 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:36143 after 14 ms (0 ms spent in bootstraps)
+19/06/20 13:04:29 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:32811 after 194 ms (0 ms spent in bootstraps)
+19/06/20 13:04:29 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:45925 after 5 ms (0 ms spent in bootstraps)
+19/06/20 13:04:30 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:42201 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:04:31 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:45311 after 6 ms (0 ms spent in bootstraps)
+19/06/20 13:04:32 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:39221 after 5 ms (0 ms spent in bootstraps)
+19/06/20 13:04:32 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:36605 after 22 ms (0 ms spent in bootstraps)
+19/06/20 13:04:32 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:34541 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:04:32 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:42031 after 19 ms (0 ms spent in bootstraps)
+19/06/20 13:04:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:42613 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:04:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:44497 after 60 ms (0 ms spent in bootstraps)
+19/06/20 13:04:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:42559 after 125 ms (0 ms spent in bootstraps)
+19/06/20 13:04:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:42653 after 4 ms (0 ms spent in bootstraps)
+19/06/20 13:04:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:40141 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:04:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:32831 after 13 ms (0 ms spent in bootstraps)
+19/06/20 13:04:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:33247 after 19 ms (0 ms spent in bootstraps)
+19/06/20 13:04:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:46005 after 14 ms (0 ms spent in bootstraps)
+19/06/20 13:04:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:33985 after 14 ms (0 ms spent in bootstraps)
+19/06/20 13:04:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:41925 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:04:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:45519 after 17 ms (0 ms spent in bootstraps)
+19/06/20 13:04:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:33419 after 20 ms (0 ms spent in bootstraps)
+19/06/20 13:04:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:34007 after 20 ms (0 ms spent in bootstraps)
+19/06/20 13:04:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:33889 after 63 ms (0 ms spent in bootstraps)
+19/06/20 13:04:36 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:34617 after 53 ms (0 ms spent in bootstraps)
+19/06/20 13:04:36 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:38151 after 89 ms (0 ms spent in bootstraps)
+19/06/20 13:04:36 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:45239 after 63 ms (0 ms spent in bootstraps)
+19/06/20 13:04:36 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:35995 after 244 ms (0 ms spent in bootstraps)
+19/06/20 13:04:36 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:45949 after 265 ms (0 ms spent in bootstraps)
+19/06/20 13:04:36 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:36213 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:04:36 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:34409 after 18 ms (0 ms spent in bootstraps)
+19/06/20 13:04:36 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:35689 after 4 ms (0 ms spent in bootstraps)
+19/06/20 13:04:37 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:33117 after 54 ms (0 ms spent in bootstraps)
+19/06/20 13:04:37 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:39663 after 53 ms (0 ms spent in bootstraps)
+19/06/20 13:04:37 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:34857 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:04:37 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:40277 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:04:37 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:39877 after 21 ms (0 ms spent in bootstraps)
+19/06/20 13:04:37 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:44915 after 249 ms (0 ms spent in bootstraps)
+19/06/20 13:04:37 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:35275 after 8 ms (0 ms spent in bootstraps)
+19/06/20 13:04:37 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:37357 after 172 ms (0 ms spent in bootstraps)
+19/06/20 13:04:38 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:45021 after 142 ms (0 ms spent in bootstraps)
+19/06/20 13:04:38 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:41127 after 91 ms (0 ms spent in bootstraps)
+19/06/20 13:04:38 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:43951 after 171 ms (0 ms spent in bootstraps)
+19/06/20 13:04:39 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:32799 after 164 ms (0 ms spent in bootstraps)
+19/06/20 13:04:39 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:34607 after 177 ms (0 ms spent in bootstraps)
+19/06/20 13:04:39 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:34005 after 175 ms (0 ms spent in bootstraps)
+19/06/20 13:04:39 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:46585 after 48 ms (0 ms spent in bootstraps)
+19/06/20 13:04:39 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:39333 after 46 ms (0 ms spent in bootstraps)
+19/06/20 13:04:40 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:39979 after 24 ms (0 ms spent in bootstraps)
+19/06/20 13:04:40 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:45889 after 29 ms (0 ms spent in bootstraps)
+19/06/20 13:04:40 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:43649 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:04:40 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:35191 after 4 ms (0 ms spent in bootstraps)
+19/06/20 13:04:40 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:36357 after 70 ms (0 ms spent in bootstraps)
+19/06/20 13:04:40 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:34561 after 10 ms (0 ms spent in bootstraps)
+19/06/20 13:04:40 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:39657 after 15 ms (0 ms spent in bootstraps)
+19/06/20 13:04:41 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:34545 after 168 ms (0 ms spent in bootstraps)
+19/06/20 13:04:41 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:40527 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:04:41 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:32837 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:04:41 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:40163 after 171 ms (0 ms spent in bootstraps)
+19/06/20 13:04:41 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:36115 after 184 ms (0 ms spent in bootstraps)
+19/06/20 13:04:41 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:38671 after 70 ms (0 ms spent in bootstraps)
+19/06/20 13:04:44 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:43969 after 473 ms (0 ms spent in bootstraps)
+19/06/20 13:04:44 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:41257 after 183 ms (0 ms spent in bootstraps)
+19/06/20 13:04:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:37359 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:04:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:43185 after 4 ms (0 ms spent in bootstraps)
+19/06/20 13:04:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:44811 after 5 ms (0 ms spent in bootstraps)
+19/06/20 13:04:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:35209 after 44 ms (0 ms spent in bootstraps)
+19/06/20 13:04:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:43479 after 4 ms (0 ms spent in bootstraps)
+19/06/20 13:04:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:46279 after 46 ms (0 ms spent in bootstraps)
+19/06/20 13:04:46 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:39821 after 85 ms (0 ms spent in bootstraps)
+19/06/20 13:04:46 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:42989 after 47 ms (0 ms spent in bootstraps)
+19/06/20 13:04:46 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:38857 after 9 ms (0 ms spent in bootstraps)
+19/06/20 13:04:47 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:34623 after 91 ms (0 ms spent in bootstraps)
+19/06/20 13:04:47 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:46799 after 15 ms (0 ms spent in bootstraps)
+19/06/20 13:04:47 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:35979 after 18 ms (0 ms spent in bootstraps)
+19/06/20 13:04:47 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:39897 after 8 ms (0 ms spent in bootstraps)
+19/06/20 13:04:47 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:41095 after 208 ms (0 ms spent in bootstraps)
+19/06/20 13:04:50 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:44199 after 221 ms (0 ms spent in bootstraps)
+19/06/20 13:04:51 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:35911 after 51 ms (0 ms spent in bootstraps)
+19/06/20 13:04:51 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:35423 after 378 ms (0 ms spent in bootstraps)
+19/06/20 13:04:54 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:34597 after 65 ms (0 ms spent in bootstraps)
+19/06/20 13:04:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:34953 after 374 ms (0 ms spent in bootstraps)
+19/06/20 13:04:59 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:40841 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:04:59 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:34683 after 5 ms (0 ms spent in bootstraps)
+19/06/20 13:04:59 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:36933 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:04:59 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:33309 after 26 ms (0 ms spent in bootstraps)
+19/06/20 13:04:59 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:36321 after 24 ms (0 ms spent in bootstraps)
+19/06/20 13:05:05 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:40639 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:05:06 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:33497 after 345 ms (0 ms spent in bootstraps)
+19/06/20 13:05:06 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:37525 after 32 ms (0 ms spent in bootstraps)
+19/06/20 13:05:06 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:35009 after 24 ms (0 ms spent in bootstraps)
+19/06/20 13:05:06 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:37921 after 28 ms (0 ms spent in bootstraps)
+19/06/20 13:05:06 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:36431 after 29 ms (0 ms spent in bootstraps)
+19/06/20 13:05:06 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:46631 after 28 ms (0 ms spent in bootstraps)
+19/06/20 13:05:15 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:41055 after 48 ms (0 ms spent in bootstraps)
+19/06/20 13:05:16 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:38405 after 52 ms (0 ms spent in bootstraps)
+19/06/20 13:05:16 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:45079 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:05:25 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:36681 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:05:25 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:37833 after 21 ms (0 ms spent in bootstraps)
+19/06/20 13:05:25 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:45065 after 22 ms (0 ms spent in bootstraps)
+19/06/20 13:05:25 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:34877 after 18 ms (0 ms spent in bootstraps)
+19/06/20 13:05:25 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:46811 after 392 ms (0 ms spent in bootstraps)
+19/06/20 13:05:26 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:45053 after 28 ms (0 ms spent in bootstraps)
+19/06/20 13:05:26 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:43269 after 27 ms (0 ms spent in bootstraps)
+19/06/20 13:05:26 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:35399 after 253 ms (0 ms spent in bootstraps)
+19/06/20 13:05:26 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:33571 after 162 ms (0 ms spent in bootstraps)
+19/06/20 13:05:26 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:34489 after 115 ms (0 ms spent in bootstraps)
+19/06/20 13:05:27 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:40635 after 434 ms (0 ms spent in bootstraps)
+19/06/20 13:05:27 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:34267 after 277 ms (0 ms spent in bootstraps)
+19/06/20 13:05:27 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:42987 after 359 ms (0 ms spent in bootstraps)
+19/06/20 13:05:28 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:40297 after 15 ms (0 ms spent in bootstraps)
+19/06/20 13:05:29 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:37383 after 97 ms (0 ms spent in bootstraps)
+19/06/20 13:05:30 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:45261 after 81 ms (0 ms spent in bootstraps)
+19/06/20 13:05:50 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:43065 after 7 ms (0 ms spent in bootstraps)
+19/06/20 13:05:50 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:40695 after 4 ms (0 ms spent in bootstraps)
+19/06/20 13:05:53 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:44909 after 98 ms (0 ms spent in bootstraps)
+19/06/20 13:05:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:39683 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:05:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:42015 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:05:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:38423 after 285 ms (0 ms spent in bootstraps)
+19/06/20 13:06:14 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:45037 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:06:14 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:38635 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:06:14 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:38333 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:06:14 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:34903 after 157 ms (0 ms spent in bootstraps)
+19/06/20 13:06:34 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:44455 after 253 ms (0 ms spent in bootstraps)
+19/06/20 13:06:37 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:35587 after 47 ms (0 ms spent in bootstraps)
+19/06/20 13:06:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:38705 after 6 ms (0 ms spent in bootstraps)
+19/06/20 13:06:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:39233 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:06:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:33601 after 95 ms (0 ms spent in bootstraps)
+19/06/20 13:06:47 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:38053 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:06:47 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:37111 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:06:47 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:34047 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:06:53 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:42639 after 81 ms (0 ms spent in bootstraps)
+19/06/20 13:06:54 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:43103 after 345 ms (0 ms spent in bootstraps)
+19/06/20 13:06:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:33513 after 34 ms (0 ms spent in bootstraps)
+19/06/20 13:06:58 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:43697 after 32 ms (0 ms spent in bootstraps)
+19/06/20 13:06:58 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:34283 after 29 ms (0 ms spent in bootstraps)
+19/06/20 13:06:58 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:35225 after 29 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:39925 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:42345 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:34431 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:39965 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:44667 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:37941 after 22 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:46121 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:42701 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:38953 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:43559 after 44 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:39891 after 257 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:42333 after 5 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:36479 after 4 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:40567 after 213 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:41561 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:41643 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:32997 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:07:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:43437 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:07:26 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:32945 after 261 ms (0 ms spent in bootstraps)
+19/06/20 13:07:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:45667 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:07:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:43605 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:07:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:41843 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:07:42 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:46265 after 262 ms (0 ms spent in bootstraps)
+19/06/20 13:07:48 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:40387 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:07:48 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:45011 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:07:48 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:45137 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:07:48 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:38797 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:07:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:34203 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:07:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:38561 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:07:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:37073 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:07:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:37931 after 278 ms (0 ms spent in bootstraps)
+19/06/20 13:07:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:33903 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:08:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:40923 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:10 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:42783 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:10 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:38057 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:10 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:35469 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:45815 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:39347 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:39495 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:40329 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:34767 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:38443 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:32977 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:44101 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:46327 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:43677 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:37187 after 87 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:34611 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:39413 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:46853 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:34255 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:42299 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:35003 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:42807 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:41861 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:39687 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:36613 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:36045 after 101 ms (0 ms spent in bootstraps)
+19/06/20 13:08:12 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:43529 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:08:17 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:35145 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:17 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:42783 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:08:17 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:46101 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:17 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:44461 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:25 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:42159 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:25 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:37341 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:08:25 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:39913 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:25 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:37105 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:25 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:36947 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:08:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:36129 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:08:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:38179 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:40283 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:37415 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:37339 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:34849 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:37609 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:37061 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:34151 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:39281 after 3 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:36127 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:37443 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:41451 after 2 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:44859 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:34951 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:32999 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:34143 after 1 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:45341 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:33289 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:08:43 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:35377 after 0 ms (0 ms spent in bootstraps)
+19/06/20 13:11:47 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 13:11:47 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 13:13:09 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190620114515_0001_r_000225_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-output/_temporary/0/task_20190620114515_0001_r_000225
+19/06/20 13:13:09 INFO mapred.SparkHadoopMapRedUtil: attempt_20190620114515_0001_r_000225_0: Committed
+19/06/20 13:13:09 INFO executor.Executor: Finished task 225.0 in stage 1.0 (TID 3025). 1342 bytes result sent to driver
+19/06/20 13:13:09 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 3457
+19/06/20 13:13:09 INFO executor.Executor: Running task 651.0 in stage 1.0 (TID 3457)
+19/06/20 13:13:09 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 13 local blocks and 2787 remote blocks
+19/06/20 13:13:09 INFO storage.ShuffleBlockFetcherIterator: Started 29 remote fetches in 22 ms
+19/06/20 13:19:44 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 13:19:44 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 13:20:39 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190620114515_0001_r_000651_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-output/_temporary/0/task_20190620114515_0001_r_000651
+19/06/20 13:20:39 INFO mapred.SparkHadoopMapRedUtil: attempt_20190620114515_0001_r_000651_0: Committed
+19/06/20 13:20:39 INFO executor.Executor: Finished task 651.0 in stage 1.0 (TID 3457). 1342 bytes result sent to driver
+19/06/20 13:20:39 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 3785
+19/06/20 13:20:39 INFO executor.Executor: Running task 961.0 in stage 1.0 (TID 3785)
+19/06/20 13:20:39 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 13 local blocks and 2787 remote blocks
+19/06/20 13:20:39 INFO storage.ShuffleBlockFetcherIterator: Started 26 remote fetches in 35 ms
+19/06/20 13:27:50 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 13:27:50 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 13:28:14 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190620114515_0001_r_000961_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-output/_temporary/0/task_20190620114515_0001_r_000961
+19/06/20 13:28:14 INFO mapred.SparkHadoopMapRedUtil: attempt_20190620114515_0001_r_000961_0: Committed
+19/06/20 13:28:14 INFO executor.Executor: Finished task 961.0 in stage 1.0 (TID 3785). 1342 bytes result sent to driver
+19/06/20 13:28:14 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 4170
+19/06/20 13:28:14 INFO executor.Executor: Running task 939.1 in stage 1.0 (TID 4170)
+19/06/20 13:28:14 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 13 local blocks and 2787 remote blocks
+19/06/20 13:28:14 INFO storage.ShuffleBlockFetcherIterator: Started 36 remote fetches in 6 ms
+19/06/20 13:33:13 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 13:33:13 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 13:34:22 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190620114515_0001_r_000939_1' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-output/_temporary/0/task_20190620114515_0001_r_000939
+19/06/20 13:34:22 INFO mapred.SparkHadoopMapRedUtil: attempt_20190620114515_0001_r_000939_1: Committed
+19/06/20 13:34:22 INFO executor.Executor: Finished task 939.1 in stage 1.0 (TID 4170). 1299 bytes result sent to driver
+19/06/20 13:34:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 4583
+19/06/20 13:34:22 INFO executor.Executor: Running task 1111.1 in stage 1.0 (TID 4583)
+19/06/20 13:34:22 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 13 local blocks and 2787 remote blocks
+19/06/20 13:34:22 INFO storage.ShuffleBlockFetcherIterator: Started 43 remote fetches in 6 ms
+19/06/20 13:38:42 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 13:38:42 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 13:40:04 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190620114515_0001_r_001111_1' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-output/_temporary/0/task_20190620114515_0001_r_001111
+19/06/20 13:40:04 INFO mapred.SparkHadoopMapRedUtil: attempt_20190620114515_0001_r_001111_1: Committed
+19/06/20 13:40:04 INFO executor.Executor: Finished task 1111.1 in stage 1.0 (TID 4583). 1342 bytes result sent to driver
+19/06/20 13:40:04 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 4794
+19/06/20 13:40:04 INFO executor.Executor: Running task 1868.0 in stage 1.0 (TID 4794)
+19/06/20 13:40:04 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 13 local blocks and 2787 remote blocks
+19/06/20 13:40:04 INFO storage.ShuffleBlockFetcherIterator: Started 28 remote fetches in 8 ms
+19/06/20 13:44:42 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 13:44:42 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 13:45:30 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190620114515_0001_r_001868_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-output/_temporary/0/task_20190620114515_0001_r_001868
+19/06/20 13:45:30 INFO mapred.SparkHadoopMapRedUtil: attempt_20190620114515_0001_r_001868_0: Committed
+19/06/20 13:45:30 INFO executor.Executor: Finished task 1868.0 in stage 1.0 (TID 4794). 1299 bytes result sent to driver
+19/06/20 13:45:30 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 5142
+19/06/20 13:45:30 INFO executor.Executor: Running task 2171.0 in stage 1.0 (TID 5142)
+19/06/20 13:45:30 INFO storage.ShuffleBlockFetcherIterator: Getting 2800 non-empty blocks including 13 local blocks and 2787 remote blocks
+19/06/20 13:45:30 INFO storage.ShuffleBlockFetcherIterator: Started 29 remote fetches in 38 ms
+19/06/20 13:55:31 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 13:55:31 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 13:56:28 WARN hdfs.DFSClient: Slow ReadProcessor read fields took 45490ms (threshold=30000ms); ack: seqno: 2364 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[10.1.1.4:50010,DS-7e2562ab-d0d7-4364-ad17-77b7c8865721,DISK]]
+19/06/20 13:57:51 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190620114515_0001_r_002171_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven3000G/HSsort-output/_temporary/0/task_20190620114515_0001_r_002171
+19/06/20 13:57:51 INFO mapred.SparkHadoopMapRedUtil: attempt_20190620114515_0001_r_002171_0: Committed
+19/06/20 13:57:51 INFO executor.Executor: Finished task 2171.0 in stage 1.0 (TID 5142). 1299 bytes result sent to driver
+19/06/20 14:03:44 INFO executor.CoarseGrainedExecutorBackend: Driver commanded a shutdown
+19/06/20 14:03:44 ERROR executor.CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

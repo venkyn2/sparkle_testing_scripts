@@ -1,0 +1,1357 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker1/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker1/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.driver.port=34747" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:34747" "--executor-id" "71" "--hostname" "mdc-ch1-cust4" "--cores" "4" "--app-id" "app-20190620054243-0008" "--worker-url" "spark://Worker@mdc-ch1-cust4:41491"
+========================================
+
+19/06/20 05:42:44 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 58368@mdc-ch1-cust4
+19/06/20 05:42:44 INFO util.SignalUtils: Registered signal handler for TERM
+19/06/20 05:42:44 INFO util.SignalUtils: Registered signal handler for HUP
+19/06/20 05:42:44 INFO util.SignalUtils: Registered signal handler for INT
+19/06/20 05:42:44 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/06/20 05:42:44 INFO spark.SecurityManager: Changing view acls to: root,nnnnnven
+19/06/20 05:42:44 INFO spark.SecurityManager: Changing modify acls to: root,nnnnnven
+19/06/20 05:42:44 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 05:42:44 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 05:42:44 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, nnnnnven); groups with view permissions: Set(); users  with modify permissions: Set(root, nnnnnven); groups with modify permissions: Set()
+19/06/20 05:42:44 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:34747 after 67 ms (0 ms spent in bootstraps)
+19/06/20 05:42:44 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/06/20 05:42:44 INFO spark.SecurityManager: Changing view acls to: root,nnnnnven
+19/06/20 05:42:44 INFO spark.SecurityManager: Changing modify acls to: root,nnnnnven
+19/06/20 05:42:44 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/20 05:42:44 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/20 05:42:44 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, nnnnnven); groups with view permissions: Set(); users  with modify permissions: Set(root, nnnnnven); groups with modify permissions: Set()
+19/06/20 05:42:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:34747 after 1 ms (0 ms spent in bootstraps)
+19/06/20 05:42:45 INFO storage.DiskBlockManager: Created local directory at /data/spark-aa19d770-0024-4e6b-9a17-68a6de868dd4/executor-0bb41f94-ed87-4d7c-8ad8-ade84256c8d9/blockmgr-45e10efb-eaea-4d3b-9074-4ab3fa9e1e0e
+19/06/20 05:42:45 INFO memory.MemoryStore: MemoryStore started with capacity 4.1 GB
+19/06/20 05:42:45 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:34747
+19/06/20 05:42:45 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@mdc-ch1-cust4:41491
+19/06/20 05:42:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:41491 after 1 ms (0 ms spent in bootstraps)
+19/06/20 05:42:45 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@mdc-ch1-cust4:41491
+19/06/20 05:42:45 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/06/20 05:42:45 INFO executor.Executor: Starting executor ID 71 on host mdc-ch1-cust4
+19/06/20 05:42:45 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44663.
+19/06/20 05:42:45 INFO netty.NettyBlockTransferService: Server created on mdc-ch1-cust4:44663
+19/06/20 05:42:45 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/06/20 05:42:45 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(71, mdc-ch1-cust4, 44663, None)
+19/06/20 05:42:45 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(71, mdc-ch1-cust4, 44663, None)
+19/06/20 05:42:45 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(71, mdc-ch1-cust4, 44663, None)
+19/06/20 05:42:45 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 356
+19/06/20 05:42:45 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 357
+19/06/20 05:42:45 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 358
+19/06/20 05:42:45 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 359
+19/06/20 05:42:45 INFO executor.Executor: Running task 358.0 in stage 0.0 (TID 358)
+19/06/20 05:42:45 INFO executor.Executor: Running task 359.0 in stage 0.0 (TID 359)
+19/06/20 05:42:45 INFO executor.Executor: Running task 356.0 in stage 0.0 (TID 356)
+19/06/20 05:42:45 INFO executor.Executor: Running task 357.0 in stage 0.0 (TID 357)
+19/06/20 05:42:45 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:34747/jars/spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar with timestamp 1561034563550
+19/06/20 05:42:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:34747 after 1 ms (0 ms spent in bootstraps)
+19/06/20 05:42:45 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:34747/jars/spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar to /data/spark-aa19d770-0024-4e6b-9a17-68a6de868dd4/executor-0bb41f94-ed87-4d7c-8ad8-ade84256c8d9/spark-c7663740-500d-42ab-b4ae-5de5540a1134/fetchFileTemp5142451490580055687.tmp
+19/06/20 05:42:45 INFO util.Utils: Copying /data/spark-aa19d770-0024-4e6b-9a17-68a6de868dd4/executor-0bb41f94-ed87-4d7c-8ad8-ade84256c8d9/spark-c7663740-500d-42ab-b4ae-5de5540a1134/-12969166421561034563550_cache to /var/tmp/spark2.0hpcplatform/multicore/worker1/work/app-20190620054243-0008/71/./spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar
+19/06/20 05:42:45 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker1/work/app-20190620054243-0008/71/./spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar to class loader
+19/06/20 05:42:45 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 1
+19/06/20 05:42:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:39665 after 1 ms (0 ms spent in bootstraps)
+19/06/20 05:42:45 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.2 KB, free 4.1 GB)
+19/06/20 05:42:45 INFO broadcast.TorrentBroadcast: Reading broadcast variable 1 took 86 ms
+19/06/20 05:42:46 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.5 KB, free 4.1 GB)
+19/06/20 05:42:46 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00009:16106127360+1073741824
+19/06/20 05:42:46 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00009:18253611008+1073741824
+19/06/20 05:42:46 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00009:15032385536+1073741824
+19/06/20 05:42:46 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00009:17179869184+1073741824
+19/06/20 05:42:46 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 0
+19/06/20 05:42:46 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:37995 after 1 ms (0 ms spent in bootstraps)
+19/06/20 05:42:46 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 22.3 KB, free 4.1 GB)
+19/06/20 05:42:46 INFO broadcast.TorrentBroadcast: Reading broadcast variable 0 took 20 ms
+19/06/20 05:42:46 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 317.5 KB, free 4.1 GB)
+19/06/20 05:48:27 INFO sort.ShuffleExternalSorter: Thread 71 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 05:50:14 INFO executor.Executor: Finished task 358.0 in stage 0.0 (TID 358). 2028 bytes result sent to driver
+19/06/20 05:50:14 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 531
+19/06/20 05:50:14 INFO executor.Executor: Running task 531.0 in stage 0.0 (TID 531)
+19/06/20 05:50:14 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00013:39728447488+271552512
+19/06/20 05:50:18 INFO executor.Executor: Finished task 531.0 in stage 0.0 (TID 531). 1942 bytes result sent to driver
+19/06/20 05:50:18 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 537
+19/06/20 05:50:18 INFO executor.Executor: Running task 537.0 in stage 0.0 (TID 537)
+19/06/20 05:50:19 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00014:5368709120+1073741824
+19/06/20 05:50:22 INFO sort.ShuffleExternalSorter: Thread 71 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 05:50:35 INFO executor.Executor: Finished task 537.0 in stage 0.0 (TID 537). 2028 bytes result sent to driver
+19/06/20 05:50:35 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 551
+19/06/20 05:50:35 INFO executor.Executor: Running task 551.0 in stage 0.0 (TID 551)
+19/06/20 05:50:35 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00014:20401094656+1073741824
+19/06/20 05:50:39 INFO sort.ShuffleExternalSorter: Thread 71 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 05:50:52 INFO executor.Executor: Finished task 551.0 in stage 0.0 (TID 551). 2028 bytes result sent to driver
+19/06/20 05:50:52 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 565
+19/06/20 05:50:52 INFO executor.Executor: Running task 565.0 in stage 0.0 (TID 565)
+19/06/20 05:50:52 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00014:35433480192+1073741824
+19/06/20 05:50:55 INFO sort.ShuffleExternalSorter: Thread 71 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 05:51:08 INFO executor.Executor: Finished task 565.0 in stage 0.0 (TID 565). 2028 bytes result sent to driver
+19/06/20 05:51:08 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 571
+19/06/20 05:51:08 INFO executor.Executor: Running task 571.0 in stage 0.0 (TID 571)
+19/06/20 05:51:08 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00015:1073741824+1073741824
+19/06/20 05:51:11 INFO sort.ShuffleExternalSorter: Thread 71 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 05:51:24 INFO executor.Executor: Finished task 571.0 in stage 0.0 (TID 571). 2071 bytes result sent to driver
+19/06/20 05:51:24 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 579
+19/06/20 05:51:24 INFO executor.Executor: Running task 579.0 in stage 0.0 (TID 579)
+19/06/20 05:51:24 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00015:9663676416+1073741824
+19/06/20 05:51:28 INFO sort.ShuffleExternalSorter: Thread 71 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 05:51:40 INFO executor.Executor: Finished task 579.0 in stage 0.0 (TID 579). 2071 bytes result sent to driver
+19/06/20 05:51:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 586
+19/06/20 05:51:40 INFO executor.Executor: Running task 586.0 in stage 0.0 (TID 586)
+19/06/20 05:51:40 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00015:17179869184+1073741824
+19/06/20 05:51:44 INFO sort.ShuffleExternalSorter: Thread 71 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 05:51:57 INFO executor.Executor: Finished task 586.0 in stage 0.0 (TID 586). 2028 bytes result sent to driver
+19/06/20 05:51:57 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 595
+19/06/20 05:51:57 INFO executor.Executor: Running task 595.0 in stage 0.0 (TID 595)
+19/06/20 05:51:57 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00015:26843545600+1073741824
+19/06/20 05:52:01 INFO sort.ShuffleExternalSorter: Thread 71 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 05:52:13 INFO executor.Executor: Finished task 595.0 in stage 0.0 (TID 595). 2028 bytes result sent to driver
+19/06/20 05:52:13 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 604
+19/06/20 05:52:13 INFO executor.Executor: Running task 604.0 in stage 0.0 (TID 604)
+19/06/20 05:52:13 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00015:36507222016+1073741824
+19/06/20 05:52:17 INFO sort.ShuffleExternalSorter: Thread 71 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 05:52:29 INFO executor.Executor: Finished task 604.0 in stage 0.0 (TID 604). 2071 bytes result sent to driver
+19/06/20 05:52:29 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 616
+19/06/20 05:52:29 INFO executor.Executor: Running task 616.0 in stage 0.0 (TID 616)
+19/06/20 05:52:29 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00016:8589934592+1073741824
+19/06/20 05:54:06 INFO sort.ShuffleExternalSorter: Thread 72 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 05:55:29 INFO executor.Executor: Finished task 359.0 in stage 0.0 (TID 359). 2028 bytes result sent to driver
+19/06/20 05:55:29 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 701
+19/06/20 05:55:29 INFO executor.Executor: Running task 701.0 in stage 0.0 (TID 701)
+19/06/20 05:55:29 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00018:18253611008+1073741824
+19/06/20 05:56:46 INFO sort.ShuffleExternalSorter: Thread 72 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 05:57:12 INFO executor.Executor: Finished task 701.0 in stage 0.0 (TID 701). 2028 bytes result sent to driver
+19/06/20 05:57:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 759
+19/06/20 05:57:12 INFO executor.Executor: Running task 759.0 in stage 0.0 (TID 759)
+19/06/20 05:57:12 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00019:39728447488+271552512
+19/06/20 05:58:19 INFO sort.ShuffleExternalSorter: Thread 70 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 05:58:24 INFO sort.ShuffleExternalSorter: Thread 69 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 05:59:36 INFO executor.Executor: Finished task 356.0 in stage 0.0 (TID 356). 2028 bytes result sent to driver
+19/06/20 05:59:36 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 845
+19/06/20 05:59:36 INFO executor.Executor: Running task 845.0 in stage 0.0 (TID 845)
+19/06/20 05:59:36 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00022:9663676416+1073741824
+19/06/20 05:59:40 INFO sort.ShuffleExternalSorter: Thread 69 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 05:59:52 INFO executor.Executor: Finished task 845.0 in stage 0.0 (TID 845). 2071 bytes result sent to driver
+19/06/20 05:59:52 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 854
+19/06/20 05:59:52 INFO executor.Executor: Running task 854.0 in stage 0.0 (TID 854)
+19/06/20 05:59:52 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00022:19327352832+1073741824
+19/06/20 05:59:56 INFO sort.ShuffleExternalSorter: Thread 69 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 06:00:08 INFO executor.Executor: Finished task 854.0 in stage 0.0 (TID 854). 2028 bytes result sent to driver
+19/06/20 06:00:08 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 867
+19/06/20 06:00:08 INFO executor.Executor: Running task 867.0 in stage 0.0 (TID 867)
+19/06/20 06:00:08 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00022:33285996544+1073741824
+19/06/20 06:00:12 INFO sort.ShuffleExternalSorter: Thread 69 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 06:00:24 INFO executor.Executor: Finished task 867.0 in stage 0.0 (TID 867). 2028 bytes result sent to driver
+19/06/20 06:00:24 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 880
+19/06/20 06:00:24 INFO executor.Executor: Running task 880.0 in stage 0.0 (TID 880)
+19/06/20 06:00:24 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00023:6442450944+1073741824
+19/06/20 06:00:28 INFO sort.ShuffleExternalSorter: Thread 69 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 06:00:40 INFO executor.Executor: Finished task 880.0 in stage 0.0 (TID 880). 2028 bytes result sent to driver
+19/06/20 06:00:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 896
+19/06/20 06:00:40 INFO executor.Executor: Running task 896.0 in stage 0.0 (TID 896)
+19/06/20 06:00:40 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00023:23622320128+1073741824
+19/06/20 06:00:43 INFO sort.ShuffleExternalSorter: Thread 69 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 06:00:56 INFO executor.Executor: Finished task 896.0 in stage 0.0 (TID 896). 2028 bytes result sent to driver
+19/06/20 06:00:56 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 909
+19/06/20 06:00:56 INFO executor.Executor: Running task 909.0 in stage 0.0 (TID 909)
+19/06/20 06:00:56 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00023:37580963840+1073741824
+19/06/20 06:00:59 INFO sort.ShuffleExternalSorter: Thread 69 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 06:01:12 INFO executor.Executor: Finished task 909.0 in stage 0.0 (TID 909). 2028 bytes result sent to driver
+19/06/20 06:01:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 923
+19/06/20 06:01:12 INFO executor.Executor: Running task 923.0 in stage 0.0 (TID 923)
+19/06/20 06:01:12 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00024:11811160064+1073741824
+19/06/20 06:01:16 INFO sort.ShuffleExternalSorter: Thread 69 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 06:01:22 INFO executor.Executor: Finished task 357.0 in stage 0.0 (TID 357). 2028 bytes result sent to driver
+19/06/20 06:01:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 939
+19/06/20 06:01:22 INFO executor.Executor: Running task 939.0 in stage 0.0 (TID 939)
+19/06/20 06:01:22 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00024:28991029248+1073741824
+19/06/20 06:01:26 INFO sort.ShuffleExternalSorter: Thread 70 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 06:01:29 INFO executor.Executor: Finished task 923.0 in stage 0.0 (TID 923). 2028 bytes result sent to driver
+19/06/20 06:01:29 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 943
+19/06/20 06:01:29 INFO executor.Executor: Running task 943.0 in stage 0.0 (TID 943)
+19/06/20 06:01:29 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00024:33285996544+1073741824
+19/06/20 06:01:32 INFO sort.ShuffleExternalSorter: Thread 69 spilling sort data of 1024.0 MB to disk (0  time so far)
+19/06/20 06:01:39 INFO executor.Executor: Finished task 939.0 in stage 0.0 (TID 939). 2028 bytes result sent to driver
+19/06/20 06:01:46 INFO executor.Executor: Finished task 943.0 in stage 0.0 (TID 943). 2028 bytes result sent to driver
+19/06/20 06:14:47 INFO executor.Executor: Finished task 759.0 in stage 0.0 (TID 759). 1942 bytes result sent to driver
+19/06/20 06:20:43 INFO executor.Executor: Finished task 616.0 in stage 0.0 (TID 616). 1985 bytes result sent to driver
+19/06/20 06:31:57 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1026
+19/06/20 06:31:57 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1126
+19/06/20 06:31:57 INFO executor.Executor: Running task 76.0 in stage 1.0 (TID 1026)
+19/06/20 06:31:57 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1226
+19/06/20 06:31:57 INFO executor.Executor: Running task 176.0 in stage 1.0 (TID 1126)
+19/06/20 06:31:57 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1326
+19/06/20 06:31:57 INFO executor.Executor: Running task 276.0 in stage 1.0 (TID 1226)
+19/06/20 06:31:57 INFO executor.Executor: Running task 376.0 in stage 1.0 (TID 1326)
+19/06/20 06:31:57 INFO spark.MapOutputTrackerWorker: Updating epoch to 1 and clearing cache
+19/06/20 06:31:57 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 2
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:35301 after 1 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 25.1 KB, free 4.1 GB)
+19/06/20 06:31:57 INFO broadcast.TorrentBroadcast: Reading broadcast variable 2 took 31 ms
+19/06/20 06:31:57 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 69.4 KB, free 4.1 GB)
+19/06/20 06:31:57 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/06/20 06:31:57 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/06/20 06:31:57 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/06/20 06:31:57 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/06/20 06:31:57 INFO spark.MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@mdc-ch1-cust4.mdc.ext.hpe.com:34747)
+19/06/20 06:31:57 INFO spark.MapOutputTrackerWorker: Got the output locations
+19/06/20 06:31:57 INFO storage.ShuffleBlockFetcherIterator: Getting 950 non-empty blocks including 25 local blocks and 925 remote blocks
+19/06/20 06:31:57 INFO storage.ShuffleBlockFetcherIterator: Getting 950 non-empty blocks including 25 local blocks and 925 remote blocks
+19/06/20 06:31:57 INFO storage.ShuffleBlockFetcherIterator: Getting 950 non-empty blocks including 25 local blocks and 925 remote blocks
+19/06/20 06:31:57 INFO storage.ShuffleBlockFetcherIterator: Getting 950 non-empty blocks including 25 local blocks and 925 remote blocks
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:36999 after 17 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:35395 after 17 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:39321 after 18 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:37689 after 19 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:38201 after 18 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:42691 after 19 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:40601 after 0 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:35683 after 1 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:39893 after 27 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:35859 after 31 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:42843 after 3 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:39007 after 16 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:35831 after 0 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:42149 after 21 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:37449 after 27 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:41729 after 27 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:35291 after 24 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:44467 after 29 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:34521 after 29 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:41193 after 28 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:34171 after 0 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:34647 after 21 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:43571 after 25 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:35153 after 26 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:35661 after 54 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO storage.ShuffleBlockFetcherIterator: Started 9 remote fetches in 254 ms
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:41503 after 26 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:43845 after 1 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:39609 after 26 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:46109 after 46 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:42359 after 30 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:37025 after 41 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO storage.ShuffleBlockFetcherIterator: Started 12 remote fetches in 313 ms
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:37857 after 24 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:39303 after 34 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO storage.ShuffleBlockFetcherIterator: Started 8 remote fetches in 328 ms
+19/06/20 06:31:57 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:39319 after 14 ms (0 ms spent in bootstraps)
+19/06/20 06:31:57 INFO storage.ShuffleBlockFetcherIterator: Started 10 remote fetches in 338 ms
+19/06/20 06:31:58 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:42351 after 40 ms (0 ms spent in bootstraps)
+19/06/20 06:31:58 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:44977 after 46 ms (0 ms spent in bootstraps)
+19/06/20 06:31:58 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:36859 after 27 ms (0 ms spent in bootstraps)
+19/06/20 06:31:58 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:46831 after 70 ms (0 ms spent in bootstraps)
+19/06/20 06:31:59 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:40421 after 44 ms (0 ms spent in bootstraps)
+19/06/20 06:31:59 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:35909 after 68 ms (0 ms spent in bootstraps)
+19/06/20 06:32:00 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:46309 after 68 ms (0 ms spent in bootstraps)
+19/06/20 06:32:00 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:34447 after 80 ms (0 ms spent in bootstraps)
+19/06/20 06:32:01 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:33009 after 19 ms (0 ms spent in bootstraps)
+19/06/20 06:32:02 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:40747 after 40 ms (0 ms spent in bootstraps)
+19/06/20 06:32:03 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:37097 after 124 ms (0 ms spent in bootstraps)
+19/06/20 06:32:03 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:46199 after 20 ms (0 ms spent in bootstraps)
+19/06/20 06:32:06 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:34965 after 66 ms (0 ms spent in bootstraps)
+19/06/20 06:32:08 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:35169 after 17 ms (0 ms spent in bootstraps)
+19/06/20 06:32:08 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:33771 after 35 ms (0 ms spent in bootstraps)
+19/06/20 06:32:09 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:43817 after 26 ms (0 ms spent in bootstraps)
+19/06/20 06:32:10 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:36603 after 46 ms (0 ms spent in bootstraps)
+19/06/20 06:32:10 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:39809 after 69 ms (0 ms spent in bootstraps)
+19/06/20 06:32:10 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:37381 after 115 ms (0 ms spent in bootstraps)
+19/06/20 06:32:11 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:42991 after 63 ms (0 ms spent in bootstraps)
+19/06/20 06:32:13 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:46065 after 49 ms (0 ms spent in bootstraps)
+19/06/20 06:32:14 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:38965 after 64 ms (0 ms spent in bootstraps)
+19/06/20 06:32:19 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:41083 after 15 ms (0 ms spent in bootstraps)
+19/06/20 06:32:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:32951 after 69 ms (0 ms spent in bootstraps)
+19/06/20 06:32:21 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:45607 after 30 ms (0 ms spent in bootstraps)
+19/06/20 06:32:25 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:34491 after 173 ms (0 ms spent in bootstraps)
+19/06/20 06:32:26 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:39277 after 36 ms (0 ms spent in bootstraps)
+19/06/20 06:32:27 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:40349 after 47 ms (0 ms spent in bootstraps)
+19/06/20 06:32:28 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:38671 after 22 ms (0 ms spent in bootstraps)
+19/06/20 06:32:31 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:45415 after 130 ms (0 ms spent in bootstraps)
+19/06/20 06:32:32 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:43573 after 33 ms (0 ms spent in bootstraps)
+19/06/20 06:32:33 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:40365 after 100 ms (0 ms spent in bootstraps)
+19/06/20 06:32:33 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:45297 after 16 ms (0 ms spent in bootstraps)
+19/06/20 06:32:35 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:46583 after 129 ms (0 ms spent in bootstraps)
+19/06/20 06:32:36 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:36689 after 31 ms (0 ms spent in bootstraps)
+19/06/20 06:32:36 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:44975 after 61 ms (0 ms spent in bootstraps)
+19/06/20 06:32:36 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:37679 after 12 ms (0 ms spent in bootstraps)
+19/06/20 06:32:39 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:36535 after 59 ms (0 ms spent in bootstraps)
+19/06/20 06:32:40 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:38897 after 20 ms (0 ms spent in bootstraps)
+19/06/20 06:32:41 INFO client.TransportClientFactory: Successfully created connection to mdc-ch7-cust4/10.1.7.4:33205 after 54 ms (0 ms spent in bootstraps)
+19/06/20 06:32:41 INFO client.TransportClientFactory: Successfully created connection to mdc-ch6-cust4/10.1.6.4:34953 after 69 ms (0 ms spent in bootstraps)
+19/06/20 06:32:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:43299 after 50 ms (0 ms spent in bootstraps)
+19/06/20 06:32:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:33605 after 46 ms (0 ms spent in bootstraps)
+19/06/20 06:32:46 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:45225 after 57 ms (0 ms spent in bootstraps)
+19/06/20 06:32:48 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:38197 after 22 ms (0 ms spent in bootstraps)
+19/06/20 06:32:52 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:44521 after 2 ms (0 ms spent in bootstraps)
+19/06/20 06:32:53 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:39427 after 1 ms (0 ms spent in bootstraps)
+19/06/20 06:32:54 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:34159 after 13 ms (0 ms spent in bootstraps)
+19/06/20 06:32:58 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:39067 after 18 ms (0 ms spent in bootstraps)
+19/06/20 06:33:15 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:41939 after 46 ms (0 ms spent in bootstraps)
+19/06/20 06:33:16 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:42755 after 21 ms (0 ms spent in bootstraps)
+19/06/20 06:33:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:45467 after 20 ms (0 ms spent in bootstraps)
+19/06/20 06:33:20 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:46163 after 19 ms (0 ms spent in bootstraps)
+19/06/20 06:33:22 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:35765 after 129 ms (0 ms spent in bootstraps)
+19/06/20 06:33:26 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:45383 after 101 ms (0 ms spent in bootstraps)
+19/06/20 06:33:33 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:35461 after 38 ms (0 ms spent in bootstraps)
+19/06/20 06:33:40 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:46551 after 2 ms (0 ms spent in bootstraps)
+19/06/20 06:33:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch5-cust4/10.1.5.4:41955 after 11 ms (0 ms spent in bootstraps)
+19/06/20 06:33:46 INFO collection.ExternalSorter: Thread 109 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/06/20 06:33:49 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:37235 after 1 ms (0 ms spent in bootstraps)
+19/06/20 06:33:53 INFO client.TransportClientFactory: Successfully created connection to mdc-ch8-cust4/10.1.8.4:32893 after 17 ms (0 ms spent in bootstraps)
+19/06/20 06:33:53 INFO collection.ExternalSorter: Thread 108 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/06/20 06:34:04 INFO collection.ExternalSorter: Thread 111 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/06/20 06:34:10 INFO client.TransportClientFactory: Successfully created connection to mdc-ch3-cust4/10.1.3.4:46625 after 4 ms (0 ms spent in bootstraps)
+19/06/20 06:34:11 INFO collection.ExternalSorter: Thread 110 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/06/20 06:34:53 INFO client.TransportClientFactory: Successfully created connection to mdc-ch2-cust4/10.1.2.4:37835 after 2 ms (0 ms spent in bootstraps)
+19/06/20 06:36:59 WARN server.TransportChannelHandler: Exception in connection from /10.1.2.4:33476
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/20 06:37:04 WARN server.TransportChannelHandler: Exception in connection from /10.1.7.4:42044
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/20 06:37:54 WARN server.TransportChannelHandler: Exception in connection from mdc-ch1-cust4/10.1.1.4:39427
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/20 06:37:54 ERROR client.TransportResponseHandler: Still have 2 requests outstanding when connection from mdc-ch1-cust4/10.1.1.4:39427 is closed
+19/06/20 06:37:54 ERROR shuffle.OneForOneBlockFetcher: Failed while starting block fetches
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/20 06:37:54 INFO shuffle.RetryingBlockFetcher: Retrying fetch (1/3) for 16 outstanding blocks after 5000 ms
+19/06/20 06:37:54 ERROR shuffle.OneForOneBlockFetcher: Failed while starting block fetches
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/20 06:37:54 INFO shuffle.RetryingBlockFetcher: Retrying fetch (1/3) for 4 outstanding blocks after 5000 ms
+19/06/20 06:37:57 INFO client.TransportClientFactory: Found inactive connection to mdc-ch1-cust4/10.1.1.4:39427, creating a new one.
+19/06/20 06:37:57 ERROR shuffle.RetryingBlockFetcher: Exception while beginning fetch of 4 outstanding blocks 
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.start(RetryingBlockFetcher.java:121)
+	at org.apache.spark.network.netty.NettyBlockTransferService.fetchBlocks(NettyBlockTransferService.scala:124)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.sendRequest(ShuffleBlockFetcherIterator.scala:260)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.org$apache$spark$storage$ShuffleBlockFetcherIterator$$send$1(ShuffleBlockFetcherIterator.scala:531)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.fetchUpToMaxBytes(ShuffleBlockFetcherIterator.scala:526)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:489)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:64)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:435)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:441)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:30)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at org.apache.spark.util.collection.ExternalSorter.insertAll(ExternalSorter.scala:199)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:102)
+	at org.apache.spark.rdd.ShuffledRDD.compute(ShuffledRDD.scala:105)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	... 1 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:37:57 INFO shuffle.RetryingBlockFetcher: Retrying fetch (1/3) for 4 outstanding blocks after 5000 ms
+19/06/20 06:37:59 INFO client.TransportClientFactory: Found inactive connection to mdc-ch1-cust4/10.1.1.4:39427, creating a new one.
+19/06/20 06:37:59 ERROR shuffle.RetryingBlockFetcher: Exception while beginning fetch of 16 outstanding blocks (after 1 retries)
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:37:59 INFO shuffle.RetryingBlockFetcher: Retrying fetch (2/3) for 16 outstanding blocks after 5000 ms
+19/06/20 06:37:59 INFO client.TransportClientFactory: Found inactive connection to mdc-ch1-cust4/10.1.1.4:39427, creating a new one.
+19/06/20 06:37:59 ERROR shuffle.RetryingBlockFetcher: Exception while beginning fetch of 4 outstanding blocks (after 1 retries)
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:37:59 INFO shuffle.RetryingBlockFetcher: Retrying fetch (2/3) for 4 outstanding blocks after 5000 ms
+19/06/20 06:38:07 INFO client.TransportClientFactory: Found inactive connection to mdc-ch1-cust4/10.1.1.4:39427, creating a new one.
+19/06/20 06:38:07 ERROR shuffle.RetryingBlockFetcher: Exception while beginning fetch of 4 outstanding blocks (after 2 retries)
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:07 INFO shuffle.RetryingBlockFetcher: Retrying fetch (3/3) for 4 outstanding blocks after 5000 ms
+19/06/20 06:38:07 INFO client.TransportClientFactory: Found inactive connection to mdc-ch1-cust4/10.1.1.4:39427, creating a new one.
+19/06/20 06:38:07 ERROR shuffle.RetryingBlockFetcher: Exception while beginning fetch of 16 outstanding blocks (after 2 retries)
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:07 INFO shuffle.RetryingBlockFetcher: Retrying fetch (3/3) for 16 outstanding blocks after 5000 ms
+19/06/20 06:38:07 INFO client.TransportClientFactory: Found inactive connection to mdc-ch1-cust4/10.1.1.4:39427, creating a new one.
+19/06/20 06:38:07 ERROR shuffle.RetryingBlockFetcher: Exception while beginning fetch of 4 outstanding blocks (after 1 retries)
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:07 INFO shuffle.RetryingBlockFetcher: Retrying fetch (2/3) for 4 outstanding blocks after 5000 ms
+19/06/20 06:38:12 INFO client.TransportClientFactory: Found inactive connection to mdc-ch1-cust4/10.1.1.4:39427, creating a new one.
+19/06/20 06:38:12 ERROR shuffle.RetryingBlockFetcher: Exception while beginning fetch of 4 outstanding blocks (after 3 retries)
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 INFO client.TransportClientFactory: Found inactive connection to mdc-ch1-cust4/10.1.1.4:39427, creating a new one.
+19/06/20 06:38:12 ERROR shuffle.RetryingBlockFetcher: Exception while beginning fetch of 16 outstanding blocks (after 3 retries)
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 INFO client.TransportClientFactory: Found inactive connection to mdc-ch1-cust4/10.1.1.4:39427, creating a new one.
+19/06/20 06:38:12 ERROR shuffle.RetryingBlockFetcher: Exception while beginning fetch of 4 outstanding blocks (after 2 retries)
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 INFO shuffle.RetryingBlockFetcher: Retrying fetch (3/3) for 4 outstanding blocks after 5000 ms
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:12 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:16 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 06:38:16 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 06:38:17 INFO client.TransportClientFactory: Found inactive connection to mdc-ch1-cust4/10.1.1.4:39427, creating a new one.
+19/06/20 06:38:17 ERROR shuffle.RetryingBlockFetcher: Exception while beginning fetch of 4 outstanding blocks (after 3 retries)
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:17 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:17 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:17 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:17 ERROR storage.ShuffleBlockFetcherIterator: Failed to get block(s) from mdc-ch1-cust4:39427
+java.io.IOException: Failed to connect to mdc-ch1-cust4/10.1.1.4:39427
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: mdc-ch1-cust4/10.1.1.4:39427
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	... 11 more
+19/06/20 06:38:55 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190620054244_0001_r_000176_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/_temporary/0/task_20190620054244_0001_r_000176
+19/06/20 06:38:55 INFO mapred.SparkHadoopMapRedUtil: attempt_20190620054244_0001_r_000176_0: Committed
+19/06/20 06:38:55 INFO executor.Executor: Finished task 176.0 in stage 1.0 (TID 1126). 1342 bytes result sent to driver
+19/06/20 06:39:06 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 06:39:06 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/06/20 06:39:29 INFO output.FileOutputCommitter: Saved output of task 'attempt_20190620054244_0001_r_000376_0' to hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-output/_temporary/0/task_20190620054244_0001_r_000376
+19/06/20 06:39:29 INFO mapred.SparkHadoopMapRedUtil: attempt_20190620054244_0001_r_000376_0: Committed
+19/06/20 06:39:29 INFO executor.Executor: Finished task 376.0 in stage 1.0 (TID 1326). 1299 bytes result sent to driver
+19/06/20 06:42:14 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1416
+19/06/20 06:42:14 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1516
+19/06/20 06:42:14 INFO executor.Executor: Running task 39.0 in stage 1.1 (TID 1416)
+19/06/20 06:42:14 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1616
+19/06/20 06:42:14 INFO executor.Executor: Running task 139.0 in stage 1.1 (TID 1516)
+19/06/20 06:42:14 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1711
+19/06/20 06:42:14 INFO executor.Executor: Running task 239.0 in stage 1.1 (TID 1616)
+19/06/20 06:42:14 INFO executor.Executor: Running task 334.0 in stage 1.1 (TID 1711)
+19/06/20 06:42:14 INFO spark.MapOutputTrackerWorker: Updating epoch to 267 and clearing cache
+19/06/20 06:42:14 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 4
+19/06/20 06:42:14 INFO memory.MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 25.1 KB, free 4.1 GB)
+19/06/20 06:42:14 INFO broadcast.TorrentBroadcast: Reading broadcast variable 4 took 10 ms
+19/06/20 06:42:14 INFO memory.MemoryStore: Block broadcast_4 stored as values in memory (estimated size 69.4 KB, free 4.1 GB)
+19/06/20 06:42:14 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/06/20 06:42:14 INFO spark.MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@mdc-ch1-cust4.mdc.ext.hpe.com:34747)
+19/06/20 06:42:14 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/06/20 06:42:14 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/06/20 06:42:14 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/06/20 06:42:14 INFO spark.MapOutputTrackerWorker: Got the output locations
+19/06/20 06:42:14 INFO storage.ShuffleBlockFetcherIterator: Getting 950 non-empty blocks including 25 local blocks and 925 remote blocks
+19/06/20 06:42:14 INFO storage.ShuffleBlockFetcherIterator: Getting 950 non-empty blocks including 25 local blocks and 925 remote blocks
+19/06/20 06:42:14 INFO storage.ShuffleBlockFetcherIterator: Getting 950 non-empty blocks including 25 local blocks and 925 remote blocks
+19/06/20 06:42:14 INFO storage.ShuffleBlockFetcherIterator: Started 8 remote fetches in 11 ms
+19/06/20 06:42:14 INFO storage.ShuffleBlockFetcherIterator: Started 10 remote fetches in 12 ms
+19/06/20 06:42:14 INFO storage.ShuffleBlockFetcherIterator: Getting 950 non-empty blocks including 25 local blocks and 925 remote blocks
+19/06/20 06:42:14 INFO storage.ShuffleBlockFetcherIterator: Started 10 remote fetches in 64 ms
+19/06/20 06:42:19 WARN client.TransportClientFactory: DNS resolution for mdc-ch1-cust4/10.1.1.4:37851 took 5025 ms
+19/06/20 06:42:19 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:37851 after 0 ms (0 ms spent in bootstraps)
+19/06/20 06:42:19 INFO storage.ShuffleBlockFetcherIterator: Started 10 remote fetches in 5031 ms
+19/06/20 06:44:53 INFO collection.ExternalSorter: Thread 132 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/06/20 06:44:53 INFO collection.ExternalSorter: Thread 129 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/06/20 06:44:54 INFO collection.ExternalSorter: Thread 131 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/06/20 06:44:59 INFO collection.ExternalSorter: Thread 130 spilling in-memory map of 1070.1 MB to disk (1 time so far)
+19/06/20 06:47:52 ERROR server.TransportChannelHandler: Connection to mdc-ch6-cust4/10.1.6.4:37689 has been quiet for 120

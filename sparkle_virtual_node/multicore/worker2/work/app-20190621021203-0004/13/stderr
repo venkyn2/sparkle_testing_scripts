@@ -1,0 +1,695 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=44085" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:44085" "--executor-id" "13" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621021203-0004" "--worker-url" "spark://Worker@mdc-ch1-cust4:35763"
+========================================
+
+19/06/21 02:12:04 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 114552@mdc-ch1-cust4
+19/06/21 02:12:04 INFO util.SignalUtils: Registered signal handler for TERM
+19/06/21 02:12:04 INFO util.SignalUtils: Registered signal handler for HUP
+19/06/21 02:12:04 INFO util.SignalUtils: Registered signal handler for INT
+19/06/21 02:12:04 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/06/21 02:12:04 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 02:12:04 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 02:12:04 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 02:12:04 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 02:12:04 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 02:12:04 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:44085 after 45 ms (0 ms spent in bootstraps)
+19/06/21 02:12:04 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/06/21 02:12:04 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 02:12:04 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 02:12:04 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 02:12:04 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 02:12:04 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 02:12:04 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:44085 after 1 ms (0 ms spent in bootstraps)
+19/06/21 02:12:04 INFO storage.DiskBlockManager: Created local directory at /data/spark-87822a48-daf4-494f-b14f-ae33f326dc42/executor-f9b3573e-3aec-4361-bc83-763c8baf73b4/blockmgr-bd517626-703e-4a53-93f5-900007ad56c4
+19/06/21 02:12:04 INFO memory.MemoryStore: MemoryStore started with capacity 12.6 GB
+19/06/21 02:12:04 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:44085
+19/06/21 02:12:04 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@mdc-ch1-cust4:35763
+19/06/21 02:12:04 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:35763 after 1 ms (0 ms spent in bootstraps)
+19/06/21 02:12:04 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@mdc-ch1-cust4:35763
+19/06/21 02:12:04 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/06/21 02:12:04 INFO executor.Executor: Starting executor ID 13 on host mdc-ch1-cust4
+19/06/21 02:12:05 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39607.
+19/06/21 02:12:05 INFO netty.NettyBlockTransferService: Server created on mdc-ch1-cust4:39607
+19/06/21 02:12:05 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/06/21 02:12:05 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(13, mdc-ch1-cust4, 39607, None)
+19/06/21 02:12:05 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(13, mdc-ch1-cust4, 39607, None)
+19/06/21 02:12:05 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(13, mdc-ch1-cust4, 39607, None)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 0
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 2
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 3
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 4
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 5
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 6
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 7
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 8
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 9
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 10
+19/06/21 02:12:05 INFO executor.Executor: Running task 0.0 in stage 0.0 (TID 0)
+19/06/21 02:12:05 INFO executor.Executor: Running task 6.0 in stage 0.0 (TID 6)
+19/06/21 02:12:05 INFO executor.Executor: Running task 9.0 in stage 0.0 (TID 9)
+19/06/21 02:12:05 INFO executor.Executor: Running task 3.0 in stage 0.0 (TID 3)
+19/06/21 02:12:05 INFO executor.Executor: Running task 1.0 in stage 0.0 (TID 1)
+19/06/21 02:12:05 INFO executor.Executor: Running task 10.0 in stage 0.0 (TID 10)
+19/06/21 02:12:05 INFO executor.Executor: Running task 5.0 in stage 0.0 (TID 5)
+19/06/21 02:12:05 INFO executor.Executor: Running task 7.0 in stage 0.0 (TID 7)
+19/06/21 02:12:05 INFO executor.Executor: Running task 4.0 in stage 0.0 (TID 4)
+19/06/21 02:12:05 INFO executor.Executor: Running task 2.0 in stage 0.0 (TID 2)
+19/06/21 02:12:05 INFO executor.Executor: Running task 8.0 in stage 0.0 (TID 8)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 11
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 12
+19/06/21 02:12:05 INFO executor.Executor: Running task 11.0 in stage 0.0 (TID 11)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 13
+19/06/21 02:12:05 INFO executor.Executor: Running task 12.0 in stage 0.0 (TID 12)
+19/06/21 02:12:05 INFO executor.Executor: Running task 13.0 in stage 0.0 (TID 13)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 14
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 15
+19/06/21 02:12:05 INFO executor.Executor: Running task 14.0 in stage 0.0 (TID 14)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 16
+19/06/21 02:12:05 INFO executor.Executor: Running task 15.0 in stage 0.0 (TID 15)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 17
+19/06/21 02:12:05 INFO executor.Executor: Running task 16.0 in stage 0.0 (TID 16)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 18
+19/06/21 02:12:05 INFO executor.Executor: Running task 17.0 in stage 0.0 (TID 17)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 19
+19/06/21 02:12:05 INFO executor.Executor: Running task 18.0 in stage 0.0 (TID 18)
+19/06/21 02:12:05 INFO executor.Executor: Running task 19.0 in stage 0.0 (TID 19)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 20
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 21
+19/06/21 02:12:05 INFO executor.Executor: Running task 20.0 in stage 0.0 (TID 20)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 22
+19/06/21 02:12:05 INFO executor.Executor: Running task 21.0 in stage 0.0 (TID 21)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 23
+19/06/21 02:12:05 INFO executor.Executor: Running task 22.0 in stage 0.0 (TID 22)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 24
+19/06/21 02:12:05 INFO executor.Executor: Running task 23.0 in stage 0.0 (TID 23)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 25
+19/06/21 02:12:05 INFO executor.Executor: Running task 24.0 in stage 0.0 (TID 24)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 26
+19/06/21 02:12:05 INFO executor.Executor: Running task 25.0 in stage 0.0 (TID 25)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 27
+19/06/21 02:12:05 INFO executor.Executor: Running task 26.0 in stage 0.0 (TID 26)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 28
+19/06/21 02:12:05 INFO executor.Executor: Running task 27.0 in stage 0.0 (TID 27)
+19/06/21 02:12:05 INFO executor.Executor: Running task 28.0 in stage 0.0 (TID 28)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 29
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 30
+19/06/21 02:12:05 INFO executor.Executor: Running task 29.0 in stage 0.0 (TID 29)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 31
+19/06/21 02:12:05 INFO executor.Executor: Running task 30.0 in stage 0.0 (TID 30)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 32
+19/06/21 02:12:05 INFO executor.Executor: Running task 31.0 in stage 0.0 (TID 31)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 33
+19/06/21 02:12:05 INFO executor.Executor: Running task 32.0 in stage 0.0 (TID 32)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 34
+19/06/21 02:12:05 INFO executor.Executor: Running task 33.0 in stage 0.0 (TID 33)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 35
+19/06/21 02:12:05 INFO executor.Executor: Running task 34.0 in stage 0.0 (TID 34)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 36
+19/06/21 02:12:05 INFO executor.Executor: Running task 35.0 in stage 0.0 (TID 35)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 37
+19/06/21 02:12:05 INFO executor.Executor: Running task 36.0 in stage 0.0 (TID 36)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 38
+19/06/21 02:12:05 INFO executor.Executor: Running task 37.0 in stage 0.0 (TID 37)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 39
+19/06/21 02:12:05 INFO executor.Executor: Running task 38.0 in stage 0.0 (TID 38)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 40
+19/06/21 02:12:05 INFO executor.Executor: Running task 39.0 in stage 0.0 (TID 39)
+19/06/21 02:12:05 INFO executor.Executor: Running task 40.0 in stage 0.0 (TID 40)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 41
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 42
+19/06/21 02:12:05 INFO executor.Executor: Running task 41.0 in stage 0.0 (TID 41)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 43
+19/06/21 02:12:05 INFO executor.Executor: Running task 42.0 in stage 0.0 (TID 42)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 44
+19/06/21 02:12:05 INFO executor.Executor: Running task 43.0 in stage 0.0 (TID 43)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 45
+19/06/21 02:12:05 INFO executor.Executor: Running task 44.0 in stage 0.0 (TID 44)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 46
+19/06/21 02:12:05 INFO executor.Executor: Running task 45.0 in stage 0.0 (TID 45)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 47
+19/06/21 02:12:05 INFO executor.Executor: Running task 46.0 in stage 0.0 (TID 46)
+19/06/21 02:12:05 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:44085/jars/simple-groupby-computation-project_2.11-2.0.jar with timestamp 1561108323610
+19/06/21 02:12:05 INFO executor.Executor: Running task 47.0 in stage 0.0 (TID 47)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 48
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 49
+19/06/21 02:12:05 INFO executor.Executor: Running task 48.0 in stage 0.0 (TID 48)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 50
+19/06/21 02:12:05 INFO executor.Executor: Running task 49.0 in stage 0.0 (TID 49)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 51
+19/06/21 02:12:05 INFO executor.Executor: Running task 50.0 in stage 0.0 (TID 50)
+19/06/21 02:12:05 INFO executor.Executor: Running task 51.0 in stage 0.0 (TID 51)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 52
+19/06/21 02:12:05 INFO executor.Executor: Running task 52.0 in stage 0.0 (TID 52)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 53
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 54
+19/06/21 02:12:05 INFO executor.Executor: Running task 53.0 in stage 0.0 (TID 53)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 55
+19/06/21 02:12:05 INFO executor.Executor: Running task 54.0 in stage 0.0 (TID 54)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 56
+19/06/21 02:12:05 INFO executor.Executor: Running task 55.0 in stage 0.0 (TID 55)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 57
+19/06/21 02:12:05 INFO executor.Executor: Running task 56.0 in stage 0.0 (TID 56)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 58
+19/06/21 02:12:05 INFO executor.Executor: Running task 57.0 in stage 0.0 (TID 57)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 59
+19/06/21 02:12:05 INFO executor.Executor: Running task 58.0 in stage 0.0 (TID 58)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 60
+19/06/21 02:12:05 INFO executor.Executor: Running task 59.0 in stage 0.0 (TID 59)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 61
+19/06/21 02:12:05 INFO executor.Executor: Running task 60.0 in stage 0.0 (TID 60)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 62
+19/06/21 02:12:05 INFO executor.Executor: Running task 61.0 in stage 0.0 (TID 61)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 63
+19/06/21 02:12:05 INFO executor.Executor: Running task 62.0 in stage 0.0 (TID 62)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 64
+19/06/21 02:12:05 INFO executor.Executor: Running task 63.0 in stage 0.0 (TID 63)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 65
+19/06/21 02:12:05 INFO executor.Executor: Running task 64.0 in stage 0.0 (TID 64)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 66
+19/06/21 02:12:05 INFO executor.Executor: Running task 65.0 in stage 0.0 (TID 65)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 67
+19/06/21 02:12:05 INFO executor.Executor: Running task 66.0 in stage 0.0 (TID 66)
+19/06/21 02:12:05 INFO executor.Executor: Running task 67.0 in stage 0.0 (TID 67)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 68
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 69
+19/06/21 02:12:05 INFO executor.Executor: Running task 68.0 in stage 0.0 (TID 68)
+19/06/21 02:12:05 INFO executor.Executor: Running task 69.0 in stage 0.0 (TID 69)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 70
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 71
+19/06/21 02:12:05 INFO executor.Executor: Running task 70.0 in stage 0.0 (TID 70)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 72
+19/06/21 02:12:05 INFO executor.Executor: Running task 71.0 in stage 0.0 (TID 71)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 73
+19/06/21 02:12:05 INFO executor.Executor: Running task 72.0 in stage 0.0 (TID 72)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 74
+19/06/21 02:12:05 INFO executor.Executor: Running task 73.0 in stage 0.0 (TID 73)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 75
+19/06/21 02:12:05 INFO executor.Executor: Running task 74.0 in stage 0.0 (TID 74)
+19/06/21 02:12:05 INFO executor.Executor: Running task 75.0 in stage 0.0 (TID 75)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 76
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 77
+19/06/21 02:12:05 INFO executor.Executor: Running task 76.0 in stage 0.0 (TID 76)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 78
+19/06/21 02:12:05 INFO executor.Executor: Running task 77.0 in stage 0.0 (TID 77)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 79
+19/06/21 02:12:05 INFO executor.Executor: Running task 78.0 in stage 0.0 (TID 78)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 80
+19/06/21 02:12:05 INFO executor.Executor: Running task 79.0 in stage 0.0 (TID 79)
+19/06/21 02:12:05 INFO executor.Executor: Running task 80.0 in stage 0.0 (TID 80)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 81
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 82
+19/06/21 02:12:05 INFO executor.Executor: Running task 81.0 in stage 0.0 (TID 81)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 83
+19/06/21 02:12:05 INFO executor.Executor: Running task 82.0 in stage 0.0 (TID 82)
+19/06/21 02:12:05 INFO executor.Executor: Running task 83.0 in stage 0.0 (TID 83)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 84
+19/06/21 02:12:05 INFO executor.Executor: Running task 84.0 in stage 0.0 (TID 84)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 85
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 86
+19/06/21 02:12:05 INFO executor.Executor: Running task 85.0 in stage 0.0 (TID 85)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 87
+19/06/21 02:12:05 INFO executor.Executor: Running task 86.0 in stage 0.0 (TID 86)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 88
+19/06/21 02:12:05 INFO executor.Executor: Running task 87.0 in stage 0.0 (TID 87)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 89
+19/06/21 02:12:05 INFO executor.Executor: Running task 88.0 in stage 0.0 (TID 88)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 90
+19/06/21 02:12:05 INFO executor.Executor: Running task 89.0 in stage 0.0 (TID 89)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 91
+19/06/21 02:12:05 INFO executor.Executor: Running task 90.0 in stage 0.0 (TID 90)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 92
+19/06/21 02:12:05 INFO executor.Executor: Running task 91.0 in stage 0.0 (TID 91)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 93
+19/06/21 02:12:05 INFO executor.Executor: Running task 92.0 in stage 0.0 (TID 92)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 94
+19/06/21 02:12:05 INFO executor.Executor: Running task 93.0 in stage 0.0 (TID 93)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 95
+19/06/21 02:12:05 INFO executor.Executor: Running task 94.0 in stage 0.0 (TID 94)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 96
+19/06/21 02:12:05 INFO executor.Executor: Running task 95.0 in stage 0.0 (TID 95)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 97
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 98
+19/06/21 02:12:05 INFO executor.Executor: Running task 96.0 in stage 0.0 (TID 96)
+19/06/21 02:12:05 INFO executor.Executor: Running task 97.0 in stage 0.0 (TID 97)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 99
+19/06/21 02:12:05 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:44085 after 2 ms (0 ms spent in bootstraps)
+19/06/21 02:12:05 INFO executor.Executor: Running task 98.0 in stage 0.0 (TID 98)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 100
+19/06/21 02:12:05 INFO executor.Executor: Running task 99.0 in stage 0.0 (TID 99)
+19/06/21 02:12:05 INFO executor.Executor: Running task 100.0 in stage 0.0 (TID 100)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 101
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 102
+19/06/21 02:12:05 INFO executor.Executor: Running task 101.0 in stage 0.0 (TID 101)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 103
+19/06/21 02:12:05 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:44085/jars/simple-groupby-computation-project_2.11-2.0.jar to /data/spark-87822a48-daf4-494f-b14f-ae33f326dc42/executor-f9b3573e-3aec-4361-bc83-763c8baf73b4/spark-90ffce46-dda3-4a07-8cc8-a8bb4e8ae48c/fetchFileTemp75974489661827482.tmp
+19/06/21 02:12:05 INFO executor.Executor: Running task 102.0 in stage 0.0 (TID 102)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 104
+19/06/21 02:12:05 INFO executor.Executor: Running task 103.0 in stage 0.0 (TID 103)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 105
+19/06/21 02:12:05 INFO executor.Executor: Running task 104.0 in stage 0.0 (TID 104)
+19/06/21 02:12:05 INFO executor.Executor: Running task 105.0 in stage 0.0 (TID 105)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 106
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 107
+19/06/21 02:12:05 INFO executor.Executor: Running task 106.0 in stage 0.0 (TID 106)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 108
+19/06/21 02:12:05 INFO executor.Executor: Running task 107.0 in stage 0.0 (TID 107)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 109
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 110
+19/06/21 02:12:05 INFO executor.Executor: Running task 108.0 in stage 0.0 (TID 108)
+19/06/21 02:12:05 INFO executor.Executor: Running task 109.0 in stage 0.0 (TID 109)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 111
+19/06/21 02:12:05 INFO executor.Executor: Running task 110.0 in stage 0.0 (TID 110)
+19/06/21 02:12:05 INFO executor.Executor: Running task 111.0 in stage 0.0 (TID 111)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 112
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 113
+19/06/21 02:12:05 INFO executor.Executor: Running task 112.0 in stage 0.0 (TID 112)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 114
+19/06/21 02:12:05 INFO executor.Executor: Running task 113.0 in stage 0.0 (TID 113)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 115
+19/06/21 02:12:05 INFO executor.Executor: Running task 114.0 in stage 0.0 (TID 114)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 116
+19/06/21 02:12:05 INFO executor.Executor: Running task 115.0 in stage 0.0 (TID 115)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 117
+19/06/21 02:12:05 INFO executor.Executor: Running task 116.0 in stage 0.0 (TID 116)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 118
+19/06/21 02:12:05 INFO executor.Executor: Running task 117.0 in stage 0.0 (TID 117)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 119
+19/06/21 02:12:05 INFO executor.Executor: Running task 118.0 in stage 0.0 (TID 118)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 120
+19/06/21 02:12:05 INFO executor.Executor: Running task 119.0 in stage 0.0 (TID 119)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 121
+19/06/21 02:12:05 INFO executor.Executor: Running task 120.0 in stage 0.0 (TID 120)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 122
+19/06/21 02:12:05 INFO executor.Executor: Running task 121.0 in stage 0.0 (TID 121)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 123
+19/06/21 02:12:05 INFO executor.Executor: Running task 122.0 in stage 0.0 (TID 122)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 124
+19/06/21 02:12:05 INFO executor.Executor: Running task 123.0 in stage 0.0 (TID 123)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 125
+19/06/21 02:12:05 INFO executor.Executor: Running task 124.0 in stage 0.0 (TID 124)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 126
+19/06/21 02:12:05 INFO executor.Executor: Running task 125.0 in stage 0.0 (TID 125)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 127
+19/06/21 02:12:05 INFO executor.Executor: Running task 126.0 in stage 0.0 (TID 126)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 128
+19/06/21 02:12:05 INFO executor.Executor: Running task 127.0 in stage 0.0 (TID 127)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 129
+19/06/21 02:12:05 INFO executor.Executor: Running task 128.0 in stage 0.0 (TID 128)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 130
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 131
+19/06/21 02:12:05 INFO executor.Executor: Running task 129.0 in stage 0.0 (TID 129)
+19/06/21 02:12:05 INFO executor.Executor: Running task 130.0 in stage 0.0 (TID 130)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 132
+19/06/21 02:12:05 INFO executor.Executor: Running task 131.0 in stage 0.0 (TID 131)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 133
+19/06/21 02:12:05 INFO executor.Executor: Running task 132.0 in stage 0.0 (TID 132)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 134
+19/06/21 02:12:05 INFO executor.Executor: Running task 133.0 in stage 0.0 (TID 133)
+19/06/21 02:12:05 INFO executor.Executor: Running task 134.0 in stage 0.0 (TID 134)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 135
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 136
+19/06/21 02:12:05 INFO executor.Executor: Running task 135.0 in stage 0.0 (TID 135)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 137
+19/06/21 02:12:05 INFO executor.Executor: Running task 136.0 in stage 0.0 (TID 136)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 138
+19/06/21 02:12:05 INFO executor.Executor: Running task 137.0 in stage 0.0 (TID 137)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 139
+19/06/21 02:12:05 INFO executor.Executor: Running task 138.0 in stage 0.0 (TID 138)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 140
+19/06/21 02:12:05 INFO executor.Executor: Running task 139.0 in stage 0.0 (TID 139)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 141
+19/06/21 02:12:05 INFO executor.Executor: Running task 140.0 in stage 0.0 (TID 140)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 142
+19/06/21 02:12:05 INFO util.Utils: Copying /data/spark-87822a48-daf4-494f-b14f-ae33f326dc42/executor-f9b3573e-3aec-4361-bc83-763c8baf73b4/spark-90ffce46-dda3-4a07-8cc8-a8bb4e8ae48c/-299606741561108323610_cache to /var/tmp/spark2.0hpcplatform/multicore/worker2/work/app-20190621021203-0004/13/./simple-groupby-computation-project_2.11-2.0.jar
+19/06/21 02:12:05 INFO executor.Executor: Running task 141.0 in stage 0.0 (TID 141)
+19/06/21 02:12:05 INFO executor.Executor: Running task 142.0 in stage 0.0 (TID 142)
+19/06/21 02:12:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 143
+19/06/21 02:12:05 INFO executor.Executor: Running task 143.0 in stage 0.0 (TID 143)
+19/06/21 02:12:05 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker2/work/app-20190621021203-0004/13/./simple-groupby-computation-project_2.11-2.0.jar to class loader
+19/06/21 02:12:05 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 0
+19/06/21 02:12:06 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:44167 after 1 ms (0 ms spent in bootstraps)
+19/06/21 02:12:06 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 921.0 B, free 12.6 GB)
+19/06/21 02:12:06 INFO broadcast.TorrentBroadcast: Reading broadcast variable 0 took 162 ms
+19/06/21 02:12:06 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 1296.0 B, free 12.6 GB)
+19/06/21 02:12:06 INFO executor.Executor: Finished task 9.0 in stage 0.0 (TID 9). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 25.0 in stage 0.0 (TID 25). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 72.0 in stage 0.0 (TID 72). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 98.0 in stage 0.0 (TID 98). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 110.0 in stage 0.0 (TID 110). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 139.0 in stage 0.0 (TID 139). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 119.0 in stage 0.0 (TID 119). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 48.0 in stage 0.0 (TID 48). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 99.0 in stage 0.0 (TID 99). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 87.0 in stage 0.0 (TID 87). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 75.0 in stage 0.0 (TID 75). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 16.0 in stage 0.0 (TID 16). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 53.0 in stage 0.0 (TID 53). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 121.0 in stage 0.0 (TID 121). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 78.0 in stage 0.0 (TID 78). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 35.0 in stage 0.0 (TID 35). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 50.0 in stage 0.0 (TID 50). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 40.0 in stage 0.0 (TID 40). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 52.0 in stage 0.0 (TID 52). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 29.0 in stage 0.0 (TID 29). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 38.0 in stage 0.0 (TID 38). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 1.0 in stage 0.0 (TID 1). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 104.0 in stage 0.0 (TID 104). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 76.0 in stage 0.0 (TID 76). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 21.0 in stage 0.0 (TID 21). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 39.0 in stage 0.0 (TID 39). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 88.0 in stage 0.0 (TID 88). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 71.0 in stage 0.0 (TID 71). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 101.0 in stage 0.0 (TID 101). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 51.0 in stage 0.0 (TID 51). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 96.0 in stage 0.0 (TID 96). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 127.0 in stage 0.0 (TID 127). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 18.0 in stage 0.0 (TID 18). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 136.0 in stage 0.0 (TID 136). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 15.0 in stage 0.0 (TID 15). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 43.0 in stage 0.0 (TID 43). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 56.0 in stage 0.0 (TID 56). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 142.0 in stage 0.0 (TID 142). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 111.0 in stage 0.0 (TID 111). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 68.0 in stage 0.0 (TID 68). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 116.0 in stage 0.0 (TID 116). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 92.0 in stage 0.0 (TID 92). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 27.0 in stage 0.0 (TID 27). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 131.0 in stage 0.0 (TID 131). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 57.0 in stage 0.0 (TID 57). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 113.0 in stage 0.0 (TID 113). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 138.0 in stage 0.0 (TID 138). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 114.0 in stage 0.0 (TID 114). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 74.0 in stage 0.0 (TID 74). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 13.0 in stage 0.0 (TID 13). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 65.0 in stage 0.0 (TID 65). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 19.0 in stage 0.0 (TID 19). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 120.0 in stage 0.0 (TID 120). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 70.0 in stage 0.0 (TID 70). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 123.0 in stage 0.0 (TID 123). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 14.0 in stage 0.0 (TID 14). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 83.0 in stage 0.0 (TID 83). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 141.0 in stage 0.0 (TID 141). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 130.0 in stage 0.0 (TID 130). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 135.0 in stage 0.0 (TID 135). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 55.0 in stage 0.0 (TID 55). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 108.0 in stage 0.0 (TID 108). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 0.0 in stage 0.0 (TID 0). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 100.0 in stage 0.0 (TID 100). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 37.0 in stage 0.0 (TID 37). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 129.0 in stage 0.0 (TID 129). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 93.0 in stage 0.0 (TID 93). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 58.0 in stage 0.0 (TID 58). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 86.0 in stage 0.0 (TID 86). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 33.0 in stage 0.0 (TID 33). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 94.0 in stage 0.0 (TID 94). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 3.0 in stage 0.0 (TID 3). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 11.0 in stage 0.0 (TID 11). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 64.0 in stage 0.0 (TID 64). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 81.0 in stage 0.0 (TID 81). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 36.0 in stage 0.0 (TID 36). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 32.0 in stage 0.0 (TID 32). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 28.0 in stage 0.0 (TID 28). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 143.0 in stage 0.0 (TID 143). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 85.0 in stage 0.0 (TID 85). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 46.0 in stage 0.0 (TID 46). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 117.0 in stage 0.0 (TID 117). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 2.0 in stage 0.0 (TID 2). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 23.0 in stage 0.0 (TID 23). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 66.0 in stage 0.0 (TID 66). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 137.0 in stage 0.0 (TID 137). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 79.0 in stage 0.0 (TID 79). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 60.0 in stage 0.0 (TID 60). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 112.0 in stage 0.0 (TID 112). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 118.0 in stage 0.0 (TID 118). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 80.0 in stage 0.0 (TID 80). 752 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 47.0 in stage 0.0 (TID 47). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 84.0 in stage 0.0 (TID 84). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 4.0 in stage 0.0 (TID 4). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 30.0 in stage 0.0 (TID 30). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 10.0 in stage 0.0 (TID 10). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 95.0 in stage 0.0 (TID 95). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 103.0 in stage 0.0 (TID 103). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 17.0 in stage 0.0 (TID 17). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 106.0 in stage 0.0 (TID 106). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 125.0 in stage 0.0 (TID 125). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 105.0 in stage 0.0 (TID 105). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 115.0 in stage 0.0 (TID 115). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 5.0 in stage 0.0 (TID 5). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 8.0 in stage 0.0 (TID 8). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 63.0 in stage 0.0 (TID 63). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 42.0 in stage 0.0 (TID 42). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 45.0 in stage 0.0 (TID 45). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 107.0 in stage 0.0 (TID 107). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 91.0 in stage 0.0 (TID 91). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 126.0 in stage 0.0 (TID 126). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 134.0 in stage 0.0 (TID 134). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 59.0 in stage 0.0 (TID 59). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 41.0 in stage 0.0 (TID 41). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 20.0 in stage 0.0 (TID 20). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 122.0 in stage 0.0 (TID 122). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 62.0 in stage 0.0 (TID 62). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 24.0 in stage 0.0 (TID 24). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 34.0 in stage 0.0 (TID 34). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 73.0 in stage 0.0 (TID 73). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 82.0 in stage 0.0 (TID 82). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 102.0 in stage 0.0 (TID 102). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 133.0 in stage 0.0 (TID 133). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 77.0 in stage 0.0 (TID 77). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 54.0 in stage 0.0 (TID 54). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 6.0 in stage 0.0 (TID 6). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 49.0 in stage 0.0 (TID 49). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 124.0 in stage 0.0 (TID 124). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 90.0 in stage 0.0 (TID 90). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 69.0 in stage 0.0 (TID 69). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 67.0 in stage 0.0 (TID 67). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 12.0 in stage 0.0 (TID 12). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 26.0 in stage 0.0 (TID 26). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 140.0 in stage 0.0 (TID 140). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 109.0 in stage 0.0 (TID 109). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 7.0 in stage 0.0 (TID 7). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 97.0 in stage 0.0 (TID 97). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 89.0 in stage 0.0 (TID 89). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 31.0 in stage 0.0 (TID 31). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 44.0 in stage 0.0 (TID 44). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 128.0 in stage 0.0 (TID 128). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 22.0 in stage 0.0 (TID 22). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 61.0 in stage 0.0 (TID 61). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.Executor: Finished task 132.0 in stage 0.0 (TID 132). 709 bytes result sent to driver
+19/06/21 02:12:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 208
+19/06/21 02:12:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 226
+19/06/21 02:12:06 INFO executor.Executor: Running task 9.0 in stage 1.0 (TID 208)
+19/06/21 02:12:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 244
+19/06/21 02:12:06 INFO executor.Executor: Running task 45.0 in stage 1.0 (TID 244)
+19/06/21 02:12:06 INFO executor.Executor: Running task 27.0 in stage 1.0 (TID 226)
+19/06/21 02:12:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 262
+19/06/21 02:12:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 280
+19/06/21 02:12:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 298
+19/06/21 02:12:06 INFO executor.Executor: Running task 63.0 in stage 1.0 (TID 262)
+19/06/21 02:12:06 INFO executor.Executor: Running task 99.0 in stage 1.0 (TID 298)
+19/06/21 02:12:06 INFO executor.Executor: Running task 81.0 in stage 1.0 (TID 280)
+19/06/21 02:12:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 316
+19/06/21 02:12:06 INFO executor.Executor: Running task 117.0 in stage 1.0 (TID 316)
+19/06/21 02:12:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 334
+19/06/21 02:12:06 INFO executor.Executor: Running task 135.0 in stage 1.0 (TID 334)
+19/06/21 02:12:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 352
+19/06/21 02:12:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 370
+19/06/21 02:12:06 INFO executor.Executor: Running task 153.0 in stage 1.0 (TID 352)
+19/06/21 02:12:06 INFO executor.Executor: Running task 171.0 in stage 1.0 (TID 370)
+19/06/21 02:12:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 388
+19/06/21 02:12:06 INFO executor.Executor: Running task 189.0 in stage 1.0 (TID 388)
+19/06/21 02:12:06 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 1
+19/06/21 02:12:06 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 1585.0 B, free 12.6 GB)
+19/06/21 02:12:06 INFO broadcast.TorrentBroadcast: Reading broadcast variable 1 took 11 ms
+19/06/21 02:12:06 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 2.5 KB, free 12.6 GB)
+19/06/21 02:12:11 INFO memory.MemoryStore: Block rdd_3_9 stored as values in memory (estimated size 160.2 MB, free 12.5 GB)
+19/06/21 02:12:11 INFO executor.Executor: 1 block locks were not released by TID = 208:
+[rdd_3_9]
+19/06/21 02:12:11 INFO executor.Executor: Finished task 9.0 in stage 1.0 (TID 208). 708 bytes result sent to driver
+19/06/21 02:12:11 INFO memory.MemoryStore: Block rdd_3_171 stored as values in memory (estimated size 160.2 MB, free 12.3 GB)
+19/06/21 02:12:11 INFO executor.Executor: 1 block locks were not released by TID = 370:
+[rdd_3_171]
+19/06/21 02:12:11 INFO executor.Executor: Finished task 171.0 in stage 1.0 (TID 370). 708 bytes result sent to driver
+19/06/21 02:12:11 INFO memory.MemoryStore: Block rdd_3_63 stored as values in memory (estimated size 160.2 MB, free 12.2 GB)
+19/06/21 02:12:11 INFO executor.Executor: 1 block locks were not released by TID = 262:
+[rdd_3_63]
+19/06/21 02:12:11 INFO executor.Executor: Finished task 63.0 in stage 1.0 (TID 262). 708 bytes result sent to driver
+19/06/21 02:12:11 INFO memory.MemoryStore: Block rdd_3_153 stored as values in memory (estimated size 160.2 MB, free 12.0 GB)
+19/06/21 02:12:11 INFO executor.Executor: 1 block locks were not released by TID = 352:
+[rdd_3_153]
+19/06/21 02:12:11 INFO executor.Executor: Finished task 153.0 in stage 1.0 (TID 352). 708 bytes result sent to driver
+19/06/21 02:12:11 INFO memory.MemoryStore: Block rdd_3_81 stored as values in memory (estimated size 160.2 MB, free 11.8 GB)
+19/06/21 02:12:11 INFO executor.Executor: 1 block locks were not released by TID = 280:
+[rdd_3_81]
+19/06/21 02:12:11 INFO executor.Executor: Finished task 81.0 in stage 1.0 (TID 280). 708 bytes result sent to driver
+19/06/21 02:12:11 INFO memory.MemoryStore: Block rdd_3_27 stored as values in memory (estimated size 160.2 MB, free 11.7 GB)
+19/06/21 02:12:11 INFO memory.MemoryStore: Block rdd_3_45 stored as values in memory (estimated size 160.2 MB, free 11.4 GB)
+19/06/21 02:12:11 INFO memory.MemoryStore: Block rdd_3_99 stored as values in memory (estimated size 160.2 MB, free 11.4 GB)
+19/06/21 02:12:11 INFO executor.Executor: 1 block locks were not released by TID = 226:
+[rdd_3_27]
+19/06/21 02:12:11 INFO executor.Executor: 1 block locks were not released by TID = 244:
+[rdd_3_45]
+19/06/21 02:12:11 INFO executor.Executor: 1 block locks were not released by TID = 298:
+[rdd_3_99]
+19/06/21 02:12:11 INFO executor.Executor: Finished task 27.0 in stage 1.0 (TID 226). 708 bytes result sent to driver
+19/06/21 02:12:11 INFO executor.Executor: Finished task 99.0 in stage 1.0 (TID 298). 708 bytes result sent to driver
+19/06/21 02:12:11 INFO executor.Executor: Finished task 45.0 in stage 1.0 (TID 244). 708 bytes result sent to driver
+19/06/21 02:12:12 INFO memory.MemoryStore: Block rdd_3_117 stored as values in memory (estimated size 160.2 MB, free 11.2 GB)
+19/06/21 02:12:12 INFO executor.Executor: 1 block locks were not released by TID = 316:
+[rdd_3_117]
+19/06/21 02:12:12 INFO executor.Executor: Finished task 117.0 in stage 1.0 (TID 316). 708 bytes result sent to driver
+19/06/21 02:12:12 INFO memory.MemoryStore: Block rdd_3_135 stored as values in memory (estimated size 160.2 MB, free 11.1 GB)
+19/06/21 02:12:12 INFO executor.Executor: 1 block locks were not released by TID = 334:
+[rdd_3_135]
+19/06/21 02:12:12 INFO executor.Executor: Finished task 135.0 in stage 1.0 (TID 334). 708 bytes result sent to driver
+19/06/21 02:12:12 INFO memory.MemoryStore: Block rdd_3_189 stored as values in memory (estimated size 160.2 MB, free 10.9 GB)
+19/06/21 02:12:12 INFO executor.Executor: 1 block locks were not released by TID = 388:
+[rdd_3_189]
+19/06/21 02:12:12 INFO executor.Executor: Finished task 189.0 in stage 1.0 (TID 388). 708 bytes result sent to driver
+19/06/21 02:12:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 400
+19/06/21 02:12:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 418
+19/06/21 02:12:22 INFO executor.Executor: Running task 9.0 in stage 2.0 (TID 400)
+19/06/21 02:12:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 436
+19/06/21 02:12:22 INFO executor.Executor: Running task 27.0 in stage 2.0 (TID 418)
+19/06/21 02:12:22 INFO executor.Executor: Running task 45.0 in stage 2.0 (TID 436)
+19/06/21 02:12:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 454
+19/06/21 02:12:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 472
+19/06/21 02:12:22 INFO executor.Executor: Running task 63.0 in stage 2.0 (TID 454)
+19/06/21 02:12:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 490
+19/06/21 02:12:22 INFO executor.Executor: Running task 81.0 in stage 2.0 (TID 472)
+19/06/21 02:12:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 508
+19/06/21 02:12:22 INFO executor.Executor: Running task 99.0 in stage 2.0 (TID 490)
+19/06/21 02:12:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 526
+19/06/21 02:12:22 INFO executor.Executor: Running task 117.0 in stage 2.0 (TID 508)
+19/06/21 02:12:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 544
+19/06/21 02:12:22 INFO executor.Executor: Running task 135.0 in stage 2.0 (TID 526)
+19/06/21 02:12:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 562
+19/06/21 02:12:22 INFO executor.Executor: Running task 153.0 in stage 2.0 (TID 544)
+19/06/21 02:12:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 580
+19/06/21 02:12:22 INFO executor.Executor: Running task 171.0 in stage 2.0 (TID 562)
+19/06/21 02:12:22 INFO executor.Executor: Running task 189.0 in stage 2.0 (TID 580)
+19/06/21 02:12:22 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 2
+19/06/21 02:12:22 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.5 KB, free 10.9 GB)
+19/06/21 02:12:22 INFO broadcast.TorrentBroadcast: Reading broadcast variable 2 took 24 ms
+19/06/21 02:12:22 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 4.4 KB, free 10.9 GB)
+19/06/21 02:12:22 INFO shm.ShmShuffleManager: ShmShuffleManager obtains SPARK_WORKER_CORES: 64
+19/06/21 02:12:22 INFO shm.ShmShuffleManager: to initialize shm shuffle manager in an executor, with executor id string value:13
+19/06/21 02:12:22 INFO shuffle.ShuffleStoreManager: jnishmshuffle shared library loaded via loadLibraryFromJar
+19/06/21 02:12:22 INFO shuffle.ShuffleStoreManager: perform actual initialization for ShuffleStoreManager
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0621 02:12:22.805099 115192 MapShuffleStoreManager.cc:101] map shuffle store manage initialize
+I0621 02:12:22.805162 115192 ByteBufferPool.cc:44] initialize queue-based bytebuffer pool
+I0621 02:12:22.805171 115192 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:12:22.805173 115192 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:12:22.805176 115192 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:12:22.805177 115192 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:12:22.805181 115192 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:12:22.805182 115192 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:12:22.805184 115192 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:12:22.805186 115192 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0621 02:12:22.805240 115192 SharedMemoryAllocator.h:64] rmb default log level chosen is: info
+I0621 02:12:22.805498 115192 SharedMemoryAllocator.h:201] rmb shared memory manager detected a single-partitioned shm path: /lfs/spark_global0
+0000001 | T.0x00007fba906d5700 | 2019-06-21, 02:12:22.805570 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 153) Open heap path: /lfs/spark_global0 
+0000002 | T.0x00007fba906d5700 | 2019-06-21, 02:12:22.806477 [info] - (/home/ghosdebd/sparkle/alps/src/pegasus/lfs_region_file.cc, 64) Open LFS region file path: "/lfs/spark_global0" flags: O_RDWR
+0000004 | T.0x00007fba906d5700 | 2019-06-21, 02:12:22.823427 [info] - (/home/ghosdebd/sparkle/alps/src/pegasus/segmap.cc, 39) map region  base_addr: 0x7f399f89b000 size: 549755813888 addr_range: 0x7f399f89b000--7fb99f89b000
+0000005 | T.0x00007fba906d5700 | 2019-06-21, 02:12:22.823520 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 158) Opened heap path: /lfs/spark_global0  size: 549755813888
+I0621 02:12:22.827580 115192 SharedMemoryAllocator.h:93] rmb shared memory manager initialized global heap:0x184a140
+I0621 02:12:22.827692 115192 SharedMemoryManager.cc:64] shared-memory manager registered heap: /lfs/spark_global0
+I0621 02:12:22.827697 115192 ShuffleDataSharedMemoryManager.h:162] shuffle engine has opened heap: /lfs/spark_global0
+I0621 02:12:22.827702 115192 ShuffleStoreManager.cc:140] shuffle store manager initialized with executor id 13 and generation id: 80
+19/06/21 02:12:24 INFO shm.ShmShuffleWriter:  Map Thread: 210 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:12:24 INFO shm.ShmShuffleWriter:  Map Thread: 179 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:12:24 INFO shm.ShmShuffleWriter:  Map Thread: 100 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:12:24 INFO shm.ShmShuffleWriter:  Map Thread: 76 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:12:24 INFO shm.ShmShuffleWriter:  Map Thread: 167 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:12:24 INFO shm.ShmShuffleWriter:  Map Thread: 91 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:12:24 INFO shm.ShmShuffleWriter:  Map Thread: 130 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:12:24 INFO shm.ShmShuffleWriter:  Map Thread: 202 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:12:24 INFO shm.ShmShuffleWriter:  Map Thread: 113 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:12:24 INFO shm.ShmShuffleWriter:  Map Thread: 198 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:12:24 INFO shm.ShmShuffleWriter:  Map Thread: 158 created the serialization buffer with size: 1073741824: SUCCESS
+19/06/21 02:12:24 INFO storage.BlockManager: Found block rdd_3_189 locally
+19/06/21 02:12:24 INFO storage.BlockManager: Found block rdd_3_171 locally
+19/06/21 02:12:24 INFO storage.BlockManager: Found block rdd_3_153 locally
+19/06/21 02:12:24 INFO storage.BlockManager: Found block rdd_3_63 locally
+19/06/21 02:12:24 INFO storage.BlockManager: Found block rdd_3_81 locally
+19/06/21 02:12:24 INFO storage.BlockManager: Found block rdd_3_117 locally
+19/06/21 02:12:24 INFO storage.BlockManager: Found block rdd_3_27 locally
+19/06/21 02:12:24 INFO storage.BlockManager: Found block rdd_3_135 locally
+19/06/21 02:12:24 INFO storage.BlockManager: Found block rdd_3_9 locally
+19/06/21 02:12:24 INFO storage.BlockManager: Found block rdd_3_45 locally
+19/06/21 02:12:24 INFO storage.BlockManager: Found block rdd_3_99 locally
+19/06/21 02:12:24 INFO shuffle.MapSHMShuffleStore: store id3 map-side shared-memory based shuffle store started with ordering: false
+19/06/21 02:12:24 INFO shuffle.MapSHMShuffleStore: store id0 map-side shared-memory based shuffle store started with ordering: false
+19/06/21 02:12:24 INFO shuffle.MapSHMShuffleStore: store id9 map-side shared-memory based shuffle store started with ordering: false
+I0621 02:12:24.553192 115172 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x184a030
+19/06/21 02:12:24 INFO shuffle.MapSHMShuffleStore: store id2 map-side shared-memory based shuffle store started with ordering: false
+I0621 02:12:24.553225 115093 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x184a030
+I0621 02:12:24.553234 115192 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x184a030
+19/06/21 02:12:24 INFO shuffle.MapSHMShuffleStore: store id10 map-side shared-memory based shuffle store started with ordering: false
+19/06/21 02:12:24 INFO shuffle.MapSHMShuffleStore: store id6 map-side shared-memory based shuffle store started with ordering: false
+I0621 02:12:24.553362 115160 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x184a030
+19/06/21 02:12:24 INFO shuffle.MapSHMShuffleStore: store id7 map-side shared-memory based shuffle store started with ordering: false
+19/06/21 02:12:24 INFO shuffle.MapSHMShuffleStore: store id5 map-side shared-memory based shuffle store started with ordering: false
+I0621 02:12:24.553859 115192 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 117 and ordering: 0
+I0621 02:12:24.553900 115192 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+19/06/21 02:12:24 INFO shuffle.MapSHMShuffleStore: store id8 map-side shared-memory based shuffle store started with ordering: false
+19/06/21 02:12:24 INFO shuffle.MapSHMShuffleStore: store id4 map-side shared-memory based shuffle store started with ordering: false
+19/06/21 02:12:24 INFO shuffle.MapSHMShuffleStore: store id1 map-side shared-memory based shuffle store started with ordering: false
+I0621 02:12:24.554317 115093 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 189 and ordering: 0
+I0621 02:12:24.554332 115093 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:12:24.554540 115172 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 135 and ordering: 0
+I0621 02:12:24.554558 115172 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:12:24.554565 115160 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 27 and ordering: 0
+I0621 02:12:24.554577 115160 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:12:24.554592 115106 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x184a030
+I0621 02:12:24.554600 115123 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x184a030
+I0621 02:12:24.554615 115151 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x184a030
+I0621 02:12:24.554718 115123 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 99 and ordering: 0
+I0621 02:12:24.554721 115151 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 63 and ordering: 0
+I0621 02:12:24.554725 115106 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 45 and ordering: 0
+I0621 02:12:24.554730 115151 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:12:24.554720 115196 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x184a030
+I0621 02:12:24.554724 115123 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:12:24.554731 115106 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:12:24.554774 115069 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x184a030
+I0621 02:12:24.554803 115196 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 81 and ordering: 0
+I0621 02:12:24.554818 115196 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:12:24.554797 115204 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x184a030
+I0621 02:12:24.554841 115069 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 9 and ordering: 0
+I0621 02:12:24.554855 115069 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:12:24.554874 115204 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 171 and ordering: 0
+I0621 02:12:24.554886 115204 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:12:24.555220 115084 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x184a030
+I0621 02:12:24.555264 115084 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 153 and ordering: 0
+I0621 02:12:24.555269 115084 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0621 02:12:24.901520 115093 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f36de11b010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:12:24.924168 115204 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f36d5e12010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:12:24.948379 115093 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f36d2bb8010 with size tracker: 1000000 reaches buffer size: 500000
+I0621 02:12:24.956738 115172 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f36dca37010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:12:24.994045 115123 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f36da34f010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:12:24.994045 115196 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f36d7cf8010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:12:24.995012 115204 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f36d0cd2010 with size tracker: 1000000 reaches buffer size: 500000
+I0621 02:12:24.999091 115093 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f36ce67b010 with size tracker: 1500000 reaches buffer size: 500000
+I0621 02:12:24.999296 115069 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f36d6d85010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:12:25.007647 115160 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f36dbac4010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:12:25.021185 115084 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f36d4e9f010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:12:25.021461 115172 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f36ccf97010 with size tracker: 1000000 reaches buffer size: 500000
+I0621 02:12:25.032138 115192 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f36dd5a9010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:12:25.036152 115106 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f36d8c6b010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:12:25.044731 115151 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f36d97dd010 with size tracker: 500000 reaches buffer size: 500000
+I0621 02:12:25.049173 115204 MapShuffleStoreWithLongKeys.cc:134] keys 0x7f36c6372010 with size tracker: 1500000 reaches buffer size: 500000
+0000006 | T.0x00007fbb87dfd700 | 2019-06-21, 02:12:25.053136 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 380) Allocate block size: 4012
+0000007 | T.0x00007fbb87dfd700 | 2019-06-21, 02:12:25.053237 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 400) Allocate block size: 4012 ig: 0
+0000008 | T.0x00007fbb87dfd700 | 2019-06-21, 02:12:25.053624 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/memattrib_heap.cc, 59) Allocate block size: 4012
+0000009 | T.0x00007fbb87dfd700 | 2019-06-21, 02:12:25.053645 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/process_slab_heap.cc, 30) acquire_slab
+0000010 | T.0x00007fbb87dfd700 | 2019-06-21, 02:12:25.053651 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/process_slab_heap.cc, 33) acquire_slab: locked
+0000011 | T.0x00007fbb87dfd700 | 2019-06-21, 02:12:25.053658 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentheap.hh, 116) malloc
+0000012 | T.0x00007fbb87dfd700 | 2019-06-21, 02:12:25.054138 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentheap.hh, 116) malloc
+0000013 | T.0x00007fbb87dfd700 | 2019-06-21, 02:12:25.054160 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentheap.hh, 116) malloc
+0000014 | T.0x00007fbb87dfd700 | 2019-06-21, 02:12:25.054170 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentheap.hh, 130) acquire_new_zone
+0000015 | T.0x00007fbb87dfd700 | 2019-06-21, 02:12:25.054189 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/extentheap.hh, 137) acquire_new_zone: zone_id: null
+0000016 | T.0x00007fbb87dfd700 | 2019-06-21, 02:12:25.054202 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/process_slab_heap.cc, 64) acquire_slab: unlock 3: slab=0
+0000017 | T.0x00007fbb87dfd700 | 2019-06-21, 02:12:25.054213 [warning] - (/home/ghosdebd/sparkle/alps/src/globalheap/thread_slab_heap.cc, 47) Out of memory
+E0621 02:12:25.054226 115093 MapShuffleStoreWithLongKeys.cc:216] allocate index chunk returns global null pointer  for size: 4012 generation id: 80
+F0621 02:12:25.054244 115093 MapShuffleStoreWithLongKeys.cc:229] Check failed: indChunkOffset != nullptr allocate index chunk returns null with generation id: 80
+*** Check failure stack trace: ***

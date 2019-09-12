@@ -1,0 +1,876 @@
+Spark Command: /opt/jdk1.8.0_131/jre/bin/java -cp /var/tmp/spark2.0hpcplatform/multicore/master/conf:/var/tmp/spark2.0hpcplatform/multicore/master/assembly/target/scala-2.11/jars/* -Xmx1g org.apache.spark.deploy.master.Master --host mdc-ch1-cust4.mdc.ext.hpe.com --port 7077 --webui-port 8080
+========================================
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/06/21 09:56:53 INFO Master: Started daemon with process name: 8786@mdc-ch1-cust4
+19/06/21 09:56:53 INFO SignalUtils: Registered signal handler for TERM
+19/06/21 09:56:53 INFO SignalUtils: Registered signal handler for HUP
+19/06/21 09:56:53 INFO SignalUtils: Registered signal handler for INT
+19/06/21 09:56:53 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/06/21 09:56:53 INFO SecurityManager: Changing view acls to: root
+19/06/21 09:56:53 INFO SecurityManager: Changing modify acls to: root
+19/06/21 09:56:53 INFO SecurityManager: Changing view acls groups to: 
+19/06/21 09:56:53 INFO SecurityManager: Changing modify acls groups to: 
+19/06/21 09:56:53 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 09:56:53 INFO Utils: Successfully started service 'sparkMaster' on port 7077.
+19/06/21 09:56:53 INFO Master: Starting Spark master at spark://mdc-ch1-cust4.mdc.ext.hpe.com:7077
+19/06/21 09:56:53 INFO Master: Running Spark version 2.4.0
+19/06/21 09:56:53 INFO Utils: Successfully started service 'MasterUI' on port 8080.
+19/06/21 09:56:54 INFO MasterWebUI: Bound MasterWebUI to 0.0.0.0, and started at http://mdc-ch1-cust4.mdc.ext.hpe.com:8080
+19/06/21 09:56:54 INFO Master: I have been elected leader! New state: ALIVE
+19/06/21 09:57:06 INFO Master: Registering worker mdc-ch1-cust4:39673 with 144 cores, 1921.3 GB RAM
+19/06/21 09:57:09 INFO Master: Registering worker mdc-ch1-cust4:34793 with 144 cores, 1921.3 GB RAM
+19/06/21 09:57:13 INFO Master: Registering worker mdc-ch1-cust4:39511 with 144 cores, 1921.3 GB RAM
+19/06/21 09:57:17 INFO Master: Registering worker mdc-ch1-cust4:42127 with 144 cores, 1921.3 GB RAM
+19/06/21 09:57:21 INFO Master: Registering worker mdc-ch1-cust4:37699 with 144 cores, 1921.3 GB RAM
+19/06/21 09:57:24 INFO Master: Registering worker mdc-ch1-cust4:43347 with 144 cores, 1921.3 GB RAM
+19/06/21 09:58:32 INFO Master: Registering worker mdc-ch3-cust4:36593 with 144 cores, 1922.0 GB RAM
+19/06/21 09:58:35 INFO Master: Registering worker mdc-ch3-cust4:43331 with 144 cores, 1922.0 GB RAM
+19/06/21 09:58:39 INFO Master: Registering worker mdc-ch3-cust4:43861 with 144 cores, 1922.0 GB RAM
+19/06/21 09:58:42 INFO Master: Registering worker mdc-ch3-cust4:38791 with 144 cores, 1922.0 GB RAM
+19/06/21 09:58:46 INFO Master: Registering worker mdc-ch3-cust4:33463 with 144 cores, 1922.0 GB RAM
+19/06/21 09:59:34 INFO Master: Registering worker mdc-ch5-cust4:46145 with 144 cores, 1922.0 GB RAM
+19/06/21 09:59:37 INFO Master: Registering worker mdc-ch5-cust4:45069 with 144 cores, 1922.0 GB RAM
+19/06/21 09:59:40 INFO Master: Registering worker mdc-ch5-cust4:44533 with 144 cores, 1922.0 GB RAM
+19/06/21 09:59:44 INFO Master: Registering worker mdc-ch5-cust4:42749 with 144 cores, 1922.0 GB RAM
+19/06/21 09:59:48 INFO Master: Registering worker mdc-ch5-cust4:38275 with 144 cores, 1922.0 GB RAM
+19/06/21 09:59:52 INFO Master: Registering worker mdc-ch5-cust4:40869 with 144 cores, 1922.0 GB RAM
+19/06/21 10:00:13 INFO Master: Registering worker mdc-ch6-cust4:43515 with 144 cores, 1922.0 GB RAM
+19/06/21 10:00:16 INFO Master: Registering worker mdc-ch6-cust4:45471 with 144 cores, 1922.0 GB RAM
+19/06/21 10:00:20 INFO Master: Registering worker mdc-ch6-cust4:36185 with 144 cores, 1922.0 GB RAM
+19/06/21 10:00:24 INFO Master: Registering worker mdc-ch6-cust4:34519 with 144 cores, 1922.0 GB RAM
+19/06/21 10:00:27 INFO Master: Registering worker mdc-ch6-cust4:45955 with 144 cores, 1922.0 GB RAM
+19/06/21 10:00:31 INFO Master: Registering worker mdc-ch6-cust4:37487 with 144 cores, 1922.0 GB RAM
+19/06/21 10:01:47 INFO Master: Registering worker mdc-ch7-cust4:38437 with 144 cores, 1922.0 GB RAM
+19/06/21 10:01:50 INFO Master: Registering worker mdc-ch7-cust4:35391 with 144 cores, 1922.0 GB RAM
+19/06/21 10:01:54 INFO Master: Registering worker mdc-ch7-cust4:37233 with 144 cores, 1922.0 GB RAM
+19/06/21 10:01:57 INFO Master: Registering worker mdc-ch7-cust4:40891 with 144 cores, 1922.0 GB RAM
+19/06/21 10:02:01 INFO Master: Registering worker mdc-ch7-cust4:33703 with 144 cores, 1922.0 GB RAM
+19/06/21 10:02:05 INFO Master: Registering worker mdc-ch7-cust4:35819 with 144 cores, 1922.0 GB RAM
+19/06/21 10:02:40 INFO Master: Registering worker mdc-ch8-cust4:46481 with 144 cores, 1922.0 GB RAM
+19/06/21 10:02:43 INFO Master: Registering worker mdc-ch8-cust4:42185 with 144 cores, 1922.0 GB RAM
+19/06/21 10:02:47 INFO Master: Registering worker mdc-ch8-cust4:36911 with 144 cores, 1922.0 GB RAM
+19/06/21 10:02:50 INFO Master: Registering worker mdc-ch8-cust4:37571 with 144 cores, 1922.0 GB RAM
+19/06/21 10:02:54 INFO Master: Registering worker mdc-ch8-cust4:45425 with 144 cores, 1922.0 GB RAM
+19/06/21 10:05:39 INFO Master: Registering app simple multi-processed groupby
+19/06/21 10:05:39 INFO Master: Registered app simple multi-processed groupby with ID app-20190621100539-0000
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/0 on worker worker-20190621100023-mdc-ch6-cust4-34519
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/1 on worker worker-20190621100243-mdc-ch8-cust4-42185
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/2 on worker worker-20190621095716-mdc-ch1-cust4-42127
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/3 on worker worker-20190621095832-mdc-ch3-cust4-36593
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/4 on worker worker-20190621100250-mdc-ch8-cust4-37571
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/5 on worker worker-20190621100147-mdc-ch7-cust4-38437
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/6 on worker worker-20190621095842-mdc-ch3-cust4-38791
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/7 on worker worker-20190621100205-mdc-ch7-cust4-35819
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/8 on worker worker-20190621100149-mdc-ch7-cust4-35391
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/9 on worker worker-20190621095724-mdc-ch1-cust4-43347
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/10 on worker worker-20190621100254-mdc-ch8-cust4-45425
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/11 on worker worker-20190621100240-mdc-ch8-cust4-46481
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/12 on worker worker-20190621095934-mdc-ch5-cust4-46145
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/13 on worker worker-20190621095944-mdc-ch5-cust4-42749
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/14 on worker worker-20190621100027-mdc-ch6-cust4-45955
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/15 on worker worker-20190621095720-mdc-ch1-cust4-37699
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/16 on worker worker-20190621100020-mdc-ch6-cust4-36185
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/17 on worker worker-20190621095834-mdc-ch3-cust4-43331
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/18 on worker worker-20190621100246-mdc-ch8-cust4-36911
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/19 on worker worker-20190621100201-mdc-ch7-cust4-33703
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/20 on worker worker-20190621100157-mdc-ch7-cust4-40891
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/21 on worker worker-20190621095846-mdc-ch3-cust4-33463
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/22 on worker worker-20190621100153-mdc-ch7-cust4-37233
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/23 on worker worker-20190621095951-mdc-ch5-cust4-40869
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/24 on worker worker-20190621095936-mdc-ch5-cust4-45069
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/25 on worker worker-20190621095838-mdc-ch3-cust4-43861
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/26 on worker worker-20190621095713-mdc-ch1-cust4-39511
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/27 on worker worker-20190621095709-mdc-ch1-cust4-34793
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/28 on worker worker-20190621095705-mdc-ch1-cust4-39673
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/29 on worker worker-20190621095940-mdc-ch5-cust4-44533
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/30 on worker worker-20190621100031-mdc-ch6-cust4-37487
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/31 on worker worker-20190621100016-mdc-ch6-cust4-45471
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/32 on worker worker-20190621095948-mdc-ch5-cust4-38275
+19/06/21 10:05:39 INFO Master: Launching executor app-20190621100539-0000/33 on worker worker-20190621100013-mdc-ch6-cust4-43515
+19/06/21 10:05:39 INFO Master: Received unregister request from application app-20190621100539-0000
+19/06/21 10:05:39 INFO Master: Removing app app-20190621100539-0000
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/2
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/26
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/6
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/9
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/1
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/18
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/8
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/19
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/15
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/4
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/20
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/28
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/22
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/16
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/7
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/31
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/14
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/30
+19/06/21 10:05:39 INFO Master: 10.1.1.4:47672 got disassociated, removing it.
+19/06/21 10:05:39 INFO Master: mdc-ch1-cust4.mdc.ext.hpe.com:32841 got disassociated, removing it.
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/10
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/27
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/11
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/21
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/25
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/0
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/5
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/17
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/3
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/33
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/24
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/23
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/13
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/12
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/29
+19/06/21 10:05:39 WARN Master: Got status update for unknown executor app-20190621100539-0000/32
+19/06/21 10:07:25 INFO Master: Registering app simple multi-processed groupby
+19/06/21 10:07:25 INFO Master: Registered app simple multi-processed groupby with ID app-20190621100725-0001
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/0 on worker worker-20190621100023-mdc-ch6-cust4-34519
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/1 on worker worker-20190621100243-mdc-ch8-cust4-42185
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/2 on worker worker-20190621095716-mdc-ch1-cust4-42127
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/3 on worker worker-20190621095832-mdc-ch3-cust4-36593
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/4 on worker worker-20190621100250-mdc-ch8-cust4-37571
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/5 on worker worker-20190621100147-mdc-ch7-cust4-38437
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/6 on worker worker-20190621095842-mdc-ch3-cust4-38791
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/7 on worker worker-20190621100205-mdc-ch7-cust4-35819
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/8 on worker worker-20190621100149-mdc-ch7-cust4-35391
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/9 on worker worker-20190621095724-mdc-ch1-cust4-43347
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/10 on worker worker-20190621100254-mdc-ch8-cust4-45425
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/11 on worker worker-20190621100240-mdc-ch8-cust4-46481
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/12 on worker worker-20190621095934-mdc-ch5-cust4-46145
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/13 on worker worker-20190621095944-mdc-ch5-cust4-42749
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/14 on worker worker-20190621100027-mdc-ch6-cust4-45955
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/15 on worker worker-20190621095720-mdc-ch1-cust4-37699
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/16 on worker worker-20190621100020-mdc-ch6-cust4-36185
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/17 on worker worker-20190621095834-mdc-ch3-cust4-43331
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/18 on worker worker-20190621100246-mdc-ch8-cust4-36911
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/19 on worker worker-20190621100201-mdc-ch7-cust4-33703
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/20 on worker worker-20190621100157-mdc-ch7-cust4-40891
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/21 on worker worker-20190621095846-mdc-ch3-cust4-33463
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/22 on worker worker-20190621100153-mdc-ch7-cust4-37233
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/23 on worker worker-20190621095951-mdc-ch5-cust4-40869
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/24 on worker worker-20190621095936-mdc-ch5-cust4-45069
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/25 on worker worker-20190621095838-mdc-ch3-cust4-43861
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/26 on worker worker-20190621095713-mdc-ch1-cust4-39511
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/27 on worker worker-20190621095709-mdc-ch1-cust4-34793
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/28 on worker worker-20190621095705-mdc-ch1-cust4-39673
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/29 on worker worker-20190621095940-mdc-ch5-cust4-44533
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/30 on worker worker-20190621100031-mdc-ch6-cust4-37487
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/31 on worker worker-20190621100016-mdc-ch6-cust4-45471
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/32 on worker worker-20190621095948-mdc-ch5-cust4-38275
+19/06/21 10:07:25 INFO Master: Launching executor app-20190621100725-0001/33 on worker worker-20190621100013-mdc-ch6-cust4-43515
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100013-mdc-ch6-cust4-43515 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100013-mdc-ch6-cust4-43515 on mdc-ch6-cust4:43515
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 33
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100013-mdc-ch6-cust4-43515
+19/06/21 10:08:54 WARN Master: Removing worker-20190621095948-mdc-ch5-cust4-38275 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621095948-mdc-ch5-cust4-38275 on mdc-ch5-cust4:38275
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 32
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621095948-mdc-ch5-cust4-38275
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100016-mdc-ch6-cust4-45471 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100016-mdc-ch6-cust4-45471 on mdc-ch6-cust4:45471
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 31
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100016-mdc-ch6-cust4-45471
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100031-mdc-ch6-cust4-37487 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100031-mdc-ch6-cust4-37487 on mdc-ch6-cust4:37487
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 30
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100031-mdc-ch6-cust4-37487
+19/06/21 10:08:54 WARN Master: Removing worker-20190621095940-mdc-ch5-cust4-44533 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621095940-mdc-ch5-cust4-44533 on mdc-ch5-cust4:44533
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 29
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621095940-mdc-ch5-cust4-44533
+19/06/21 10:08:54 WARN Master: Removing worker-20190621095838-mdc-ch3-cust4-43861 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621095838-mdc-ch3-cust4-43861 on mdc-ch3-cust4:43861
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 25
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621095838-mdc-ch3-cust4-43861
+19/06/21 10:08:54 WARN Master: Removing worker-20190621095936-mdc-ch5-cust4-45069 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621095936-mdc-ch5-cust4-45069 on mdc-ch5-cust4:45069
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 24
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621095936-mdc-ch5-cust4-45069
+19/06/21 10:08:54 WARN Master: Removing worker-20190621095951-mdc-ch5-cust4-40869 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621095951-mdc-ch5-cust4-40869 on mdc-ch5-cust4:40869
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 23
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621095951-mdc-ch5-cust4-40869
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100157-mdc-ch7-cust4-40891 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100157-mdc-ch7-cust4-40891 on mdc-ch7-cust4:40891
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 20
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100157-mdc-ch7-cust4-40891
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100153-mdc-ch7-cust4-37233 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100153-mdc-ch7-cust4-37233 on mdc-ch7-cust4:37233
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 22
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100153-mdc-ch7-cust4-37233
+19/06/21 10:08:54 WARN Master: Removing worker-20190621095846-mdc-ch3-cust4-33463 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621095846-mdc-ch3-cust4-33463 on mdc-ch3-cust4:33463
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 21
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621095846-mdc-ch3-cust4-33463
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100201-mdc-ch7-cust4-33703 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100201-mdc-ch7-cust4-33703 on mdc-ch7-cust4:33703
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 19
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100201-mdc-ch7-cust4-33703
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100246-mdc-ch8-cust4-36911 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100246-mdc-ch8-cust4-36911 on mdc-ch8-cust4:36911
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 18
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100246-mdc-ch8-cust4-36911
+19/06/21 10:08:54 WARN Master: Removing worker-20190621095834-mdc-ch3-cust4-43331 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621095834-mdc-ch3-cust4-43331 on mdc-ch3-cust4:43331
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 17
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621095834-mdc-ch3-cust4-43331
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100020-mdc-ch6-cust4-36185 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100020-mdc-ch6-cust4-36185 on mdc-ch6-cust4:36185
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 16
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100020-mdc-ch6-cust4-36185
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100027-mdc-ch6-cust4-45955 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100027-mdc-ch6-cust4-45955 on mdc-ch6-cust4:45955
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 14
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100027-mdc-ch6-cust4-45955
+19/06/21 10:08:54 WARN Master: Removing worker-20190621095944-mdc-ch5-cust4-42749 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621095944-mdc-ch5-cust4-42749 on mdc-ch5-cust4:42749
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 13
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621095944-mdc-ch5-cust4-42749
+19/06/21 10:08:54 WARN Master: Removing worker-20190621095934-mdc-ch5-cust4-46145 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621095934-mdc-ch5-cust4-46145 on mdc-ch5-cust4:46145
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 12
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621095934-mdc-ch5-cust4-46145
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100240-mdc-ch8-cust4-46481 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100240-mdc-ch8-cust4-46481 on mdc-ch8-cust4:46481
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 11
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100240-mdc-ch8-cust4-46481
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100254-mdc-ch8-cust4-45425 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100254-mdc-ch8-cust4-45425 on mdc-ch8-cust4:45425
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 10
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100254-mdc-ch8-cust4-45425
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100149-mdc-ch7-cust4-35391 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100149-mdc-ch7-cust4-35391 on mdc-ch7-cust4:35391
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 8
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100149-mdc-ch7-cust4-35391
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100205-mdc-ch7-cust4-35819 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100205-mdc-ch7-cust4-35819 on mdc-ch7-cust4:35819
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 7
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100205-mdc-ch7-cust4-35819
+19/06/21 10:08:54 WARN Master: Removing worker-20190621095842-mdc-ch3-cust4-38791 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621095842-mdc-ch3-cust4-38791 on mdc-ch3-cust4:38791
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 6
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621095842-mdc-ch3-cust4-38791
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100147-mdc-ch7-cust4-38437 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100147-mdc-ch7-cust4-38437 on mdc-ch7-cust4:38437
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 5
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100147-mdc-ch7-cust4-38437
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100250-mdc-ch8-cust4-37571 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100250-mdc-ch8-cust4-37571 on mdc-ch8-cust4:37571
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 4
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100250-mdc-ch8-cust4-37571
+19/06/21 10:08:54 WARN Master: Removing worker-20190621095832-mdc-ch3-cust4-36593 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621095832-mdc-ch3-cust4-36593 on mdc-ch3-cust4:36593
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 3
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621095832-mdc-ch3-cust4-36593
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100243-mdc-ch8-cust4-42185 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100243-mdc-ch8-cust4-42185 on mdc-ch8-cust4:42185
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 1
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100243-mdc-ch8-cust4-42185
+19/06/21 10:08:54 WARN Master: Removing worker-20190621100023-mdc-ch6-cust4-34519 because we got no heartbeat in 60 seconds
+19/06/21 10:08:54 INFO Master: Removing worker worker-20190621100023-mdc-ch6-cust4-34519 on mdc-ch6-cust4:34519
+19/06/21 10:08:54 INFO Master: Telling app of lost executor: 0
+19/06/21 10:08:54 INFO Master: Telling app of lost worker: worker-20190621100023-mdc-ch6-cust4-34519
+19/06/21 10:09:05 INFO Master: Removing executor app-20190621100725-0001/2 because it is EXITED
+19/06/21 10:09:05 INFO Master: Launching executor app-20190621100725-0001/34 on worker worker-20190621095716-mdc-ch1-cust4-42127
+19/06/21 10:09:08 INFO Master: Removing executor app-20190621100725-0001/15 because it is EXITED
+19/06/21 10:09:08 INFO Master: Launching executor app-20190621100725-0001/35 on worker worker-20190621095720-mdc-ch1-cust4-37699
+19/06/21 10:09:08 INFO Master: Received unregister request from application app-20190621100725-0001
+19/06/21 10:09:08 INFO Master: Removing app app-20190621100725-0001
+19/06/21 10:09:08 WARN Master: Got status update for unknown executor app-20190621100725-0001/35
+19/06/21 10:09:08 INFO Master: 10.1.1.4:47674 got disassociated, removing it.
+19/06/21 10:09:08 INFO Master: mdc-ch1-cust4.mdc.ext.hpe.com:45717 got disassociated, removing it.
+19/06/21 10:09:08 WARN Master: Got status update for unknown executor app-20190621100725-0001/34
+19/06/21 10:09:10 WARN Master: Got status update for unknown executor app-20190621100725-0001/9
+19/06/21 10:09:10 WARN Master: Got status update for unknown executor app-20190621100725-0001/28
+19/06/21 10:09:10 WARN Master: Got status update for unknown executor app-20190621100725-0001/27
+19/06/21 10:09:13 WARN Master: Got status update for unknown executor app-20190621100725-0001/26
+19/06/21 10:09:33 INFO Master: Registering app simple multi-processed groupby
+19/06/21 10:09:33 INFO Master: Registered app simple multi-processed groupby with ID app-20190621100933-0002
+19/06/21 10:09:33 INFO Master: Launching executor app-20190621100933-0002/0 on worker worker-20190621095716-mdc-ch1-cust4-42127
+19/06/21 10:09:33 INFO Master: Launching executor app-20190621100933-0002/1 on worker worker-20190621095724-mdc-ch1-cust4-43347
+19/06/21 10:09:33 INFO Master: Launching executor app-20190621100933-0002/2 on worker worker-20190621095720-mdc-ch1-cust4-37699
+19/06/21 10:09:33 INFO Master: Launching executor app-20190621100933-0002/3 on worker worker-20190621095713-mdc-ch1-cust4-39511
+19/06/21 10:09:33 INFO Master: Launching executor app-20190621100933-0002/4 on worker worker-20190621095709-mdc-ch1-cust4-34793
+19/06/21 10:09:33 INFO Master: Launching executor app-20190621100933-0002/5 on worker worker-20190621095705-mdc-ch1-cust4-39673
+19/06/21 10:10:57 INFO Master: Removing executor app-20190621100933-0002/5 because it is EXITED
+19/06/21 10:10:57 INFO Master: Launching executor app-20190621100933-0002/6 on worker worker-20190621095705-mdc-ch1-cust4-39673
+19/06/21 10:11:22 INFO Master: Removing executor app-20190621100933-0002/1 because it is EXITED
+19/06/21 10:11:22 INFO Master: Launching executor app-20190621100933-0002/7 on worker worker-20190621095724-mdc-ch1-cust4-43347
+19/06/21 10:11:58 INFO Master: Removing executor app-20190621100933-0002/2 because it is EXITED
+19/06/21 10:11:58 INFO Master: Launching executor app-20190621100933-0002/8 on worker worker-20190621095720-mdc-ch1-cust4-37699
+19/06/21 10:12:15 INFO Master: Removing executor app-20190621100933-0002/3 because it is EXITED
+19/06/21 10:12:15 INFO Master: Launching executor app-20190621100933-0002/9 on worker worker-20190621095713-mdc-ch1-cust4-39511
+19/06/21 10:12:15 INFO Master: Received unregister request from application app-20190621100933-0002
+19/06/21 10:12:15 INFO Master: Removing app app-20190621100933-0002
+19/06/21 10:12:15 WARN Master: Got status update for unknown executor app-20190621100933-0002/9
+19/06/21 10:12:15 INFO Master: 10.1.1.4:47754 got disassociated, removing it.
+19/06/21 10:12:15 INFO Master: mdc-ch1-cust4.mdc.ext.hpe.com:35383 got disassociated, removing it.
+19/06/21 10:12:15 WARN Master: Got status update for unknown executor app-20190621100933-0002/8
+19/06/21 10:12:15 WARN Master: Got status update for unknown executor app-20190621100933-0002/7
+19/06/21 10:12:15 WARN Master: Got status update for unknown executor app-20190621100933-0002/6
+19/06/21 10:12:25 WARN Master: Got status update for unknown executor app-20190621100933-0002/4
+19/06/21 10:12:25 WARN Master: Got status update for unknown executor app-20190621100933-0002/0
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.8.4:51612
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.3.4:33754
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.3.4:33758
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.3.4:33752
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.6.4:41038
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.6.4:41036
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.3.4:33756
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.8.4:51614
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.5.4:47838
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.5.4:47840
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.8.4:51618
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.6.4:41034
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.6.4:41040
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.8.4:51616
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 INFO Master: 10.1.3.4:33758 got disassociated, removing it.
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.5.4:47842
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.5.4:47848
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.3.4:33750
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.8.4:51620
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.5.4:47844
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.5.4:47846
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 INFO Master: 10.1.8.4:51612 got disassociated, removing it.
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.6.4:41042
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 WARN TransportChannelHandler: Exception in connection from /10.1.6.4:41032
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:47 INFO Master: mdc-ch3-cust4:33463 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch8-cust4:46481 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.3.4:33754 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch3-cust4:43861 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.6.4:41038 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch6-cust4:34519 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.6.4:41036 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch6-cust4:36185 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.5.4:47838 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch5-cust4:46145 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.5.4:47840 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch5-cust4:45069 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.6.4:41034 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch6-cust4:45471 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.6.4:41040 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch6-cust4:45955 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.5.4:47842 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch5-cust4:44533 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.8.4:51618 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch8-cust4:37571 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.5.4:47848 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch5-cust4:40869 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.3.4:33756 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch3-cust4:38791 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.8.4:51620 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch8-cust4:45425 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.3.4:33752 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch3-cust4:43331 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.8.4:51616 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch8-cust4:36911 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.5.4:47846 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch5-cust4:38275 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.8.4:51614 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch8-cust4:42185 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.3.4:33750 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch3-cust4:36593 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.6.4:41032 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.5.4:47844 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch6-cust4:43515 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch5-cust4:42749 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: 10.1.6.4:41042 got disassociated, removing it.
+19/06/21 10:24:47 INFO Master: mdc-ch6-cust4:37487 got disassociated, removing it.
+19/06/21 10:24:53 WARN TransportChannelHandler: Exception in connection from /10.1.7.4:55396
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:53 INFO Master: 10.1.7.4:55396 got disassociated, removing it.
+19/06/21 10:24:53 INFO Master: mdc-ch7-cust4:37233 got disassociated, removing it.
+19/06/21 10:24:53 WARN TransportChannelHandler: Exception in connection from /10.1.7.4:55394
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:53 WARN TransportChannelHandler: Exception in connection from /10.1.7.4:55398
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:53 INFO Master: 10.1.7.4:55394 got disassociated, removing it.
+19/06/21 10:24:53 INFO Master: mdc-ch7-cust4:35391 got disassociated, removing it.
+19/06/21 10:24:53 INFO Master: 10.1.7.4:55398 got disassociated, removing it.
+19/06/21 10:24:53 INFO Master: mdc-ch7-cust4:40891 got disassociated, removing it.
+19/06/21 10:24:55 WARN TransportChannelHandler: Exception in connection from /10.1.7.4:55392
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:55 WARN TransportChannelHandler: Exception in connection from /10.1.7.4:55400
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:55 WARN TransportChannelHandler: Exception in connection from /10.1.7.4:55402
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1106)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:343)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+19/06/21 10:24:55 INFO Master: 10.1.7.4:55392 got disassociated, removing it.
+19/06/21 10:24:55 INFO Master: mdc-ch7-cust4:38437 got disassociated, removing it.
+19/06/21 10:24:55 INFO Master: 10.1.7.4:55400 got disassociated, removing it.
+19/06/21 10:24:55 INFO Master: mdc-ch7-cust4:33703 got disassociated, removing it.
+19/06/21 10:24:55 INFO Master: 10.1.7.4:55402 got disassociated, removing it.
+19/06/21 10:24:55 INFO Master: mdc-ch7-cust4:35819 got disassociated, removing it.
+19/06/21 12:21:58 ERROR Master: RECEIVED SIGNAL TERM

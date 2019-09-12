@@ -1,0 +1,230 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker0/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker0/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=41791" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:41791" "--executor-id" "9" "--hostname" "10.1.1.4" "--cores" "144" "--app-id" "app-20190903203314-0001" "--worker-url" "spark://Worker@10.1.1.4:44119"
+========================================
+
+19/09/03 20:33:54 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 116604@mdc-ch1-cust4
+19/09/03 20:33:54 INFO util.SignalUtils: Registered signal handler for TERM
+19/09/03 20:33:54 INFO util.SignalUtils: Registered signal handler for HUP
+19/09/03 20:33:54 INFO util.SignalUtils: Registered signal handler for INT
+19/09/03 20:33:55 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/09/03 20:33:55 INFO spark.SecurityManager: Changing view acls to: root
+19/09/03 20:33:55 INFO spark.SecurityManager: Changing modify acls to: root
+19/09/03 20:33:55 INFO spark.SecurityManager: Changing view acls groups to: 
+19/09/03 20:33:55 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/09/03 20:33:55 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/09/03 20:33:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:41791 after 41 ms (0 ms spent in bootstraps)
+19/09/03 20:33:55 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/09/03 20:33:55 INFO spark.SecurityManager: Changing view acls to: root
+19/09/03 20:33:55 INFO spark.SecurityManager: Changing modify acls to: root
+19/09/03 20:33:55 INFO spark.SecurityManager: Changing view acls groups to: 
+19/09/03 20:33:55 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/09/03 20:33:55 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/09/03 20:33:55 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:41791 after 1 ms (0 ms spent in bootstraps)
+19/09/03 20:33:55 INFO storage.DiskBlockManager: Created local directory at /data/spark-b3473462-e9f5-4f44-825f-9b274eb40118/executor-a7ce7eb3-b90f-4d7b-8044-436465ae5e5e/blockmgr-8d5bb5c1-6722-4f56-ac95-ebc7b4c045bf
+19/09/03 20:33:55 INFO memory.MemoryStore: MemoryStore started with capacity 12.6 GB
+19/09/03 20:33:55 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:41791
+19/09/03 20:33:55 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@10.1.1.4:44119
+19/09/03 20:33:55 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:44119 after 0 ms (0 ms spent in bootstraps)
+19/09/03 20:33:55 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@10.1.1.4:44119
+19/09/03 20:33:55 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/09/03 20:33:55 INFO executor.Executor: Starting executor ID 9 on host 10.1.1.4
+19/09/03 20:33:55 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35135.
+19/09/03 20:33:55 INFO netty.NettyBlockTransferService: Server created on 10.1.1.4:35135
+19/09/03 20:33:55 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/09/03 20:33:55 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(9, 10.1.1.4, 35135, None)
+19/09/03 20:33:55 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(9, 10.1.1.4, 35135, None)
+19/09/03 20:33:55 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(9, 10.1.1.4, 35135, None)
+19/09/03 20:34:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 662
+19/09/03 20:34:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 664
+19/09/03 20:34:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 666
+19/09/03 20:34:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 668
+19/09/03 20:34:31 INFO executor.Executor: Running task 52.2 in stage 2.0 (TID 666)
+19/09/03 20:34:31 INFO executor.Executor: Running task 164.2 in stage 2.0 (TID 668)
+19/09/03 20:34:31 INFO executor.Executor: Running task 20.2 in stage 2.0 (TID 662)
+19/09/03 20:34:31 INFO executor.Executor: Running task 108.2 in stage 2.0 (TID 664)
+19/09/03 20:34:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 670
+19/09/03 20:34:31 INFO executor.Executor: Running task 156.3 in stage 2.0 (TID 670)
+19/09/03 20:34:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 672
+19/09/03 20:34:31 INFO executor.Executor: Running task 116.2 in stage 2.0 (TID 672)
+19/09/03 20:34:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 674
+19/09/03 20:34:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 676
+19/09/03 20:34:31 INFO executor.Executor: Running task 92.3 in stage 2.0 (TID 674)
+19/09/03 20:34:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 678
+19/09/03 20:34:31 INFO executor.Executor: Running task 4.2 in stage 2.0 (TID 676)
+19/09/03 20:34:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 680
+19/09/03 20:34:31 INFO executor.Executor: Running task 188.2 in stage 2.0 (TID 678)
+19/09/03 20:34:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 682
+19/09/03 20:34:31 INFO executor.Executor: Running task 196.2 in stage 2.0 (TID 680)
+19/09/03 20:34:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 684
+19/09/03 20:34:31 INFO executor.Executor: Running task 132.2 in stage 2.0 (TID 682)
+19/09/03 20:34:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 685
+19/09/03 20:34:31 INFO executor.Executor: Running task 44.2 in stage 2.0 (TID 684)
+19/09/03 20:34:31 INFO executor.Executor: Running task 76.2 in stage 2.0 (TID 685)
+19/09/03 20:34:31 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:41791/jars/simple-groupby-computation-project_2.11-2.0.jar with timestamp 1567567994054
+19/09/03 20:34:31 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:41791 after 1 ms (0 ms spent in bootstraps)
+19/09/03 20:34:31 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:41791/jars/simple-groupby-computation-project_2.11-2.0.jar to /data/spark-b3473462-e9f5-4f44-825f-9b274eb40118/executor-a7ce7eb3-b90f-4d7b-8044-436465ae5e5e/spark-84278498-1a53-4450-97eb-b1d2a6075112/fetchFileTemp1073344860307598040.tmp
+19/09/03 20:34:31 INFO util.Utils: Copying /data/spark-b3473462-e9f5-4f44-825f-9b274eb40118/executor-a7ce7eb3-b90f-4d7b-8044-436465ae5e5e/spark-84278498-1a53-4450-97eb-b1d2a6075112/14573470651567567994054_cache to /var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190903203314-0001/9/./simple-groupby-computation-project_2.11-2.0.jar
+19/09/03 20:34:31 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190903203314-0001/9/./simple-groupby-computation-project_2.11-2.0.jar to class loader
+19/09/03 20:34:31 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 2
+19/09/03 20:34:35 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 689
+19/09/03 20:34:35 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 694
+19/09/03 20:34:35 INFO executor.Executor: Running task 185.1 in stage 2.0 (TID 689)
+19/09/03 20:34:35 INFO executor.Executor: Running task 81.1 in stage 2.0 (TID 694)
+19/09/03 20:34:35 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 699
+19/09/03 20:34:35 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 704
+19/09/03 20:34:35 INFO executor.Executor: Running task 25.1 in stage 2.0 (TID 699)
+19/09/03 20:34:35 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 709
+19/09/03 20:34:35 INFO executor.Executor: Running task 169.1 in stage 2.0 (TID 704)
+19/09/03 20:34:35 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 714
+19/09/03 20:34:35 INFO executor.Executor: Running task 113.1 in stage 2.0 (TID 709)
+19/09/03 20:34:35 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 719
+19/09/03 20:34:35 INFO executor.Executor: Running task 77.1 in stage 2.0 (TID 714)
+19/09/03 20:34:35 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 724
+19/09/03 20:34:35 INFO executor.Executor: Running task 53.1 in stage 2.0 (TID 719)
+19/09/03 20:34:35 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 729
+19/09/03 20:34:35 INFO executor.Executor: Running task 69.1 in stage 2.0 (TID 724)
+19/09/03 20:34:35 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 734
+19/09/03 20:34:35 INFO executor.Executor: Running task 117.1 in stage 2.0 (TID 729)
+19/09/03 20:34:35 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 739
+19/09/03 20:34:35 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 744
+19/09/03 20:34:35 INFO executor.Executor: Running task 195.1 in stage 2.0 (TID 739)
+19/09/03 20:34:35 INFO executor.Executor: Running task 133.1 in stage 2.0 (TID 734)
+19/09/03 20:34:35 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 749
+19/09/03 20:34:35 INFO executor.Executor: Running task 43.1 in stage 2.0 (TID 744)
+19/09/03 20:34:35 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 754
+19/09/03 20:34:35 INFO executor.Executor: Running task 35.1 in stage 2.0 (TID 749)
+19/09/03 20:34:35 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 759
+19/09/03 20:34:35 INFO executor.Executor: Running task 179.1 in stage 2.0 (TID 754)
+19/09/03 20:34:35 INFO executor.Executor: Running task 51.1 in stage 2.0 (TID 759)
+19/09/03 20:34:50 ERROR shuffle.RetryingBlockFetcher: Exception while beginning fetch of 1 outstanding blocks 
+java.io.IOException: Failed to connect to /10.1.5.4:43237
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.start(RetryingBlockFetcher.java:121)
+	at org.apache.spark.network.netty.NettyBlockTransferService.fetchBlocks(NettyBlockTransferService.scala:124)
+	at org.apache.spark.network.BlockTransferService.fetchBlockSync(BlockTransferService.scala:98)
+	at org.apache.spark.storage.BlockManager.getRemoteBytes(BlockManager.scala:757)
+	at org.apache.spark.broadcast.TorrentBroadcast$$anonfun$org$apache$spark$broadcast$TorrentBroadcast$$readBlocks$1.apply$mcVI$sp(TorrentBroadcast.scala:162)
+	at org.apache.spark.broadcast.TorrentBroadcast$$anonfun$org$apache$spark$broadcast$TorrentBroadcast$$readBlocks$1.apply(TorrentBroadcast.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$$anonfun$org$apache$spark$broadcast$TorrentBroadcast$$readBlocks$1.apply(TorrentBroadcast.scala:151)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at org.apache.spark.broadcast.TorrentBroadcast.org$apache$spark$broadcast$TorrentBroadcast$$readBlocks(TorrentBroadcast.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$$anonfun$readBroadcastBlock$1$$anonfun$apply$2.apply(TorrentBroadcast.scala:231)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.broadcast.TorrentBroadcast$$anonfun$readBroadcastBlock$1.apply(TorrentBroadcast.scala:211)
+	at org.apache.spark.util.Utils$.tryOrIOException(Utils.scala:1326)
+	at org.apache.spark.broadcast.TorrentBroadcast.readBroadcastBlock(TorrentBroadcast.scala:207)
+	at org.apache.spark.broadcast.TorrentBroadcast._value$lzycompute(TorrentBroadcast.scala:66)
+	at org.apache.spark.broadcast.TorrentBroadcast._value(TorrentBroadcast.scala:66)
+	at org.apache.spark.broadcast.TorrentBroadcast.getValue(TorrentBroadcast.scala:96)
+	at org.apache.spark.broadcast.Broadcast.value(Broadcast.scala:70)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:89)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedNoRouteToHostException: No route to host: /10.1.5.4:43237
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	... 1 more
+Caused by: java.net.NoRouteToHostException: No route to host
+	... 11 more
+19/09/03 20:34:50 INFO shuffle.RetryingBlockFetcher: Retrying fetch (1/3) for 1 outstanding blocks after 5000 ms
+19/09/03 20:34:58 ERROR shuffle.RetryingBlockFetcher: Exception while beginning fetch of 1 outstanding blocks (after 1 retries)
+java.io.IOException: Failed to connect to /10.1.5.4:43237
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedNoRouteToHostException: No route to host: /10.1.5.4:43237
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.NoRouteToHostException: No route to host
+	... 11 more
+19/09/03 20:34:58 INFO shuffle.RetryingBlockFetcher: Retrying fetch (2/3) for 1 outstanding blocks after 5000 ms
+19/09/03 20:35:06 ERROR shuffle.RetryingBlockFetcher: Exception while beginning fetch of 1 outstanding blocks (after 2 retries)
+java.io.IOException: Failed to connect to /10.1.5.4:43237
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedNoRouteToHostException: No route to host: /10.1.5.4:43237
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	... 2 more
+Caused by: java.net.NoRouteToHostException: No route to host
+	... 11 more
+19/09/03 20:35:06 INFO shuffle.RetryingBlockFetcher: Retrying fetch (3/3) for 1 outstanding blocks after 5000 ms
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 77.1 in stage 2.0 (TID 714), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 76.2 in stage 2.0 (TID 685), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 108.2 in stage 2.0 (TID 664), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 169.1 in stage 2.0 (TID 704), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 117.1 in stage 2.0 (TID 729), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 43.1 in stage 2.0 (TID 744), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 81.1 in stage 2.0 (TID 694), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 53.1 in stage 2.0 (TID 719), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 133.1 in stage 2.0 (TID 734), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 44.2 in stage 2.0 (TID 684), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 196.2 in stage 2.0 (TID 680), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 4.2 in stage 2.0 (TID 676), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 35.1 in stage 2.0 (TID 749), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 116.2 in stage 2.0 (TID 672), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 52.2 in stage 2.0 (TID 666), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 20.2 in stage 2.0 (TID 662), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 179.1 in stage 2.0 (TID 754), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 51.1 in stage 2.0 (TID 759), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 113.1 in stage 2.0 (TID 709), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 132.2 in stage 2.0 (TID 682), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 92.3 in stage 2.0 (TID 674), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 25.1 in stage 2.0 (TID 699), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 188.2 in stage 2.0 (TID 678), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 156.3 in stage 2.0 (TID 670), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 69.1 in stage 2.0 (TID 724), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 195.1 in stage 2.0 (TID 739), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 185.1 in stage 2.0 (TID 689), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.Executor: Executor is trying to kill task 164.2 in stage 2.0 (TID 668), reason: Stage cancelled
+19/09/03 20:35:06 INFO executor.CoarseGrainedExecutorBackend: Driver commanded a shutdown
+19/09/03 20:35:06 ERROR executor.CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

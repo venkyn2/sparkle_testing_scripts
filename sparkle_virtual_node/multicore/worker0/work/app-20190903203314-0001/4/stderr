@@ -1,0 +1,578 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker0/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker0/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=41791" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:41791" "--executor-id" "4" "--hostname" "10.1.1.4" "--cores" "144" "--app-id" "app-20190903203314-0001" "--worker-url" "spark://Worker@10.1.1.4:44119"
+========================================
+
+19/09/03 20:33:14 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 116355@mdc-ch1-cust4
+19/09/03 20:33:14 INFO util.SignalUtils: Registered signal handler for TERM
+19/09/03 20:33:14 INFO util.SignalUtils: Registered signal handler for HUP
+19/09/03 20:33:14 INFO util.SignalUtils: Registered signal handler for INT
+19/09/03 20:33:14 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/09/03 20:33:14 INFO spark.SecurityManager: Changing view acls to: root
+19/09/03 20:33:14 INFO spark.SecurityManager: Changing modify acls to: root
+19/09/03 20:33:14 INFO spark.SecurityManager: Changing view acls groups to: 
+19/09/03 20:33:14 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/09/03 20:33:14 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/09/03 20:33:15 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:41791 after 49 ms (0 ms spent in bootstraps)
+19/09/03 20:33:15 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/09/03 20:33:15 INFO spark.SecurityManager: Changing view acls to: root
+19/09/03 20:33:15 INFO spark.SecurityManager: Changing modify acls to: root
+19/09/03 20:33:15 INFO spark.SecurityManager: Changing view acls groups to: 
+19/09/03 20:33:15 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/09/03 20:33:15 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/09/03 20:33:15 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:41791 after 1 ms (0 ms spent in bootstraps)
+19/09/03 20:33:15 INFO storage.DiskBlockManager: Created local directory at /data/spark-b3473462-e9f5-4f44-825f-9b274eb40118/executor-a7ce7eb3-b90f-4d7b-8044-436465ae5e5e/blockmgr-9ec2e842-4309-4fa9-a839-9ae1b4728435
+19/09/03 20:33:15 INFO memory.MemoryStore: MemoryStore started with capacity 12.6 GB
+19/09/03 20:33:15 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:41791
+19/09/03 20:33:15 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@10.1.1.4:44119
+19/09/03 20:33:15 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:44119 after 1 ms (0 ms spent in bootstraps)
+19/09/03 20:33:15 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@10.1.1.4:44119
+19/09/03 20:33:15 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/09/03 20:33:15 INFO executor.Executor: Starting executor ID 4 on host 10.1.1.4
+19/09/03 20:33:15 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 32935.
+19/09/03 20:33:15 INFO netty.NettyBlockTransferService: Server created on 10.1.1.4:32935
+19/09/03 20:33:15 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/09/03 20:33:15 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(4, 10.1.1.4, 32935, None)
+19/09/03 20:33:15 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(4, 10.1.1.4, 32935, None)
+19/09/03 20:33:15 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(4, 10.1.1.4, 32935, None)
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 203
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 211
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 219
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 227
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 235
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 243
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 251
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 259
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 267
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 275
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 283
+19/09/03 20:33:16 INFO executor.Executor: Running task 4.0 in stage 1.0 (TID 203)
+19/09/03 20:33:16 INFO executor.Executor: Running task 76.0 in stage 1.0 (TID 275)
+19/09/03 20:33:16 INFO executor.Executor: Running task 36.0 in stage 1.0 (TID 235)
+19/09/03 20:33:16 INFO executor.Executor: Running task 60.0 in stage 1.0 (TID 259)
+19/09/03 20:33:16 INFO executor.Executor: Running task 12.0 in stage 1.0 (TID 211)
+19/09/03 20:33:16 INFO executor.Executor: Running task 44.0 in stage 1.0 (TID 243)
+19/09/03 20:33:16 INFO executor.Executor: Running task 20.0 in stage 1.0 (TID 219)
+19/09/03 20:33:16 INFO executor.Executor: Running task 52.0 in stage 1.0 (TID 251)
+19/09/03 20:33:16 INFO executor.Executor: Running task 28.0 in stage 1.0 (TID 227)
+19/09/03 20:33:16 INFO executor.Executor: Running task 68.0 in stage 1.0 (TID 267)
+19/09/03 20:33:16 INFO executor.Executor: Running task 84.0 in stage 1.0 (TID 283)
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 291
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 299
+19/09/03 20:33:16 INFO executor.Executor: Running task 92.0 in stage 1.0 (TID 291)
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 307
+19/09/03 20:33:16 INFO executor.Executor: Running task 100.0 in stage 1.0 (TID 299)
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 315
+19/09/03 20:33:16 INFO executor.Executor: Running task 108.0 in stage 1.0 (TID 307)
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 323
+19/09/03 20:33:16 INFO executor.Executor: Running task 116.0 in stage 1.0 (TID 315)
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 331
+19/09/03 20:33:16 INFO executor.Executor: Running task 124.0 in stage 1.0 (TID 323)
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 339
+19/09/03 20:33:16 INFO executor.Executor: Running task 132.0 in stage 1.0 (TID 331)
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 347
+19/09/03 20:33:16 INFO executor.Executor: Running task 140.0 in stage 1.0 (TID 339)
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 355
+19/09/03 20:33:16 INFO executor.Executor: Running task 148.0 in stage 1.0 (TID 347)
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 363
+19/09/03 20:33:16 INFO executor.Executor: Running task 156.0 in stage 1.0 (TID 355)
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 371
+19/09/03 20:33:16 INFO executor.Executor: Running task 164.0 in stage 1.0 (TID 363)
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 379
+19/09/03 20:33:16 INFO executor.Executor: Running task 172.0 in stage 1.0 (TID 371)
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 387
+19/09/03 20:33:16 INFO executor.Executor: Running task 180.0 in stage 1.0 (TID 379)
+19/09/03 20:33:16 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 395
+19/09/03 20:33:16 INFO executor.Executor: Running task 188.0 in stage 1.0 (TID 387)
+19/09/03 20:33:16 INFO executor.Executor: Running task 196.0 in stage 1.0 (TID 395)
+19/09/03 20:33:16 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:41791/jars/simple-groupby-computation-project_2.11-2.0.jar with timestamp 1567567994054
+19/09/03 20:33:16 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:41791 after 1 ms (0 ms spent in bootstraps)
+19/09/03 20:33:16 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:41791/jars/simple-groupby-computation-project_2.11-2.0.jar to /data/spark-b3473462-e9f5-4f44-825f-9b274eb40118/executor-a7ce7eb3-b90f-4d7b-8044-436465ae5e5e/spark-395ecbd5-afff-4b41-8ca2-e1477fac5ad5/fetchFileTemp5556837045857066350.tmp
+19/09/03 20:33:16 INFO util.Utils: Copying /data/spark-b3473462-e9f5-4f44-825f-9b274eb40118/executor-a7ce7eb3-b90f-4d7b-8044-436465ae5e5e/spark-395ecbd5-afff-4b41-8ca2-e1477fac5ad5/14573470651567567994054_cache to /var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190903203314-0001/4/./simple-groupby-computation-project_2.11-2.0.jar
+19/09/03 20:33:16 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190903203314-0001/4/./simple-groupby-computation-project_2.11-2.0.jar to class loader
+19/09/03 20:33:17 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 1
+19/09/03 20:33:17 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:35177 after 1 ms (0 ms spent in bootstraps)
+19/09/03 20:33:17 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 1585.0 B, free 12.6 GB)
+19/09/03 20:33:17 INFO broadcast.TorrentBroadcast: Reading broadcast variable 1 took 71 ms
+19/09/03 20:33:17 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 2.5 KB, free 12.6 GB)
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_188 stored as values in memory (estimated size 160.2 MB, free 12.5 GB)
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_124 stored as values in memory (estimated size 160.2 MB, free 12.3 GB)
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_132 stored as values in memory (estimated size 160.2 MB, free 12.2 GB)
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 323:
+[rdd_3_124]
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 387:
+[rdd_3_188]
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 331:
+[rdd_3_132]
+19/09/03 20:33:40 INFO executor.Executor: Finished task 188.0 in stage 1.0 (TID 387). 751 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: Finished task 124.0 in stage 1.0 (TID 323). 751 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: Finished task 132.0 in stage 1.0 (TID 331). 751 bytes result sent to driver
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_196 stored as values in memory (estimated size 160.2 MB, free 11.8 GB)
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_4 stored as values in memory (estimated size 160.2 MB, free 11.8 GB)
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 203:
+[rdd_3_4]
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 395:
+[rdd_3_196]
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_20 stored as values in memory (estimated size 160.2 MB, free 11.7 GB)
+19/09/03 20:33:40 INFO executor.Executor: Finished task 4.0 in stage 1.0 (TID 203). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: Finished task 196.0 in stage 1.0 (TID 395). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 219:
+[rdd_3_20]
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_140 stored as values in memory (estimated size 160.2 MB, free 11.5 GB)
+19/09/03 20:33:40 INFO executor.Executor: Finished task 20.0 in stage 1.0 (TID 219). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_172 stored as values in memory (estimated size 160.2 MB, free 11.4 GB)
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_92 stored as values in memory (estimated size 160.2 MB, free 11.2 GB)
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 339:
+[rdd_3_140]
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 371:
+[rdd_3_172]
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 291:
+[rdd_3_92]
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_164 stored as values in memory (estimated size 160.2 MB, free 11.1 GB)
+19/09/03 20:33:40 INFO executor.Executor: Finished task 140.0 in stage 1.0 (TID 339). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: Finished task 92.0 in stage 1.0 (TID 291). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: Finished task 172.0 in stage 1.0 (TID 371). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_156 stored as values in memory (estimated size 160.2 MB, free 10.9 GB)
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 363:
+[rdd_3_164]
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_44 stored as values in memory (estimated size 160.2 MB, free 10.7 GB)
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 355:
+[rdd_3_156]
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_28 stored as values in memory (estimated size 160.2 MB, free 10.6 GB)
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 243:
+[rdd_3_44]
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_84 stored as values in memory (estimated size 160.2 MB, free 10.4 GB)
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 227:
+[rdd_3_28]
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_52 stored as values in memory (estimated size 160.2 MB, free 10.3 GB)
+19/09/03 20:33:40 INFO executor.Executor: Finished task 164.0 in stage 1.0 (TID 363). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: Finished task 156.0 in stage 1.0 (TID 355). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 283:
+[rdd_3_84]
+19/09/03 20:33:40 INFO executor.Executor: Finished task 44.0 in stage 1.0 (TID 243). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: Finished task 28.0 in stage 1.0 (TID 227). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 251:
+[rdd_3_52]
+19/09/03 20:33:40 INFO executor.Executor: Finished task 84.0 in stage 1.0 (TID 283). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: Finished task 52.0 in stage 1.0 (TID 251). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_68 stored as values in memory (estimated size 160.2 MB, free 10.1 GB)
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_180 stored as values in memory (estimated size 160.2 MB, free 10.0 GB)
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 267:
+[rdd_3_68]
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_116 stored as values in memory (estimated size 160.2 MB, free 9.7 GB)
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_60 stored as values in memory (estimated size 160.2 MB, free 9.7 GB)
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 379:
+[rdd_3_180]
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 315:
+[rdd_3_116]
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 259:
+[rdd_3_60]
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_36 stored as values in memory (estimated size 160.2 MB, free 9.5 GB)
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 235:
+[rdd_3_36]
+19/09/03 20:33:40 INFO executor.Executor: Finished task 68.0 in stage 1.0 (TID 267). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: Finished task 116.0 in stage 1.0 (TID 315). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: Finished task 180.0 in stage 1.0 (TID 379). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: Finished task 60.0 in stage 1.0 (TID 259). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: Finished task 36.0 in stage 1.0 (TID 235). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_76 stored as values in memory (estimated size 160.2 MB, free 9.3 GB)
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_12 stored as values in memory (estimated size 160.2 MB, free 9.2 GB)
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 275:
+[rdd_3_76]
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 211:
+[rdd_3_12]
+19/09/03 20:33:40 INFO executor.Executor: Finished task 12.0 in stage 1.0 (TID 211). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: Finished task 76.0 in stage 1.0 (TID 275). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_108 stored as values in memory (estimated size 160.2 MB, free 8.9 GB)
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_148 stored as values in memory (estimated size 160.2 MB, free 8.9 GB)
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 307:
+[rdd_3_108]
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 347:
+[rdd_3_148]
+19/09/03 20:33:40 INFO executor.Executor: Finished task 108.0 in stage 1.0 (TID 307). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.Executor: Finished task 148.0 in stage 1.0 (TID 347). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO memory.MemoryStore: Block rdd_3_100 stored as values in memory (estimated size 160.2 MB, free 8.7 GB)
+19/09/03 20:33:40 INFO executor.Executor: 1 block locks were not released by TID = 299:
+[rdd_3_100]
+19/09/03 20:33:40 INFO executor.Executor: Finished task 100.0 in stage 1.0 (TID 299). 708 bytes result sent to driver
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 405
+19/09/03 20:33:40 INFO executor.Executor: Running task 4.0 in stage 2.0 (TID 405)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 413
+19/09/03 20:33:40 INFO executor.Executor: Running task 12.0 in stage 2.0 (TID 413)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 421
+19/09/03 20:33:40 INFO executor.Executor: Running task 20.0 in stage 2.0 (TID 421)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 429
+19/09/03 20:33:40 INFO executor.Executor: Running task 28.0 in stage 2.0 (TID 429)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 437
+19/09/03 20:33:40 INFO executor.Executor: Running task 36.0 in stage 2.0 (TID 437)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 445
+19/09/03 20:33:40 INFO executor.Executor: Running task 44.0 in stage 2.0 (TID 445)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 453
+19/09/03 20:33:40 INFO executor.Executor: Running task 52.0 in stage 2.0 (TID 453)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 461
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 469
+19/09/03 20:33:40 INFO executor.Executor: Running task 60.0 in stage 2.0 (TID 461)
+19/09/03 20:33:40 INFO executor.Executor: Running task 68.0 in stage 2.0 (TID 469)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 477
+19/09/03 20:33:40 INFO executor.Executor: Running task 76.0 in stage 2.0 (TID 477)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 485
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 493
+19/09/03 20:33:40 INFO executor.Executor: Running task 84.0 in stage 2.0 (TID 485)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 501
+19/09/03 20:33:40 INFO executor.Executor: Running task 92.0 in stage 2.0 (TID 493)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 509
+19/09/03 20:33:40 INFO executor.Executor: Running task 100.0 in stage 2.0 (TID 501)
+19/09/03 20:33:40 INFO executor.Executor: Running task 108.0 in stage 2.0 (TID 509)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 517
+19/09/03 20:33:40 INFO executor.Executor: Running task 116.0 in stage 2.0 (TID 517)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 525
+19/09/03 20:33:40 INFO executor.Executor: Running task 124.0 in stage 2.0 (TID 525)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 533
+19/09/03 20:33:40 INFO executor.Executor: Running task 132.0 in stage 2.0 (TID 533)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 541
+19/09/03 20:33:40 INFO executor.Executor: Running task 140.0 in stage 2.0 (TID 541)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 549
+19/09/03 20:33:40 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 2
+19/09/03 20:33:40 INFO executor.Executor: Running task 148.0 in stage 2.0 (TID 549)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 557
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 565
+19/09/03 20:33:40 INFO executor.Executor: Running task 156.0 in stage 2.0 (TID 557)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 573
+19/09/03 20:33:40 INFO executor.Executor: Running task 164.0 in stage 2.0 (TID 565)
+19/09/03 20:33:40 INFO executor.Executor: Running task 172.0 in stage 2.0 (TID 573)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 581
+19/09/03 20:33:40 INFO executor.Executor: Running task 180.0 in stage 2.0 (TID 581)
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 589
+19/09/03 20:33:40 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 597
+19/09/03 20:33:40 INFO executor.Executor: Running task 188.0 in stage 2.0 (TID 589)
+19/09/03 20:33:40 INFO executor.Executor: Running task 196.0 in stage 2.0 (TID 597)
+19/09/03 20:33:40 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:45319 after 2 ms (0 ms spent in bootstraps)
+19/09/03 20:33:40 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.5 KB, free 8.7 GB)
+19/09/03 20:33:40 INFO broadcast.TorrentBroadcast: Reading broadcast variable 2 took 31 ms
+19/09/03 20:33:40 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 4.4 KB, free 8.7 GB)
+19/09/03 20:33:40 INFO shm.ShmShuffleManager: ShmShuffleManager obtains SPARK_WORKER_CORES: 64
+19/09/03 20:33:40 INFO shm.ShmShuffleManager: to initialize shm shuffle manager in an executor, with executor id string value:4
+19/09/03 20:33:40 INFO shuffle.ShuffleStoreManager: jnishmshuffle shared library loaded via loadLibraryFromJar
+19/09/03 20:33:40 INFO shuffle.ShuffleStoreManager: perform actual initialization for ShuffleStoreManager
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0903 20:33:40.990063 116483 MapShuffleStoreManager.cc:101] map shuffle store manage initialize
+I0903 20:33:40.990113 116483 ByteBufferPool.cc:44] initialize queue-based bytebuffer pool
+I0903 20:33:40.990120 116483 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0903 20:33:40.990123 116483 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0903 20:33:40.990125 116483 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0903 20:33:40.990128 116483 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0903 20:33:40.990130 116483 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0903 20:33:40.990134 116483 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0903 20:33:40.990135 116483 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0903 20:33:40.990137 116483 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0903 20:33:40.990166 116483 SharedMemoryAllocator.h:64] rmb default log level chosen is: info
+I0903 20:33:40.991343 116483 SharedMemoryAllocator.h:201] rmb shared memory manager detected a single-partitioned shm path: /lfs/spark_global0
+0000001 | T.0x00007fcd1a0ef700 | 2019-09-03, 20:33:40.991477 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 153) Open heap path: /lfs/spark_global0 
+0000002 | T.0x00007fcd1a0ef700 | 2019-09-03, 20:33:40.992492 [info] - (/home/ghosdebd/sparkle/alps/src/pegasus/lfs_region_file.cc, 64) Open LFS region file path: "/lfs/spark_global0" flags: O_RDWR
+0000004 | T.0x00007fcd1a0ef700 | 2019-09-03, 20:33:40.994675 [info] - (/home/ghosdebd/sparkle/alps/src/pegasus/segmap.cc, 39) map region  base_addr: 0x7fbc9eabc000 size: 68719476736 addr_range: 0x7fbc9eabc000--7fcc9eabc000
+0000005 | T.0x00007fcd1a0ef700 | 2019-09-03, 20:33:40.994746 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 158) Opened heap path: /lfs/spark_global0  size: 68719476736
+I0903 20:33:40.994966 116483 SharedMemoryAllocator.h:93] rmb shared memory manager initialized global heap:0x2cc4140
+I0903 20:33:40.995069 116483 SharedMemoryManager.cc:64] shared-memory manager registered heap: /lfs/spark_global0
+I0903 20:33:40.995076 116483 ShuffleDataSharedMemoryManager.h:162] shuffle engine has opened heap: /lfs/spark_global0
+I0903 20:33:40.995084 116483 ShuffleStoreManager.cc:140] shuffle store manager initialized with executor id 4 and generation id: 4
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 72 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 91 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 86 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 92 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 81 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 74 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 78 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 82 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 83 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 88 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 69 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 80 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 87 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 93 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 77 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 73 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 90 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 85 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 76 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 89 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO shm.ShmShuffleWriter:  Map Thread: 84 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_12 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_164 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_172 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_20 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_68 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_60 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_28 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_116 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_188 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_108 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_196 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_148 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_100 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_44 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_52 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_140 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_132 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_76 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_4 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_180 locally
+19/09/03 20:33:52 INFO storage.BlockManager: Found block rdd_3_124 locally
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id6 map-side shared-memory based shuffle store started with ordering: false
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id16 map-side shared-memory based shuffle store started with ordering: false
+I0903 20:33:52.922461 116481 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id19 map-side shared-memory based shuffle store started with ordering: false
+I0903 20:33:52.922531 116473 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.922614 116484 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id3 map-side shared-memory based shuffle store started with ordering: false
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id18 map-side shared-memory based shuffle store started with ordering: false
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id9 map-side shared-memory based shuffle store started with ordering: false
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id11 map-side shared-memory based shuffle store started with ordering: false
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id0 map-side shared-memory based shuffle store started with ordering: false
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id8 map-side shared-memory based shuffle store started with ordering: false
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id10 map-side shared-memory based shuffle store started with ordering: false
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id5 map-side shared-memory based shuffle store started with ordering: false
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id12 map-side shared-memory based shuffle store started with ordering: false
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id14 map-side shared-memory based shuffle store started with ordering: false
+I0903 20:33:52.923168 116483 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id20 map-side shared-memory based shuffle store started with ordering: false
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id2 map-side shared-memory based shuffle store started with ordering: false
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id4 map-side shared-memory based shuffle store started with ordering: false
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id1 map-side shared-memory based shuffle store started with ordering: false
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id17 map-side shared-memory based shuffle store started with ordering: false
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id7 map-side shared-memory based shuffle store started with ordering: false
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id15 map-side shared-memory based shuffle store started with ordering: false
+I0903 20:33:52.923590 116473 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 28 and ordering: 0
+I0903 20:33:52.923606 116473 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+19/09/03 20:33:52 INFO shuffle.MapSHMShuffleStore: store id13 map-side shared-memory based shuffle store started with ordering: false
+I0903 20:33:52.923636 116481 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 132 and ordering: 0
+I0903 20:33:52.923645 116481 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.924098 116484 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 124 and ordering: 0
+I0903 20:33:52.924106 116484 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.924108 116483 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 116 and ordering: 0
+I0903 20:33:52.924115 116483 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.924118 116471 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.924108 116478 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.924108 116482 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.924135 116469 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.924175 116485 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.924181 116467 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.924664 116471 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 44 and ordering: 0
+I0903 20:33:52.924672 116471 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.924715 116464 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.924752 116477 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.924757 116469 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 108 and ordering: 0
+I0903 20:33:52.924782 116469 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.924774 116476 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.925233 116482 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 12 and ordering: 0
+I0903 20:33:52.925246 116482 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.925289 116478 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 52 and ordering: 0
+I0903 20:33:52.925298 116478 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.925446 116467 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 100 and ordering: 0
+I0903 20:33:52.925457 116467 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.925457 116475 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.925456 116468 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.925448 116486 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.925457 116488 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.925951 116485 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 140 and ordering: 0
+I0903 20:33:52.925963 116485 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.926082 116479 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.926088 116476 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 4 and ordering: 0
+I0903 20:33:52.926095 116480 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.926110 116476 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.926568 116477 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 20 and ordering: 0
+I0903 20:33:52.926589 116477 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.926568 116464 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 172 and ordering: 0
+I0903 20:33:52.926614 116464 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.926659 116487 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.926760 116488 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 164 and ordering: 0
+I0903 20:33:52.926782 116488 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.927206 116468 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 60 and ordering: 0
+I0903 20:33:52.927218 116468 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.927219 116472 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x2cc4030
+I0903 20:33:52.927675 116475 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 148 and ordering: 0
+I0903 20:33:52.927685 116475 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.927719 116486 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 68 and ordering: 0
+I0903 20:33:52.927727 116486 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.928222 116480 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 180 and ordering: 0
+I0903 20:33:52.928239 116480 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.928670 116479 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 188 and ordering: 0
+I0903 20:33:52.928679 116487 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 196 and ordering: 0
+I0903 20:33:52.928689 116487 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.928684 116479 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:52.928722 116472 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 76 and ordering: 0
+I0903 20:33:52.928735 116472 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0903 20:33:53.296182 116464 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb7538b4010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.301486 116477 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb752d42010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.341339 116480 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb74b5ab010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.347095 116478 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb7585f3010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.350314 116485 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb755b9b010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.351954 116488 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb74fae8010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.351974 116487 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb74c11d010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.358376 116464 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb747f50010 with size tracker: 1000000 reaches buffer size: 500000
+I0903 20:33:53.362030 116482 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb75727f010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.364022 116476 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb7521d0010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.368824 116477 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb74686c010 with size tracker: 1000000 reaches buffer size: 500000
+I0903 20:33:53.375478 116473 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb75d733010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.376479 116481 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb75cbc1010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.378008 116469 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb75670d010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.380003 116468 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb75065a010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.382308 116475 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb74dc02010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.396034 116486 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb74e774010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.407812 116479 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb74cc8f010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.417241 116485 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb73f3b4010 with size tracker: 1000000 reaches buffer size: 500000
+I0903 20:33:53.418130 116484 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb75bc4e010 with size tracker: 500000 reaches buffer size: 500000
+19/09/03 20:33:53 ERROR executor.Executor: Exception in task 36.0 in stage 2.0 (TID 437)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/03 20:33:53 ERROR executor.Executor: Exception in task 92.0 in stage 2.0 (TID 493)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/03 20:33:53 ERROR executor.Executor: Exception in task 84.0 in stage 2.0 (TID 485)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/03 20:33:53 ERROR executor.Executor: Exception in task 156.0 in stage 2.0 (TID 557)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+I0903 20:33:53.434396 116464 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb73a396010 with size tracker: 1500000 reaches buffer size: 500000
+I0903 20:33:53.439661 116487 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb73c5ec010 with size tracker: 1000000 reaches buffer size: 500000
+I0903 20:33:53.441730 116477 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb736a5c010 with size tracker: 1500000 reaches buffer size: 500000
+I0903 20:33:53.446048 116482 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb747f50010 with size tracker: 1000000 reaches buffer size: 500000
+19/09/03 20:33:53 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 557,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/03 20:33:53 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 493,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/03 20:33:53 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 437,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/03 20:33:53 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 485,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+I0903 20:33:53.450171 116471 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb759d68010 with size tracker: 500000 reaches buffer size: 500000
+19/09/03 20:33:53 INFO storage.DiskBlockManager: Shutdown hook called
+I0903 20:33:53.451812 116478 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb740a98010 with size tracker: 1000000 reaches buffer size: 500000
+19/09/03 20:33:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 603
+19/09/03 20:33:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 604
+19/09/03 20:33:53 INFO executor.Executor: Running task 36.1 in stage 2.0 (TID 604)
+19/09/03 20:33:53 INFO executor.Executor: Running task 84.1 in stage 2.0 (TID 603)
+19/09/03 20:33:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 605
+19/09/03 20:33:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 606
+19/09/03 20:33:53 INFO executor.Executor: Running task 92.1 in stage 2.0 (TID 605)
+I0903 20:33:53.453642 116467 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb754426010 with size tracker: 500000 reaches buffer size: 500000
+I0903 20:33:53.455279 116488 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb73dcd0010 with size tracker: 1000000 reaches buffer size: 500000
+19/09/03 20:33:53 INFO executor.Executor: Running task 156.1 in stage 2.0 (TID 606)
+19/09/03 20:33:53 INFO util.ShutdownHookManager: Shutdown hook called
+19/09/03 20:33:53 INFO util.ShutdownHookManager: Deleting directory /data/spark-b3473462-e9f5-4f44-825f-9b274eb40118/executor-a7ce7eb3-b90f-4d7b-8044-436465ae5e5e/spark-395ecbd5-afff-4b41-8ca2-e1477fac5ad5
+I0903 20:33:53.458616 116468 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb733893010 with size tracker: 1000000 reaches buffer size: 500000
+I0903 20:33:53.460577 116481 MapShuffleStoreWithLongKeys.cc:134] keys 0x7fb75cbc1010 with size tracker: 1000000 reaches buffer size: 500000

@@ -1,0 +1,957 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker0/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker0/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-Dspark.driver.port=39567" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39567" "--executor-id" "4" "--hostname" "10.1.1.4" "--cores" "144" "--app-id" "app-20190827011857-0003" "--worker-url" "spark://Worker@10.1.1.4:46217"
+========================================
+
+19/08/27 01:18:57 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 132028@mdc-ch1-cust4
+19/08/27 01:18:57 INFO util.SignalUtils: Registered signal handler for TERM
+19/08/27 01:18:57 INFO util.SignalUtils: Registered signal handler for HUP
+19/08/27 01:18:57 INFO util.SignalUtils: Registered signal handler for INT
+19/08/27 01:18:57 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/08/27 01:18:57 INFO spark.SecurityManager: Changing view acls to: root
+19/08/27 01:18:57 INFO spark.SecurityManager: Changing modify acls to: root
+19/08/27 01:18:57 INFO spark.SecurityManager: Changing view acls groups to: 
+19/08/27 01:18:57 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/08/27 01:18:57 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/08/27 01:18:58 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:39567 after 50 ms (0 ms spent in bootstraps)
+19/08/27 01:18:58 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/08/27 01:18:58 INFO spark.SecurityManager: Changing view acls to: root
+19/08/27 01:18:58 INFO spark.SecurityManager: Changing modify acls to: root
+19/08/27 01:18:58 INFO spark.SecurityManager: Changing view acls groups to: 
+19/08/27 01:18:58 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/08/27 01:18:58 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/08/27 01:18:58 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:39567 after 1 ms (0 ms spent in bootstraps)
+19/08/27 01:18:58 INFO storage.DiskBlockManager: Created local directory at /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-1e9f2111-1e13-482b-a914-93e2b4e65a18/blockmgr-ee08d53e-592b-4c25-a991-5a812612f13a
+19/08/27 01:18:58 INFO memory.MemoryStore: MemoryStore started with capacity 12.6 GB
+19/08/27 01:18:58 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39567
+19/08/27 01:18:58 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@10.1.1.4:46217
+19/08/27 01:18:58 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:46217 after 1 ms (0 ms spent in bootstraps)
+19/08/27 01:18:58 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@10.1.1.4:46217
+19/08/27 01:18:58 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/08/27 01:18:58 INFO executor.Executor: Starting executor ID 4 on host 10.1.1.4
+19/08/27 01:18:58 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34045.
+19/08/27 01:18:58 INFO netty.NettyBlockTransferService: Server created on 10.1.1.4:34045
+19/08/27 01:18:58 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/08/27 01:18:58 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(4, 10.1.1.4, 34045, None)
+19/08/27 01:18:58 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(4, 10.1.1.4, 34045, None)
+19/08/27 01:18:58 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(4, 10.1.1.4, 34045, None)
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 202
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 210
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 218
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 226
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 234
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 242
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 250
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 258
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 266
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 274
+19/08/27 01:18:59 INFO executor.Executor: Running task 27.0 in stage 1.0 (TID 226)
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 282
+19/08/27 01:18:59 INFO executor.Executor: Running task 3.0 in stage 1.0 (TID 202)
+19/08/27 01:18:59 INFO executor.Executor: Running task 11.0 in stage 1.0 (TID 210)
+19/08/27 01:18:59 INFO executor.Executor: Running task 35.0 in stage 1.0 (TID 234)
+19/08/27 01:18:59 INFO executor.Executor: Running task 19.0 in stage 1.0 (TID 218)
+19/08/27 01:18:59 INFO executor.Executor: Running task 51.0 in stage 1.0 (TID 250)
+19/08/27 01:18:59 INFO executor.Executor: Running task 43.0 in stage 1.0 (TID 242)
+19/08/27 01:18:59 INFO executor.Executor: Running task 59.0 in stage 1.0 (TID 258)
+19/08/27 01:18:59 INFO executor.Executor: Running task 67.0 in stage 1.0 (TID 266)
+19/08/27 01:18:59 INFO executor.Executor: Running task 83.0 in stage 1.0 (TID 282)
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 290
+19/08/27 01:18:59 INFO executor.Executor: Running task 75.0 in stage 1.0 (TID 274)
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 298
+19/08/27 01:18:59 INFO executor.Executor: Running task 91.0 in stage 1.0 (TID 290)
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 306
+19/08/27 01:18:59 INFO executor.Executor: Running task 99.0 in stage 1.0 (TID 298)
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 314
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 322
+19/08/27 01:18:59 INFO executor.Executor: Running task 107.0 in stage 1.0 (TID 306)
+19/08/27 01:18:59 INFO executor.Executor: Running task 115.0 in stage 1.0 (TID 314)
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 330
+19/08/27 01:18:59 INFO executor.Executor: Running task 123.0 in stage 1.0 (TID 322)
+19/08/27 01:18:59 INFO executor.Executor: Running task 131.0 in stage 1.0 (TID 330)
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 338
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 346
+19/08/27 01:18:59 INFO executor.Executor: Running task 139.0 in stage 1.0 (TID 338)
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 354
+19/08/27 01:18:59 INFO executor.Executor: Running task 147.0 in stage 1.0 (TID 346)
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 362
+19/08/27 01:18:59 INFO executor.Executor: Running task 155.0 in stage 1.0 (TID 354)
+19/08/27 01:18:59 INFO executor.Executor: Running task 163.0 in stage 1.0 (TID 362)
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 370
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 378
+19/08/27 01:18:59 INFO executor.Executor: Running task 171.0 in stage 1.0 (TID 370)
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 386
+19/08/27 01:18:59 INFO executor.Executor: Running task 179.0 in stage 1.0 (TID 378)
+19/08/27 01:18:59 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 394
+19/08/27 01:18:59 INFO executor.Executor: Running task 187.0 in stage 1.0 (TID 386)
+19/08/27 01:18:59 INFO executor.Executor: Running task 195.0 in stage 1.0 (TID 394)
+19/08/27 01:18:59 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:39567/jars/simple-groupby-computation-project_2.11-2.0.jar with timestamp 1566893937035
+19/08/27 01:18:59 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:39567 after 1 ms (0 ms spent in bootstraps)
+19/08/27 01:18:59 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:39567/jars/simple-groupby-computation-project_2.11-2.0.jar to /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-1e9f2111-1e13-482b-a914-93e2b4e65a18/spark-256470b9-9f2f-4026-aa9e-14a49be5c5b7/fetchFileTemp3358963752573894295.tmp
+19/08/27 01:18:59 INFO util.Utils: Copying /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-1e9f2111-1e13-482b-a914-93e2b4e65a18/spark-256470b9-9f2f-4026-aa9e-14a49be5c5b7/3489047311566893937035_cache to /var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190827011857-0003/4/./simple-groupby-computation-project_2.11-2.0.jar
+19/08/27 01:18:59 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190827011857-0003/4/./simple-groupby-computation-project_2.11-2.0.jar to class loader
+19/08/27 01:19:00 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 1
+19/08/27 01:19:00 INFO client.TransportClientFactory: Successfully created connection to /10.1.7.4:35933 after 1 ms (0 ms spent in bootstraps)
+19/08/27 01:19:04 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 1585.0 B, free 12.6 GB)
+19/08/27 01:19:04 INFO broadcast.TorrentBroadcast: Reading broadcast variable 1 took 4373 ms
+19/08/27 01:19:04 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 2.5 KB, free 12.6 GB)
+19/08/27 01:19:30 INFO memory.MemoryStore: Block rdd_3_75 stored as values in memory (estimated size 160.2 MB, free 12.5 GB)
+19/08/27 01:19:30 INFO memory.MemoryStore: Block rdd_3_171 stored as values in memory (estimated size 160.2 MB, free 12.3 GB)
+19/08/27 01:19:30 INFO memory.MemoryStore: Block rdd_3_163 stored as values in memory (estimated size 160.2 MB, free 12.2 GB)
+19/08/27 01:19:30 INFO memory.MemoryStore: Block rdd_3_147 stored as values in memory (estimated size 160.2 MB, free 12.0 GB)
+19/08/27 01:19:30 INFO memory.MemoryStore: Block rdd_3_155 stored as values in memory (estimated size 160.2 MB, free 11.8 GB)
+19/08/27 01:19:30 INFO memory.MemoryStore: Block rdd_3_83 stored as values in memory (estimated size 160.2 MB, free 11.7 GB)
+19/08/27 01:19:30 INFO executor.Executor: 1 block locks were not released by TID = 370:
+[rdd_3_171]
+19/08/27 01:19:30 INFO executor.Executor: 1 block locks were not released by TID = 274:
+[rdd_3_75]
+19/08/27 01:19:30 INFO executor.Executor: 1 block locks were not released by TID = 282:
+[rdd_3_83]
+19/08/27 01:19:30 INFO executor.Executor: 1 block locks were not released by TID = 362:
+[rdd_3_163]
+19/08/27 01:19:30 INFO executor.Executor: 1 block locks were not released by TID = 354:
+[rdd_3_155]
+19/08/27 01:19:30 INFO executor.Executor: 1 block locks were not released by TID = 346:
+[rdd_3_147]
+19/08/27 01:19:30 INFO executor.Executor: Finished task 163.0 in stage 1.0 (TID 362). 708 bytes result sent to driver
+19/08/27 01:19:30 INFO executor.Executor: Finished task 155.0 in stage 1.0 (TID 354). 708 bytes result sent to driver
+19/08/27 01:19:30 INFO executor.Executor: Finished task 83.0 in stage 1.0 (TID 282). 708 bytes result sent to driver
+19/08/27 01:19:30 INFO executor.Executor: Finished task 75.0 in stage 1.0 (TID 274). 708 bytes result sent to driver
+19/08/27 01:19:30 INFO executor.Executor: Finished task 171.0 in stage 1.0 (TID 370). 708 bytes result sent to driver
+19/08/27 01:19:30 INFO executor.Executor: Finished task 147.0 in stage 1.0 (TID 346). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_107 stored as values in memory (estimated size 160.2 MB, free 11.5 GB)
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 306:
+[rdd_3_107]
+19/08/27 01:19:31 INFO executor.Executor: Finished task 107.0 in stage 1.0 (TID 306). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_131 stored as values in memory (estimated size 160.2 MB, free 11.4 GB)
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 330:
+[rdd_3_131]
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_51 stored as values in memory (estimated size 160.2 MB, free 11.2 GB)
+19/08/27 01:19:31 INFO executor.Executor: Finished task 131.0 in stage 1.0 (TID 330). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 250:
+[rdd_3_51]
+19/08/27 01:19:31 INFO executor.Executor: Finished task 51.0 in stage 1.0 (TID 250). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_195 stored as values in memory (estimated size 160.2 MB, free 10.9 GB)
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_115 stored as values in memory (estimated size 160.2 MB, free 10.9 GB)
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 394:
+[rdd_3_195]
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 314:
+[rdd_3_115]
+19/08/27 01:19:31 INFO executor.Executor: Finished task 195.0 in stage 1.0 (TID 394). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO executor.Executor: Finished task 115.0 in stage 1.0 (TID 314). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_91 stored as values in memory (estimated size 160.2 MB, free 10.7 GB)
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_43 stored as values in memory (estimated size 160.2 MB, free 10.6 GB)
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_59 stored as values in memory (estimated size 160.2 MB, free 10.4 GB)
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 290:
+[rdd_3_91]
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 242:
+[rdd_3_43]
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 258:
+[rdd_3_59]
+19/08/27 01:19:31 INFO executor.Executor: Finished task 59.0 in stage 1.0 (TID 258). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO executor.Executor: Finished task 91.0 in stage 1.0 (TID 290). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO executor.Executor: Finished task 43.0 in stage 1.0 (TID 242). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_187 stored as values in memory (estimated size 160.2 MB, free 10.3 GB)
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_139 stored as values in memory (estimated size 160.2 MB, free 10.0 GB)
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_35 stored as values in memory (estimated size 160.2 MB, free 10.0 GB)
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 386:
+[rdd_3_187]
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 338:
+[rdd_3_139]
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_123 stored as values in memory (estimated size 160.2 MB, free 9.5 GB)
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_11 stored as values in memory (estimated size 160.2 MB, free 9.5 GB)
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_67 stored as values in memory (estimated size 160.2 MB, free 9.5 GB)
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_27 stored as values in memory (estimated size 160.2 MB, free 9.3 GB)
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 234:
+[rdd_3_35]
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 210:
+[rdd_3_11]
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 322:
+[rdd_3_123]
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 266:
+[rdd_3_67]
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 226:
+[rdd_3_27]
+19/08/27 01:19:31 INFO executor.Executor: Finished task 187.0 in stage 1.0 (TID 386). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO executor.Executor: Finished task 35.0 in stage 1.0 (TID 234). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO executor.Executor: Finished task 139.0 in stage 1.0 (TID 338). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO executor.Executor: Finished task 123.0 in stage 1.0 (TID 322). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO executor.Executor: Finished task 11.0 in stage 1.0 (TID 210). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO executor.Executor: Finished task 67.0 in stage 1.0 (TID 266). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO executor.Executor: Finished task 27.0 in stage 1.0 (TID 226). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_19 stored as values in memory (estimated size 160.2 MB, free 9.2 GB)
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 218:
+[rdd_3_19]
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_179 stored as values in memory (estimated size 160.2 MB, free 9.0 GB)
+19/08/27 01:19:31 INFO executor.Executor: Finished task 19.0 in stage 1.0 (TID 218). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 378:
+[rdd_3_179]
+19/08/27 01:19:31 INFO executor.Executor: Finished task 179.0 in stage 1.0 (TID 378). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_3 stored as values in memory (estimated size 160.2 MB, free 8.9 GB)
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 202:
+[rdd_3_3]
+19/08/27 01:19:31 INFO memory.MemoryStore: Block rdd_3_99 stored as values in memory (estimated size 160.2 MB, free 8.7 GB)
+19/08/27 01:19:31 INFO executor.Executor: 1 block locks were not released by TID = 298:
+[rdd_3_99]
+19/08/27 01:19:31 INFO executor.Executor: Finished task 3.0 in stage 1.0 (TID 202). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO executor.Executor: Finished task 99.0 in stage 1.0 (TID 298). 708 bytes result sent to driver
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 405
+19/08/27 01:19:31 INFO executor.Executor: Running task 3.0 in stage 2.0 (TID 405)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 413
+19/08/27 01:19:31 INFO executor.Executor: Running task 11.0 in stage 2.0 (TID 413)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 421
+19/08/27 01:19:31 INFO executor.Executor: Running task 19.0 in stage 2.0 (TID 421)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 429
+19/08/27 01:19:31 INFO executor.Executor: Running task 27.0 in stage 2.0 (TID 429)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 437
+19/08/27 01:19:31 INFO executor.Executor: Running task 35.0 in stage 2.0 (TID 437)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 445
+19/08/27 01:19:31 INFO executor.Executor: Running task 43.0 in stage 2.0 (TID 445)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 453
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 461
+19/08/27 01:19:31 INFO executor.Executor: Running task 51.0 in stage 2.0 (TID 453)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 469
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 477
+19/08/27 01:19:31 INFO executor.Executor: Running task 59.0 in stage 2.0 (TID 461)
+19/08/27 01:19:31 INFO executor.Executor: Running task 67.0 in stage 2.0 (TID 469)
+19/08/27 01:19:31 INFO executor.Executor: Running task 75.0 in stage 2.0 (TID 477)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 485
+19/08/27 01:19:31 INFO executor.Executor: Running task 83.0 in stage 2.0 (TID 485)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 493
+19/08/27 01:19:31 INFO executor.Executor: Running task 91.0 in stage 2.0 (TID 493)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 501
+19/08/27 01:19:31 INFO executor.Executor: Running task 99.0 in stage 2.0 (TID 501)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 509
+19/08/27 01:19:31 INFO executor.Executor: Running task 107.0 in stage 2.0 (TID 509)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 517
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 525
+19/08/27 01:19:31 INFO executor.Executor: Running task 115.0 in stage 2.0 (TID 517)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 533
+19/08/27 01:19:31 INFO executor.Executor: Running task 123.0 in stage 2.0 (TID 525)
+19/08/27 01:19:31 INFO executor.Executor: Running task 131.0 in stage 2.0 (TID 533)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 541
+19/08/27 01:19:31 INFO executor.Executor: Running task 139.0 in stage 2.0 (TID 541)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 549
+19/08/27 01:19:31 INFO executor.Executor: Running task 147.0 in stage 2.0 (TID 549)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 557
+19/08/27 01:19:31 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 2
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 565
+19/08/27 01:19:31 INFO executor.Executor: Running task 155.0 in stage 2.0 (TID 557)
+19/08/27 01:19:31 INFO executor.Executor: Running task 163.0 in stage 2.0 (TID 565)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 573
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 581
+19/08/27 01:19:31 INFO executor.Executor: Running task 171.0 in stage 2.0 (TID 573)
+19/08/27 01:19:31 INFO executor.Executor: Running task 179.0 in stage 2.0 (TID 581)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 589
+19/08/27 01:19:31 INFO executor.Executor: Running task 187.0 in stage 2.0 (TID 589)
+19/08/27 01:19:31 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 597
+19/08/27 01:19:31 INFO executor.Executor: Running task 195.0 in stage 2.0 (TID 597)
+19/08/27 01:19:31 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.5 KB, free 8.7 GB)
+19/08/27 01:19:31 INFO broadcast.TorrentBroadcast: Reading broadcast variable 2 took 17 ms
+19/08/27 01:19:31 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 4.5 KB, free 8.7 GB)
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_179 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_163 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_3 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_155 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_35 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_51 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_67 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_11 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_123 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_83 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_99 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_115 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_139 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_27 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_19 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_131 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_91 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_75 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_43 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_59 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_107 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_195 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_187 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_147 locally
+19/08/27 01:19:31 INFO storage.BlockManager: Found block rdd_3_171 locally
+19/08/27 01:19:33 INFO executor.Executor: Finished task 11.0 in stage 2.0 (TID 413). 1141 bytes result sent to driver
+19/08/27 01:19:33 INFO executor.Executor: Finished task 107.0 in stage 2.0 (TID 509). 1141 bytes result sent to driver
+19/08/27 01:19:33 INFO executor.Executor: Finished task 51.0 in stage 2.0 (TID 453). 1141 bytes result sent to driver
+19/08/27 01:19:33 INFO executor.Executor: Finished task 75.0 in stage 2.0 (TID 477). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 43.0 in stage 2.0 (TID 445). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 3.0 in stage 2.0 (TID 405). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 19.0 in stage 2.0 (TID 421). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 115.0 in stage 2.0 (TID 517). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 123.0 in stage 2.0 (TID 525). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 139.0 in stage 2.0 (TID 541). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 91.0 in stage 2.0 (TID 493). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 99.0 in stage 2.0 (TID 501). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 59.0 in stage 2.0 (TID 461). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 147.0 in stage 2.0 (TID 549). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 67.0 in stage 2.0 (TID 469). 1184 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 179.0 in stage 2.0 (TID 581). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 35.0 in stage 2.0 (TID 437). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 27.0 in stage 2.0 (TID 429). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 171.0 in stage 2.0 (TID 573). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 195.0 in stage 2.0 (TID 597). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 163.0 in stage 2.0 (TID 565). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 83.0 in stage 2.0 (TID 485). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 187.0 in stage 2.0 (TID 589). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 131.0 in stage 2.0 (TID 533). 1141 bytes result sent to driver
+19/08/27 01:19:34 INFO executor.Executor: Finished task 155.0 in stage 2.0 (TID 557). 1141 bytes result sent to driver
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 603
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 611
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 619
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 627
+19/08/27 01:19:41 INFO executor.Executor: Running task 4.0 in stage 3.0 (TID 603)
+19/08/27 01:19:41 INFO executor.Executor: Running task 20.0 in stage 3.0 (TID 619)
+19/08/27 01:19:41 INFO executor.Executor: Running task 28.0 in stage 3.0 (TID 627)
+19/08/27 01:19:41 INFO executor.Executor: Running task 12.0 in stage 3.0 (TID 611)
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 635
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 643
+19/08/27 01:19:41 INFO executor.Executor: Running task 36.0 in stage 3.0 (TID 635)
+19/08/27 01:19:41 INFO executor.Executor: Running task 44.0 in stage 3.0 (TID 643)
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 651
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 659
+19/08/27 01:19:41 INFO executor.Executor: Running task 52.0 in stage 3.0 (TID 651)
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 667
+19/08/27 01:19:41 INFO executor.Executor: Running task 60.0 in stage 3.0 (TID 659)
+19/08/27 01:19:41 INFO executor.Executor: Running task 68.0 in stage 3.0 (TID 667)
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 675
+19/08/27 01:19:41 INFO executor.Executor: Running task 76.0 in stage 3.0 (TID 675)
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 683
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 691
+19/08/27 01:19:41 INFO executor.Executor: Running task 92.0 in stage 3.0 (TID 691)
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 699
+19/08/27 01:19:41 INFO executor.Executor: Running task 84.0 in stage 3.0 (TID 683)
+19/08/27 01:19:41 INFO executor.Executor: Running task 100.0 in stage 3.0 (TID 699)
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 707
+19/08/27 01:19:41 INFO executor.Executor: Running task 108.0 in stage 3.0 (TID 707)
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 715
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 723
+19/08/27 01:19:41 INFO executor.Executor: Running task 116.0 in stage 3.0 (TID 715)
+19/08/27 01:19:41 INFO executor.Executor: Running task 124.0 in stage 3.0 (TID 723)
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 731
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 739
+19/08/27 01:19:41 INFO executor.Executor: Running task 132.0 in stage 3.0 (TID 731)
+19/08/27 01:19:41 INFO executor.Executor: Running task 140.0 in stage 3.0 (TID 739)
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 747
+19/08/27 01:19:41 INFO executor.Executor: Running task 148.0 in stage 3.0 (TID 747)
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 755
+19/08/27 01:19:41 INFO executor.Executor: Running task 156.0 in stage 3.0 (TID 755)
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 763
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Updating epoch to 1 and clearing cache
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 771
+19/08/27 01:19:41 INFO executor.Executor: Running task 164.0 in stage 3.0 (TID 763)
+19/08/27 01:19:41 INFO executor.Executor: Running task 172.0 in stage 3.0 (TID 771)
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 779
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 787
+19/08/27 01:19:41 INFO executor.Executor: Running task 180.0 in stage 3.0 (TID 779)
+19/08/27 01:19:41 INFO executor.Executor: Running task 188.0 in stage 3.0 (TID 787)
+19/08/27 01:19:41 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 795
+19/08/27 01:19:41 INFO executor.Executor: Running task 196.0 in stage 3.0 (TID 795)
+19/08/27 01:19:41 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 3
+19/08/27 01:19:41 INFO memory.MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 2.9 KB, free 8.7 GB)
+19/08/27 01:19:41 INFO broadcast.TorrentBroadcast: Reading broadcast variable 3 took 7 ms
+19/08/27 01:19:41 INFO memory.MemoryStore: Block broadcast_3 stored as values in memory (estimated size 5.3 KB, free 8.7 GB)
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@mdc-ch1-cust4.mdc.ext.hpe.com:39567)
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/08/27 01:19:41 INFO spark.MapOutputTrackerWorker: Got the output locations
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:19:41 INFO client.TransportClientFactory: Successfully created connection to /10.1.3.4:39885 after 3 ms (0 ms spent in bootstraps)
+19/08/27 01:19:41 INFO client.TransportClientFactory: Successfully created connection to /10.1.2.4:36497 after 3 ms (0 ms spent in bootstraps)
+19/08/27 01:19:41 INFO client.TransportClientFactory: Successfully created connection to /10.1.4.4:44453 after 3 ms (0 ms spent in bootstraps)
+19/08/27 01:19:41 INFO client.TransportClientFactory: Successfully created connection to /10.1.6.4:41151 after 3 ms (0 ms spent in bootstraps)
+19/08/27 01:19:41 INFO client.TransportClientFactory: Successfully created connection to /10.1.5.4:41537 after 3 ms (0 ms spent in bootstraps)
+19/08/27 01:19:41 INFO client.TransportClientFactory: Successfully created connection to /10.1.8.4:35017 after 3 ms (0 ms spent in bootstraps)
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 87 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 87 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 91 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 95 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 92 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 96 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 93 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 96 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 92 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 93 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 93 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 93 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 94 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 93 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 97 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 95 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 95 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 98 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 98 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 95 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 97 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 98 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 99 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 96 ms
+19/08/27 01:19:41 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 99 ms
+19/08/27 01:19:48 INFO executor.Executor: Finished task 164.0 in stage 3.0 (TID 763). 1141 bytes result sent to driver
+19/08/27 01:19:48 INFO executor.Executor: Finished task 188.0 in stage 3.0 (TID 787). 1141 bytes result sent to driver
+19/08/27 01:19:49 INFO executor.Executor: Finished task 140.0 in stage 3.0 (TID 739). 1141 bytes result sent to driver
+19/08/27 01:19:49 INFO executor.Executor: Finished task 4.0 in stage 3.0 (TID 603). 1141 bytes result sent to driver
+19/08/27 01:19:49 INFO executor.Executor: Finished task 68.0 in stage 3.0 (TID 667). 1141 bytes result sent to driver
+19/08/27 01:19:49 INFO executor.Executor: Finished task 108.0 in stage 3.0 (TID 707). 1141 bytes result sent to driver
+19/08/27 01:19:50 INFO executor.Executor: Finished task 44.0 in stage 3.0 (TID 643). 1184 bytes result sent to driver
+19/08/27 01:19:50 INFO executor.Executor: Finished task 52.0 in stage 3.0 (TID 651). 1141 bytes result sent to driver
+19/08/27 01:19:56 INFO executor.Executor: Finished task 132.0 in stage 3.0 (TID 731). 1141 bytes result sent to driver
+19/08/27 01:19:56 INFO executor.Executor: Finished task 148.0 in stage 3.0 (TID 747). 1141 bytes result sent to driver
+19/08/27 01:19:56 INFO executor.Executor: Finished task 156.0 in stage 3.0 (TID 755). 1141 bytes result sent to driver
+19/08/27 01:19:56 INFO executor.Executor: Finished task 20.0 in stage 3.0 (TID 619). 1141 bytes result sent to driver
+19/08/27 01:19:56 INFO executor.Executor: Finished task 76.0 in stage 3.0 (TID 675). 1141 bytes result sent to driver
+19/08/27 01:19:56 INFO executor.Executor: Finished task 84.0 in stage 3.0 (TID 683). 1141 bytes result sent to driver
+19/08/27 01:19:58 INFO executor.Executor: Finished task 28.0 in stage 3.0 (TID 627). 1141 bytes result sent to driver
+19/08/27 01:19:58 INFO executor.Executor: Finished task 36.0 in stage 3.0 (TID 635). 1141 bytes result sent to driver
+19/08/27 01:19:58 INFO executor.Executor: Finished task 124.0 in stage 3.0 (TID 723). 1141 bytes result sent to driver
+19/08/27 01:19:58 INFO executor.Executor: Finished task 92.0 in stage 3.0 (TID 691). 1141 bytes result sent to driver
+19/08/27 01:19:58 INFO executor.Executor: Finished task 172.0 in stage 3.0 (TID 771). 1141 bytes result sent to driver
+19/08/27 01:19:58 INFO executor.Executor: Finished task 180.0 in stage 3.0 (TID 779). 1141 bytes result sent to driver
+19/08/27 01:19:58 INFO executor.Executor: Finished task 100.0 in stage 3.0 (TID 699). 1141 bytes result sent to driver
+19/08/27 01:19:58 INFO executor.Executor: Finished task 12.0 in stage 3.0 (TID 611). 1141 bytes result sent to driver
+19/08/27 01:19:58 INFO executor.Executor: Finished task 60.0 in stage 3.0 (TID 659). 1141 bytes result sent to driver
+19/08/27 01:19:58 INFO executor.Executor: Finished task 116.0 in stage 3.0 (TID 715). 1141 bytes result sent to driver
+19/08/27 01:19:58 INFO executor.Executor: Finished task 196.0 in stage 3.0 (TID 795). 1184 bytes result sent to driver
+19/08/27 01:20:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 799
+19/08/27 01:20:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 807
+19/08/27 01:20:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 815
+19/08/27 01:20:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 823
+19/08/27 01:20:02 INFO executor.Executor: Running task 0.0 in stage 5.0 (TID 799)
+19/08/27 01:20:02 INFO executor.Executor: Running task 16.0 in stage 5.0 (TID 815)
+19/08/27 01:20:02 INFO executor.Executor: Running task 8.0 in stage 5.0 (TID 807)
+19/08/27 01:20:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 831
+19/08/27 01:20:02 INFO executor.Executor: Running task 24.0 in stage 5.0 (TID 823)
+19/08/27 01:20:02 INFO executor.Executor: Running task 32.0 in stage 5.0 (TID 831)
+19/08/27 01:20:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 839
+19/08/27 01:20:05 INFO executor.Executor: Running task 40.0 in stage 5.0 (TID 839)
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 847
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 855
+19/08/27 01:20:05 INFO executor.Executor: Running task 48.0 in stage 5.0 (TID 847)
+19/08/27 01:20:05 INFO executor.Executor: Running task 56.0 in stage 5.0 (TID 855)
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 863
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 871
+19/08/27 01:20:05 INFO executor.Executor: Running task 64.0 in stage 5.0 (TID 863)
+19/08/27 01:20:05 INFO executor.Executor: Running task 72.0 in stage 5.0 (TID 871)
+19/08/27 01:20:05 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 4
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 879
+19/08/27 01:20:05 INFO executor.Executor: Running task 80.0 in stage 5.0 (TID 879)
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 887
+19/08/27 01:20:05 INFO executor.Executor: Running task 88.0 in stage 5.0 (TID 887)
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 895
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 903
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 911
+19/08/27 01:20:05 INFO executor.Executor: Running task 96.0 in stage 5.0 (TID 895)
+19/08/27 01:20:05 INFO executor.Executor: Running task 112.0 in stage 5.0 (TID 911)
+19/08/27 01:20:05 INFO executor.Executor: Running task 104.0 in stage 5.0 (TID 903)
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 919
+19/08/27 01:20:05 INFO executor.Executor: Running task 120.0 in stage 5.0 (TID 919)
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 927
+19/08/27 01:20:05 INFO executor.Executor: Running task 128.0 in stage 5.0 (TID 927)
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 935
+19/08/27 01:20:05 INFO executor.Executor: Running task 136.0 in stage 5.0 (TID 935)
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 943
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 951
+19/08/27 01:20:05 INFO executor.Executor: Running task 144.0 in stage 5.0 (TID 943)
+19/08/27 01:20:05 INFO executor.Executor: Running task 152.0 in stage 5.0 (TID 951)
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 959
+19/08/27 01:20:05 INFO executor.Executor: Running task 160.0 in stage 5.0 (TID 959)
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 967
+19/08/27 01:20:05 INFO executor.Executor: Running task 168.0 in stage 5.0 (TID 967)
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 975
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 983
+19/08/27 01:20:05 INFO executor.Executor: Running task 176.0 in stage 5.0 (TID 975)
+19/08/27 01:20:05 INFO executor.Executor: Running task 184.0 in stage 5.0 (TID 983)
+19/08/27 01:20:05 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 991
+19/08/27 01:20:05 INFO executor.Executor: Running task 192.0 in stage 5.0 (TID 991)
+19/08/27 01:20:09 INFO memory.MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 3.2 KB, free 8.7 GB)
+19/08/27 01:20:09 INFO broadcast.TorrentBroadcast: Reading broadcast variable 4 took 3273 ms
+19/08/27 01:20:09 INFO memory.MemoryStore: Block broadcast_4 stored as values in memory (estimated size 6.1 KB, free 8.7 GB)
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 18 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 19 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 18 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 22 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 28 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 36 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 33 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 34 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 35 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 33 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 35 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 30 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 34 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 35 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 30 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 30 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 30 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 30 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 32 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 31 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 31 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 31 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 32 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 31 ms
+19/08/27 01:20:09 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 32 ms
+19/08/27 01:20:11 INFO executor.Executor: Finished task 40.0 in stage 5.0 (TID 839). 1146 bytes result sent to driver
+19/08/27 01:20:12 INFO executor.Executor: Finished task 168.0 in stage 5.0 (TID 967). 1146 bytes result sent to driver
+19/08/27 01:20:14 INFO executor.Executor: Finished task 144.0 in stage 5.0 (TID 943). 1146 bytes result sent to driver
+19/08/27 01:20:14 INFO executor.Executor: Finished task 112.0 in stage 5.0 (TID 911). 1146 bytes result sent to driver
+19/08/27 01:20:14 INFO executor.Executor: Finished task 176.0 in stage 5.0 (TID 975). 1146 bytes result sent to driver
+19/08/27 01:20:14 INFO executor.Executor: Finished task 192.0 in stage 5.0 (TID 991). 1146 bytes result sent to driver
+19/08/27 01:20:15 INFO executor.Executor: Finished task 120.0 in stage 5.0 (TID 919). 1146 bytes result sent to driver
+19/08/27 01:20:15 INFO executor.Executor: Finished task 160.0 in stage 5.0 (TID 959). 1146 bytes result sent to driver
+19/08/27 01:20:17 INFO executor.Executor: Finished task 16.0 in stage 5.0 (TID 815). 1146 bytes result sent to driver
+19/08/27 01:20:17 INFO executor.Executor: Finished task 184.0 in stage 5.0 (TID 983). 1146 bytes result sent to driver
+19/08/27 01:20:17 INFO executor.Executor: Finished task 48.0 in stage 5.0 (TID 847). 1146 bytes result sent to driver
+19/08/27 01:20:17 INFO executor.Executor: Finished task 0.0 in stage 5.0 (TID 799). 1189 bytes result sent to driver
+19/08/27 01:20:17 INFO executor.Executor: Finished task 136.0 in stage 5.0 (TID 935). 1146 bytes result sent to driver
+19/08/27 01:20:17 INFO executor.Executor: Finished task 56.0 in stage 5.0 (TID 855). 1189 bytes result sent to driver
+19/08/27 01:20:17 INFO executor.Executor: Finished task 104.0 in stage 5.0 (TID 903). 1146 bytes result sent to driver
+19/08/27 01:20:23 INFO executor.Executor: Finished task 32.0 in stage 5.0 (TID 831). 1146 bytes result sent to driver
+19/08/27 01:20:23 INFO executor.Executor: Finished task 24.0 in stage 5.0 (TID 823). 1146 bytes result sent to driver
+19/08/27 01:20:23 INFO executor.Executor: Finished task 96.0 in stage 5.0 (TID 895). 1146 bytes result sent to driver
+19/08/27 01:20:23 INFO executor.Executor: Finished task 152.0 in stage 5.0 (TID 951). 1189 bytes result sent to driver
+19/08/27 01:20:23 INFO executor.Executor: Finished task 80.0 in stage 5.0 (TID 879). 1146 bytes result sent to driver
+19/08/27 01:20:23 INFO executor.Executor: Finished task 128.0 in stage 5.0 (TID 927). 1146 bytes result sent to driver
+19/08/27 01:20:23 INFO executor.Executor: Finished task 72.0 in stage 5.0 (TID 871). 1146 bytes result sent to driver
+19/08/27 01:20:23 INFO executor.Executor: Finished task 8.0 in stage 5.0 (TID 807). 1146 bytes result sent to driver
+19/08/27 01:20:23 INFO executor.Executor: Finished task 64.0 in stage 5.0 (TID 863). 1146 bytes result sent to driver
+19/08/27 01:20:23 INFO executor.Executor: Finished task 88.0 in stage 5.0 (TID 887). 1146 bytes result sent to driver
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1004
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1012
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1020
+19/08/27 01:20:23 INFO executor.Executor: Running task 13.0 in stage 7.0 (TID 1012)
+19/08/27 01:20:23 INFO executor.Executor: Running task 5.0 in stage 7.0 (TID 1004)
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1028
+19/08/27 01:20:23 INFO executor.Executor: Running task 21.0 in stage 7.0 (TID 1020)
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1036
+19/08/27 01:20:23 INFO executor.Executor: Running task 29.0 in stage 7.0 (TID 1028)
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1044
+19/08/27 01:20:23 INFO executor.Executor: Running task 37.0 in stage 7.0 (TID 1036)
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1052
+19/08/27 01:20:23 INFO executor.Executor: Running task 45.0 in stage 7.0 (TID 1044)
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1060
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1068
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1076
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1084
+19/08/27 01:20:23 INFO executor.Executor: Running task 61.0 in stage 7.0 (TID 1060)
+19/08/27 01:20:23 INFO executor.Executor: Running task 77.0 in stage 7.0 (TID 1076)
+19/08/27 01:20:23 INFO executor.Executor: Running task 53.0 in stage 7.0 (TID 1052)
+19/08/27 01:20:23 INFO executor.Executor: Running task 69.0 in stage 7.0 (TID 1068)
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1092
+19/08/27 01:20:23 INFO executor.Executor: Running task 85.0 in stage 7.0 (TID 1084)
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1100
+19/08/27 01:20:23 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 5
+19/08/27 01:20:23 INFO executor.Executor: Running task 93.0 in stage 7.0 (TID 1092)
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1108
+19/08/27 01:20:23 INFO executor.Executor: Running task 101.0 in stage 7.0 (TID 1100)
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1116
+19/08/27 01:20:23 INFO executor.Executor: Running task 109.0 in stage 7.0 (TID 1108)
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1124
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1132
+19/08/27 01:20:23 INFO executor.Executor: Running task 117.0 in stage 7.0 (TID 1116)
+19/08/27 01:20:23 INFO executor.Executor: Running task 125.0 in stage 7.0 (TID 1124)
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1140
+19/08/27 01:20:23 INFO executor.Executor: Running task 133.0 in stage 7.0 (TID 1132)
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1148
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1156
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1164
+19/08/27 01:20:23 INFO executor.Executor: Running task 141.0 in stage 7.0 (TID 1140)
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1172
+19/08/27 01:20:23 INFO executor.Executor: Running task 149.0 in stage 7.0 (TID 1148)
+19/08/27 01:20:23 INFO executor.Executor: Running task 165.0 in stage 7.0 (TID 1164)
+19/08/27 01:20:23 INFO executor.Executor: Running task 157.0 in stage 7.0 (TID 1156)
+19/08/27 01:20:23 INFO executor.Executor: Running task 173.0 in stage 7.0 (TID 1172)
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1180
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1188
+19/08/27 01:20:23 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1196
+19/08/27 01:20:23 INFO executor.Executor: Running task 181.0 in stage 7.0 (TID 1180)
+19/08/27 01:20:23 INFO executor.Executor: Running task 189.0 in stage 7.0 (TID 1188)
+19/08/27 01:20:23 INFO executor.Executor: Running task 197.0 in stage 7.0 (TID 1196)
+19/08/27 01:20:23 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:38517 after 2 ms (0 ms spent in bootstraps)
+19/08/27 01:20:23 INFO memory.MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 3.3 KB, free 8.7 GB)
+19/08/27 01:20:23 INFO broadcast.TorrentBroadcast: Reading broadcast variable 5 took 17 ms
+19/08/27 01:20:23 INFO memory.MemoryStore: Block broadcast_5 stored as values in memory (estimated size 6.3 KB, free 8.7 GB)
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 3 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 3 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 7 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 8 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 9 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 10 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 10 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 10 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 11 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 11 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 10 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 11 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 13 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 11 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 11 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 11 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 10 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 10 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 10 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 10 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 10 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 11 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 11 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 11 ms
+19/08/27 01:20:23 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 11 ms
+19/08/27 01:20:30 INFO executor.Executor: Finished task 37.0 in stage 7.0 (TID 1036). 1146 bytes result sent to driver
+19/08/27 01:20:30 INFO executor.Executor: Finished task 45.0 in stage 7.0 (TID 1044). 1146 bytes result sent to driver
+19/08/27 01:20:30 INFO executor.Executor: Finished task 149.0 in stage 7.0 (TID 1148). 1146 bytes result sent to driver
+19/08/27 01:20:37 INFO executor.Executor: Finished task 189.0 in stage 7.0 (TID 1188). 1146 bytes result sent to driver
+19/08/27 01:20:37 INFO executor.Executor: Finished task 165.0 in stage 7.0 (TID 1164). 1146 bytes result sent to driver
+19/08/27 01:20:37 INFO executor.Executor: Finished task 5.0 in stage 7.0 (TID 1004). 1146 bytes result sent to driver
+19/08/27 01:20:37 INFO executor.Executor: Finished task 173.0 in stage 7.0 (TID 1172). 1146 bytes result sent to driver
+19/08/27 01:20:37 INFO executor.Executor: Finished task 197.0 in stage 7.0 (TID 1196). 1146 bytes result sent to driver
+19/08/27 01:20:37 INFO executor.Executor: Finished task 53.0 in stage 7.0 (TID 1052). 1146 bytes result sent to driver
+19/08/27 01:20:37 INFO executor.Executor: Finished task 157.0 in stage 7.0 (TID 1156). 1146 bytes result sent to driver
+19/08/27 01:20:38 INFO executor.Executor: Finished task 133.0 in stage 7.0 (TID 1132). 1146 bytes result sent to driver
+19/08/27 01:20:38 INFO executor.Executor: Finished task 13.0 in stage 7.0 (TID 1012). 1146 bytes result sent to driver
+19/08/27 01:20:38 INFO executor.Executor: Finished task 109.0 in stage 7.0 (TID 1108). 1146 bytes result sent to driver
+19/08/27 01:20:38 INFO executor.Executor: Finished task 181.0 in stage 7.0 (TID 1180). 1146 bytes result sent to driver
+19/08/27 01:20:38 INFO executor.Executor: Finished task 69.0 in stage 7.0 (TID 1068). 1146 bytes result sent to driver
+19/08/27 01:20:38 INFO executor.Executor: Finished task 125.0 in stage 7.0 (TID 1124). 1146 bytes result sent to driver
+19/08/27 01:20:38 INFO executor.Executor: Finished task 141.0 in stage 7.0 (TID 1140). 1146 bytes result sent to driver
+19/08/27 01:20:38 INFO executor.Executor: Finished task 93.0 in stage 7.0 (TID 1092). 1146 bytes result sent to driver
+19/08/27 01:20:38 INFO executor.Executor: Finished task 77.0 in stage 7.0 (TID 1076). 1146 bytes result sent to driver
+19/08/27 01:20:38 INFO executor.Executor: Finished task 101.0 in stage 7.0 (TID 1100). 1146 bytes result sent to driver
+19/08/27 01:20:38 INFO executor.Executor: Finished task 117.0 in stage 7.0 (TID 1116). 1146 bytes result sent to driver
+19/08/27 01:20:38 INFO executor.Executor: Finished task 21.0 in stage 7.0 (TID 1020). 1146 bytes result sent to driver
+19/08/27 01:20:38 INFO executor.Executor: Finished task 61.0 in stage 7.0 (TID 1060). 1146 bytes result sent to driver
+19/08/27 01:20:38 INFO executor.Executor: Finished task 29.0 in stage 7.0 (TID 1028). 1146 bytes result sent to driver
+19/08/27 01:20:38 INFO executor.Executor: Finished task 85.0 in stage 7.0 (TID 1084). 1146 bytes result sent to driver
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1201
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1209
+19/08/27 01:20:47 INFO executor.Executor: Running task 2.0 in stage 9.0 (TID 1201)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1217
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1225
+19/08/27 01:20:47 INFO executor.Executor: Running task 10.0 in stage 9.0 (TID 1209)
+19/08/27 01:20:47 INFO executor.Executor: Running task 18.0 in stage 9.0 (TID 1217)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1233
+19/08/27 01:20:47 INFO executor.Executor: Running task 26.0 in stage 9.0 (TID 1225)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1241
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1249
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1257
+19/08/27 01:20:47 INFO executor.Executor: Running task 34.0 in stage 9.0 (TID 1233)
+19/08/27 01:20:47 INFO executor.Executor: Running task 58.0 in stage 9.0 (TID 1257)
+19/08/27 01:20:47 INFO executor.Executor: Running task 42.0 in stage 9.0 (TID 1241)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1265
+19/08/27 01:20:47 INFO executor.Executor: Running task 50.0 in stage 9.0 (TID 1249)
+19/08/27 01:20:47 INFO executor.Executor: Running task 66.0 in stage 9.0 (TID 1265)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1273
+19/08/27 01:20:47 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 6
+19/08/27 01:20:47 INFO executor.Executor: Running task 74.0 in stage 9.0 (TID 1273)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1281
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1289
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1297
+19/08/27 01:20:47 INFO executor.Executor: Running task 82.0 in stage 9.0 (TID 1281)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1305
+19/08/27 01:20:47 INFO executor.Executor: Running task 90.0 in stage 9.0 (TID 1289)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1313
+19/08/27 01:20:47 INFO executor.Executor: Running task 98.0 in stage 9.0 (TID 1297)
+19/08/27 01:20:47 INFO executor.Executor: Running task 106.0 in stage 9.0 (TID 1305)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1321
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1329
+19/08/27 01:20:47 INFO executor.Executor: Running task 114.0 in stage 9.0 (TID 1313)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1337
+19/08/27 01:20:47 INFO executor.Executor: Running task 130.0 in stage 9.0 (TID 1329)
+19/08/27 01:20:47 INFO executor.Executor: Running task 122.0 in stage 9.0 (TID 1321)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1345
+19/08/27 01:20:47 INFO executor.Executor: Running task 138.0 in stage 9.0 (TID 1337)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1353
+19/08/27 01:20:47 INFO executor.Executor: Running task 146.0 in stage 9.0 (TID 1345)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1361
+19/08/27 01:20:47 INFO executor.Executor: Running task 154.0 in stage 9.0 (TID 1353)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1369
+19/08/27 01:20:47 INFO executor.Executor: Running task 162.0 in stage 9.0 (TID 1361)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1377
+19/08/27 01:20:47 INFO executor.Executor: Running task 170.0 in stage 9.0 (TID 1369)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1385
+19/08/27 01:20:47 INFO executor.Executor: Running task 178.0 in stage 9.0 (TID 1377)
+19/08/27 01:20:47 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1393
+19/08/27 01:20:47 INFO executor.Executor: Running task 186.0 in stage 9.0 (TID 1385)
+19/08/27 01:20:47 INFO executor.Executor: Running task 194.0 in stage 9.0 (TID 1393)
+19/08/27 01:20:47 INFO memory.MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 2.9 KB, free 8.7 GB)
+19/08/27 01:20:47 INFO broadcast.TorrentBroadcast: Reading broadcast variable 6 took 6 ms
+19/08/27 01:20:47 INFO memory.MemoryStore: Block broadcast_6 stored as values in memory (estimated size 5.3 KB, free 8.7 GB)
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 1 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 2 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 3 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 3 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 3 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 9 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 10 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 10 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 9 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 9 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Getting 200 non-empty blocks including 25 local blocks and 175 remote blocks
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 11 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 11 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 11 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 12 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 12 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 12 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 13 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 13 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 13 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 13 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 13 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 13 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 13 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 13 ms
+19/08/27 01:20:47 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 13 ms
+19/08/27 01:20:50 INFO executor.Executor: Finished task 194.0 in stage 9.0 (TID 1393). 1141 bytes result sent to driver
+19/08/27 01:20:51 INFO executor.Executor: Finished task 154.0 in stage 9.0 (TID 1353). 1141 bytes result sent to driver
+19/08/27 01:20:51 INFO executor.Executor: Finished task 2.0 in stage 9.0 (TID 1201). 1141 bytes result sent to driver
+19/08/27 01:20:53 INFO executor.Executor: Finished task 146.0 in stage 9.0 (TID 1345). 1141 bytes result sent to driver
+19/08/27 01:20:53 INFO executor.Executor: Finished task 170.0 in stage 9.0 (TID 1369). 1141 bytes result sent to driver
+19/08/27 01:20:53 INFO executor.Executor: Finished task 122.0 in stage 9.0 (TID 1321). 1141 bytes result sent to driver
+19/08/27 01:20:56 INFO executor.Executor: Finished task 186.0 in stage 9.0 (TID 1385). 1184 bytes result sent to driver
+19/08/27 01:20:56 INFO executor.Executor: Finished task 34.0 in stage 9.0 (TID 1233). 1141 bytes result sent to driver
+19/08/27 01:20:56 INFO executor.Executor: Finished task 90.0 in stage 9.0 (TID 1289). 1141 bytes result sent to driver
+19/08/27 01:20:56 INFO executor.Executor: Finished task 138.0 in stage 9.0 (TID 1337). 1141 bytes result sent to driver
+19/08/27 01:20:56 INFO executor.Executor: Finished task 10.0 in stage 9.0 (TID 1209). 1141 bytes result sent to driver
+19/08/27 01:20:56 INFO executor.Executor: Finished task 82.0 in stage 9.0 (TID 1281). 1141 bytes result sent to driver
+19/08/27 01:20:56 INFO executor.Executor: Finished task 42.0 in stage 9.0 (TID 1241). 1141 bytes result sent to driver
+19/08/27 01:20:56 INFO executor.Executor: Finished task 26.0 in stage 9.0 (TID 1225). 1141 bytes result sent to driver
+19/08/27 01:20:56 INFO executor.Executor: Finished task 18.0 in stage 9.0 (TID 1217). 1141 bytes result sent to driver
+19/08/27 01:20:56 INFO executor.Executor: Finished task 74.0 in stage 9.0 (TID 1273). 1141 bytes result sent to driver
+19/08/27 01:20:56 INFO executor.Executor: Finished task 98.0 in stage 9.0 (TID 1297). 1141 bytes result sent to driver
+19/08/27 01:20:57 INFO executor.Executor: Finished task 162.0 in stage 9.0 (TID 1361). 1141 bytes result sent to driver
+19/08/27 01:20:57 INFO executor.Executor: Finished task 178.0 in stage 9.0 (TID 1377). 1141 bytes result sent to driver
+19/08/27 01:20:57 INFO executor.Executor: Finished task 130.0 in stage 9.0 (TID 1329). 1141 bytes result sent to driver
+19/08/27 01:20:57 INFO executor.Executor: Finished task 106.0 in stage 9.0 (TID 1305). 1141 bytes result sent to driver
+19/08/27 01:20:57 INFO executor.Executor: Finished task 58.0 in stage 9.0 (TID 1257). 1141 bytes result sent to driver
+19/08/27 01:20:57 INFO executor.Executor: Finished task 114.0 in stage 9.0 (TID 1313). 1141 bytes result sent to driver
+19/08/27 01:20:57 INFO executor.Executor: Finished task 66.0 in stage 9.0 (TID 1265). 1141 bytes result sent to driver
+19/08/27 01:20:57 INFO executor.Executor: Finished task 50.0 in stage 9.0 (TID 1249). 1141 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1405
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1413
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1421
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1429
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1437
+19/08/27 01:20:58 INFO executor.Executor: Running task 3.0 in stage 10.0 (TID 1405)
+19/08/27 01:20:58 INFO executor.Executor: Running task 11.0 in stage 10.0 (TID 1413)
+19/08/27 01:20:58 INFO executor.Executor: Running task 19.0 in stage 10.0 (TID 1421)
+19/08/27 01:20:58 INFO executor.Executor: Running task 27.0 in stage 10.0 (TID 1429)
+19/08/27 01:20:58 INFO executor.Executor: Running task 35.0 in stage 10.0 (TID 1437)
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1445
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1453
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1461
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1469
+19/08/27 01:20:58 INFO executor.Executor: Running task 43.0 in stage 10.0 (TID 1445)
+19/08/27 01:20:58 INFO executor.Executor: Running task 59.0 in stage 10.0 (TID 1461)
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1477
+19/08/27 01:20:58 INFO executor.Executor: Running task 51.0 in stage 10.0 (TID 1453)
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1485
+19/08/27 01:20:58 INFO executor.Executor: Running task 67.0 in stage 10.0 (TID 1469)
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1493
+19/08/27 01:20:58 INFO executor.Executor: Running task 75.0 in stage 10.0 (TID 1477)
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1501
+19/08/27 01:20:58 INFO executor.Executor: Running task 83.0 in stage 10.0 (TID 1485)
+19/08/27 01:20:58 INFO executor.Executor: Running task 99.0 in stage 10.0 (TID 1501)
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1509
+19/08/27 01:20:58 INFO executor.Executor: Running task 91.0 in stage 10.0 (TID 1493)
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1517
+19/08/27 01:20:58 INFO executor.Executor: Running task 107.0 in stage 10.0 (TID 1509)
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1525
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1533
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1541
+19/08/27 01:20:58 INFO executor.Executor: Running task 115.0 in stage 10.0 (TID 1517)
+19/08/27 01:20:58 INFO executor.Executor: Running task 123.0 in stage 10.0 (TID 1525)
+19/08/27 01:20:58 INFO executor.Executor: Running task 139.0 in stage 10.0 (TID 1541)
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1549
+19/08/27 01:20:58 INFO executor.Executor: Running task 131.0 in stage 10.0 (TID 1533)
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1557
+19/08/27 01:20:58 INFO executor.Executor: Running task 147.0 in stage 10.0 (TID 1549)
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1565
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1573
+19/08/27 01:20:58 INFO executor.Executor: Running task 155.0 in stage 10.0 (TID 1557)
+19/08/27 01:20:58 INFO executor.Executor: Running task 163.0 in stage 10.0 (TID 1565)
+19/08/27 01:20:58 INFO executor.Executor: Running task 171.0 in stage 10.0 (TID 1573)
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1581
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1589
+19/08/27 01:20:58 INFO executor.Executor: Running task 179.0 in stage 10.0 (TID 1581)
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 1597
+19/08/27 01:20:58 INFO executor.Executor: Running task 187.0 in stage 10.0 (TID 1589)
+19/08/27 01:20:58 INFO executor.Executor: Running task 195.0 in stage 10.0 (TID 1597)
+19/08/27 01:20:58 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 7
+19/08/27 01:20:58 INFO memory.MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 1545.0 B, free 8.7 GB)
+19/08/27 01:20:58 INFO broadcast.TorrentBroadcast: Reading broadcast variable 7 took 4 ms
+19/08/27 01:20:58 INFO memory.MemoryStore: Block broadcast_7 stored as values in memory (estimated size 2.4 KB, free 8.7 GB)
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_155 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_163 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_139 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_171 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_115 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_195 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_3 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_99 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_179 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_147 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_187 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_123 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_131 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_83 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_43 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_107 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_35 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_91 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_59 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_19 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_27 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_51 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_67 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_11 locally
+19/08/27 01:20:58 INFO storage.BlockManager: Found block rdd_3_75 locally
+19/08/27 01:20:58 INFO executor.Executor: Finished task 75.0 in stage 10.0 (TID 1477). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 115.0 in stage 10.0 (TID 1517). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 43.0 in stage 10.0 (TID 1445). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 59.0 in stage 10.0 (TID 1461). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 195.0 in stage 10.0 (TID 1597). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 83.0 in stage 10.0 (TID 1485). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 51.0 in stage 10.0 (TID 1453). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 27.0 in stage 10.0 (TID 1429). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 99.0 in stage 10.0 (TID 1501). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 155.0 in stage 10.0 (TID 1557). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 163.0 in stage 10.0 (TID 1565). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 67.0 in stage 10.0 (TID 1469). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 35.0 in stage 10.0 (TID 1437). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 179.0 in stage 10.0 (TID 1581). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 91.0 in stage 10.0 (TID 1493). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 123.0 in stage 10.0 (TID 1525). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 139.0 in stage 10.0 (TID 1541). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 19.0 in stage 10.0 (TID 1421). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 11.0 in stage 10.0 (TID 1413). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 171.0 in stage 10.0 (TID 1573). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 107.0 in stage 10.0 (TID 1509). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 187.0 in stage 10.0 (TID 1589). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 147.0 in stage 10.0 (TID 1549). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 131.0 in stage 10.0 (TID 1533). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.Executor: Finished task 3.0 in stage 10.0 (TID 1405). 755 bytes result sent to driver
+19/08/27 01:20:58 INFO executor.CoarseGrainedExecutorBackend: Driver commanded a shutdown
+19/08/27 01:20:58 ERROR executor.CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

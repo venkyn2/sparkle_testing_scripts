@@ -1,0 +1,38 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker2/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker2/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.driver.port=39133" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39133" "--executor-id" "22" "--hostname" "mdc-ch1-cust4" "--cores" "144" "--app-id" "app-20190621021028-0003" "--worker-url" "spark://Worker@mdc-ch1-cust4:35763"
+========================================
+
+19/06/21 02:10:49 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 113849@mdc-ch1-cust4
+19/06/21 02:10:49 INFO util.SignalUtils: Registered signal handler for TERM
+19/06/21 02:10:49 INFO util.SignalUtils: Registered signal handler for HUP
+19/06/21 02:10:49 INFO util.SignalUtils: Registered signal handler for INT
+19/06/21 02:10:49 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/06/21 02:10:49 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 02:10:49 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 02:10:49 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 02:10:49 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 02:10:49 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 02:10:49 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:39133 after 50 ms (0 ms spent in bootstraps)
+19/06/21 02:10:49 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/06/21 02:10:49 INFO spark.SecurityManager: Changing view acls to: root
+19/06/21 02:10:49 INFO spark.SecurityManager: Changing modify acls to: root
+19/06/21 02:10:49 INFO spark.SecurityManager: Changing view acls groups to: 
+19/06/21 02:10:49 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/06/21 02:10:49 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/06/21 02:10:49 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:39133 after 1 ms (0 ms spent in bootstraps)
+19/06/21 02:10:49 INFO storage.DiskBlockManager: Created local directory at /data/spark-87822a48-daf4-494f-b14f-ae33f326dc42/executor-b78ff26b-16c2-46c2-982e-8aa4ed0e93d4/blockmgr-a32c22ea-71f9-4aea-92a8-e8c27df77398
+19/06/21 02:10:49 INFO memory.MemoryStore: MemoryStore started with capacity 12.6 GB
+19/06/21 02:10:49 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:39133
+19/06/21 02:10:49 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@mdc-ch1-cust4:35763
+19/06/21 02:10:49 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4/10.1.1.4:35763 after 0 ms (0 ms spent in bootstraps)
+19/06/21 02:10:49 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@mdc-ch1-cust4:35763
+19/06/21 02:10:49 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/06/21 02:10:49 INFO executor.Executor: Starting executor ID 22 on host mdc-ch1-cust4
+19/06/21 02:10:49 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46677.
+19/06/21 02:10:49 INFO netty.NettyBlockTransferService: Server created on mdc-ch1-cust4:46677
+19/06/21 02:10:49 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/06/21 02:10:50 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(22, mdc-ch1-cust4, 46677, None)
+19/06/21 02:10:50 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(22, mdc-ch1-cust4, 46677, None)
+19/06/21 02:10:50 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(22, mdc-ch1-cust4, 46677, None)
+19/06/21 02:11:01 INFO executor.CoarseGrainedExecutorBackend: Driver commanded a shutdown
+19/06/21 02:11:01 ERROR executor.CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

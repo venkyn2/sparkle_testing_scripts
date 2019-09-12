@@ -1,0 +1,66 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker0/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker0/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.driver.port=36645" "-Dspark.network.timeout=40000" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:36645" "--executor-id" "54" "--hostname" "10.1.1.4" "--cores" "4" "--app-id" "app-20190827092644-0018" "--worker-url" "spark://Worker@10.1.1.4:46217"
+========================================
+
+19/08/27 09:26:45 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 56938@mdc-ch1-cust4
+19/08/27 09:26:45 INFO util.SignalUtils: Registered signal handler for TERM
+19/08/27 09:26:45 INFO util.SignalUtils: Registered signal handler for HUP
+19/08/27 09:26:45 INFO util.SignalUtils: Registered signal handler for INT
+19/08/27 09:26:45 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/08/27 09:26:45 INFO spark.SecurityManager: Changing view acls to: root,nnnnnven
+19/08/27 09:26:45 INFO spark.SecurityManager: Changing modify acls to: root,nnnnnven
+19/08/27 09:26:45 INFO spark.SecurityManager: Changing view acls groups to: 
+19/08/27 09:26:45 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/08/27 09:26:45 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, nnnnnven); groups with view permissions: Set(); users  with modify permissions: Set(root, nnnnnven); groups with modify permissions: Set()
+19/08/27 09:26:45 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:36645 after 62 ms (0 ms spent in bootstraps)
+19/08/27 09:26:45 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/08/27 09:26:45 WARN spark.SparkConf: The configuration key 'spark.yarn.executor.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.executor.memoryOverhead' instead.
+19/08/27 09:26:45 INFO spark.SecurityManager: Changing view acls to: root,nnnnnven
+19/08/27 09:26:45 INFO spark.SecurityManager: Changing modify acls to: root,nnnnnven
+19/08/27 09:26:45 INFO spark.SecurityManager: Changing view acls groups to: 
+19/08/27 09:26:45 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/08/27 09:26:45 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, nnnnnven); groups with view permissions: Set(); users  with modify permissions: Set(root, nnnnnven); groups with modify permissions: Set()
+19/08/27 09:26:46 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:36645 after 2 ms (0 ms spent in bootstraps)
+19/08/27 09:26:46 INFO storage.DiskBlockManager: Created local directory at /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-e636c72a-9021-4420-a5ee-a208582be517/blockmgr-e717d606-a59c-4c74-979a-c0e5934bcda8
+19/08/27 09:26:46 INFO memory.MemoryStore: MemoryStore started with capacity 4.1 GB
+19/08/27 09:26:46 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:36645
+19/08/27 09:26:46 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@10.1.1.4:46217
+19/08/27 09:26:46 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:46217 after 1 ms (0 ms spent in bootstraps)
+19/08/27 09:26:46 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@10.1.1.4:46217
+19/08/27 09:26:46 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/08/27 09:26:46 INFO executor.Executor: Starting executor ID 54 on host 10.1.1.4
+19/08/27 09:26:46 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36805.
+19/08/27 09:26:46 INFO netty.NettyBlockTransferService: Server created on 10.1.1.4:36805
+19/08/27 09:26:46 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/08/27 09:26:46 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(54, 10.1.1.4, 36805, None)
+19/08/27 09:26:46 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(54, 10.1.1.4, 36805, None)
+19/08/27 09:26:46 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(54, 10.1.1.4, 36805, None)
+19/08/27 09:26:46 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 348
+19/08/27 09:26:46 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 349
+19/08/27 09:26:46 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 350
+19/08/27 09:26:46 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 351
+19/08/27 09:26:46 INFO executor.Executor: Running task 323.0 in stage 0.0 (TID 351)
+19/08/27 09:26:46 INFO executor.Executor: Running task 321.0 in stage 0.0 (TID 349)
+19/08/27 09:26:46 INFO executor.Executor: Running task 322.0 in stage 0.0 (TID 350)
+19/08/27 09:26:46 INFO executor.Executor: Running task 320.0 in stage 0.0 (TID 348)
+19/08/27 09:26:46 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:36645/jars/spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar with timestamp 1566923204533
+19/08/27 09:26:46 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:36645 after 2 ms (0 ms spent in bootstraps)
+19/08/27 09:26:46 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:36645/jars/spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar to /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-e636c72a-9021-4420-a5ee-a208582be517/spark-19e5e3b8-3d8e-4c57-94e7-e952d619b5f7/fetchFileTemp689432317381588555.tmp
+19/08/27 09:26:46 INFO util.Utils: Copying /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-e636c72a-9021-4420-a5ee-a208582be517/spark-19e5e3b8-3d8e-4c57-94e7-e952d619b5f7/-1082896611566923204533_cache to /var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190827092644-0018/54/./spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar
+19/08/27 09:26:47 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190827092644-0018/54/./spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar to class loader
+19/08/27 09:26:47 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 1
+19/08/27 09:26:47 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:44745 after 2 ms (0 ms spent in bootstraps)
+19/08/27 09:26:47 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.2 KB, free 4.1 GB)
+19/08/27 09:26:47 INFO broadcast.TorrentBroadcast: Reading broadcast variable 1 took 130 ms
+19/08/27 09:26:47 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.5 KB, free 4.1 GB)
+19/08/27 09:26:47 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00008:18253611008+1073741824
+19/08/27 09:26:47 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00008:17179869184+1073741824
+19/08/27 09:26:47 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00008:20401094656+1073741824
+19/08/27 09:26:47 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00008:19327352832+1073741824
+19/08/27 09:26:47 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 0
+19/08/27 09:26:47 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43685 after 2 ms (0 ms spent in bootstraps)
+19/08/27 09:26:47 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 22.3 KB, free 4.1 GB)
+19/08/27 09:26:47 INFO broadcast.TorrentBroadcast: Reading broadcast variable 0 took 46 ms
+19/08/27 09:26:47 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 317.5 KB, free 4.1 GB)
+19/08/27 09:27:32 INFO executor.CoarseGrainedExecutorBackend: Driver commanded a shutdown
+19/08/27 09:27:32 ERROR executor.CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

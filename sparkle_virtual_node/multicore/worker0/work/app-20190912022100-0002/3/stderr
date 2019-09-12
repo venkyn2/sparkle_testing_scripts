@@ -1,0 +1,1951 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker0/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker0/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx24576M" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-Dspark.driver.port=44765" "-XX:ParallelGCThreads=10" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:44765" "--executor-id" "3" "--hostname" "10.1.1.4" "--cores" "144" "--app-id" "app-20190912022100-0002" "--worker-url" "spark://Worker@10.1.1.4:38593"
+========================================
+
+19/09/12 02:21:00 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 6143@mdc-ch1-cust4
+19/09/12 02:21:00 INFO util.SignalUtils: Registered signal handler for TERM
+19/09/12 02:21:00 INFO util.SignalUtils: Registered signal handler for HUP
+19/09/12 02:21:00 INFO util.SignalUtils: Registered signal handler for INT
+19/09/12 02:21:00 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/09/12 02:21:00 INFO spark.SecurityManager: Changing view acls to: root
+19/09/12 02:21:00 INFO spark.SecurityManager: Changing modify acls to: root
+19/09/12 02:21:00 INFO spark.SecurityManager: Changing view acls groups to: 
+19/09/12 02:21:00 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/09/12 02:21:00 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/09/12 02:21:01 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:44765 after 48 ms (0 ms spent in bootstraps)
+19/09/12 02:21:01 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/09/12 02:21:01 INFO spark.SecurityManager: Changing view acls to: root
+19/09/12 02:21:01 INFO spark.SecurityManager: Changing modify acls to: root
+19/09/12 02:21:01 INFO spark.SecurityManager: Changing view acls groups to: 
+19/09/12 02:21:01 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/09/12 02:21:01 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/09/12 02:21:01 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:44765 after 1 ms (0 ms spent in bootstraps)
+19/09/12 02:21:01 INFO storage.DiskBlockManager: Created local directory at /data/spark-f065191f-0249-418d-849b-4b2c2ebe2a05/executor-bb8dccb6-b553-457c-8656-cca2e989d2c6/blockmgr-5ed07d19-2707-4869-9dc7-fe794064e1c3
+19/09/12 02:21:01 INFO memory.MemoryStore: MemoryStore started with capacity 12.6 GB
+19/09/12 02:21:01 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:44765
+19/09/12 02:21:01 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@10.1.1.4:38593
+19/09/12 02:21:01 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:38593 after 1 ms (0 ms spent in bootstraps)
+19/09/12 02:21:01 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@10.1.1.4:38593
+19/09/12 02:21:01 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/09/12 02:21:01 INFO executor.Executor: Starting executor ID 3 on host 10.1.1.4
+19/09/12 02:21:01 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41523.
+19/09/12 02:21:01 INFO netty.NettyBlockTransferService: Server created on 10.1.1.4:41523
+19/09/12 02:21:01 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/09/12 02:21:01 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(3, 10.1.1.4, 41523, None)
+19/09/12 02:21:01 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(3, 10.1.1.4, 41523, None)
+19/09/12 02:21:01 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(3, 10.1.1.4, 41523, None)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 200
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 204
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 208
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 212
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 216
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 220
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 224
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 228
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 232
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 236
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 240
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 244
+19/09/12 02:21:02 INFO executor.Executor: Running task 1.0 in stage 1.0 (TID 200)
+19/09/12 02:21:02 INFO executor.Executor: Running task 37.0 in stage 1.0 (TID 236)
+19/09/12 02:21:02 INFO executor.Executor: Running task 33.0 in stage 1.0 (TID 232)
+19/09/12 02:21:02 INFO executor.Executor: Running task 21.0 in stage 1.0 (TID 220)
+19/09/12 02:21:02 INFO executor.Executor: Running task 17.0 in stage 1.0 (TID 216)
+19/09/12 02:21:02 INFO executor.Executor: Running task 9.0 in stage 1.0 (TID 208)
+19/09/12 02:21:02 INFO executor.Executor: Running task 5.0 in stage 1.0 (TID 204)
+19/09/12 02:21:02 INFO executor.Executor: Running task 29.0 in stage 1.0 (TID 228)
+19/09/12 02:21:02 INFO executor.Executor: Running task 25.0 in stage 1.0 (TID 224)
+19/09/12 02:21:02 INFO executor.Executor: Running task 41.0 in stage 1.0 (TID 240)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 248
+19/09/12 02:21:02 INFO executor.Executor: Running task 13.0 in stage 1.0 (TID 212)
+19/09/12 02:21:02 INFO executor.Executor: Running task 45.0 in stage 1.0 (TID 244)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 252
+19/09/12 02:21:02 INFO executor.Executor: Running task 49.0 in stage 1.0 (TID 248)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 256
+19/09/12 02:21:02 INFO executor.Executor: Running task 53.0 in stage 1.0 (TID 252)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 260
+19/09/12 02:21:02 INFO executor.Executor: Running task 57.0 in stage 1.0 (TID 256)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 264
+19/09/12 02:21:02 INFO executor.Executor: Running task 61.0 in stage 1.0 (TID 260)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 268
+19/09/12 02:21:02 INFO executor.Executor: Running task 65.0 in stage 1.0 (TID 264)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 272
+19/09/12 02:21:02 INFO executor.Executor: Running task 69.0 in stage 1.0 (TID 268)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 276
+19/09/12 02:21:02 INFO executor.Executor: Running task 73.0 in stage 1.0 (TID 272)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 280
+19/09/12 02:21:02 INFO executor.Executor: Running task 77.0 in stage 1.0 (TID 276)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 284
+19/09/12 02:21:02 INFO executor.Executor: Running task 81.0 in stage 1.0 (TID 280)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 288
+19/09/12 02:21:02 INFO executor.Executor: Running task 85.0 in stage 1.0 (TID 284)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 292
+19/09/12 02:21:02 INFO executor.Executor: Running task 89.0 in stage 1.0 (TID 288)
+19/09/12 02:21:02 INFO executor.Executor: Running task 93.0 in stage 1.0 (TID 292)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 296
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 300
+19/09/12 02:21:02 INFO executor.Executor: Running task 97.0 in stage 1.0 (TID 296)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 304
+19/09/12 02:21:02 INFO executor.Executor: Running task 101.0 in stage 1.0 (TID 300)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 308
+19/09/12 02:21:02 INFO executor.Executor: Running task 105.0 in stage 1.0 (TID 304)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 312
+19/09/12 02:21:02 INFO executor.Executor: Running task 109.0 in stage 1.0 (TID 308)
+19/09/12 02:21:02 INFO executor.Executor: Running task 113.0 in stage 1.0 (TID 312)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 316
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 320
+19/09/12 02:21:02 INFO executor.Executor: Running task 117.0 in stage 1.0 (TID 316)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 324
+19/09/12 02:21:02 INFO executor.Executor: Running task 121.0 in stage 1.0 (TID 320)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 328
+19/09/12 02:21:02 INFO executor.Executor: Running task 125.0 in stage 1.0 (TID 324)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 332
+19/09/12 02:21:02 INFO executor.Executor: Running task 129.0 in stage 1.0 (TID 328)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 336
+19/09/12 02:21:02 INFO executor.Executor: Running task 133.0 in stage 1.0 (TID 332)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 340
+19/09/12 02:21:02 INFO executor.Executor: Running task 137.0 in stage 1.0 (TID 336)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 344
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 348
+19/09/12 02:21:02 INFO executor.Executor: Running task 141.0 in stage 1.0 (TID 340)
+19/09/12 02:21:02 INFO executor.Executor: Running task 145.0 in stage 1.0 (TID 344)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 352
+19/09/12 02:21:02 INFO executor.Executor: Running task 149.0 in stage 1.0 (TID 348)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 356
+19/09/12 02:21:02 INFO executor.Executor: Running task 153.0 in stage 1.0 (TID 352)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 360
+19/09/12 02:21:02 INFO executor.Executor: Running task 157.0 in stage 1.0 (TID 356)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 364
+19/09/12 02:21:02 INFO executor.Executor: Running task 161.0 in stage 1.0 (TID 360)
+19/09/12 02:21:02 INFO executor.Executor: Running task 165.0 in stage 1.0 (TID 364)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 368
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 372
+19/09/12 02:21:02 INFO executor.Executor: Running task 169.0 in stage 1.0 (TID 368)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 376
+19/09/12 02:21:02 INFO executor.Executor: Running task 173.0 in stage 1.0 (TID 372)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 380
+19/09/12 02:21:02 INFO executor.Executor: Running task 177.0 in stage 1.0 (TID 376)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 384
+19/09/12 02:21:02 INFO executor.Executor: Running task 181.0 in stage 1.0 (TID 380)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 388
+19/09/12 02:21:02 INFO executor.Executor: Running task 185.0 in stage 1.0 (TID 384)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 392
+19/09/12 02:21:02 INFO executor.Executor: Running task 189.0 in stage 1.0 (TID 388)
+19/09/12 02:21:02 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 396
+19/09/12 02:21:02 INFO executor.Executor: Running task 193.0 in stage 1.0 (TID 392)
+19/09/12 02:21:02 INFO executor.Executor: Running task 197.0 in stage 1.0 (TID 396)
+19/09/12 02:21:02 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:44765/jars/simple-groupby-computation-project_2.11-2.0.jar with timestamp 1568280060187
+19/09/12 02:21:02 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:44765 after 0 ms (0 ms spent in bootstraps)
+19/09/12 02:21:02 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:44765/jars/simple-groupby-computation-project_2.11-2.0.jar to /data/spark-f065191f-0249-418d-849b-4b2c2ebe2a05/executor-bb8dccb6-b553-457c-8656-cca2e989d2c6/spark-24090c93-650a-42ca-a672-3a6d544392a3/fetchFileTemp763993063748518801.tmp
+19/09/12 02:21:02 INFO util.Utils: Copying /data/spark-f065191f-0249-418d-849b-4b2c2ebe2a05/executor-bb8dccb6-b553-457c-8656-cca2e989d2c6/spark-24090c93-650a-42ca-a672-3a6d544392a3/-12743844591568280060187_cache to /var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190912022100-0002/3/./simple-groupby-computation-project_2.11-2.0.jar
+19/09/12 02:21:02 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190912022100-0002/3/./simple-groupby-computation-project_2.11-2.0.jar to class loader
+19/09/12 02:21:03 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 1
+19/09/12 02:21:03 INFO client.TransportClientFactory: Successfully created connection to /10.1.4.4:46091 after 1 ms (0 ms spent in bootstraps)
+19/09/12 02:21:06 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 1585.0 B, free 12.6 GB)
+19/09/12 02:21:06 INFO broadcast.TorrentBroadcast: Reading broadcast variable 1 took 3072 ms
+19/09/12 02:21:06 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 2.5 KB, free 12.6 GB)
+19/09/12 02:22:09 INFO memory.MemoryStore: Block rdd_3_33 stored as values in memory (estimated size 160.2 MB, free 12.5 GB)
+19/09/12 02:22:09 INFO executor.Executor: 1 block locks were not released by TID = 232:
+[rdd_3_33]
+19/09/12 02:22:09 INFO executor.Executor: Finished task 33.0 in stage 1.0 (TID 232). 708 bytes result sent to driver
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_49 stored as values in memory (estimated size 160.2 MB, free 12.3 GB)
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 248:
+[rdd_3_49]
+19/09/12 02:22:10 INFO executor.Executor: Finished task 49.0 in stage 1.0 (TID 248). 708 bytes result sent to driver
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_185 stored as values in memory (estimated size 160.2 MB, free 12.2 GB)
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 384:
+[rdd_3_185]
+19/09/12 02:22:10 INFO executor.Executor: Finished task 185.0 in stage 1.0 (TID 384). 708 bytes result sent to driver
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_129 stored as values in memory (estimated size 160.2 MB, free 11.8 GB)
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_125 stored as values in memory (estimated size 160.2 MB, free 11.8 GB)
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 328:
+[rdd_3_129]
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 324:
+[rdd_3_125]
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_145 stored as values in memory (estimated size 160.2 MB, free 11.7 GB)
+19/09/12 02:22:10 INFO executor.Executor: Finished task 125.0 in stage 1.0 (TID 324). 708 bytes result sent to driver
+19/09/12 02:22:10 INFO executor.Executor: Finished task 129.0 in stage 1.0 (TID 328). 708 bytes result sent to driver
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 344:
+[rdd_3_145]
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_133 stored as values in memory (estimated size 160.2 MB, free 11.5 GB)
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 332:
+[rdd_3_133]
+19/09/12 02:22:10 INFO executor.Executor: Finished task 145.0 in stage 1.0 (TID 344). 708 bytes result sent to driver
+19/09/12 02:22:10 INFO executor.Executor: Finished task 133.0 in stage 1.0 (TID 332). 708 bytes result sent to driver
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_117 stored as values in memory (estimated size 160.2 MB, free 11.4 GB)
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 316:
+[rdd_3_117]
+19/09/12 02:22:10 INFO executor.Executor: Finished task 117.0 in stage 1.0 (TID 316). 708 bytes result sent to driver
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_141 stored as values in memory (estimated size 160.2 MB, free 11.2 GB)
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_101 stored as values in memory (estimated size 160.2 MB, free 11.1 GB)
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 340:
+[rdd_3_141]
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 300:
+[rdd_3_101]
+19/09/12 02:22:10 INFO executor.Executor: Finished task 141.0 in stage 1.0 (TID 340). 708 bytes result sent to driver
+19/09/12 02:22:10 INFO executor.Executor: Finished task 101.0 in stage 1.0 (TID 300). 708 bytes result sent to driver
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_105 stored as values in memory (estimated size 160.2 MB, free 10.9 GB)
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 304:
+[rdd_3_105]
+19/09/12 02:22:10 INFO executor.Executor: Finished task 105.0 in stage 1.0 (TID 304). 708 bytes result sent to driver
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_37 stored as values in memory (estimated size 160.2 MB, free 10.7 GB)
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_165 stored as values in memory (estimated size 160.2 MB, free 10.6 GB)
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 364:
+[rdd_3_165]
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 236:
+[rdd_3_37]
+19/09/12 02:22:10 INFO executor.Executor: Finished task 165.0 in stage 1.0 (TID 364). 708 bytes result sent to driver
+19/09/12 02:22:10 INFO executor.Executor: Finished task 37.0 in stage 1.0 (TID 236). 708 bytes result sent to driver
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_153 stored as values in memory (estimated size 160.2 MB, free 10.4 GB)
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_181 stored as values in memory (estimated size 160.2 MB, free 10.3 GB)
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 352:
+[rdd_3_153]
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 380:
+[rdd_3_181]
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_161 stored as values in memory (estimated size 160.2 MB, free 10.1 GB)
+19/09/12 02:22:10 INFO executor.Executor: Finished task 153.0 in stage 1.0 (TID 352). 751 bytes result sent to driver
+19/09/12 02:22:10 INFO executor.Executor: Finished task 181.0 in stage 1.0 (TID 380). 751 bytes result sent to driver
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 360:
+[rdd_3_161]
+19/09/12 02:22:10 INFO executor.Executor: Finished task 161.0 in stage 1.0 (TID 360). 751 bytes result sent to driver
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_113 stored as values in memory (estimated size 160.2 MB, free 9.8 GB)
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_197 stored as values in memory (estimated size 160.2 MB, free 9.8 GB)
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 312:
+[rdd_3_113]
+19/09/12 02:22:10 INFO executor.Executor: 1 block locks were not released by TID = 396:
+[rdd_3_197]
+19/09/12 02:22:10 INFO memory.MemoryStore: Block rdd_3_109 stored as values in memory (estimated size 160.2 MB, free 9.7 GB)
+19/09/12 02:22:10 INFO executor.Executor: Finished task 197.0 in stage 1.0 (TID 396). 708 bytes result sent to driver
+19/09/12 02:22:10 INFO executor.Executor: Finished task 113.0 in stage 1.0 (TID 312). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_65 stored as values in memory (estimated size 160.2 MB, free 9.5 GB)
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_21 stored as values in memory (estimated size 160.2 MB, free 9.3 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 308:
+[rdd_3_109]
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 220:
+[rdd_3_21]
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 264:
+[rdd_3_65]
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_137 stored as values in memory (estimated size 160.2 MB, free 9.2 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 336:
+[rdd_3_137]
+19/09/12 02:22:12 INFO executor.Executor: Finished task 109.0 in stage 1.0 (TID 308). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 21.0 in stage 1.0 (TID 220). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 137.0 in stage 1.0 (TID 336). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 65.0 in stage 1.0 (TID 264). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_193 stored as values in memory (estimated size 160.2 MB, free 8.9 GB)
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_149 stored as values in memory (estimated size 160.2 MB, free 8.9 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 392:
+[rdd_3_193]
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_73 stored as values in memory (estimated size 160.2 MB, free 8.7 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 348:
+[rdd_3_149]
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 272:
+[rdd_3_73]
+19/09/12 02:22:12 INFO executor.Executor: Finished task 193.0 in stage 1.0 (TID 392). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 73.0 in stage 1.0 (TID 272). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 149.0 in stage 1.0 (TID 348). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_29 stored as values in memory (estimated size 160.2 MB, free 8.6 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 228:
+[rdd_3_29]
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_17 stored as values in memory (estimated size 160.2 MB, free 7.9 GB)
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_25 stored as values in memory (estimated size 160.2 MB, free 7.9 GB)
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_189 stored as values in memory (estimated size 160.2 MB, free 7.9 GB)
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_173 stored as values in memory (estimated size 160.2 MB, free 7.9 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 216:
+[rdd_3_17]
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 388:
+[rdd_3_189]
+19/09/12 02:22:12 INFO executor.Executor: Finished task 29.0 in stage 1.0 (TID 228). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 224:
+[rdd_3_25]
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 372:
+[rdd_3_173]
+19/09/12 02:22:12 INFO executor.Executor: Finished task 17.0 in stage 1.0 (TID 216). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 173.0 in stage 1.0 (TID 372). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 189.0 in stage 1.0 (TID 388). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 25.0 in stage 1.0 (TID 224). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_169 stored as values in memory (estimated size 160.2 MB, free 7.8 GB)
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_157 stored as values in memory (estimated size 160.2 MB, free 7.6 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 368:
+[rdd_3_169]
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_53 stored as values in memory (estimated size 160.2 MB, free 7.5 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 356:
+[rdd_3_157]
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 252:
+[rdd_3_53]
+19/09/12 02:22:12 INFO executor.Executor: Finished task 169.0 in stage 1.0 (TID 368). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 157.0 in stage 1.0 (TID 356). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 53.0 in stage 1.0 (TID 252). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_177 stored as values in memory (estimated size 160.2 MB, free 7.3 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 376:
+[rdd_3_177]
+19/09/12 02:22:12 INFO executor.Executor: Finished task 177.0 in stage 1.0 (TID 376). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_93 stored as values in memory (estimated size 160.2 MB, free 7.1 GB)
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_5 stored as values in memory (estimated size 160.2 MB, free 7.0 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 292:
+[rdd_3_93]
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 204:
+[rdd_3_5]
+19/09/12 02:22:12 INFO executor.Executor: Finished task 93.0 in stage 1.0 (TID 292). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_97 stored as values in memory (estimated size 160.2 MB, free 6.8 GB)
+19/09/12 02:22:12 INFO executor.Executor: Finished task 5.0 in stage 1.0 (TID 204). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_9 stored as values in memory (estimated size 160.2 MB, free 6.5 GB)
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_13 stored as values in memory (estimated size 160.2 MB, free 6.5 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 296:
+[rdd_3_97]
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 208:
+[rdd_3_9]
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 212:
+[rdd_3_13]
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_1 stored as values in memory (estimated size 160.2 MB, free 6.4 GB)
+19/09/12 02:22:12 INFO executor.Executor: Finished task 9.0 in stage 1.0 (TID 208). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 13.0 in stage 1.0 (TID 212). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_89 stored as values in memory (estimated size 160.2 MB, free 6.2 GB)
+19/09/12 02:22:12 INFO executor.Executor: Finished task 97.0 in stage 1.0 (TID 296). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_121 stored as values in memory (estimated size 160.2 MB, free 6.1 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 200:
+[rdd_3_1]
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 288:
+[rdd_3_89]
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 320:
+[rdd_3_121]
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_41 stored as values in memory (estimated size 160.2 MB, free 5.9 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 240:
+[rdd_3_41]
+19/09/12 02:22:12 INFO executor.Executor: Finished task 1.0 in stage 1.0 (TID 200). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 89.0 in stage 1.0 (TID 288). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 121.0 in stage 1.0 (TID 320). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 41.0 in stage 1.0 (TID 240). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_61 stored as values in memory (estimated size 160.2 MB, free 5.7 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 260:
+[rdd_3_61]
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_85 stored as values in memory (estimated size 160.2 MB, free 5.6 GB)
+19/09/12 02:22:12 INFO executor.Executor: Finished task 61.0 in stage 1.0 (TID 260). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_81 stored as values in memory (estimated size 160.2 MB, free 5.4 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 284:
+[rdd_3_85]
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_77 stored as values in memory (estimated size 160.2 MB, free 5.3 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 280:
+[rdd_3_81]
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 276:
+[rdd_3_77]
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_45 stored as values in memory (estimated size 160.2 MB, free 5.1 GB)
+19/09/12 02:22:12 INFO executor.Executor: Finished task 85.0 in stage 1.0 (TID 284). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 81.0 in stage 1.0 (TID 280). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 77.0 in stage 1.0 (TID 276). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 244:
+[rdd_3_45]
+19/09/12 02:22:12 INFO executor.Executor: Finished task 45.0 in stage 1.0 (TID 244). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_69 stored as values in memory (estimated size 160.2 MB, free 5.0 GB)
+19/09/12 02:22:12 INFO memory.MemoryStore: Block rdd_3_57 stored as values in memory (estimated size 160.2 MB, free 4.8 GB)
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 268:
+[rdd_3_69]
+19/09/12 02:22:12 INFO executor.Executor: 1 block locks were not released by TID = 256:
+[rdd_3_57]
+19/09/12 02:22:12 INFO executor.Executor: Finished task 57.0 in stage 1.0 (TID 256). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.Executor: Finished task 69.0 in stage 1.0 (TID 268). 708 bytes result sent to driver
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 402
+19/09/12 02:22:12 INFO executor.Executor: Running task 1.0 in stage 2.0 (TID 402)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 406
+19/09/12 02:22:12 INFO executor.Executor: Running task 5.0 in stage 2.0 (TID 406)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 410
+19/09/12 02:22:12 INFO executor.Executor: Running task 9.0 in stage 2.0 (TID 410)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 414
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 418
+19/09/12 02:22:12 INFO executor.Executor: Running task 13.0 in stage 2.0 (TID 414)
+19/09/12 02:22:12 INFO executor.Executor: Running task 17.0 in stage 2.0 (TID 418)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 422
+19/09/12 02:22:12 INFO executor.Executor: Running task 21.0 in stage 2.0 (TID 422)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 426
+19/09/12 02:22:12 INFO executor.Executor: Running task 25.0 in stage 2.0 (TID 426)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 430
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 434
+19/09/12 02:22:12 INFO executor.Executor: Running task 29.0 in stage 2.0 (TID 430)
+19/09/12 02:22:12 INFO executor.Executor: Running task 33.0 in stage 2.0 (TID 434)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 438
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 442
+19/09/12 02:22:12 INFO executor.Executor: Running task 37.0 in stage 2.0 (TID 438)
+19/09/12 02:22:12 INFO executor.Executor: Running task 41.0 in stage 2.0 (TID 442)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 446
+19/09/12 02:22:12 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 2
+19/09/12 02:22:12 INFO executor.Executor: Running task 45.0 in stage 2.0 (TID 446)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 450
+19/09/12 02:22:12 INFO executor.Executor: Running task 49.0 in stage 2.0 (TID 450)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 454
+19/09/12 02:22:12 INFO executor.Executor: Running task 53.0 in stage 2.0 (TID 454)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 458
+19/09/12 02:22:12 INFO executor.Executor: Running task 57.0 in stage 2.0 (TID 458)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 462
+19/09/12 02:22:12 INFO executor.Executor: Running task 61.0 in stage 2.0 (TID 462)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 466
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 470
+19/09/12 02:22:12 INFO executor.Executor: Running task 65.0 in stage 2.0 (TID 466)
+19/09/12 02:22:12 INFO executor.Executor: Running task 69.0 in stage 2.0 (TID 470)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 474
+19/09/12 02:22:12 INFO executor.Executor: Running task 73.0 in stage 2.0 (TID 474)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 478
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 482
+19/09/12 02:22:12 INFO executor.Executor: Running task 77.0 in stage 2.0 (TID 478)
+19/09/12 02:22:12 INFO executor.Executor: Running task 81.0 in stage 2.0 (TID 482)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 486
+19/09/12 02:22:12 INFO executor.Executor: Running task 85.0 in stage 2.0 (TID 486)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 490
+19/09/12 02:22:12 INFO executor.Executor: Running task 89.0 in stage 2.0 (TID 490)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 494
+19/09/12 02:22:12 INFO executor.Executor: Running task 93.0 in stage 2.0 (TID 494)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 498
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 502
+19/09/12 02:22:12 INFO executor.Executor: Running task 101.0 in stage 2.0 (TID 502)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 506
+19/09/12 02:22:12 INFO executor.Executor: Running task 105.0 in stage 2.0 (TID 506)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 510
+19/09/12 02:22:12 INFO executor.Executor: Running task 97.0 in stage 2.0 (TID 498)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 514
+19/09/12 02:22:12 INFO executor.Executor: Running task 109.0 in stage 2.0 (TID 510)
+19/09/12 02:22:12 INFO executor.Executor: Running task 113.0 in stage 2.0 (TID 514)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 518
+19/09/12 02:22:12 INFO executor.Executor: Running task 117.0 in stage 2.0 (TID 518)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 522
+19/09/12 02:22:12 INFO executor.Executor: Running task 121.0 in stage 2.0 (TID 522)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 526
+19/09/12 02:22:12 INFO executor.Executor: Running task 125.0 in stage 2.0 (TID 526)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 530
+19/09/12 02:22:12 INFO executor.Executor: Running task 129.0 in stage 2.0 (TID 530)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 534
+19/09/12 02:22:12 INFO executor.Executor: Running task 133.0 in stage 2.0 (TID 534)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 538
+19/09/12 02:22:12 INFO executor.Executor: Running task 137.0 in stage 2.0 (TID 538)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 542
+19/09/12 02:22:12 INFO executor.Executor: Running task 141.0 in stage 2.0 (TID 542)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 546
+19/09/12 02:22:12 INFO executor.Executor: Running task 145.0 in stage 2.0 (TID 546)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 550
+19/09/12 02:22:12 INFO executor.Executor: Running task 149.0 in stage 2.0 (TID 550)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 554
+19/09/12 02:22:12 INFO executor.Executor: Running task 153.0 in stage 2.0 (TID 554)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 558
+19/09/12 02:22:12 INFO executor.Executor: Running task 157.0 in stage 2.0 (TID 558)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 562
+19/09/12 02:22:12 INFO executor.Executor: Running task 161.0 in stage 2.0 (TID 562)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 566
+19/09/12 02:22:12 INFO executor.Executor: Running task 165.0 in stage 2.0 (TID 566)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 570
+19/09/12 02:22:12 INFO executor.Executor: Running task 169.0 in stage 2.0 (TID 570)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 574
+19/09/12 02:22:12 INFO executor.Executor: Running task 173.0 in stage 2.0 (TID 574)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 578
+19/09/12 02:22:12 INFO executor.Executor: Running task 177.0 in stage 2.0 (TID 578)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 582
+19/09/12 02:22:12 INFO executor.Executor: Running task 181.0 in stage 2.0 (TID 582)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 586
+19/09/12 02:22:12 INFO executor.Executor: Running task 185.0 in stage 2.0 (TID 586)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 590
+19/09/12 02:22:12 INFO executor.Executor: Running task 189.0 in stage 2.0 (TID 590)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 594
+19/09/12 02:22:12 INFO executor.Executor: Running task 193.0 in stage 2.0 (TID 594)
+19/09/12 02:22:12 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 598
+19/09/12 02:22:12 INFO executor.Executor: Running task 197.0 in stage 2.0 (TID 598)
+19/09/12 02:22:12 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.5 KB, free 4.8 GB)
+19/09/12 02:22:12 INFO broadcast.TorrentBroadcast: Reading broadcast variable 2 took 31 ms
+19/09/12 02:22:12 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 4.4 KB, free 4.8 GB)
+19/09/12 02:22:12 INFO shm.ShmShuffleManager: ShmShuffleManager obtains SPARK_WORKER_CORES: 64
+19/09/12 02:22:12 INFO shm.ShmShuffleManager: to initialize shm shuffle manager in an executor, with executor id string value:3
+19/09/12 02:22:12 INFO shuffle.ShuffleStoreManager: jnishmshuffle shared library loaded via loadLibraryFromJar
+19/09/12 02:22:12 INFO shuffle.ShuffleStoreManager: perform actual initialization for ShuffleStoreManager
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0912 02:22:12.699512  6258 MapShuffleStoreManager.cc:101] map shuffle store manage initialize
+I0912 02:22:12.699586  6258 ByteBufferPool.cc:44] initialize queue-based bytebuffer pool
+I0912 02:22:12.699596  6258 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0912 02:22:12.699599  6258 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0912 02:22:12.699604  6258 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0912 02:22:12.699609  6258 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0912 02:22:12.699614  6258 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0912 02:22:12.699617  6258 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0912 02:22:12.699622  6258 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0912 02:22:12.699626  6258 ArrayBufferPool.cc:44] initialize queue-based array-buffer pool
+I0912 02:22:12.699662  6258 SharedMemoryAllocator.h:64] rmb default log level chosen is: info
+I0912 02:22:12.701400  6258 SharedMemoryAllocator.h:201] rmb shared memory manager detected a single-partitioned shm path: /lfs/spark_global0
+0000001 | T.0x00007ff1aa5f4700 | 2019-09-12, 02:22:12.701563 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 153) Open heap path: /lfs/spark_global0 
+0000002 | T.0x00007ff1aa5f4700 | 2019-09-12, 02:22:12.702701 [info] - (/home/ghosdebd/sparkle/alps/src/pegasus/lfs_region_file.cc, 64) Open LFS region file path: "/lfs/spark_global0" flags: O_RDWR
+0000004 | T.0x00007ff1aa5f4700 | 2019-09-12, 02:22:12.707486 [info] - (/home/ghosdebd/sparkle/alps/src/pegasus/segmap.cc, 39) map region  base_addr: 0x7ef0c8000000 size: 1099511627776 addr_range: 0x7ef0c8000000--7ff0c8000000
+0000005 | T.0x00007ff1aa5f4700 | 2019-09-12, 02:22:12.707530 [info] - (/home/ghosdebd/sparkle/alps/src/globalheap/globalheap_internal.cc, 158) Opened heap path: /lfs/spark_global0  size: 1099511627776
+I0912 02:22:12.707729  6258 SharedMemoryAllocator.h:93] rmb shared memory manager initialized global heap:0x1a10140
+I0912 02:22:12.707839  6258 SharedMemoryManager.cc:64] shared-memory manager registered heap: /lfs/spark_global0
+I0912 02:22:12.707846  6258 ShuffleDataSharedMemoryManager.h:162] shuffle engine has opened heap: /lfs/spark_global0
+I0912 02:22:12.707854  6258 ShuffleStoreManager.cc:140] shuffle store manager initialized with executor id 3 and generation id: 9
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 81 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 108 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 69 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 73 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 80 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 113 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 114 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 79 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 93 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 85 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 118 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 111 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 70 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 117 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 116 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 77 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 72 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 84 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 107 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 109 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:31 INFO shm.ShmShuffleWriter:  Map Thread: 115 created the serialization buffer with size: 1073741824: SUCCESS
+19/09/12 02:23:44 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 602
+19/09/12 02:23:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 605
+19/09/12 02:23:53 INFO executor.Executor: Running task 131.1 in stage 2.0 (TID 602)
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_41 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_193 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_73 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_93 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_189 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_25 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_113 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_109 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_137 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_49 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_29 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_133 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_85 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_145 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_77 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_9 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_65 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_45 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_57 locally
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_141 locally
+19/09/12 02:23:53 INFO executor.Executor: Running task 95.1 in stage 2.0 (TID 605)
+19/09/12 02:23:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 608
+19/09/12 02:23:53 INFO storage.BlockManager: Found block rdd_3_197 locally
+19/09/12 02:23:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 611
+19/09/12 02:23:53 INFO executor.Executor: Running task 51.1 in stage 2.0 (TID 608)
+19/09/12 02:23:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 614
+19/09/12 02:23:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 617
+19/09/12 02:23:53 INFO executor.Executor: Running task 3.1 in stage 2.0 (TID 611)
+19/09/12 02:23:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 620
+19/09/12 02:23:53 INFO executor.Executor: Running task 111.1 in stage 2.0 (TID 614)
+19/09/12 02:23:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 623
+19/09/12 02:23:53 INFO executor.Executor: Running task 63.1 in stage 2.0 (TID 617)
+19/09/12 02:23:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 626
+19/09/12 02:23:53 INFO executor.Executor: Running task 195.1 in stage 2.0 (TID 620)
+19/09/12 02:23:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 629
+19/09/12 02:23:53 INFO executor.Executor: Running task 183.1 in stage 2.0 (TID 623)
+19/09/12 02:23:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 632
+19/09/12 02:23:53 INFO executor.Executor: Running task 79.1 in stage 2.0 (TID 629)
+19/09/12 02:23:53 INFO executor.Executor: Running task 55.1 in stage 2.0 (TID 626)
+19/09/12 02:23:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 635
+19/09/12 02:23:53 ERROR executor.Executor: Exception in task 173.0 in stage 2.0 (TID 574)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id7 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id16 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id19 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id20 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id18 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id1 map-side shared-memory based shuffle store started with ordering: false
+I0912 02:23:53.907603  6257 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.907634  6295 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.907634  6297 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.907634  6259 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.907658  6292 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.907634  6252 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id8 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id15 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id4 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id3 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id12 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id9 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id5 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id13 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id14 map-side shared-memory based shuffle store started with ordering: false
+I0912 02:23:53.908948  6259 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 29 and ordering: 0
+I0912 02:23:53.908974  6259 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.908969  6288 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.909353  6257 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 197 and ordering: 0
+I0912 02:23:53.909370  6257 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.909430  6252 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 49 and ordering: 0
+I0912 02:23:53.909446  6252 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.909624  6295 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 145 and ordering: 0
+I0912 02:23:53.909636  6295 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.909647  6292 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 77 and ordering: 0
+I0912 02:23:53.909659  6292 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.909679  6297 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 85 and ordering: 0
+I0912 02:23:53.909690  6297 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.909688  6290 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.909725  6264 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.909729  6250 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.909765  6253 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.909777  6288 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 141 and ordering: 0
+I0912 02:23:53.909796  6288 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.909849  6249 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.909859  6265 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.909869  6299 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.909857  6290 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 137 and ordering: 0
+I0912 02:23:53.909900  6290 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.910651  6264 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 25 and ordering: 0
+I0912 02:23:53.910665  6264 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.910732  6274 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id0 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id2 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id6 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id17 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id11 map-side shared-memory based shuffle store started with ordering: false
+19/09/12 02:23:53 INFO shuffle.MapSHMShuffleStore: store id10 map-side shared-memory based shuffle store started with ordering: false
+I0912 02:23:53.911507  6253 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 93 and ordering: 0
+I0912 02:23:53.911518  6253 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.911589  6250 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 57 and ordering: 0
+I0912 02:23:53.911597  6250 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.911952  6289 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.911955  6265 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 113 and ordering: 0
+I0912 02:23:53.911957  6260 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.911972  6265 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+19/09/12 02:23:53 INFO executor.Executor: Running task 175.1 in stage 2.0 (TID 635)
+19/09/12 02:23:53 ERROR executor.Executor: Exception in task 117.0 in stage 2.0 (TID 518)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+I0912 02:23:53.912453  6299 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 133 and ordering: 0
+I0912 02:23:53.912463  6299 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.913225  6249 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 41 and ordering: 0
+I0912 02:23:53.913235  6249 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+19/09/12 02:23:53 INFO executor.Executor: Running task 103.1 in stage 2.0 (TID 632)
+I0912 02:23:53.913311  6294 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.913319  6298 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.913312  6274 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 45 and ordering: 0
+I0912 02:23:53.913329  6261 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.913349  6274 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+19/09/12 02:23:53 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 638
+I0912 02:23:53.914623  6296 shuffle_MapSHMShuffleStore.cc:46] ***get map shuffle store manager with address: 0x0x1a10030
+I0912 02:23:53.916110  6260 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 9 and ordering: 0
+I0912 02:23:53.916122  6260 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.917165  6289 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 73 and ordering: 0
+I0912 02:23:53.917172  6289 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.918072  6294 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 65 and ordering: 0
+I0912 02:23:53.918087  6294 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.918478  6261 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 193 and ordering: 0
+I0912 02:23:53.918494  6261 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.918512  6296 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 189 and ordering: 0
+I0912 02:23:53.918521  6296 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+I0912 02:23:53.919369  6298 MapShuffleStoreManager.cc:43] create long-key map shuffle store with shuffle id:0 map id: 109 and ordering: 0
+I0912 02:23:53.919385  6298 shuffle_MapSHMShuffleStore.cc:106] ***return from ninitialization.
+19/09/12 02:24:15 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 641
+19/09/12 02:24:15 INFO executor.Executor: Running task 127.1 in stage 2.0 (TID 638)
+19/09/12 02:24:15 ERROR executor.Executor: Exception in task 169.0 in stage 2.0 (TID 570)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:15 INFO executor.Executor: Running task 59.1 in stage 2.0 (TID 641)
+19/09/12 02:24:15 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 644
+19/09/12 02:24:15 ERROR executor.Executor: Exception in task 101.0 in stage 2.0 (TID 502)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:15 ERROR executor.Executor: Exception in task 37.0 in stage 2.0 (TID 438)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:15 ERROR executor.Executor: Exception in task 149.0 in stage 2.0 (TID 550)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:15 WARN executor.Executor: Issue communicating with driver in heartbeater
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:835)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply$mcV$sp(Executor.scala:864)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:864)
+	at org.apache.spark.executor.Executor$$anon$2$$anonfun$run$1.apply(Executor.scala:864)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1945)
+	at org.apache.spark.executor.Executor$$anon$2.run(Executor.scala:864)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:223)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:227)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:220)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 14 more
+19/09/12 02:24:15 ERROR executor.Executor: Exception in task 153.0 in stage 2.0 (TID 554)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:15 WARN netty.NettyRpcEnv: Ignored failure: java.util.concurrent.TimeoutException: Cannot receive any reply from mdc-ch1-cust4.mdc.ext.hpe.com:44765 in 10 seconds
+19/09/12 02:24:15 INFO executor.Executor: Running task 83.1 in stage 2.0 (TID 644)
+19/09/12 02:24:15 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 647
+19/09/12 02:24:15 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 650
+19/09/12 02:24:15 INFO executor.Executor: Running task 47.1 in stage 2.0 (TID 647)
+19/09/12 02:24:15 INFO executor.Executor: Running task 71.1 in stage 2.0 (TID 650)
+19/09/12 02:24:28 ERROR executor.Executor: Exception in task 21.0 in stage 2.0 (TID 422)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:28 ERROR executor.Executor: Exception in task 5.0 in stage 2.0 (TID 406)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:28 ERROR executor.Executor: Exception in task 81.0 in stage 2.0 (TID 482)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:28 ERROR executor.Executor: Exception in task 69.0 in stage 2.0 (TID 470)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:28 ERROR executor.Executor: Exception in task 181.0 in stage 2.0 (TID 582)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:28 ERROR executor.Executor: Exception in task 53.0 in stage 2.0 (TID 454)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:31 ERROR executor.Executor: Exception in task 1.0 in stage 2.0 (TID 402)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:31 ERROR executor.Executor: Exception in task 185.0 in stage 2.0 (TID 586)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:31 ERROR executor.Executor: Exception in task 61.0 in stage 2.0 (TID 462)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:31 ERROR executor.Executor: Exception in task 97.0 in stage 2.0 (TID 498)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:31 ERROR executor.Executor: Exception in task 33.0 in stage 2.0 (TID 434)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:31 ERROR executor.Executor: Exception in task 121.0 in stage 2.0 (TID 522)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:31 ERROR executor.Executor: Exception in task 125.0 in stage 2.0 (TID 526)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:38 ERROR executor.Executor: Exception in task 165.0 in stage 2.0 (TID 566)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:38 ERROR executor.Executor: Exception in task 89.0 in stage 2.0 (TID 490)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:38 ERROR executor.Executor: Exception in task 129.0 in stage 2.0 (TID 530)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:38 ERROR executor.Executor: Exception in task 157.0 in stage 2.0 (TID 558)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:38 ERROR executor.Executor: Exception in task 161.0 in stage 2.0 (TID 562)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:38 ERROR executor.Executor: Exception in task 17.0 in stage 2.0 (TID 418)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:41 ERROR executor.Executor: Exception in task 105.0 in stage 2.0 (TID 506)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:41 ERROR executor.Executor: Exception in task 13.0 in stage 2.0 (TID 414)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:41 ERROR executor.Executor: Exception in task 177.0 in stage 2.0 (TID 578)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:51 ERROR executor.Executor: Exception in task 79.1 in stage 2.0 (TID 629)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:51 ERROR executor.Executor: Exception in task 131.1 in stage 2.0 (TID 602)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:51 ERROR executor.Executor: Exception in task 195.1 in stage 2.0 (TID 620)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:51 ERROR executor.Executor: Exception in task 63.1 in stage 2.0 (TID 617)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:51 ERROR executor.Executor: Exception in task 51.1 in stage 2.0 (TID 608)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:51 ERROR executor.Executor: Exception in task 95.1 in stage 2.0 (TID 605)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 582,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 438,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 422,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 470,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 522,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 482,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 406,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 434,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 462,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 518,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 498,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 490,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 586,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 502,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 578,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 550,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR executor.Executor: Exception in task 3.1 in stage 2.0 (TID 611)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR executor.Executor: Exception in task 183.1 in stage 2.0 (TID 623)
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 652
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 617,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 605,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 608,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 570,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 530,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 602,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 629,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 526,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 562,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 414,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 454,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 566,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 402,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 620,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 554,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 558,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 418,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 506,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 574,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 653
+19/09/12 02:24:55 INFO executor.Executor: Not reporting error to driver during JVM shutdown.
+19/09/12 02:24:55 INFO executor.Executor: Not reporting error to driver during JVM shutdown.
+19/09/12 02:24:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 654
+19/09/12 02:24:55 INFO executor.Executor: Running task 5.1 in stage 2.0 (TID 652)
+19/09/12 02:24:55 INFO executor.Executor: Running task 185.1 in stage 2.0 (TID 654)
+19/09/12 02:24:55 INFO storage.DiskBlockManager: Shutdown hook called
+19/09/12 02:24:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 655
+19/09/12 02:24:55 INFO executor.Executor: Running task 173.1 in stage 2.0 (TID 653)
+19/09/12 02:24:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 656
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: [Container in shutdown] Uncaught exception in thread Thread[Executor task launch worker for task 611,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 ERROR util.SparkUncaughtExceptionHandler: [Container in shutdown] Uncaught exception in thread Thread[Executor task launch worker for task 623,5,main]
+java.lang.OutOfMemoryError: Direct buffer memory
+	at java.nio.Bits.reserveMemory(Bits.java:693)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:123)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.getThreadLocalShuffleResource(ShmShuffleWriter.scala:86)
+	at org.apache.spark.shuffle.shm.ShmShuffleWriter.<init>(ShmShuffleWriter.scala:64)
+	at org.apache.spark.shuffle.shm.ShmShuffleManager.getWriter(ShmShuffleManager.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:98)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/09/12 02:24:55 INFO executor.Executor: Running task 69.1 in stage 2.0 (TID 656)
+19/09/12 02:24:55 INFO executor.Executor: Running task 97.1 in stage 2.0 (TID 655)
+19/09/12 02:24:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 657
+19/09/12 02:24:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 658
+19/09/12 02:24:55 INFO executor.Executor: Running task 153.1 in stage 2.0 (TID 657)
+19/09/12 02:24:55 INFO executor.Executor: Running task 101.1 in stage 2.0 (TID 658)
+19/09/12 02:24:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 659
+19/09/12 02:24:55 INFO executor.Executor: Running task 125.1 in stage 2.0 (TID 659)
+19/09/12 02:24:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 660
+19/09/12 02:24:55 INFO executor.Executor: Running task 181.1 in stage 2.0 (TID 660)
+19/09/12 02:24:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 661
+19/09/12 02:24:55 INFO executor.Executor: Running task 117.1 in stage 2.0 (TID 661)
+19/09/12 02:24:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 662
+19/09/12 02:24:55 INFO executor.Executor: Running task 169.1 in stage 2.0 (TID 662)
+19/09/12 02:24:55 INFO util.ShutdownHookManager: Shutdown hook called
+19/09/12 02:24:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 663
+19/09/12 02:24:55 INFO executor.Executor: Running task 121.1 in stage 2.0 (TID 663)
+19/09/12 02:24:55 INFO util.ShutdownHookManager: Deleting directory /data/spark-f065191f-0249-418d-849b-4b2c2ebe2a05/executor-bb8dccb6-b553-457c-8656-cca2e989d2c6/spark-24090c93-650a-42ca-a672-3a6d544392a3
+19/09/12 02:24:55 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 664
+19/09/12 02:25:04 INFO executor.Executor: Running task 21.1 in stage 2.0 (TID 664)

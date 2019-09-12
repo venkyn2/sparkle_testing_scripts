@@ -1,0 +1,182 @@
+Spark Executor Command: "/opt/jdk1.8.0_131/jre/bin/java" "-cp" "/var/tmp/spark2.0hpcplatform/lib/firesteel-2.4.0.jar:/var/tmp/spark2.0hpcplatform/multicore/worker0/conf/:/var/tmp/spark2.0hpcplatform/multicore/worker0/assembly/target/scala-2.11/jars/*:/opt/hadoop/etc/hadoop/" "-Xmx8192M" "-Dspark.rpc.numRetries=5" "-Dspark.driver.port=44907" "-Dspark.network.timeout=40000" "-Dspark.rpc.netty.dispatcher.numThreads=10" "-XX:-UseBiasedLocking" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:44907" "--executor-id" "58" "--hostname" "10.1.1.4" "--cores" "4" "--app-id" "app-20190827093249-0019" "--worker-url" "spark://Worker@10.1.1.4:46217"
+========================================
+
+19/08/27 09:32:49 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 60790@mdc-ch1-cust4
+19/08/27 09:32:49 INFO util.SignalUtils: Registered signal handler for TERM
+19/08/27 09:32:49 INFO util.SignalUtils: Registered signal handler for HUP
+19/08/27 09:32:49 INFO util.SignalUtils: Registered signal handler for INT
+19/08/27 09:32:49 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/08/27 09:32:49 INFO spark.SecurityManager: Changing view acls to: root,nnnnnven
+19/08/27 09:32:49 INFO spark.SecurityManager: Changing modify acls to: root,nnnnnven
+19/08/27 09:32:49 INFO spark.SecurityManager: Changing view acls groups to: 
+19/08/27 09:32:49 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/08/27 09:32:49 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, nnnnnven); groups with view permissions: Set(); users  with modify permissions: Set(root, nnnnnven); groups with modify permissions: Set()
+19/08/27 09:32:50 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:44907 after 57 ms (0 ms spent in bootstraps)
+19/08/27 09:32:50 WARN spark.SparkConf: The configuration key 'spark.kryoserializer.buffer.max.mb' has been deprecated as of Spark 1.4 and may be removed in the future. Please use the new key 'spark.kryoserializer.buffer.max' instead.
+19/08/27 09:32:50 WARN spark.SparkConf: The configuration key 'spark.yarn.executor.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.executor.memoryOverhead' instead.
+19/08/27 09:32:50 INFO spark.SecurityManager: Changing view acls to: root,nnnnnven
+19/08/27 09:32:50 INFO spark.SecurityManager: Changing modify acls to: root,nnnnnven
+19/08/27 09:32:50 INFO spark.SecurityManager: Changing view acls groups to: 
+19/08/27 09:32:50 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/08/27 09:32:50 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, nnnnnven); groups with view permissions: Set(); users  with modify permissions: Set(root, nnnnnven); groups with modify permissions: Set()
+19/08/27 09:32:50 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:44907 after 10 ms (0 ms spent in bootstraps)
+19/08/27 09:32:50 INFO storage.DiskBlockManager: Created local directory at /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-ce79734d-94c1-4a73-a6c0-363277e7615c/blockmgr-e8335909-7d15-49d3-8ed2-b992ec687637
+19/08/27 09:32:50 INFO memory.MemoryStore: MemoryStore started with capacity 4.1 GB
+19/08/27 09:32:50 INFO executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@mdc-ch1-cust4.mdc.ext.hpe.com:44907
+19/08/27 09:32:50 INFO worker.WorkerWatcher: Connecting to worker spark://Worker@10.1.1.4:46217
+19/08/27 09:32:50 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:46217 after 1 ms (0 ms spent in bootstraps)
+19/08/27 09:32:50 INFO worker.WorkerWatcher: Successfully connected to spark://Worker@10.1.1.4:46217
+19/08/27 09:32:50 INFO executor.CoarseGrainedExecutorBackend: Successfully registered with driver
+19/08/27 09:32:50 INFO executor.Executor: Starting executor ID 58 on host 10.1.1.4
+19/08/27 09:32:50 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40619.
+19/08/27 09:32:50 INFO netty.NettyBlockTransferService: Server created on 10.1.1.4:40619
+19/08/27 09:32:50 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/08/27 09:32:50 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(58, 10.1.1.4, 40619, None)
+19/08/27 09:32:50 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(58, 10.1.1.4, 40619, None)
+19/08/27 09:32:50 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(58, 10.1.1.4, 40619, None)
+19/08/27 09:32:51 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 71
+19/08/27 09:32:51 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 170
+19/08/27 09:32:51 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 251
+19/08/27 09:32:51 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 314
+19/08/27 09:32:51 INFO executor.Executor: Running task 344.0 in stage 0.0 (TID 71)
+19/08/27 09:32:51 INFO executor.Executor: Running task 202.0 in stage 0.0 (TID 251)
+19/08/27 09:32:51 INFO executor.Executor: Running task 276.0 in stage 0.0 (TID 314)
+19/08/27 09:32:51 INFO executor.Executor: Running task 102.0 in stage 0.0 (TID 170)
+19/08/27 09:32:51 INFO executor.Executor: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:44907/jars/spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar with timestamp 1566923568972
+19/08/27 09:32:51 INFO client.TransportClientFactory: Successfully created connection to mdc-ch1-cust4.mdc.ext.hpe.com/10.1.1.4:44907 after 2 ms (0 ms spent in bootstraps)
+19/08/27 09:32:51 INFO util.Utils: Fetching spark://mdc-ch1-cust4.mdc.ext.hpe.com:44907/jars/spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar to /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-ce79734d-94c1-4a73-a6c0-363277e7615c/spark-b2b147a2-5a99-499a-85e2-7a503a98bfa8/fetchFileTemp7278740648464913040.tmp
+19/08/27 09:32:51 INFO util.Utils: Copying /data/spark-6e9264d8-6fb2-4eff-a979-6d4b27dc7a35/executor-ce79734d-94c1-4a73-a6c0-363277e7615c/spark-b2b147a2-5a99-499a-85e2-7a503a98bfa8/18744607911566923568972_cache to /var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190827093249-0019/58/./spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar
+19/08/27 09:32:51 INFO executor.Executor: Adding file:/var/tmp/spark2.0hpcplatform/multicore/worker0/work/app-20190827093249-0019/58/./spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar to class loader
+19/08/27 09:32:51 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 1
+19/08/27 09:32:51 INFO client.TransportClientFactory: Successfully created connection to /10.1.1.4:43425 after 2 ms (0 ms spent in bootstraps)
+19/08/27 09:32:51 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.2 KB, free 4.1 GB)
+19/08/27 09:32:51 INFO broadcast.TorrentBroadcast: Reading broadcast variable 1 took 118 ms
+19/08/27 09:32:51 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.5 KB, free 4.1 GB)
+19/08/27 09:32:51 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00002:27917287424+1073741824
+19/08/27 09:32:51 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00005:12884901888+1073741824
+19/08/27 09:32:51 INFO broadcast.TorrentBroadcast: Started reading broadcast variable 0
+19/08/27 09:32:51 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00007:10737418240+1073741824
+19/08/27 09:32:51 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00009:2147483648+1073741824
+19/08/27 09:32:51 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 22.3 KB, free 4.1 GB)
+19/08/27 09:32:51 INFO broadcast.TorrentBroadcast: Reading broadcast variable 0 took 80 ms
+19/08/27 09:32:52 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 317.5 KB, free 4.1 GB)
+19/08/27 09:32:52 INFO hdfs.DFSClient: No node available for BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 file=/user/nnnnnven1000G/HSsort-input/part-r-00009
+19/08/27 09:32:52 INFO hdfs.DFSClient: Could not obtain BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 from any node: java.io.IOException: No live nodes contain block BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 after checking nodes = [], ignoredNodes = null No live nodes contain current block Block locations: Dead nodes: . Will get new block locations from namenode and retry...
+19/08/27 09:32:52 WARN hdfs.DFSClient: DFS chooseDataNode: got # 1 IOException, will wait for 713.6008267696075 msec.
+19/08/27 09:32:53 INFO hdfs.DFSClient: No node available for BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 file=/user/nnnnnven1000G/HSsort-input/part-r-00009
+19/08/27 09:32:53 INFO hdfs.DFSClient: Could not obtain BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 from any node: java.io.IOException: No live nodes contain block BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 after checking nodes = [], ignoredNodes = null No live nodes contain current block Block locations: Dead nodes: . Will get new block locations from namenode and retry...
+19/08/27 09:32:53 WARN hdfs.DFSClient: DFS chooseDataNode: got # 2 IOException, will wait for 4627.409004598942 msec.
+19/08/27 09:32:58 INFO hdfs.DFSClient: No node available for BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 file=/user/nnnnnven1000G/HSsort-input/part-r-00009
+19/08/27 09:32:58 INFO hdfs.DFSClient: Could not obtain BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 from any node: java.io.IOException: No live nodes contain block BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 after checking nodes = [], ignoredNodes = null No live nodes contain current block Block locations: Dead nodes: . Will get new block locations from namenode and retry...
+19/08/27 09:32:58 WARN hdfs.DFSClient: DFS chooseDataNode: got # 3 IOException, will wait for 8688.34037517291 msec.
+19/08/27 09:33:06 WARN hdfs.DFSClient: Could not obtain block: BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 file=/user/nnnnnven1000G/HSsort-input/part-r-00009 No live nodes contain current block Block locations: Dead nodes: . Throwing a BlockMissingException
+19/08/27 09:33:06 WARN hdfs.DFSClient: Could not obtain block: BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 file=/user/nnnnnven1000G/HSsort-input/part-r-00009 No live nodes contain current block Block locations: Dead nodes: . Throwing a BlockMissingException
+19/08/27 09:33:06 WARN hdfs.DFSClient: DFS Read
+org.apache.hadoop.hdfs.BlockMissingException: Could not obtain block: BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 file=/user/nnnnnven1000G/HSsort-input/part-r-00009
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:946)
+	at org.apache.hadoop.hdfs.DFSInputStream.blockSeekTo(DFSInputStream.java:604)
+	at org.apache.hadoop.hdfs.DFSInputStream.readWithStrategy(DFSInputStream.java:844)
+	at org.apache.hadoop.hdfs.DFSInputStream.read(DFSInputStream.java:896)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at com.github.ehiggs.spark.terasort.TeraInputFormat$TeraRecordReader.nextKeyValue(TeraInputFormat.scala:75)
+	at org.apache.spark.rdd.NewHadoopRDD$$anon$1.hasNext(NewHadoopRDD.scala:230)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at org.apache.spark.shuffle.sort.UnsafeShuffleWriter.write(UnsafeShuffleWriter.java:187)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/08/27 09:33:06 ERROR executor.Executor: Exception in task 344.0 in stage 0.0 (TID 71)
+org.apache.hadoop.hdfs.BlockMissingException: Could not obtain block: BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 file=/user/nnnnnven1000G/HSsort-input/part-r-00009
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:946)
+	at org.apache.hadoop.hdfs.DFSInputStream.blockSeekTo(DFSInputStream.java:604)
+	at org.apache.hadoop.hdfs.DFSInputStream.readWithStrategy(DFSInputStream.java:844)
+	at org.apache.hadoop.hdfs.DFSInputStream.read(DFSInputStream.java:896)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at com.github.ehiggs.spark.terasort.TeraInputFormat$TeraRecordReader.nextKeyValue(TeraInputFormat.scala:75)
+	at org.apache.spark.rdd.NewHadoopRDD$$anon$1.hasNext(NewHadoopRDD.scala:230)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at org.apache.spark.shuffle.sort.UnsafeShuffleWriter.write(UnsafeShuffleWriter.java:187)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/08/27 09:33:06 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 418
+19/08/27 09:33:06 INFO executor.Executor: Running task 10.1 in stage 0.0 (TID 418)
+19/08/27 09:33:06 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00000:10737418240+1073741824
+19/08/27 09:33:07 INFO hdfs.DFSClient: No node available for BP-1096908835-10.1.1.4-1566790228469:blk_1073742138_1314 file=/user/nnnnnven1000G/HSsort-input/part-r-00000
+19/08/27 09:33:07 INFO hdfs.DFSClient: Could not obtain BP-1096908835-10.1.1.4-1566790228469:blk_1073742138_1314 from any node: java.io.IOException: No live nodes contain block BP-1096908835-10.1.1.4-1566790228469:blk_1073742138_1314 after checking nodes = [], ignoredNodes = null No live nodes contain current block Block locations: Dead nodes: . Will get new block locations from namenode and retry...
+19/08/27 09:33:07 WARN hdfs.DFSClient: DFS chooseDataNode: got # 1 IOException, will wait for 58.508821916640755 msec.
+19/08/27 09:33:07 INFO hdfs.DFSClient: No node available for BP-1096908835-10.1.1.4-1566790228469:blk_1073742138_1314 file=/user/nnnnnven1000G/HSsort-input/part-r-00000
+19/08/27 09:33:07 INFO hdfs.DFSClient: Could not obtain BP-1096908835-10.1.1.4-1566790228469:blk_1073742138_1314 from any node: java.io.IOException: No live nodes contain block BP-1096908835-10.1.1.4-1566790228469:blk_1073742138_1314 after checking nodes = [], ignoredNodes = null No live nodes contain current block Block locations: Dead nodes: . Will get new block locations from namenode and retry...
+19/08/27 09:33:07 WARN hdfs.DFSClient: DFS chooseDataNode: got # 2 IOException, will wait for 3018.5570511846945 msec.
+19/08/27 09:33:10 INFO hdfs.DFSClient: No node available for BP-1096908835-10.1.1.4-1566790228469:blk_1073742138_1314 file=/user/nnnnnven1000G/HSsort-input/part-r-00000
+19/08/27 09:33:10 INFO hdfs.DFSClient: Could not obtain BP-1096908835-10.1.1.4-1566790228469:blk_1073742138_1314 from any node: java.io.IOException: No live nodes contain block BP-1096908835-10.1.1.4-1566790228469:blk_1073742138_1314 after checking nodes = [], ignoredNodes = null No live nodes contain current block Block locations: Dead nodes: . Will get new block locations from namenode and retry...
+19/08/27 09:33:10 WARN hdfs.DFSClient: DFS chooseDataNode: got # 3 IOException, will wait for 12036.73864301297 msec.
+19/08/27 09:33:22 WARN hdfs.DFSClient: Could not obtain block: BP-1096908835-10.1.1.4-1566790228469:blk_1073742138_1314 file=/user/nnnnnven1000G/HSsort-input/part-r-00000 No live nodes contain current block Block locations: Dead nodes: . Throwing a BlockMissingException
+19/08/27 09:33:22 WARN hdfs.DFSClient: Could not obtain block: BP-1096908835-10.1.1.4-1566790228469:blk_1073742138_1314 file=/user/nnnnnven1000G/HSsort-input/part-r-00000 No live nodes contain current block Block locations: Dead nodes: . Throwing a BlockMissingException
+19/08/27 09:33:22 WARN hdfs.DFSClient: DFS Read
+org.apache.hadoop.hdfs.BlockMissingException: Could not obtain block: BP-1096908835-10.1.1.4-1566790228469:blk_1073742138_1314 file=/user/nnnnnven1000G/HSsort-input/part-r-00000
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:946)
+	at org.apache.hadoop.hdfs.DFSInputStream.blockSeekTo(DFSInputStream.java:604)
+	at org.apache.hadoop.hdfs.DFSInputStream.readWithStrategy(DFSInputStream.java:844)
+	at org.apache.hadoop.hdfs.DFSInputStream.read(DFSInputStream.java:896)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at com.github.ehiggs.spark.terasort.TeraInputFormat$TeraRecordReader.nextKeyValue(TeraInputFormat.scala:75)
+	at org.apache.spark.rdd.NewHadoopRDD$$anon$1.hasNext(NewHadoopRDD.scala:230)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at org.apache.spark.shuffle.sort.UnsafeShuffleWriter.write(UnsafeShuffleWriter.java:187)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/08/27 09:33:22 ERROR executor.Executor: Exception in task 10.1 in stage 0.0 (TID 418)
+org.apache.hadoop.hdfs.BlockMissingException: Could not obtain block: BP-1096908835-10.1.1.4-1566790228469:blk_1073742138_1314 file=/user/nnnnnven1000G/HSsort-input/part-r-00000
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:946)
+	at org.apache.hadoop.hdfs.DFSInputStream.blockSeekTo(DFSInputStream.java:604)
+	at org.apache.hadoop.hdfs.DFSInputStream.readWithStrategy(DFSInputStream.java:844)
+	at org.apache.hadoop.hdfs.DFSInputStream.read(DFSInputStream.java:896)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at com.github.ehiggs.spark.terasort.TeraInputFormat$TeraRecordReader.nextKeyValue(TeraInputFormat.scala:75)
+	at org.apache.spark.rdd.NewHadoopRDD$$anon$1.hasNext(NewHadoopRDD.scala:230)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at org.apache.spark.shuffle.sort.UnsafeShuffleWriter.write(UnsafeShuffleWriter.java:187)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:121)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:402)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:408)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+19/08/27 09:33:22 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 528
+19/08/27 09:33:22 INFO executor.Executor: Running task 344.2 in stage 0.0 (TID 528)
+19/08/27 09:33:22 INFO rdd.NewHadoopRDD: Input split: hdfs://mdc-ch1-cust4:9000/user/nnnnnven1000G/HSsort-input/part-r-00009:2147483648+1073741824
+19/08/27 09:33:22 INFO hdfs.DFSClient: No node available for BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 file=/user/nnnnnven1000G/HSsort-input/part-r-00009
+19/08/27 09:33:22 INFO hdfs.DFSClient: Could not obtain BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 from any node: java.io.IOException: No live nodes contain block BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 after checking nodes = [], ignoredNodes = null No live nodes contain current block Block locations: Dead nodes: . Will get new block locations from namenode and retry...
+19/08/27 09:33:22 WARN hdfs.DFSClient: DFS chooseDataNode: got # 1 IOException, will wait for 2226.282328535558 msec.
+19/08/27 09:33:24 INFO hdfs.DFSClient: No node available for BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 file=/user/nnnnnven1000G/HSsort-input/part-r-00009
+19/08/27 09:33:24 INFO hdfs.DFSClient: Could not obtain BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 from any node: java.io.IOException: No live nodes contain block BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 after checking nodes = [], ignoredNodes = null No live nodes contain current block Block locations: Dead nodes: . Will get new block locations from namenode and retry...
+19/08/27 09:33:24 WARN hdfs.DFSClient: DFS chooseDataNode: got # 2 IOException, will wait for 4574.523682422348 msec.
+19/08/27 09:33:28 INFO hdfs.DFSClient: No node available for BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 file=/user/nnnnnven1000G/HSsort-input/part-r-00009
+19/08/27 09:33:28 INFO hdfs.DFSClient: Could not obtain BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 from any node: java.io.IOException: No live nodes contain block BP-1096908835-10.1.1.4-1566790228469:blk_1073741898_1074 after checking nodes = [], ignoredNodes = null No live nodes contain current block Block locations: Dead nodes: . Will get new block locations from namenode and retry...
+19/08/27 09:33:28 WARN hdfs.DFSClient: DFS chooseDataNode: got # 3 IOException, will wait for 10602.973522531836 msec.
+19/08/27 09:33:35 INFO executor.CoarseGrainedExecutorBackend: Driver commanded a shutdown
+19/08/27 09:33:35 ERROR executor.CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

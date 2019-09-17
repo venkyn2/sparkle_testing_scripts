@@ -1,0 +1,1 @@
+spark-submit --class com.github.ehiggs.spark.terasort.TeraGen --deploy-mode client --master spark://mdc-ch1-cust4:7077 --conf spark.driver.memory=50g --conf spark.executor.memory=5g spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar 1000000000 /user/nnnnnven/benchmark/HSsort-input1

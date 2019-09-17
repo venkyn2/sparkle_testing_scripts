@@ -1,0 +1,189 @@
+
+[0;32mRunning 1GB test[0m
+[0;32mHSsize is 1000000000[0m
+[0;32mAll Output will be logged to file ./result-1GB.log[0m
+
+[0;32m===================================[0m
+[0;32mDeleting Previous Data - Start - Wed Jun 12 20:34:30 PDT 2019[0m
+[0;32mDeleting Previous Data - End - Wed Jun 12 20:35:38 PDT 2019[0m
+[0;32m===================================[0m
+
+
+[0;32m===================================[0m
+[0;32m Running TPCx-HS style benchmark for Spark - Run 1 - Epoch 1560396938 [0m
+[0;32m===================================[0m
+
+[0;32mStarting TeraGen Run 1 (output being return to ./logs/HSgen-time-run1.txt)[0m
+
++ spark-submit --class com.github.ehiggs.spark.terasort.TeraGen --deploy-mode client --master spark://mdc-ch1-cust4:7077 --conf spark.driver.memory=1.5g --conf spark.executor.memory=3g spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar 1000000000 /user/nnnnnven/benchmark/HSsort-input
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+Invalid maximum heap size: -Xmx1.5g
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+
+real	0m0.301s
+user	0m0.183s
+sys	0m3.715s
+
+
+[0;32m======== TeraGen Result SUCCESS ========[0m
+[0;32m======== Time take by TeraGen = 0m0.301s====[0m
+
+
+
+[0;32mListing TeraGen output [0m
+
+
+
+
+[0;32mStarting TeraSort Run 1 (output being return to ./logs/HSsort-time-run1.txt)[0m
+
++ spark-submit --class com.github.ehiggs.spark.terasort.TeraSort --deploy-mode client --master spark://mdc-ch1-cust4:7077 --conf spark.driver.memory=1.5g --conf spark.executor.memory=3g spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar /user/nnnnnven/benchmark/HSsort-input /user/nnnnnven/benchmark/HSsort-output
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+Invalid maximum heap size: -Xmx1.5g
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+
+real	0m0.302s
+user	0m0.162s
+sys	0m4.448s
+
+
+[0;32m======== TeraSort Result SUCCESS =============[0m
+[0;32m======== Time take by TeraSort = 0m0.302s====[0m
+
+
+
+[0;32mListing TeraSort output [0m
+
+
+
+
+[0;32mStarting TeraValidate [0m
+
++ spark-submit --class com.github.ehiggs.spark.terasort.TeraValidate --deploy-mode client --master spark://mdc-ch1-cust4:7077 --conf spark.driver.memory=1.5g --conf spark.executor.memory=3g spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar /user/nnnnnven/benchmark/HSsort-output
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+Invalid maximum heap size: -Xmx1.5g
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+
+real	0m0.315s
+user	0m0.172s
+sys	0m2.957s
+
+
+[0;32m======== TeraValidate Result SUCCESS =============[0m
+[0;32m======== Time take by TeraValidate = 0m0.315s====[0m
+
+
+[0;32m===============================================[0m
+[0;32mTPCx-HS Performance Metric (HSph@SF) Report [0m
+
+[0;32mTest Run 1 details: Total Time = 5 [0m
+[0;32m                     Total Size = 1000000000 [0m
+[0;32m                     Scale-Factor =  [0m
+
+[0;32mTPCx-HS Performance Metric (HSph@SF):  [0m
+
+[0;32m===============================================[0m
+[0;32m===================================[0m
+[0;32mDeleting Previous Data - Start - Wed Jun 12 20:35:43 PDT 2019[0m
+[0;32mDeleting Previous Data - End - Wed Jun 12 20:36:51 PDT 2019[0m
+[0;32m===================================[0m
+
+
+[0;32m===================================[0m
+[0;32m Running TPCx-HS style benchmark for Spark - Run 2 - Epoch 1560397011 [0m
+[0;32m===================================[0m
+
+[0;32mStarting TeraGen Run 2 (output being return to ./logs/HSgen-time-run2.txt)[0m
+
++ spark-submit --class com.github.ehiggs.spark.terasort.TeraGen --deploy-mode client --master spark://mdc-ch1-cust4:7077 --conf spark.driver.memory=1.5g --conf spark.executor.memory=3g spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar 1000000000 /user/nnnnnven/benchmark/HSsort-input
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+Invalid maximum heap size: -Xmx1.5g
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+
+real	0m0.339s
+user	0m0.153s
+sys	0m6.845s
+
+
+[0;32m======== TeraGen Result SUCCESS ========[0m
+[0;32m======== Time take by TeraGen = 0m0.339s====[0m
+
+
+
+[0;32mListing TeraGen output [0m
+
+
+
+
+[0;32mStarting TeraSort Run 2 (output being return to ./logs/HSsort-time-run2.txt)[0m
+
++ spark-submit --class com.github.ehiggs.spark.terasort.TeraSort --deploy-mode client --master spark://mdc-ch1-cust4:7077 --conf spark.driver.memory=1.5g --conf spark.executor.memory=3g spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar /user/nnnnnven/benchmark/HSsort-input /user/nnnnnven/benchmark/HSsort-output
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+Invalid maximum heap size: -Xmx1.5g
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+
+real	0m0.327s
+user	0m0.158s
+sys	0m9.529s
+
+
+[0;32m======== TeraSort Result SUCCESS =============[0m
+[0;32m======== Time take by TeraSort = 0m0.327s====[0m
+
+
+
+[0;32mListing TeraSort output [0m
+
+
+
+
+[0;32mStarting TeraValidate [0m
+
++ spark-submit --class com.github.ehiggs.spark.terasort.TeraValidate --deploy-mode client --master spark://mdc-ch1-cust4:7077 --conf spark.driver.memory=1.5g --conf spark.executor.memory=3g spark-terasort-1.1-SNAPSHOT-jar-with-dependencies.jar /user/nnnnnven/benchmark/HSsort-output
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+OpenJDK 64-Bit Server VM warning: sched_getaffinity failed (Invalid argument)- using online processor count (1152) which may exceed available processors
+Invalid maximum heap size: -Xmx1.5g
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+
+real	0m0.346s
+user	0m0.247s
+sys	0m11.517s
+
+
+[0;32m======== TeraValidate Result SUCCESS =============[0m
+[0;32m======== Time take by TeraValidate = 0m0.346s====[0m
+
+
+[0;32m===============================================[0m
+[0;32mTPCx-HS Performance Metric (HSph@SF) Report [0m
+
+[0;32mTest Run 2 details: Total Time = 12 [0m
+[0;32m                     Total Size = 1000000000 [0m
+[0;32m                     Scale-Factor =  [0m
+
+[0;32mTPCx-HS Performance Metric (HSph@SF):  [0m
+
+[0;32m===============================================[0m

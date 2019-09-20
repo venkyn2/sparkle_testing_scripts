@@ -1,0 +1,47 @@
+'\" t
+.\"     Title: fam_atomic_32_read
+.\"    Author: [FIXME: author] [see http://docbook.sf.net/el/author]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 03/27/2019
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "FAM_ATOMIC_32_READ" "3" "03/27/2019" "\ \&" "\ \&"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+fam_atomic_32_read \- 32 bit fam atomic read
+.SH "SYNOPSIS"
+.sp
+.nf
+#include <fam_atomic\&.h>
+
+int32_t
+fam_atomic_32_read(int32_t *address);
+
+cc \&.\&.\&. \-lfam_atomic
+.fi
+.SH "DESCRIPTION"
+.sp
+Given \fIaddress\fR, which is a pointer to a 32 bit fam atomic variable, reads the contents of the atomic variable and returns that value\&.
+.SH "RETURN VALUE"
+.sp
+Returns the value of the fam atomic that was read\&.

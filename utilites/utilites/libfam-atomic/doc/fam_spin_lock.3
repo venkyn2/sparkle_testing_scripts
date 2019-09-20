@@ -1,0 +1,49 @@
+'\" t
+.\"     Title: fam_spin_lock
+.\"    Author: [FIXME: author] [see http://docbook.sf.net/el/author]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 03/27/2019
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "FAM_SPIN_LOCK" "3" "03/27/2019" "\ \&" "\ \&"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+fam_spin_lock \- Acquires an fam spinlock
+.SH "SYNOPSIS"
+.sp
+.nf
+#include <fam_atomic\&.h>
+
+void
+fam_spin_lock(struct fam_spinlock *lock);
+
+cc \&.\&.\&. \-lfam_atomic
+.fi
+.SH "DESCRIPTION"
+.sp
+Given \fIlock\fR, which is a pointer to an fam spinlock, tries to acquire the lock\&. If the lock has already been acquired by another thread, the current thread will continue to spin until it has acquired the lock\&.
+.sp
+Used for obtaining mutual exclusion\&. Only 1 thread could obtain the lock at a time\&.
+.SH "RETURN VALUE"
+.sp
+None

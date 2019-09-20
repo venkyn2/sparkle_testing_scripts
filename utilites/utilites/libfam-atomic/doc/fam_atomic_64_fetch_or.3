@@ -1,0 +1,48 @@
+'\" t
+.\"     Title: fam_atomic_64_fetch_or
+.\"    Author: [FIXME: author] [see http://docbook.sf.net/el/author]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 03/27/2019
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "FAM_ATOMIC_64_FETCH_" "3" "03/27/2019" "\ \&" "\ \&"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+fam_atomic_64_fetch_or \- 64 bit fam atomic fetch or operation
+.SH "SYNOPSIS"
+.sp
+.nf
+#include <fam_atomic\&.h>
+
+int64_t
+fam_atomic_64_fetch_or(int64_t *address,
+                       int64_t arg);
+
+cc \&.\&.\&. \-lfam_atomic
+.fi
+.SH "DESCRIPTION"
+.sp
+Given \fIaddress\fR, which is a pointer to a 64 bit fam atomic variable, reads the contents of the atomic variable, performs bitwise OR between the atomic variable and \fIarg\fR, and returns the original value that was read\&.
+.SH "RETURN VALUE"
+.sp
+Returns the previous value of the fam atomic (before the atomic variable was OR\(cqd with \fIarg\fR\&.

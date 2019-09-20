@@ -1,0 +1,193 @@
+fam_atomic(3)
+=============
+:doctype: manpage
+
+NAME
+----
+fam_atomic - fabric attached memory atomic support library
+
+SYNOPSIS
+--------
+
+Include the header file
+....
+#include <fam_atomic.h>
+....
+
+Register and unregister FAM areas with the library
+
+....
+int
+fam_atomic_register_region(void *region_start,
+			   size_t region_length,
+			   int fd,
+			   off_t offset);
+
+void
+fam_atomic_unregister_region(void *region_start,
+			     size_t region_length);
+....
+
+Atomic operations. These are not cacheline aligned,
+so care must be taken when using them to avoid accessing
+memory within the same cacheline from the SoC without
+performing the required cache flush and invalidate operations.
+....
+int32_t
+fam_atomic_32_fetch_add(int32_t *address,
+			int32_t increment);
+
+int64_t
+fam_atomic_64_fetch_add(int64_t *address,
+			int64_t increment);
+
+int32_t
+fam_atomic_32_swap(int32_t *address,
+		   int32_t value);
+
+int64_t
+fam_atomic_64_swap(int64_t *address,
+		   int64_t value);
+
+void
+fam_atomic_128_swap(int64_t *address,
+		    int64_t value[2],
+		    int64_t result[2]);
+
+int32_t
+fam_atomic_32_compare_store(int32_t *address,
+			    int32_t compare,
+			    int32_t store);
+
+int64_t
+fam_atomic_64_compare_store(int64_t *address,
+			    int64_t compare,
+			    int64_t store);
+
+void
+fam_atomic_128_compare_store(int64_t *address,
+			     int64_t compare[2],
+			     int64_t store[2],
+			     int64_t result[2]);
+
+int32_t
+fam_atomic_32_read(int32_t *address);
+
+int64_t
+fam_atomic_64_read(int64_t *address);
+
+void
+fam_atomic_128_read(int64_t *address,
+		    int64_t result[2]);
+
+void
+fam_atomic_32_write(int32_t *address,
+		    int32_t value);
+
+void
+fam_atomic_64_write(int64_t *address,
+		    int64_t value);
+
+void
+fam_atomic_128_write(int64_t *address,
+		     int64_t value[2]);
+
+int32_t
+fam_atomic_32_fetch_and(int32_t *address,
+			int32_t arg);
+
+int64_t
+fam_atomic_64_fetch_and(int64_t *address,
+			int64_t arg);
+
+int32_t
+fam_atomic_32_fetch_or(int32_t *address,
+		       int32_t arg);
+
+int64_t
+fam_atomic_64_fetch_or(int64_t *address,
+		       int64_t arg);
+....
+
+Spinlock operations
+....
+struct fam_spinlock;
+
+void
+fam_spin_lock(struct fam_spinlock *lock);
+
+bool
+fam_spin_trylock(struct fam_spinlock *lock);
+
+void
+fam_spin_unlock(struct fam_spinlock *lock);
+....
+
+DESCRIPTION
+-----------
+
+The Fabric Attached Memory Atomics library provides a set of
+primitives similar to the C11 atomics interfaces, but for memory
+contained within a cache-incoherent fabric environment.
+
+There are four operations available:
+
+1. Fetch and Add. Read from the target address, stores the sum of that
+value and a user-provided value and returns the original
+value. Available for 32- and 64- bit values.
+
+2. Swap. Read from the target address, write a user-provided value to
+that address and return the original value. Available for 32-, 64- and
+128- bit values.
+
+3. Compare and Store. Read from the target address, if that matches
+one user-provided value, store a second user-provided value. In any
+case, return the original value. Available for 32-, 64-, and 128- bit
+values.
+
+4. Read. Reads from the target address, returning that
+value. Available for 128- bit values. The fetch-and-add operation can
+be used to perform this on 32- and 64- bit values by providing a 0
+value.
+
+All of these operations are atomic at the fabric level. None of them
+perform any cache flushing or invalidation, so applications also
+accessing the same cache lines directly must perform the necessary
+cache invalidation and flushing operations.
+
+Applications must take care when using these functions that either
+all memory within the same cache line is accessed solely through
+this atomics API or that the cache line is flushed before an atomic
+operation and invalidated afterwards.
+
+The atomic functions use virtual memory addresses to reference the
+atomic objects. That address must be converted to an offset within a
+specific file before being passed to the kernel. To perform this
+conversion, the library needs to know the relationship between virtual
+addresses and files. Applications must call fam_atomic_register_region
+with the values from the mmap operation to set up this association
+(see the example). When the region is unmapped,
+fam_atomic_unregister_region must be called to clear this mapping.
+
+For regions of memory mapped from files not
+contained within fabric attached memory, these
+atomic operations will be performed using the
+C11 atomic operations so that applications can
+use this library without regard to the
+location of the storage.
+
+To initialize a spinlock, use fam_spin_lock_init() or
+assign the FAM_SPINLOCK_INITIALIZER followed by a
+flush of the lock structure.
+
+EXAMPLE
+-------
+
+Here's a simple example which maps a new shelf in FAM to cover
+a structure containing a 64-bit atomic and a spinlock. Then it
+shows how to invoke some of the functions described above
+while checking to make sure the library returns the expected values.
+
+....
+include::../tests/fam_atomic_example.c[]
+....

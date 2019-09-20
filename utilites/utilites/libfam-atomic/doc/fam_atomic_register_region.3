@@ -1,0 +1,60 @@
+'\" t
+.\"     Title: fam_atomic_register_region
+.\"    Author: [FIXME: author] [see http://docbook.sf.net/el/author]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 03/27/2019
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "FAM_ATOMIC_REGISTER_" "3" "03/27/2019" "\ \&" "\ \&"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+fam_atomic_register_region \- registers FAM area with the library
+.SH "SYNOPSIS"
+.sp
+.nf
+#include <fam_atomic\&.h>
+
+int fam_atomic_register_region(void *region_start,
+                               size_t region_length,
+                               int fd,
+                               off_t offset);
+
+cc \&.\&.\&. \-lfam_atomic
+.fi
+.SH "DESCRIPTION"
+.sp
+Memory regions containing fam atomics and/or fam locks must be registered using some of the parameters from the mmap operation before any of the atomics or locks within the region can be used\&. It is recommended that this gets called right after the mmap operation to register the entire mapped region\&.
+.sp
+region_start: Pointer to start of region\&. This is usually the value that was returned by mmap()\&.
+.sp
+region_length: Size of the region\&. Should match value given to mmap()\&.
+.sp
+fd: The file descriptor associated with the region\&. Should match the fd given to mmap()\&.
+.sp
+offset: The offset between the start of the file and \fIregion_start\fR\&. Should match offset value given to mmap()\&.
+.SH "RETURN VALUE"
+.sp
+Returns 0 on success\&. On failure, returns \-1 and sets errno to indicate the error\&.
+.SH "ERRORS"
+.sp
+\fBENOMEM\fR Not enough memory for the library to allocate the metadata required for tracking the registered region\&.
